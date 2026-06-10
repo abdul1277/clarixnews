@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology – ClarixNews</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://clarixnews.vercel.app/category" />
+  <meta property="og:title" content="Technology – ClarixNews" />
+  <meta property="og:description" content="Latest technology news, AI updates, career guides, and analysis from ClarixNews." />
+  <meta property="og:site_name" content="ClarixNews" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@clarixnews" />
+  <meta name="twitter:title" content="Technology – ClarixNews" />
+  <meta name="twitter:description" content="Latest technology news, AI updates, career guides, and analysis from ClarixNews." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .cat-hero { background: var(--bg-2); border-bottom: 3px solid var(--red); padding: 32px 0; }
+    .cat-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .cat-name { font-family: var(--font-display); font-size: clamp(32px, 5vw, 60px); font-weight: 900; color: var(--text-1); line-height: 1; margin-bottom: 8px; }
+    .cat-name span { color: var(--red); }
+    .cat-desc { font-size: 14px; color: var(--text-3); max-width: 600px; line-height: 1.7; }
+    .cat-tabs { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; margin-top: 20px; border-top: 1px solid var(--border); }
+    .cat-tabs::-webkit-scrollbar { display: none; }
+    .cat-tab { padding: 10px 18px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: all .2s; }
+    .cat-tab.active, .cat-tab:hover { color: var(--text-1); border-bottom-color: var(--red); }
+
+    .cat-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; padding: 32px 0; }
+
+    /* FEATURED */
+    .featured-story { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); margin-bottom: 32px; }
+    .featured-main { position: relative; min-height: 360px; overflow: hidden; cursor: pointer; }
+    .featured-main:hover .fm-img { transform: scale(1.04); }
+    .fm-img { position: absolute; inset: 0; transition: transform .5s; }
+    .feat-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.9) 0%, transparent 60%); }
+    .feat-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; }
+    .feat-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; line-height: 1.25; color: #fff; margin: 8px 0 10px; }
+    .feat-meta { font-size: 12px; color: #ccc; }
+    .featured-list { background: var(--bg-3); display: flex; flex-direction: column; }
+    .feat-list-item { flex: 1; padding: 18px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .2s; display: flex; gap: 12px; align-items: flex-start; }
+    .feat-list-item:last-child { border-bottom: none; }
+    .feat-list-item:hover { background: var(--bg-4); }
+    .fli-img { width: 80px; height: 60px; flex-shrink: 0; overflow: hidden; }
+    .fli-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 5px; }
+    .feat-list-item:hover .fli-title { color: var(--red); }
+    .fli-meta { font-size: 11px; color: var(--text-3); }
+
+    /* ARTICLE GRID */
+    .article-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--border); margin-bottom: 24px; }
+    .load-more { text-align: center; padding: 24px 0; }
+    .load-more-btn { background: var(--bg-3); border: 1px solid var(--border); color: var(--text-1); padding: 12px 36px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: all .2s; font-family: var(--font-sans); }
+    .load-more-btn:hover { background: var(--red); border-color: var(--red); color: #fff; }
+
+    /* FILTER BAR */
+    .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .filter-left { display: flex; gap: 8px; }
+    .filter-btn { background: var(--bg-3); border: 1px solid var(--border); color: var(--text-2); padding: 6px 14px; font-size: 12px; font-weight: 600; transition: all .2s; font-family: var(--font-sans); border-radius: 2px; }
+    .filter-btn.active, .filter-btn:hover { background: var(--red); border-color: var(--red); color: #fff; }
+    .sort-select { background: var(--bg-3); border: 1px solid var(--border); color: var(--text-2); padding: 6px 14px; font-size: 12px; font-family: var(--font-sans); outline: none; }
+
+    /* SIDEBAR */
+    .cat-sidebar { position: sticky; top: 80px; }
+    .sidebar-widget { background: var(--bg-3); padding: 20px; margin-bottom: 20px; }
+    .widget-title { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--text-3); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 16px; }
+    .sidebar-story { display: flex; gap: 10px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); cursor: pointer; }
+    .sidebar-story:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .ss-img { width: 64px; height: 48px; flex-shrink: 0; overflow: hidden; }
+    .ss-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 4px; }
+    .sidebar-story:hover .ss-title { color: var(--red); }
+    .ss-meta { font-size: 11px; color: var(--text-3); }
+    .topic-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .topic-tag { padding: 5px 12px; background: var(--bg-4); border: 1px solid var(--border); font-size: 12px; color: var(--text-2); cursor: pointer; transition: all .2s; }
+    .topic-tag:hover { background: var(--red); border-color: var(--red); color: #fff; }
+
+    @media(max-width:900px) {
+      .cat-layout { grid-template-columns: 1fr; }
+      .cat-sidebar { position: static; }
+      .featured-story { grid-template-columns: 1fr; }
+      .article-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TICKERS -->
+<div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>EU announces €500bn energy independence package</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>EU announces €500bn energy independence package</span></div></div></div>
+<div class="stocks-bar"><div class="stocks-inner"><div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421.23</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453.08</span><span class="stock-up">▲ 1.12%</span></div><div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341.60</span><span class="stock-up">▲ 1.34%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341.50</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421.23</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453.08</span><span class="stock-up">▲ 1.12%</span></div><div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341.60</span><span class="stock-up">▲ 1.34%</span></div></div></div>
+
+<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button></div></div></div>
+<header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
+<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=middleeast">Middle East</a></li><li><a href="category.html?cat=asia">Asia</a></li><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn">🔍 Search</button></div></div></nav>
+
+<!-- CATEGORY HERO -->
+<div class="cat-hero">
+  <div class="cat-hero-inner">
+    <div class="cat-name" id="catName">Technology</div>
+    <div class="cat-desc" id="catDesc">The latest in AI, software, cybersecurity, gadgets, and the global tech industry. In-depth reporting for a digital-first world.</div>
+    <div class="cat-tabs">
+      <div class="cat-tab active">All Stories</div>
+      <div class="cat-tab">Artificial Intelligence</div>
+      <div class="cat-tab">Cybersecurity</div>
+      <div class="cat-tab">Gadgets</div>
+      <div class="cat-tab">Start-ups</div>
+      <div class="cat-tab">Career & AI</div>
+      <div class="cat-tab">Analysis</div>
+    </div>
+  </div>
+</div>
+
+<main>
+<div class="container">
+  <div class="cat-layout">
+    <div>
+      <!-- FEATURED -->
+      <div class="section-label"><h2>Featured</h2></div>
+      <div class="featured-story">
+        <a href="article.html" class="featured-main">
+          <div class="fm-img"><div class="ph" style="background:linear-gradient(135deg,#0f3460,#16213e);"></div></div>
+          <div class="feat-overlay"></div>
+          <div class="feat-content">
+            <span class="cat-pill tech">AI</span>
+            <div class="feat-title">ChatGPT vs Claude vs Gemini: The Definitive 2026 Comparison</div>
+            <div class="feat-meta">James Thornton · 2 hours ago · 12 min read</div>
+          </div>
+        </a>
+        <div class="featured-list">
+          <a href="article.html" class="feat-list-item"><div class="fli-img"><div class="ph" style="background:linear-gradient(135deg,#134e5e,#71b280);"></div></div><div><div class="fli-title">AI Jobs That Will Boom in the Next Five Years</div><div class="fli-meta">Career · 4 hrs ago</div></div></a>
+          <a href="article.html" class="feat-list-item"><div class="fli-img"><div class="ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95);"></div></div><div><div class="fli-title">Apple Unveils New Chip That Runs AI Entirely On-Device</div><div class="fli-meta">Gadgets · 6 hrs ago</div></div></a>
+          <a href="article.html" class="feat-list-item"><div class="fli-img"><div class="ph" style="background:linear-gradient(135deg,#1d4ed8,#1e3a8a);"></div></div><div><div class="fli-title">Cybersecurity Breaches Hit Record High in First Half of 2026</div><div class="fli-meta">Security · 8 hrs ago</div></div></a>
+        </div>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar">
+        <div class="filter-left">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">AI</button>
+          <button class="filter-btn">Security</button>
+          <button class="filter-btn">Gadgets</button>
+          <button class="filter-btn">Career</button>
+        </div>
+        <select class="sort-select"><option>Latest First</option><option>Most Read</option><option>Most Shared</option></select>
+      </div>
+
+      <!-- ARTICLE GRID -->
+      <div class="article-grid">
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#0f766e,#134e5e);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill career">Career</span></div><div class="card-title" style="font-size:17px;">If You Are Going Into Tech in 2026, Here Are Your Best Career Options</div><div class="card-excerpt">Software engineering, data science, cybersecurity, AI/ML — which path pays most and suits your skills?</div><div class="card-meta">Sarah Lee · 1 day ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill tech">AI</span></div><div class="card-title" style="font-size:17px;">OpenAI Announces New Model Specifically Designed for Scientific Research</div><div class="card-excerpt">The new model can read, analyze and summarize scientific literature at a pace no human researcher can match.</div><div class="card-meta">James Thornton · 1 day ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#1d4ed8,#1e3a8a);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill">Security</span></div><div class="card-title" style="font-size:17px;">Major Bank Hack Exposes Data of 14 Million Customers Across Asia</div><div class="card-excerpt">Security researchers identified a sophisticated state-level attack exploiting a zero-day in widely used banking software.</div><div class="card-meta">Mike Davis · 2 days ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#15803d,#065f46);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill career">Career</span></div><div class="card-title" style="font-size:17px;">Jobs AI Cannot Replace: The Complete 2026 Guide for Professionals</div><div class="card-excerpt">Which careers are AI-proof? Our analysis of 50 professions shows which skills remain uniquely human.</div><div class="card-meta">Priya Nair · 2 days ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#c94b4b,#4b134f);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill tech">Gadgets</span></div><div class="card-title" style="font-size:17px;">Samsung Galaxy S26 Review: The Best Android Phone of the Year?</div><div class="card-excerpt">After three weeks of testing, our verdict on Samsung's latest flagship — and whether it is worth upgrading.</div><div class="card-meta">Alex Park · 3 days ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#134e5e,#2a6049);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill tech">Start-ups</span></div><div class="card-title" style="font-size:17px;">Pakistani Tech Start-ups Raised $340M in 2026 — The Biggest Names</div><div class="card-excerpt">A record-breaking year for Pakistani tech investment as global VCs bet on South Asian digital economy growth.</div><div class="card-meta">Zara Ahmed · 3 days ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#1a1a2e,#16213e);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill tech">AI</span></div><div class="card-title" style="font-size:17px;">The Rise of Agentic AI: When Your Computer Starts Working For Itself</div><div class="card-excerpt">Agentic AI systems can now book flights, write code, and manage files without any human input. Should you be concerned?</div><div class="card-meta">James Thornton · 4 days ago</div></div></a>
+        <a href="article.html" class="card"><div class="card-img" style="height:170px;"><div class="ph" style="background:linear-gradient(135deg,#b45309,#78350f);"></div></div><div class="card-body"><div class="card-cat"><span class="cat-pill business">Business</span></div><div class="card-title" style="font-size:17px;">Big Tech Layoffs Continue Into 2026 — But AI Hiring Is Booming</div><div class="card-excerpt">Traditional software roles are shrinking while AI-adjacent positions are seeing unprecedented demand and salary growth.</div><div class="card-meta">Laura Chen · 5 days ago</div></div></a>
+      </div>
+
+      <div class="load-more">
+        <button class="load-more-btn">Load More Stories</button>
+      </div>
+
+      <div class="newsletter">
+        <div class="newsletter-text"><h3>Tech Newsletter</h3><p>Weekly tech digest — the stories that matter, every Friday.</p></div>
+        <div class="newsletter-form"><input type="email" placeholder="Your email address" /><button>Subscribe</button></div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="cat-sidebar">
+      <div class="ad-banner ad-banner-300" style="margin-bottom:20px;">Ad · 300×250</div>
+      <div class="sidebar-widget">
+        <div class="widget-title">Trending in Tech</div>
+        <a href="article.html" class="sidebar-story"><div class="ss-img"><div class="ph" style="background:linear-gradient(135deg,#0f3460,#16213e);"></div></div><div><div class="ss-title">ChatGPT vs Claude vs Gemini 2026</div><div class="ss-meta">47.3k reads</div></div></a>
+        <a href="article.html" class="sidebar-story"><div class="ss-img"><div class="ph" style="background:linear-gradient(135deg,#0f766e,#134e5e);"></div></div><div><div class="ss-title">AI-Proof Jobs: The 2026 Guide</div><div class="ss-meta">31.2k reads</div></div></a>
+        <a href="article.html" class="sidebar-story"><div class="ss-img"><div class="ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95);"></div></div><div><div class="ss-title">Pakistan Tech Start-ups Raise $340M</div><div class="ss-meta">18.7k reads</div></div></a>
+      </div>
+      <div class="sidebar-widget">
+        <div class="widget-title">Popular Topics</div>
+        <div class="topic-tags">
+          <a href="search.html?q=AI" class="topic-tag">Artificial Intelligence</a>
+          <a href="search.html?q=ChatGPT" class="topic-tag">ChatGPT</a>
+          <a href="search.html?q=Cybersecurity" class="topic-tag">Cybersecurity</a>
+          <a href="search.html?q=Career" class="topic-tag">Career Guide</a>
+          <a href="search.html?q=Apple" class="topic-tag">Apple</a>
+          <a href="search.html?q=Pakistan+Tech" class="topic-tag">Pakistan Tech</a>
+          <a href="search.html?q=Startups" class="topic-tag">Start-ups</a>
+          <a href="search.html?q=Jobs" class="topic-tag">Jobs & Future</a>
+        </div>
+      </div>
+      <div class="sidebar-widget">
+        <div class="widget-title">Weather</div>
+        <div id="weatherWidget"></div>
+      </div>
+      <div class="ad-banner ad-banner-300">Ad · 300×250</div>
+    </aside>
+  </div>
+</div>
+</main>
+
+<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Clarix<span>News</span></div><div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond.</div><div class="footer-social"><a href="#">𝕏</a><a href="#">f</a><a href="#">in</a><a href="#">W</a><a href="#">▶</a></div></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li></ul></div><div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Advertise</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 ClarixNews. All rights reserved.</div><div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div></div></div></footer>
+<button class="scroll-top" id="scrollTop">↑</button>
+<div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" /><button type="button" class="search-close" id="searchClose">✕</button></form><div class="search-hints"><strong>Trending</strong><span onclick="window.location='search.html?q=AI'">AI</span><span onclick="window.location='search.html?q=Pakistan'">Pakistan</span><span onclick="window.location='search.html?q=Career'">Career</span></div></div></div>
+
+<script src="shared.js"></script>
+<script>
+  const cats = {
+    world:{ name:'World', desc:'Breaking international news and analysis from every corner of the globe. Our correspondents report from over 40 countries.' },
+    pakistan:{ name:'Pakistan', desc:'Comprehensive coverage of Pakistan — politics, economy, society, culture, and international relations.' },
+    usa:{ name:'US & Americas', desc:'Latest news from the United States, Canada, Latin America and the Caribbean.' },
+    europe:{ name:'Europe', desc:'News and analysis from across Europe — from Brussels politics to London markets to Eastern European affairs.' },
+    middleeast:{ name:'Middle East', desc:'In-depth reporting on the Middle East — conflict, diplomacy, energy, and social change.' },
+    asia:{ name:'Asia', desc:'Coverage of Asia-Pacific — from Tokyo to Beijing, New Delhi to Seoul and beyond.' },
+    business:{ name:'Business', desc:'Markets, economics, corporate news, and financial analysis from around the world.' },
+    tech:{ name:'Technology', desc:'The latest in AI, software, cybersecurity, gadgets, and the global tech industry.' },
+    career:{ name:'Career & AI', desc:'Expert guides on career choices, AI impact on jobs, salary data, and the future of work.' },
+    opinion:{ name:'Opinion', desc:'Perspectives and analysis from our global network of columnists, experts, and thought leaders.' },
+  };
+  const p = new URLSearchParams(location.search);
+  const cat = p.get('cat') || 'tech';
+  const data = cats[cat] || cats.tech;
+  document.getElementById('catName').textContent = data.name;
+  document.getElementById('catDesc').textContent = data.desc;
+  document.title = data.name + ' – ClarixNews';
+</script>
+</body>
+</html>

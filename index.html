@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClarixNews – World News, Unfiltered</title>
+  <meta name="description" content="ClarixNews delivers breaking international news from Pakistan, America, Europe and beyond. Fast. Clear. Unfiltered." />
+  <meta name="keywords" content="world news, international news, Pakistan news, breaking news, politics, business, technology, career, AI" />
+  <meta name="author" content="ClarixNews Editorial Team" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://clarixnews.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://clarixnews.vercel.app/" />
+  <meta property="og:title" content="ClarixNews – World News, Unfiltered" />
+  <meta property="og:description" content="Breaking international news from Pakistan, America, Europe and beyond. Fast. Clear. Unfiltered." />
+  <meta property="og:site_name" content="ClarixNews" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@clarixnews" />
+  <meta name="twitter:title" content="ClarixNews – World News, Unfiltered" />
+  <meta name="twitter:description" content="Breaking international news from Pakistan, America, Europe and beyond." />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "ClarixNews",
+    "url": "https://clarixnews.vercel.app",
+    "description": "Independent international news coverage from South Asia, America, Europe and beyond.",
+    "sameAs": [
+      "https://twitter.com/clarixnews",
+      "https://facebook.com/clarixnews"
+    ],
+    "publishingPrinciples": "https://clarixnews.vercel.app/about",
+    "masthead": "https://clarixnews.vercel.app/about"
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    /* HERO */
+    .hero-border { border-top: 3px solid var(--red); padding-top: 28px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 340px; gap: 2px; background: var(--border); }
+    .hero-main { grid-row: 1/3; position: relative; min-height: 500px; overflow: hidden; cursor: pointer; }
+    .hero-main:hover .hm-img { transform: scale(1.04); }
+    .hm-img { position: absolute; inset: 0; transition: transform .6s; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.35) 55%, transparent 100%); }
+    .hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; }
+    .hero-title { font-family: var(--font-display); font-size: clamp(24px,3vw,40px); font-weight: 700; line-height: 1.15; color: #fff; margin: 10px 0 12px; }
+    .hero-meta { font-size: 12px; color: #ccc; display: flex; gap: 10px; align-items: center; }
+    .hero-side { background: var(--bg-3); display: flex; flex-direction: column; }
+    .side-story { flex: 1; padding: 18px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .2s; }
+    .side-story:hover { background: var(--bg-4); }
+    .side-story:last-child { border-bottom: none; }
+    .side-img { height: 100px; overflow: hidden; margin-bottom: 10px; }
+    .side-img .ph { background: linear-gradient(135deg,#1d4ed8,#7c3aed); color: #2a3a8f; }
+    .side-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin: 6px 0 4px; }
+    .side-meta { font-size: 11px; color: var(--text-3); }
+
+    /* LATEST STRIP */
+    .latest-strip { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .latest-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; overflow-x: auto; scrollbar-width: none; gap: 0; }
+    .latest-inner::-webkit-scrollbar { display: none; }
+    .latest-item { flex-shrink: 0; padding: 0 24px; border-right: 1px solid var(--border); max-width: 210px; cursor: pointer; }
+    .latest-item:last-child { border-right: none; }
+    .latest-time { font-size: 10px; color: var(--red); font-weight: 700; letter-spacing: .08em; margin-bottom: 3px; }
+    .latest-headline { font-family: var(--font-serif); font-size: 13px; line-height: 1.4; color: var(--text-1); }
+    .latest-item:hover .latest-headline { color: var(--red); }
+
+    /* TOP STORIES GRID */
+    .top-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); }
+
+    /* WORLD + SIDEBAR */
+    .world-section { display: grid; grid-template-columns: 1fr 300px; gap: 2px; background: var(--border); margin-top: 2px; }
+    .world-list { background: var(--bg-3); }
+    .world-item { display: flex; gap: 14px; padding: 16px 20px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .2s; align-items: flex-start; }
+    .world-item:hover { background: var(--bg-4); }
+    .world-num { font-family: var(--font-display); font-size: 30px; font-weight: 900; color: var(--border); line-height: 1; flex-shrink: 0; width: 32px; }
+    .world-body { flex: 1; }
+    .world-cat { font-size: 10px; color: var(--red); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+    .world-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 3px; }
+    .world-meta { font-size: 11px; color: var(--text-3); }
+    .world-img { width: 88px; height: 66px; flex-shrink: 0; overflow: hidden; }
+
+    /* OPINION SIDEBAR */
+    .sidebar { background: var(--bg-2); padding: 22px 18px; }
+    .sidebar-title { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 16px; }
+    .opinion-item { display: flex; gap: 10px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); cursor: pointer; }
+    .opinion-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .opinion-av { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-5); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--red); flex-shrink: 0; }
+    .opinion-author { font-size: 11px; font-weight: 600; color: var(--text-1); margin-bottom: 3px; }
+    .opinion-headline { font-family: var(--font-serif); font-size: 12px; line-height: 1.4; color: var(--text-2); }
+    .opinion-item:hover .opinion-headline { color: var(--text-1); }
+
+    /* TRENDING */
+    .trending-bg { background: var(--bg-2); padding: 32px 0; border-top: 1px solid var(--border); }
+    .trending-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: var(--border); margin-top: 20px; }
+    .trending-card { background: var(--bg-3); padding: 20px; cursor: pointer; transition: background .2s; }
+    .trending-card:hover { background: var(--bg-4); }
+    .trending-num { font-family: var(--font-display); font-size: 44px; font-weight: 900; color: var(--red); opacity: .2; line-height: 1; margin-bottom: 8px; }
+    .trending-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 6px; }
+    .trending-meta { font-size: 11px; color: var(--text-3); }
+
+    /* SPECIAL SERIES */
+    .series-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: var(--border); }
+    .series-card { background: var(--bg-3); padding: 24px; cursor: pointer; transition: background .2s; border-left: 4px solid transparent; }
+    .series-card:hover { background: var(--bg-4); border-left-color: var(--red); }
+    .series-tag { font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+    .series-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; line-height: 1.25; color: var(--text-1); margin-bottom: 8px; }
+    .series-desc { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+
+    /* WEATHER BAR */
+    .weather-bar { background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 8px 0; }
+    .weather-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 4px; }
+    .weather-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); margin-right: 12px; flex-shrink: 0; }
+    .weather-item { display: flex; align-items: center; gap: 6px; padding: 0 16px; border-right: 1px solid var(--border); font-size: 12px; }
+    .weather-item:last-child { border-right: none; }
+    .weather-city { color: var(--text-3); font-size: 11px; }
+    .weather-icon { font-size: 14px; }
+    .weather-temp { font-weight: 600; color: var(--text-1); }
+
+    /* VIDEO SECTION */
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: var(--border); }
+    .video-card { background: var(--bg-3); cursor: pointer; overflow: hidden; }
+    .video-thumb { position: relative; height: 160px; overflow: hidden; }
+    .video-thumb .ph { background: linear-gradient(135deg,#1a1a2e,#16213e); }
+    .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: rgba(200,16,46,.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #fff; transition: transform .2s; }
+    .video-card:hover .video-play { transform: translate(-50%,-50%) scale(1.1); }
+    .video-duration { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 10px; padding: 2px 6px; font-weight: 600; }
+    .video-body { padding: 14px; }
+    .video-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 6px; }
+    .video-meta { font-size: 11px; color: var(--text-3); }
+
+    /* SEARCH OVERLAY */
+    .search-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85); z-index: 1000; align-items: flex-start; justify-content: center; padding-top: 80px; }
+    .search-box { background: var(--bg-2); width: 100%; max-width: 640px; border-top: 3px solid var(--red); }
+    .search-header { display: flex; align-items: center; padding: 0 20px; border-bottom: 1px solid var(--border); }
+    .search-header input { flex: 1; background: none; border: none; color: var(--text-1); font-size: 20px; padding: 20px 0; outline: none; font-family: var(--font-sans); }
+    .search-header input::placeholder { color: var(--text-3); }
+    .search-close { background: none; border: none; color: var(--text-3); font-size: 24px; padding: 8px; transition: color .2s; }
+    .search-close:hover { color: var(--text-1); }
+    .search-hints { padding: 16px 20px; font-size: 12px; color: var(--text-3); }
+    .search-hints strong { color: var(--text-2); display: block; margin-bottom: 8px; }
+    .search-hints span { display: inline-block; background: var(--bg-4); padding: 4px 12px; margin: 3px; border-radius: 2px; cursor: pointer; transition: background .2s; }
+    .search-hints span:hover { background: var(--red); color: #fff; }
+
+    @media(max-width:900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-side { flex-direction: row; }
+      .side-story { flex: 1; }
+      .top-grid { grid-template-columns: 1fr; }
+      .world-section { grid-template-columns: 1fr; }
+      .trending-grid { grid-template-columns: 1fr 1fr; }
+      .video-grid { grid-template-columns: 1fr 1fr; }
+      .series-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px) {
+      .hero-side { flex-direction: column; }
+      .trending-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <form class="search-header" id="searchForm">
+      <input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" />
+      <button type="button" class="search-close" id="searchClose">✕</button>
+    </form>
+    <div class="search-hints">
+      <strong>Trending searches</strong>
+      <span onclick="window.location='search.html?q=Pakistan'">Pakistan</span>
+      <span onclick="window.location='search.html?q=AI'">Artificial Intelligence</span>
+      <span onclick="window.location='search.html?q=Europe'">Europe</span>
+      <span onclick="window.location='search.html?q=Economy'">Economy</span>
+      <span onclick="window.location='search.html?q=Career'">Career Guide</span>
+    </div>
+  </div>
+</div>
+
+<!-- BREAKING TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Breaking</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <span>G7 leaders reach landmark AI governance agreement</span>
+      <span>Pakistan PM holds bilateral talks with US Secretary of State</span>
+      <span>EU announces €500bn energy independence package</span>
+      <span>Fed signals rate pause as inflation retreats</span>
+      <span>Middle East ceasefire talks enter critical final stage</span>
+      <span>Global markets rally on positive IMF outlook</span>
+      <span>G7 leaders reach landmark AI governance agreement</span>
+      <span>Pakistan PM holds bilateral talks with US Secretary of State</span>
+      <span>EU announces €500bn energy independence package</span>
+      <span>Fed signals rate pause as inflation retreats</span>
+      <span>Middle East ceasefire talks enter critical final stage</span>
+      <span>Global markets rally on positive IMF outlook</span>
+    </div>
+  </div>
+</div>
+
+<!-- STOCKS TICKER -->
+<div class="stocks-bar">
+  <div class="stocks-inner">
+    <div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421.23</span><span class="stock-up">▲ 0.84%</span></div>
+    <div class="stock-item"><span class="stock-name">DOW</span><span class="stock-val">39,872.15</span><span class="stock-up">▲ 0.56%</span></div>
+    <div class="stock-item"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453.08</span><span class="stock-up">▲ 1.12%</span></div>
+    <div class="stock-item"><span class="stock-name">FTSE 100</span><span class="stock-val">8,241.30</span><span class="stock-down">▼ 0.23%</span></div>
+    <div class="stock-item"><span class="stock-name">DAX</span><span class="stock-val">18,903.44</span><span class="stock-up">▲ 0.47%</span></div>
+    <div class="stock-item"><span class="stock-name">NIKKEI</span><span class="stock-val">38,502.77</span><span class="stock-up">▲ 0.91%</span></div>
+    <div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341.60</span><span class="stock-up">▲ 1.34%</span></div>
+    <div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341.50</span><span class="stock-down">▼ 0.18%</span></div>
+    <div class="stock-item"><span class="stock-name">OIL (WTI)</span><span class="stock-val">$78.42</span><span class="stock-up">▲ 0.67%</span></div>
+    <div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div>
+    <div class="stock-item"><span class="stock-name">USD/PKR</span><span class="stock-val">278.45</span><span class="stock-down">▼ 0.12%</span></div>
+    <div class="stock-item"><span class="stock-name">EUR/USD</span><span class="stock-val">1.0842</span><span class="stock-up">▲ 0.09%</span></div>
+    <!-- Duplicate for loop -->
+    <div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421.23</span><span class="stock-up">▲ 0.84%</span></div>
+    <div class="stock-item"><span class="stock-name">DOW</span><span class="stock-val">39,872.15</span><span class="stock-up">▲ 0.56%</span></div>
+    <div class="stock-item"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453.08</span><span class="stock-up">▲ 1.12%</span></div>
+    <div class="stock-item"><span class="stock-name">FTSE 100</span><span class="stock-val">8,241.30</span><span class="stock-down">▼ 0.23%</span></div>
+    <div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341.60</span><span class="stock-up">▲ 1.34%</span></div>
+    <div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341.50</span><span class="stock-down">▼ 0.18%</span></div>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <span id="currentDate"></span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="top-bar-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Newsletter</a>
+      </div>
+      <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo"><a href="index.html">Clarix<span>News</span></a></div>
+  <div class="tagline">World News · Unfiltered · Independent</div>
+</header>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <button class="mobile-nav-btn" id="mobileNavBtn">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="category.html?cat=world">World</a></li>
+      <li><a href="category.html?cat=pakistan">Pakistan</a></li>
+      <li><a href="category.html?cat=usa">US & Americas</a></li>
+      <li><a href="category.html?cat=europe">Europe</a></li>
+      <li><a href="category.html?cat=middleeast">Middle East</a></li>
+      <li><a href="category.html?cat=asia">Asia</a></li>
+      <li><a href="category.html?cat=business">Business</a></li>
+      <li><a href="category.html?cat=tech">Technology</a></li>
+      <li><a href="category.html?cat=career">Career & AI</a></li>
+      <li><a href="category.html?cat=opinion">Opinion</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="search-btn" id="searchBtn">🔍 Search</button>
+    </div>
+  </div>
+</nav>
+
+<!-- WEATHER BAR -->
+<div class="weather-bar">
+  <div class="weather-inner">
+    <span class="weather-label">Weather</span>
+    <div id="weatherWidget" style="display:flex;gap:0;"></div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero-border">
+      <div class="hero-grid">
+        <a href="article.html" class="hero-main">
+          <div class="hm-img"><div class="ph" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#2a4a7f;font-size:13px;">World News Photo</div></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="cat-pill world">World Exclusive</span>
+            <h1 class="hero-title">Global Powers Forge New Framework for Digital Economy Governance at Emergency Summit</h1>
+            <div class="hero-meta"><span>By Sarah Mitchell</span><span>·</span><span>2 hours ago</span><span>·</span><span>6 min read</span></div>
+          </div>
+        </a>
+        <div class="hero-side">
+          <a href="article.html" class="side-story">
+            <div class="side-img"><div class="ph" style="background:linear-gradient(135deg,#15803d,#065f46);"></div></div>
+            <span class="cat-pill pakistan">Pakistan</span>
+            <div class="side-title">PM Engages World Leaders on Debt Relief Initiative at UN Assembly</div>
+            <div class="side-meta">3 hours ago · 4 min read</div>
+          </a>
+          <a href="article.html" class="side-story">
+            <div class="side-img"><div class="ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95);"></div></div>
+            <span class="cat-pill europe">Europe</span>
+            <div class="side-title">ECB Holds Rates Steady as Eurozone Economy Shows Stabilization</div>
+            <div class="side-meta">5 hours ago · 3 min read</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LATEST STRIP -->
+  <div class="latest-strip">
+    <div class="latest-inner">
+      <a href="article.html" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">White House issues statement on new trade deal negotiations</div></a>
+      <a href="article.html" class="latest-item"><div class="latest-time">18 min ago</div><div class="latest-headline">Oil prices surge 4% following OPEC+ supply cut announcement</div></a>
+      <a href="article.html" class="latest-item"><div class="latest-time">34 min ago</div><div class="latest-headline">Pakistani rupee strengthens as IMF program resumes disbursement</div></a>
+      <a href="article.html" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">UK Parliament passes landmark climate legislation unanimously</div></a>
+      <a href="article.html" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">South Korea reports record tech exports in Q2 2026</div></a>
+      <a href="article.html" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">African Union summit focuses on regional security cooperation</div></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="ad-banner ad-banner-728">Advertisement · Google AdSense 728×90</div>
+
+    <!-- TOP STORIES -->
+    <div class="section-label"><h2>Top Stories</h2></div>
+    <div class="top-grid">
+      <a href="article.html" class="card">
+        <div class="card-img" style="height:185px;"><div class="ph" style="background:linear-gradient(135deg,#134e5e,#71b280);"></div></div>
+        <div class="card-body">
+          <div class="card-cat"><span class="cat-pill tech">Technology</span></div>
+          <div class="card-title" style="font-size:18px;">AI Race Intensifies as Major Labs Release Competing Frontier Models</div>
+          <div class="card-excerpt">The battle for AI supremacy entered a new phase as three leading research laboratories unveiled competing systems claiming significant advances in reasoning.</div>
+          <div class="card-meta">James Thornton · 4 hours ago</div>
+        </div>
+      </a>
+      <a href="article.html" class="card">
+        <div class="card-img" style="height:185px;"><div class="ph" style="background:linear-gradient(135deg,#1d4ed8,#4286f4);"></div></div>
+        <div class="card-body">
+          <div class="card-cat"><span class="cat-pill usa">US & Americas</span></div>
+          <div class="card-title" style="font-size:18px;">Senate Passes Sweeping $1.2 Trillion Infrastructure Package</div>
+          <div class="card-excerpt">A bipartisan coalition reached a breakthrough approving infrastructure renewal that funds roads, bridges, broadband and clean energy projects nationwide.</div>
+          <div class="card-meta">Laura Chen · 6 hours ago</div>
+        </div>
+      </a>
+      <a href="article.html" class="card">
+        <div class="card-img" style="height:185px;"><div class="ph" style="background:linear-gradient(135deg,#7c2d12,#c2410c);"></div></div>
+        <div class="card-body">
+          <div class="card-cat"><span class="cat-pill">Middle East</span></div>
+          <div class="card-title" style="font-size:18px;">Regional Powers Back Diplomatic Road Map for Lasting Stability</div>
+          <div class="card-excerpt">Six regional governments signed a preliminary agreement in Riyadh committing to a phased diplomatic process toward long-term peace.</div>
+          <div class="card-meta">Amir Hassan · 8 hours ago</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SPECIAL SERIES: AI & CAREER -->
+    <div class="section-label"><h2>Featured Series</h2></div>
+    <div class="series-grid">
+      <a href="article.html" class="series-card">
+        <div class="series-tag">AI Comparison Series</div>
+        <div class="series-title">ChatGPT vs Claude vs Gemini: Which AI Is Actually Best in 2026?</div>
+        <div class="series-desc">A comprehensive head-to-head comparison across writing, coding, reasoning, and real-world tasks. We tested all three so you don't have to.</div>
+      </a>
+      <a href="article.html" class="series-card">
+        <div class="series-tag">Career Guide</div>
+        <div class="series-title">Which Career Should You Choose? The Complete 2026 Field Guide</div>
+        <div class="series-desc">From technology to medicine to law — we break down salary, demand, future outlook, and what skills you actually need to succeed in each field.</div>
+      </a>
+      <a href="article.html" class="series-card">
+        <div class="series-tag">Jobs & AI</div>
+        <div class="series-title">AI Is Changing Every Industry — Here Are the Jobs That Will Thrive</div>
+        <div class="series-desc">Which careers are AI-proof, which will be transformed, and which are at risk? Our experts analyze 50 professions for the decade ahead.</div>
+      </a>
+      <a href="article.html" class="series-card">
+        <div class="series-tag">Tech Explainer</div>
+        <div class="series-title">If You're Going Into Tech in 2026, Here Are Your Best Career Options</div>
+        <div class="series-desc">Software engineering, data science, cybersecurity, AI/ML — which path pays most, which has most demand, and which suits your skills?</div>
+      </a>
+    </div>
+
+    <!-- WORLD + OPINION -->
+    <div class="section-label"><h2>Around the World</h2></div>
+    <div class="world-section">
+      <div class="world-list">
+        <a href="article.html" class="world-item"><div class="world-num">01</div><div class="world-body"><div class="world-cat">Asia Pacific</div><div class="world-title">Japan Announces $200bn Green Hydrogen Investment Plan</div><div class="world-meta">9 hours ago · 5 min read</div></div><div class="world-img"><div class="ph" style="background:linear-gradient(135deg,#005c97,#363795);"></div></div></a>
+        <a href="article.html" class="world-item"><div class="world-num">02</div><div class="world-body"><div class="world-cat">Africa</div><div class="world-title">Nigeria's New Economic Policy Draws Cautious Optimism</div><div class="world-meta">10 hours ago · 4 min read</div></div><div class="world-img"><div class="ph" style="background:linear-gradient(135deg,#134e5e,#71b280);"></div></div></a>
+        <a href="article.html" class="world-item"><div class="world-num">03</div><div class="world-body"><div class="world-cat">Europe</div><div class="world-title">NATO Summit Strengthens Eastern Flank Defense Commitments</div><div class="world-meta">11 hours ago · 6 min read</div></div><div class="world-img"><div class="ph" style="background:linear-gradient(135deg,#1a1a2e,#e94560);"></div></div></a>
+        <a href="article.html" class="world-item"><div class="world-num">04</div><div class="world-body"><div class="world-cat">South Asia</div><div class="world-title">SAARC Nations Revive Regional Trade Framework</div><div class="world-meta">12 hours ago · 3 min read</div></div><div class="world-img"><div class="ph" style="background:linear-gradient(135deg,#15803d,#065f46);"></div></div></a>
+        <a href="article.html" class="world-item"><div class="world-num">05</div><div class="world-body"><div class="world-cat">Business</div><div class="world-title">Global Semiconductor Shortage Easing as New Capacity Comes Online</div><div class="world-meta">14 hours ago · 4 min read</div></div><div class="world-img"><div class="ph" style="background:linear-gradient(135deg,#141e30,#243b55);"></div></div></a>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-title">Opinion & Analysis</div>
+        <a href="article.html" class="opinion-item"><div class="opinion-av">RK</div><div><div class="opinion-author">Raza Khan</div><div class="opinion-headline">Why Pakistan's Diplomatic Reset Is More Than a Tactical Shift</div></div></a>
+        <a href="article.html" class="opinion-item"><div class="opinion-av">EW</div><div><div class="opinion-author">Eleanor Walsh</div><div class="opinion-headline">The EU's Green Deal: Bold Vision or Unrealistic Promise?</div></div></a>
+        <a href="article.html" class="opinion-item"><div class="opinion-av">DM</div><div><div class="opinion-author">David Morrow</div><div class="opinion-headline">America's AI Strategy Needs More Than Executive Orders</div></div></a>
+        <a href="article.html" class="opinion-item"><div class="opinion-av">SC</div><div><div class="opinion-author">Sunita Chand</div><div class="opinion-headline">India's Rise and the New Asian Power Equation</div></div></a>
+      </div>
+    </div>
+
+    <!-- VIDEO SECTION -->
+    <div class="section-label"><h2>Video Reports</h2></div>
+    <div class="video-grid">
+      <a href="article.html" class="video-card">
+        <div class="video-thumb"><div class="ph" style="background:linear-gradient(135deg,#1a1a2e,#16213e);"></div><div class="video-play">▶</div><div class="video-duration">8:24</div></div>
+        <div class="video-body"><div class="video-title">Inside the AI Summit: What World Leaders Agreed On</div><div class="video-meta">World · 2 hours ago</div></div>
+      </a>
+      <a href="article.html" class="video-card">
+        <div class="video-thumb"><div class="ph" style="background:linear-gradient(135deg,#134e5e,#2a6049);"></div><div class="video-play">▶</div><div class="video-duration">5:12</div></div>
+        <div class="video-body"><div class="video-title">Pakistan Economy: What the IMF Deal Really Means</div><div class="video-meta">Pakistan · 4 hours ago</div></div>
+      </a>
+      <a href="article.html" class="video-card">
+        <div class="video-thumb"><div class="ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95);"></div><div class="video-play">▶</div><div class="video-duration">11:05</div></div>
+        <div class="video-body"><div class="video-title">ChatGPT vs Claude vs Gemini: Full 2026 Comparison</div><div class="video-meta">Technology · 6 hours ago</div></div>
+      </a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter">
+      <div class="newsletter-text"><h3>Stay Ahead of the News</h3><p>Get ClarixNews Morning Brief delivered to your inbox — free, every weekday.</p></div>
+      <div class="newsletter-form"><input type="email" placeholder="Your email address" /><button>Subscribe Free</button></div>
+    </div>
+
+  </div>
+
+  <!-- TRENDING -->
+  <div class="trending-bg">
+    <div class="container">
+      <div class="section-label"><h2>Trending Now</h2></div>
+      <div class="trending-grid">
+        <a href="article.html" class="trending-card"><div class="trending-num">01</div><div class="trending-title">Central Banks Eye Rate Cuts as Inflation Finally Retreats</div><div class="trending-meta">Business · 2.4k reads</div></a>
+        <a href="article.html" class="trending-card"><div class="trending-num">02</div><div class="trending-title">Pakistan Secures $3bn Energy Investment from Gulf Partners</div><div class="trending-meta">Pakistan · 1.8k reads</div></a>
+        <a href="article.html" class="trending-card"><div class="trending-num">03</div><div class="trending-title">Which AI Model Should You Actually Use in 2026?</div><div class="trending-meta">Technology · 1.7k reads</div></a>
+        <a href="article.html" class="trending-card"><div class="trending-num">04</div><div class="trending-title">Best Paying Tech Jobs That AI Cannot Replace</div><div class="trending-meta">Career · 1.5k reads</div></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Clarix<span>News</span></div>
+        <div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond. Fast, clear, and unfiltered journalism for a connected world.</div>
+        <div class="footer-social">
+          <a href="#" title="Twitter/X">𝕏</a>
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="WhatsApp">W</a>
+          <a href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=middleeast">Middle East</a></li><li><a href="category.html?cat=asia">Asia</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="#">Video</a></li><li><a href="#">Podcasts</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Advertise</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="#">Sitemap</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ClarixNews. All rights reserved.</div>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop">↑</button>
+<script src="shared.js"></script>
+</body>
+</html>
