@@ -177,23 +177,23 @@
     <article class="article-main">
       <div class="breadcrumb">
         <a href="index.html">Home</a><span>›</span>
-        <a href="category.html?cat=tech">Technology</a><span>›</span>
-        <span>AI Comparison</span>
+        <a href="category.html?cat=tech" id="breadCat">Technology</a><span>›</span>
+        <span>Article</span>
       </div>
 
-      <div class="article-cat"><span class="cat-pill tech">Technology</span></div>
-      <h1 class="article-title">ChatGPT vs Claude vs Gemini: Which AI Is Actually Best in 2026?</h1>
+      <div class="article-cat"><span class="cat-pill tech" id="artCatPill">Technology</span></div>
+      <h1 class="article-title" id="artTitle">ChatGPT vs Claude vs Gemini: Which AI Is Actually Best in 2026?</h1>
       <div class="article-subtitle">We ran hundreds of real-world tests across writing, coding, reasoning, math, and creativity. Here is exactly what we found — and which AI model you should be using.</div>
 
       <div class="article-meta">
         <div class="author-info">
-          <div class="author-av">JT</div>
-          <div><div class="author-name">James Thornton</div><div class="author-role">Senior Technology Editor</div></div>
+          <div class="author-av" id="artAuthorAv">JT</div>
+          <div><div class="author-name" id="artAuthorName">James Thornton</div><div class="author-role" id="artAuthorRole">Senior Technology Editor</div></div>
         </div>
         <div class="meta-details">
-          <span>📅 June 9, 2026</span>
-          <span>⏱ 12 min read</span>
-          <span>👁 47.3k views</span>
+          <span id="artDate">📅 June 9, 2026</span>
+          <span id="artReadTime">⏱ 12 min read</span>
+          <span id="artViews">👁 47.3k views</span>
         </div>
       </div>
 
@@ -208,10 +208,10 @@
       </div>
 
       <!-- HERO IMAGE -->
-      <div class="article-hero-img"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1400&q=80&fit=crop" alt="AI comparison 2026" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+      <div class="article-hero-img"><img id="artHeroImg" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1400&q=80&fit=crop" alt="AI comparison 2026" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
       <div class="img-caption">Three major AI platforms competed across hundreds of tasks in our comprehensive 2026 evaluation. — ClarixNews / Tech Desk</div>
 
-      <div class="article-body">
+      <div class="article-body" id="artBody">
         <p>Artificial intelligence has gone from a futuristic concept to an everyday tool used by hundreds of millions of people worldwide. But with so many options — ChatGPT, Claude, Gemini, and more — choosing the right AI assistant for your needs has become genuinely confusing. We spent three weeks running comprehensive tests to give you a definitive answer.</p>
 
         <blockquote>"The gap between the top models has narrowed significantly in 2026, but the differences in personality, reliability, and specific strengths are still very real." <cite>— ClarixNews Technology Desk</cite></blockquote>
@@ -274,7 +274,7 @@
       </div>
 
       <!-- TAGS -->
-      <div class="article-tags">
+      <div class="article-tags" id="artTags">
         <span>Tags:</span>
         <a href="search.html?q=ChatGPT" class="tag">ChatGPT</a>
         <a href="search.html?q=Claude" class="tag">Claude AI</a>
@@ -319,6 +319,7 @@
 
       <div class="sidebar-widget">
         <div class="widget-title">Related Articles</div>
+      <div id="relatedArticles">
         <a href="article.html" class="related-item">
           <div class="related-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&q=80&fit=crop" alt="Career tech" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
           <div><div class="related-title">Which Tech Career Should You Choose in 2026?</div><div class="related-meta">Career · 2 days ago</div></div>
@@ -332,10 +333,11 @@
           <div><div class="related-title">How to Use AI to 10x Your Productivity at Work</div><div class="related-meta">Technology · 5 days ago</div></div>
         </a>
       </div>
+      </div>
 
       <div class="sidebar-widget">
         <div class="widget-title">Most Read</div>
-        <a href="article.html" class="most-read-item"><div class="most-read-num">1</div><div class="most-read-title">Pakistan Secures $3bn Gulf Investment Deal</div></a>
+        <div id="mostRead"><a href="article.html" class="most-read-item"><div class="most-read-num">1</div><div class="most-read-title">Pakistan Secures $3bn Gulf Investment Deal</div></a>
         <a href="article.html" class="most-read-item"><div class="most-read-num">2</div><div class="most-read-title">Best Paying Jobs That AI Cannot Replace</div></a>
         <a href="article.html" class="most-read-item"><div class="most-read-num">3</div><div class="most-read-title">Fed Signals First Rate Cut in 18 Months</div></a>
         <a href="article.html" class="most-read-item"><div class="most-read-num">4</div><div class="most-read-title">NATO Summit: What the New Commitments Mean</div></a>
@@ -362,7 +364,98 @@
 <!-- SEARCH OVERLAY -->
 <div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" /><button type="button" class="search-close" id="searchClose">✕</button></form><div class="search-hints"><strong>Trending searches</strong><span onclick="window.location='search.html?q=Pakistan'">Pakistan</span><span onclick="window.location='search.html?q=AI'">AI</span><span onclick="window.location='search.html?q=Europe'">Europe</span><span onclick="window.location='search.html?q=Career'">Career</span></div></div></div>
 
+<script src="articles.js"></script>
 <script src="shared.js"></script>
+
+<script>
+// Load article dynamically based on URL ?id=
+(function() {
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id') || 'ai-comparison-2026';
+  const article = getArticle(id);
+  
+  if (!article) {
+    window.location.href = '404.html';
+    return;
+  }
+
+  // Update page title & meta
+  document.title = article.title + ' – ClarixNews';
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', article.subtitle);
+
+  // Update breadcrumb category
+  const breadCat = document.getElementById('breadCat');
+  if (breadCat) { breadCat.textContent = article.category; breadCat.href = 'category.html?cat=' + article.catClass; }
+
+  // Update category pill
+  const catPill = document.getElementById('artCatPill');
+  if (catPill) { catPill.textContent = article.category; catPill.className = 'cat-pill ' + article.catClass; }
+
+  // Update title & subtitle
+  const titleEl = document.getElementById('artTitle');
+  if (titleEl) titleEl.textContent = article.title;
+  const subEl = document.getElementById('artSubtitle');
+  if (subEl) subEl.textContent = article.subtitle;
+
+  // Update author
+  const avEl = document.getElementById('artAuthorAv');
+  if (avEl) avEl.textContent = article.authorInitials;
+  const nameEl = document.getElementById('artAuthorName');
+  if (nameEl) nameEl.textContent = article.author;
+  const roleEl = document.getElementById('artAuthorRole');
+  if (roleEl) roleEl.textContent = article.authorRole;
+
+  // Update meta details
+  const dateEl = document.getElementById('artDate');
+  if (dateEl) dateEl.textContent = '📅 ' + article.date;
+  const timeEl = document.getElementById('artReadTime');
+  if (timeEl) timeEl.textContent = '⏱ ' + article.readTime;
+  const viewsEl = document.getElementById('artViews');
+  if (viewsEl) viewsEl.textContent = '👁 ' + article.views + ' views';
+
+  // Update hero image
+  const heroImg = document.getElementById('artHeroImg');
+  if (heroImg) { heroImg.src = article.image; heroImg.alt = article.title; }
+
+  // Update article body
+  const bodyEl = document.getElementById('artBody');
+  if (bodyEl) bodyEl.innerHTML = article.content;
+
+  // Update tags
+  const tagsEl = document.getElementById('artTags');
+  if (tagsEl) {
+    tagsEl.innerHTML = '<span>Tags:</span> ' + article.tags.map(t =>
+      `<a href="search.html?q=${encodeURIComponent(t)}" class="tag">${t}</a>`
+    ).join('');
+  }
+
+  // Load related articles
+  const relatedEl = document.getElementById('relatedArticles');
+  if (relatedEl) {
+    const related = getRelatedArticles(id, 3);
+    relatedEl.innerHTML = related.map(a => `
+      <a href="article.html?id=${a.id}" class="related-item">
+        <div class="related-img"><img src="${a.image}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+        <div>
+          <div class="related-title">${a.title}</div>
+          <div class="related-meta">${a.category} · ${a.date}</div>
+        </div>
+      </a>`).join('');
+  }
+
+  // Load most read (all articles)
+  const mostReadEl = document.getElementById('mostRead');
+  if (mostReadEl) {
+    const others = getRelatedArticles(id, 5);
+    mostReadEl.innerHTML = others.map((a, i) => `
+      <a href="article.html?id=${a.id}" class="most-read-item">
+        <div class="most-read-num">${i+1}</div>
+        <div class="most-read-title">${a.title}</div>
+      </a>`).join('');
+  }
+})();
+</script>
 <script>
   // Reading progress bar
   window.addEventListener('scroll', () => {
