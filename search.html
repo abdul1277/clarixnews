@@ -136,10 +136,11 @@
 <button class="scroll-top" id="scrollTop">↑</button>
 <div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" /><button type="button" class="search-close" id="searchClose">✕</button></form></div></div>
 
+<script src="articles.js"></script>
 <script src="shared.js"></script>
 <script>
 const articles = [
-  { title: 'ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026?', excerpt: 'We ran hundreds of real-world tests across writing, coding, reasoning and creativity. Here is exactly what we found.', cat: 'Technology', catClass: 'tech', time: '2 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=300&q=80&fit=crop' },
+  { title: 'ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026?', excerpt: 'We ran hundreds of real-world tests across writing, coding, reasoning and creativity. Here is exactly what we found.', cat: 'Technology', catClass: 'tech', time: '2 hours ago', bg: '', id: 'ai-comparison-2026', id: 'pakistan-gulf-investment', id: 'us-infrastructure-package', id: 'ai-jobs-future', id: 'europe-ecb-rates', id: 'career-guide-2026', id: 'tech-career-options-2026', id: 'global-ai-governance', id: 'pakistan-gulf-investment', id: 'ai-jobs-future', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=300&q=80&fit=crop' },
   { title: 'Pakistan PM Engages World Leaders on Debt Relief at UN', excerpt: 'Prime Minister held a series of high-level bilateral meetings at the United Nations headquarters in New York.', cat: 'Pakistan', catClass: 'pakistan', time: '3 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=300&q=80&fit=crop' },
   { title: 'Senate Passes Sweeping $1.2 Trillion Infrastructure Package', excerpt: 'A bipartisan coalition in the US Senate approved the landmark bill after months of heated negotiations.', cat: 'US & Americas', catClass: 'usa', time: '6 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=300&q=80&fit=crop' },
   { title: 'AI Jobs That Will Boom in the Next Five Years', excerpt: 'Which AI-related careers are growing fastest, paying most, and most likely to survive the next decade of automation?', cat: 'Career', catClass: 'career', time: '4 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&q=80&fit=crop' },
@@ -176,7 +177,7 @@ if (query) {
   } else {
     meta.innerHTML = '<strong>' + filtered.length + ' results</strong> for "<strong class=\'highlight\'>' + query + '</strong>"';
     results.innerHTML = filtered.map(a => `
-      <a href="article.html" class="result-item">
+      <a href="article.html?id=${a.id || 'ai-comparison-2026'}" class="result-item">
         <div class="result-img"><img src="${a.img}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
         <div class="result-body">
           <div class="result-cat"><span class="cat-pill ${a.catClass}">${a.cat}</span></div>
