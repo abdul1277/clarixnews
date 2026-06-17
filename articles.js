@@ -1,5 +1,24 @@
 const ARTICLES = [
 
+  // Peace Deal Article
+  {
+    id: "us-iran-peace-deal-pakistan-mediator",
+    title: "US and Iran Reach Historic Peace Deal: How Pakistan Ended a 107-Day War",
+    subtitle: "Trump announced the end of the US-Iran war on June 14, with Pakistan's PM Shehbaz Sharif and Army Chief Asim Munir credited as key mediators who brokered the historic agreement.",
+    category: "World",
+    catClass: "world",
+    author: "Amir Hassan & Raza Khan",
+    authorRole: "Middle East & South Asia Desks",
+    authorInitials: "AH",
+    date: "June 16, 2026",
+    readTime: "10 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&q=80&fit=crop",
+    tags: ["US Iran Peace Deal", "Pakistan", "Shehbaz Sharif", "Strait of Hormuz", "Trump", "Middle East"],
+    content: `<p>After 107 days of war that shut down the Strait of Hormuz and rattled global oil markets, the United States and Iran reached a historic peace agreement on June 14, 2026. President Trump confirmed the deal, announcing the immediate removal of the US naval blockade and the reopening of the Strait of Hormuz. Behind the headlines lies a remarkable story — Pakistan played the decisive role as mediator.</p><h2>How the War Began</h2><p>The conflict started on February 28, 2026, when the US and Israel launched coordinated strikes on Iran, killing Supreme Leader Ali Khamenei. Iran responded by closing the Strait of Hormuz, through which 20% of the world's oil passes, triggering a global economic crisis with oil prices surging past $100 per barrel.</p><h2>Pakistan Steps In</h2><p>Pakistan emerged as the one country capable of talking to both sides. PM Shehbaz Sharif held direct talks with Iranian President Pezeshkian while Army Chief Asim Munir spoke personally with President Trump at critical moments. Pakistan relayed messages between US Special Envoy Steve Witkoff and Iranian Foreign Minister Abbas Araghchi — acting as the essential bridge between two governments that could not speak directly.</p><blockquote>"Throughout this period, he was awake all day and night." — PM Shehbaz Sharif, speaking about Army Chief Asim Munir's role</blockquote><h2>The Deal</h2><p>On June 14, Trump announced the deal on Truth Social: immediate end to military operations, reopening of the Strait of Hormuz for toll-free shipping, removal of the US naval blockade, and a 60-day negotiation period for longer-term issues including Iran's nuclear program. The formal signing ceremony was scheduled for June 19 in Switzerland.</p><h2>Pakistan's Historic Achievement</h2><p>For Pakistan, this represents a remarkable diplomatic achievement — a country that demonstrated it can play a constructive, consequential role in the world's most complex geopolitical disputes. Field Marshal Asim Munir's personal relationships with both Trump and Iranian leadership proved decisive. PM Sharif told Pakistan's National Assembly that it was Munir who "kept the deliberations alive" each time they appeared close to collapse.</p>`
+  },
+  
+
   // Fot ball Article
   {
   id: "world-cup-2026-day7-england-croatia",
