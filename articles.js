@@ -1,5 +1,57 @@
 const ARTICLES = [
 
+  // Fot ball Article
+  {
+  id: "world-cup-2026-day7-england-croatia",
+  title: "World Cup 2026 Day 7: England Face Croatia Revenge Match, Ronaldo Returns, Germany Smash Curaçao 7-1",
+  subtitle: "Day 7 of the 2026 FIFA World Cup brings the tournament's most anticipated group stage clash as England meet Croatia in Dallas — the team that broke their hearts at Russia 2018. Plus Cristiano Ronaldo makes his World Cup bow at 41, and Germany destroy Curaçao 7-1.",
+  category: "Sports",
+  catClass: "world",
+  author: "ClarixNews Sports Desk",
+  authorRole: "Sports Editor",
+  authorInitials: "SD",
+  date: "June 17, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80&fit=crop",
+  tags: ["FIFA World Cup 2026", "England", "Croatia", "Portugal", "Ronaldo", "Germany", "Football", "Sports"],
+  content: `
+    <p>Wednesday June 17 marks Day 7 of the 2026 FIFA World Cup — and it is one of the most loaded days of the entire group stage. England begin their campaign against a familiar and dangerous Croatia side at AT&T Stadium in Dallas, Texas. Cristiano Ronaldo makes his fifth World Cup appearance against DR Congo in Houston. And the tournament has already witnessed its most one-sided scoreline as Germany demolished Curaçao 7-1 in what is becoming a trademark World Cup blowout victory for Die Mannschaft.</p>
+
+    <blockquote>"England are ready. We have prepared for this moment for four years. Croatia will be tough — they always are — but we believe in ourselves." — Thomas Tuchel, England Manager, pre-match press conference</blockquote>
+
+    <h2>Germany 7–1 Curaçao — The Blowout of the Tournament</h2>
+    <p>Germany wasted no time announcing themselves at the 2026 World Cup, delivering a stunning 7-1 demolition of Curaçao in Houston that sent a message to every other contender in the field. It was a performance of relentless efficiency — the kind that has made Germany one of football's most feared tournament sides across generations.</p>
+    <p>The result continues Germany's remarkable World Cup tradition of big wins in the group stage. For Curaçao, making only their second World Cup appearance, it was a brutal introduction to the highest level of international football. Germany now top their group and look ominous heading into the rest of the competition.</p>
+
+    <h2>England vs Croatia — The Revenge Match</h2>
+    <p>Of all the group stage fixtures at the 2026 World Cup, none carries more historical weight than England vs Croatia. The last time these two nations met at a World Cup, Croatia broke English hearts in the 2018 Russia semi-final, winning 2-1 in extra time through a Mario Mandzukic winner to reach their first ever final. Eight years later, England have the chance for revenge — and a chance to set up a smooth path through Group L.</p>
+    <p>England arrive in Dallas as clear favourites under German manager Thomas Tuchel. The squad is arguably the most talented England have assembled in decades — Jude Bellingham in midfield, Bukayo Saka and Anthony Gordon on the wings, and Harry Kane leading the line. However, Saka carries a slight Achilles concern into the match that will be closely monitored.</p>
+    <p>Croatia, meanwhile, are not the force they were in 2018. Luka Modric — now 40 years old — remains their inspirational captain, but the legs that powered Croatia to that historic final run are no longer what they were. Their squad has been rebuilt around a younger generation, but questions remain about whether they have the depth and quality to compete at the highest level in 2026.</p>
+    <p>The match kicks off at 4pm ET (9pm BST) at AT&T Stadium in Arlington, Texas — one of the largest stadiums in the world — in what is expected to be an electric atmosphere with huge support for both nations.</p>
+
+    <h2>Portugal vs DR Congo — Ronaldo's 2026 World Cup Debut</h2>
+    <p>At 41 years old, Cristiano Ronaldo makes what is widely expected to be his final World Cup appearance as Portugal open their Group K campaign against DR Congo in Houston. Ronaldo is already the only player in history to have scored in five World Cups — a record he shares with no one. A goal today would extend that extraordinary legacy.</p>
+    <p>Portugal arrive as one of the tournament's stronger contenders, with a squad full of talent beyond just Ronaldo: Bruno Fernandes, Bernardo Silva, João Neves, and Pedro Neto form one of the most exciting supporting casts in the tournament. Roberto Martínez's side won their qualifying group in style, including a remarkable 9-1 win over Armenia.</p>
+    <p>DR Congo are the romantic story of the day — returning to the World Cup for the first time in 52 years. Their journey to the 2026 World Cup was extraordinary, culminating in Axel Tuanzebe's extra-time winner against Jamaica in their intercontinental playoff. They have never previously met Portugal in any competitive or friendly match. Anything but a Portugal victory would rank among the biggest upsets of the group stage.</p>
+
+    <h2>Colombia vs Uzbekistan — Group K's Other Fixture</h2>
+    <p>The day concludes with Colombia facing Uzbekistan at the iconic Estadio Azteca in Mexico City — one of football's most historic venues. Colombia, with their talented generation of players, are considered clear favorites. Uzbekistan, the Central Asian nation making their World Cup debut, will be hoping to cause a surprise on the biggest stage of their football history.</p>
+
+    <h2>World Cup Day 7 — Schedule at a Glance</h2>
+    <p><strong>Austria 3–1 Jordan</strong> (San Francisco) — Austria made a strong statement in the day's early match, beating Jordan 3-1 to go top of their group.</p>
+    <p><strong>Portugal vs DR Congo</strong> — 1pm ET, NRG Stadium, Houston</p>
+    <p><strong>England vs Croatia</strong> — 4pm ET, AT&T Stadium, Arlington, Texas</p>
+    <p><strong>Ghana vs Panama</strong> — 7pm ET, BMO Field, Toronto</p>
+    <p><strong>Colombia vs Uzbekistan</strong> — 10pm ET, Estadio Azteca, Mexico City</p>
+
+    <h2>Tournament So Far — Key Results</h2>
+    <p>The 2026 World Cup has already delivered extraordinary drama in its first seven days. Mexico beat South Africa 2-0 in the opening match. South Korea came back to beat Czechia 2-1. France's Kylian Mbappé became his country's record World Cup scorer with a brace against Senegal in a 3-1 win. Brazil were held 1-1 by Morocco. Scotland ended their 36-year World Cup winning drought by beating Haiti 1-0. The USA impressed massively, crushing Paraguay 4-1 at home. And Germany crushed Curaçao 7-1 — the tournament's biggest winning margin so far.</p>
+    <p>With 48 teams competing for the first time in World Cup history, this tournament has produced more goals, more surprises, and more memorable moments in its opening week than almost any in living memory. The group stage has barely begun — and the football is already extraordinary.</p>
+  `
+},
+  
+
   // ── 1. US-IRAN AIRSTRIKES ──
   {
     id: "us-iran-airstrikes-2026",
