@@ -1,5 +1,63 @@
 const ARTICLES = [
 
+
+  {
+  id: "messi-hattrick-world-cup-2026-argentina",
+  title: "Messi's First-Ever World Cup Hat-Trick: The 38-Year-Old GOAT Silences Every Doubter at 2026 World Cup",
+  subtitle: "Lionel Messi scored a stunning hat-trick against Algeria to equal Miroslav Klose's all-time World Cup scoring record of 16 goals — 20 years to the day of his World Cup debut. England beat Croatia 4-2. Here is your complete World Cup Day 6-9 recap.",
+  category: "Sports",
+  catClass: "world",
+  author: "ClarixNews Sports Desk",
+  authorRole: "Sports Editor",
+  authorInitials: "SD",
+  date: "June 20, 2026",
+  readTime: "10 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80&fit=crop",
+  tags: ["Messi", "World Cup 2026", "Argentina", "Hat-trick", "England Croatia", "FIFA", "Football"],
+  content: `
+    <p>Twenty years to the day that a teenage Lionel Messi made his World Cup debut against Serbia and Montenegro — scoring in that game too — the greatest player of all time delivered a performance for the ages at the 2026 FIFA World Cup. A first-ever World Cup hat-trick in a 3-0 win over Algeria equalled Miroslav Klose's all-time scoring record of 16 World Cup goals, silenced every doubter who questioned why a 38-year-old was still playing, and set the tone for what is already shaping up to be the most spectacular World Cup in history.</p>
+
+    <blockquote>"My tears after the first goal? I've had some tough days. It wasn't related to football. And those feelings were because of that." — Lionel Messi, post-match interview, June 16, 2026</blockquote>
+
+    <h2>Messi 3–0 Algeria: The Hat-Trick Heard Around the World</h2>
+    <p>Argentina opened their title defence at Kansas City Stadium on June 16, and from the first whistle there was only going to be one story. Messi, who turned 39 in just a few days, was everywhere — pressing, creating, finishing with that trademark left foot. His first goal came from a mazy run that cut straight through Algeria's defence, a drive on the edge of the box that flew past keeper Luca Zidane — yes, the son of Zinedine Zidane — with devastating power.</p>
+    <p>The strike took Messi level with former Germany striker Miroslav Klose on 16 World Cup goals, making him the joint-highest scorer in men's World Cup history.  His second came from an opportunistic rebound early in the second half. The third was a crisp, clinical finish that completed only the 61st hat-trick of Messi's remarkable career — his first ever at a World Cup.</p>
+    <p>The crowd of 69,000 at Kansas City Stadium gave him a standing ovation when he was substituted off with minutes remaining — even Messi himself seemed disappointed to leave the pitch, as though he knew he was in the middle of something magical. The hat-trick came 20 years to the day that Messi made his World Cup debut against Serbia and Montenegro — he scored in that one, too.</p> 
+    <p>Before the match, some had whispered that Argentina should not have brought Messi. At 38, almost 39, with hamstring concerns and the accumulated wear of six World Cups across two decades, was it not time to let go? By the final whistle, nobody was asking that question anymore.</p>
+
+    <h2>England 4–2 Croatia: Revenge at Last</h2>
+    <p>Eight years after Croatia broke English hearts in the Russia 2018 semi-final, England got their revenge — and then some. England beat Croatia 4-2 in Dallas  in a breathless Group L clash that featured everything a football fan could ask for: drama, goals, controversy, and a performance that suggests Tuchel's side could go deep in this tournament.</p>
+    <p>Croatia, despite the advancing years of captain Luka Modric, made a game of it — but England's superior firepower ultimately proved decisive. The result leaves England top of Group L heading into their second group game against Ghana.</p>
+
+    <h2>France 3–1 Senegal: Mbappé Inspires</h2>
+    <p>France defeated Senegal 3-1 thanks to an inspired second-half performance, led by Michael Olise.  France, widely considered one of the tournament's strongest contenders, are finding their groove at exactly the right time. With Kylian Mbappé in inspired form, Les Bleus are looking every bit the force many predicted they would be before the tournament.</p>
+
+    <h2>Norway 4–1 Iraq: Haaland Delivers</h2>
+    <p>Iraq and Norway returned to the global stage playing out a 4-1 scoreline, in which Erling Haaland unsurprisingly netted twice.  Norway's Erling Haaland, who many consider the only living footballer capable of challenging Messi and Mbappé for the Golden Boot, announced his arrival at the tournament with typical efficiency. Two goals, relentless pressing, and the kind of physical dominance that makes opposing defenders' nights very long indeed.</p>
+
+    <h2>USA 2–0 Australia: Home Crowd Roars Again</h2>
+    <p>The United States beat Australia 2-0 on June 19,  cementing their position at the top of Group D and continuing what has been a remarkable home tournament so far. After crushing Paraguay 4-1 in their opener, the US have now won both of their first two games without conceding a goal — the kind of form that gets neutral fans excited about the possibility of a host nation going all the way.</p>
+
+    <h2>Brazil 3–0 Haiti: Vinicius Leads the Way</h2>
+    <p>Brazil beat Haiti 3-0 on June 19,  recovering from their surprising 1-1 draw with Morocco in their opening match. Vinicius Jr. was the driving force, adding two goals to the one he scored against Morocco. Brazil need a strong result in their final group game against Morocco to ensure they top the group, but the quality is clearly there.</p>
+
+    <h2>Morocco 1–0 Scotland: African Lions Continue to Impress</h2>
+    <p>Morocco beat Scotland 1-0 on June 19,  continuing their impressive form that began with holding Brazil to a draw. Morocco, who reached the semi-finals at Qatar 2022, are proving once again that African football can compete at the very highest level. Scotland's historic win over Haiti now looks like a solitary bright spot in what could be a difficult group stage exit.</p>
+
+    <h2>The Golden Boot Race: Messi Leads, Haaland Closes</h2>
+    <p>After nine days and 27 matches, the 2026 World Cup Golden Boot race is already one of the most exciting in recent memory. There have been 27 games and a whopping 88 goals at the World Cup 2026 so far  — making this one of the highest-scoring tournaments in history. Messi leads the Golden Boot race on three goals, alongside Jonathan David of Canada who scored a hat-trick versus Qatar. Haaland, Mbappé, and Vinicius Jr. are all on two goals and threatening to make this a race that goes all the way to the final.</p>
+
+    <h2>Today's Fixtures — June 20</h2>
+    <p>Today's schedule includes Germany vs Ivory Coast at 4pm ET in Toronto, Ecuador vs Curaçao at 8pm ET in Kansas City, Netherlands vs Sweden at 1pm ET, and Tunisia vs Japan at midnight ET in Guadalajara. Germany, who demolished Curaçao 7-1 in their opener, face a sterner test against Ivory Coast — a side with genuine quality throughout their squad.</p>
+
+    <h2>What This World Cup Is Telling Us</h2>
+    <p>Ten days in, the 2026 FIFA World Cup is already delivering on its extraordinary promise. The expanded 48-team format, initially greeted with scepticism by purists, has produced more goals, more upsets, and more talking points than almost any World Cup in living memory. With Messi chasing history, Haaland and Mbappé in top form, England looking dangerous, and the USA riding a wave of home support, the knockout stages — still weeks away — are already being anticipated with extraordinary excitement.</p>
+    <p>For now, though, one image dominates: a 38-year-old from Rosario, Argentina, running toward the corner flag at Kansas City Stadium with pure joy on his face, having just scored his first World Cup hat-trick, twenty years after it all began. Some things in football transcend sport entirely. This was one of them.</p>
+  `
+},
+  
+
   // Peace Deal Article
   {
     id: "us-iran-peace-deal-pakistan-mediator",
