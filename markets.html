@@ -88,7 +88,7 @@
         {"description":"Gold","proName":"TVC:GOLD"},
         {"description":"Oil (WTI)","proName":"TVC:USOIL"},
         {"description":"EUR/USD","proName":"FX:EURUSD"},
-        {"description":"USD/PKR","proName":"FX:USDPKR"},
+        {"description":"USD/PKR","proName":"OANDA:USDPKR"},
         {"description":"GBP/USD","proName":"FX:GBPUSD"}
       ],
       "showSymbolLogo": true,
@@ -156,7 +156,7 @@
                 {"s": "FOREXCOM:SPXUSD", "d": "S&P 500"},
                 {"s": "FOREXCOM:NSXUSD", "d": "Nasdaq 100"},
                 {"s": "FOREXCOM:DJI", "d": "Dow Jones"},
-                {"s": "INDEX:UKX", "d": "FTSE 100"},
+                {"s": "TVC:UKX", "d": "FTSE 100"},
                 {"s": "INDEX:DEU40", "d": "DAX"},
                 {"s": "INDEX:NKY", "d": "Nikkei 225"},
                 {"s": "INDEX:KSE100", "d": "KSE-100"}
@@ -170,20 +170,21 @@
                 {"s": "TVC:SILVER", "d": "Silver"},
                 {"s": "TVC:USOIL", "d": "Oil (WTI)"},
                 {"s": "TVC:UKOIL", "d": "Oil (Brent)"},
-                {"s": "TVC:NATURALGAS", "d": "Natural Gas"},
+                {"s": "TVC:NGAS", "d": "Natural Gas"},
                 {"s": "TVC:COPPER", "d": "Copper"}
               ],
               "originalTitle": "Commodities"
             },
             {
-              "title": "Bonds",
+              "title": "Crypto",
               "symbols": [
-                {"s": "CBOT:ZB1!", "d": "T-Bond"},
-                {"s": "CBOT:UB1!", "d": "Ultra T-Bond"},
-                {"s": "EUREX:FGBL1!", "d": "Euro Bund"},
-                {"s": "EUREX:FBTP1!", "d": "Euro BTP"}
+                {"s": "BITSTAMP:BTCUSD", "d": "Bitcoin"},
+                {"s": "BITSTAMP:ETHUSD", "d": "Ethereum"},
+                {"s": "BINANCE:BNBUSDT", "d": "BNB"},
+                {"s": "BINANCE:SOLUSDT", "d": "Solana"},
+                {"s": "BINANCE:XRPUSDT", "d": "XRP"}
               ],
-              "originalTitle": "Bonds"
+              "originalTitle": "Crypto"
             },
             {
               "title": "Forex",
@@ -191,9 +192,9 @@
                 {"s": "FX:EURUSD", "d": "EUR/USD"},
                 {"s": "FX:GBPUSD", "d": "GBP/USD"},
                 {"s": "FX:USDJPY", "d": "USD/JPY"},
-                {"s": "FX:USDPKR", "d": "USD/PKR"},
-                {"s": "FX:USDINR", "d": "USD/INR"},
-                {"s": "FX:USDSAR", "d": "USD/SAR"}
+                {"s": "OANDA:USDPKR", "d": "USD/PKR"},
+                {"s": "OANDA:USDINR", "d": "USD/INR"},
+                {"s": "OANDA:USDSAR", "d": "USD/SAR"}
               ],
               "originalTitle": "Forex"
             }
@@ -384,7 +385,7 @@
         {
           "width": "100%",
           "height": "400",
-          "currencies": ["EUR","USD","JPY","GBP","CHF","AUD","CAD","NZD","CNY","INR","PKR","SAR","AED"],
+          "currencies": ["EUR","USD","JPY","GBP","CHF","AUD","CAD","NZD","CNY","INR"],
           "isTransparent": false,
           "colorTheme": "dark",
           "locale": "en",
@@ -404,7 +405,7 @@
           "autosize": false,
           "width": "100%",
           "height": "400",
-          "symbol": "FX:USDPKR",
+          "symbol": "OANDA:USDPKR",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "dark",
