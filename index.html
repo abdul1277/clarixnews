@@ -41,7 +41,6 @@
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -177,6 +176,12 @@
   gtag('js', new Date());
   gtag('config', 'G-T7B4BGRJFC');
 </script>
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
 </head>
 <body>
 
@@ -220,28 +225,10 @@
 </div>
 
 <!-- STOCKS TICKER -->
-<div class="stocks-bar">
-  <div class="stocks-inner">
-    <div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421.23</span><span class="stock-up">▲ 0.84%</span></div>
-    <div class="stock-item"><span class="stock-name">DOW</span><span class="stock-val">39,872.15</span><span class="stock-up">▲ 0.56%</span></div>
-    <div class="stock-item"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453.08</span><span class="stock-up">▲ 1.12%</span></div>
-    <div class="stock-item"><span class="stock-name">FTSE 100</span><span class="stock-val">8,241.30</span><span class="stock-down">▼ 0.23%</span></div>
-    <div class="stock-item"><span class="stock-name">DAX</span><span class="stock-val">18,903.44</span><span class="stock-up">▲ 0.47%</span></div>
-    <div class="stock-item"><span class="stock-name">NIKKEI</span><span class="stock-val">38,502.77</span><span class="stock-up">▲ 0.91%</span></div>
-    <div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341.60</span><span class="stock-up">▲ 1.34%</span></div>
-    <div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341.50</span><span class="stock-down">▼ 0.18%</span></div>
-    <div class="stock-item"><span class="stock-name">OIL (WTI)</span><span class="stock-val">$78.42</span><span class="stock-up">▲ 0.67%</span></div>
-    <div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div>
-    <div class="stock-item"><span class="stock-name">USD/PKR</span><span class="stock-val">278.45</span><span class="stock-down">▼ 0.12%</span></div>
-    <div class="stock-item"><span class="stock-name">EUR/USD</span><span class="stock-val">1.0842</span><span class="stock-up">▲ 0.09%</span></div>
-    <!-- Duplicate for loop -->
-    <div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421.23</span><span class="stock-up">▲ 0.84%</span></div>
-    <div class="stock-item"><span class="stock-name">DOW</span><span class="stock-val">39,872.15</span><span class="stock-up">▲ 0.56%</span></div>
-    <div class="stock-item"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453.08</span><span class="stock-up">▲ 1.12%</span></div>
-    <div class="stock-item"><span class="stock-name">FTSE 100</span><span class="stock-val">8,241.30</span><span class="stock-down">▼ 0.23%</span></div>
-    <div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341.60</span><span class="stock-up">▲ 1.34%</span></div>
-    <div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341.50</span><span class="stock-down">▼ 0.18%</span></div>
-  </div>
+<div class="stocks-bar" style="cursor:pointer;" onclick="window.location='markets.html'" title="Click for live markets">
+<div class="stocks-inner" id="homeTickerInner">
+<div class="stock-item"><span class="stock-name">Loading live prices</span><span class="stock-val" style="color:var(--text-3)">⟳</span></div>
+</div></div>
 </div>
 
 <!-- TOP BAR -->
@@ -283,6 +270,7 @@
       <li><a href="category.html?cat=tech">Technology</a></li>
       <li><a href="category.html?cat=career">Career & AI</a></li>
       <li><a href="category.html?cat=opinion">Opinion</a></li>
+      <li><a href="markets.html">📈 Markets</a></li>
     </ul>
     <div class="nav-right">
       <button class="search-btn" id="searchBtn">🔍 Search</button>
@@ -304,21 +292,21 @@
     <!-- HERO -->
     <div class="hero-border">
       <div class="hero-grid">
-        <a href="article.html?id=us-iran-airstrikes-2026" class="hero-main">
-          <div class="hm-img"><img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=1200&q=80&fit=crop" alt="US Iran War" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+        <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="hero-main">
+          <div class="hm-img"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80&fit=crop" alt="US Iran Peace Deal Pakistan" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <span class="cat-pill world">Breaking News</span>
-            <h1 class="hero-title">Trump Threatens to Hit Iran 'Very Hard' as US-Iran War Escalates Into Third Week</h1>
-            <div class="hero-meta"><span>By Amir Hassan</span><span>·</span><span>3 hours ago</span><span>·</span><span>7 min read</span></div>
+            <span class="cat-pill world">Breaking — World Exclusive</span>
+            <h1 class="hero-title">US and Iran Reach Historic Peace Deal: How Pakistan Ended a 107-Day War</h1>
+            <div class="hero-meta"><span>By Amir Hassan & Raza Khan</span><span>·</span><span>2 hours ago</span><span>·</span><span>10 min read</span></div>
           </div>
         </a>
         <div class="hero-side">
-          <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="side-story">
+          <a href="article.html?id=europe-ecb-rates" class="side-story">
             <div class="side-img"><img src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600&q=80&fit=crop" alt="Pakistan UN Assembly" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
-            <span class="cat-pill pakistan">World</span>
-            <div class="side-title">US-Iran Peace Deal: How Pakistan Ended a 107-Day War</div>
-            <div class="side-meta">2 hours ago · 10 min read</div>
+            <span class="cat-pill pakistan">Pakistan</span>
+            <div class="side-title">PM Engages World Leaders on Debt Relief Initiative at UN Assembly</div>
+            <div class="side-meta">3 hours ago · 4 min read</div>
           </a>
           <a href="article.html?id=south-korea-yoon-sentenced" class="side-story">
             <div class="side-img"><img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=600&q=80&fit=crop" alt="South Korea Yoon sentenced" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
@@ -335,10 +323,8 @@
   <!-- LATEST STRIP -->
   <div class="latest-strip">
     <div class="latest-inner">
-      <a href="article.html?id=fox-roku-22-billion-streaming-deal-2026" class="latest-item"><div class="latest-time">Breaking</div><div class="latest-headline">Fox's $22B Roku Deal Could Reshape the Future of Streaming and Digital Media</div></a>
-      <a href="article.html?id=messi-hattrick-world-cup-2026-argentina" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Messi hat-trick vs Algeria equals World Cup scoring record — full Day 9 recap</div></a>
-      <a href="article.html?id=world-cup-2026-day7-england-croatia" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">World Cup 2026: England vs Croatia live — Ronaldo returns, Germany beat Curaçao 7-1</div></a>
-      <a href="article.html?id=us-iran-airstrikes-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Trump threatens to hit Iran "very hard" and seize oil infrastructure</div></a>
+      <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">BREAKING: US-Iran peace deal signed — Pakistan hails historic diplomatic achievement</div></a>
+      <a href="article.html?id=us-iran-airstrikes-2026" class="latest-item"><div class="latest-time">3 days ago</div><div class="latest-headline">How the US-Iran war started — and what happened day by day</div></a>
       <a href="article.html?id=fifa-world-cup-2026-opening" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">World Cup 2026: Germany vs Curaçao kicks off in Houston today</div></a>
       <a href="article.html?id=south-korea-yoon-sentenced" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">South Korea's Yoon sentenced to 30 years over Pyongyang drone plot</div></a>
       <a href="article.html?id=china-detains-us-citizen-2026" class="latest-item"><div class="latest-time">3 hrs ago</div><div class="latest-headline">China confirms arrest of US think tank director Min Zin on espionage charges</div></a>
@@ -411,7 +397,7 @@
     <div class="section-label"><h2>Around the World</h2></div>
     <div class="world-section">
       <div class="world-list">
-        <a href="article.html?id=us-iran-airstrikes-2026" class="world-item"><div class="world-num">01</div><div class="world-body"><div class="world-cat">Middle East</div><div class="world-title">Trump Threatens Iran Oil Takeover as Second Wave of Strikes Launched</div><div class="world-meta">3 hours ago · 7 min read</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=400&q=80&fit=crop" alt="US Iran" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div></a>
+        <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="world-item"><div class="world-num">01</div><div class="world-body"><div class="world-cat">World — Breaking</div><div class="world-title">US-Iran Peace Deal Reached — Pakistan Named Key Mediator</div><div class="world-meta">2 hours ago · 10 min read</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=400&q=80&fit=crop" alt="US Iran" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div></a>
         <a href="article.html?id=south-korea-yoon-sentenced" class="world-item"><div class="world-num">02</div><div class="world-body"><div class="world-cat">Asia</div><div class="world-title">South Korea Ex-President Yoon Gets 30-Year Sentence Over Drone Plot</div><div class="world-meta">2 days ago · 6 min read</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=400&q=80&fit=crop" alt="South Korea Yoon" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div></a>
         <a href="article.html?id=china-detains-us-citizen-2026" class="world-item"><div class="world-num">03</div><div class="world-body"><div class="world-cat">World</div><div class="world-title">China Arrests US Think Tank Director Min Zin on Espionage Charges</div><div class="world-meta">2 days ago · 5 min read</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=400&q=80&fit=crop" alt="China US" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div></a>
         <a href="article.html?id=pakistan-gulf-investment" class="world-item"><div class="world-num">04</div><div class="world-body"><div class="world-cat">Pakistan</div><div class="world-title">Pakistan Secures $3bn Energy Investment from Gulf Partners</div><div class="world-meta">5 days ago · 5 min read</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80&fit=crop" alt="Pakistan energy" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div></a>
@@ -456,10 +442,10 @@
     <div class="container">
       <div class="section-label"><h2>Trending Now</h2></div>
       <div class="trending-grid">
-        <a href="article.html?id=fox-roku-22-billion-streaming-deal-2026" class="trending-card"><div class="trending-num">04</div><div class="trending-title">Fox's $22B Roku Deal Set to Redefine the Future of Streaming</div><div class="trending-meta">Technology · Breaking</div></a>
-        <a href="article.html?id=world-cup-2026-day7-england-croatia" class="trending-card"><div class="trending-num">01</div><div class="trending-title">World Cup 2026: England vs Croatia, Ronaldo Returns — Day 7 Recap</div><div class="trending-meta">Sports · Just now</div></a>
-        <a href="article.html?id=us-iran-airstrikes-2026" class="trending-card"><div class="trending-num">01</div><div class="trending-title">Trump Threatens Iran Oil Takeover as War Enters Third Week</div><div class="trending-meta">Middle East · 112k reads</div></a>
+        <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="trending-card"><div class="trending-num">01</div><div class="trending-title">US-Iran Peace Deal: How Pakistan Ended a 107-Day War</div><div class="trending-meta">World · Breaking</div></a>
         <a href="article.html?id=fifa-world-cup-2026-opening" class="trending-card"><div class="trending-num">02</div><div class="trending-title">World Cup 2026: Brazil Held, Scotland Historic Win, USA 4-1</div><div class="trending-meta">Sports · 84k reads</div></a>
+        <a href="article.html?id=ai-comparison-2026" class="trending-card"><div class="trending-num">03</div><div class="trending-title">ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026?</div><div class="trending-meta">Technology · 47k reads</div></a>
+        <a href="article.html?id=career-guide-2026" class="trending-card"><div class="trending-num">04</div><div class="trending-title">Which Career Should You Choose? Complete 2026 Field Guide</div><div class="trending-meta">Career · 38k reads</div></a>
       </div>
     </div>
   </div>
@@ -481,7 +467,8 @@
         </div>
       </div>
       <div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=middleeast">Middle East</a></li><li><a href="category.html?cat=asia">Asia</a></li></ul></div>
-      <div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="#">Video</a></li><li><a href="#">Podcasts</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li>
+      <li><a href="markets.html">📈 Markets</a></li><li><a href="#">Video</a></li><li><a href="#">Podcasts</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Advertise</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="#">Sitemap</a></li></ul></div>
     </div>
     <div class="footer-bottom">
@@ -494,5 +481,41 @@
 <button class="scroll-top" id="scrollTop">↑</button>
 <script src="articles.js"></script>
 <script src="shared.js"></script>
+
+<script>
+async function loadHomeTicker() {
+  try {
+    const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,ripple,dogecoin&order=market_cap_desc&sparkline=false');
+    const crypto = await res.json();
+    const staticItems = [
+      {name:'S&P 500',val:'5,421',chg:'+0.84%',up:true},
+      {name:'DOW',val:'39,872',chg:'+0.56%',up:true},
+      {name:'NASDAQ',val:'17,453',chg:'+1.12%',up:true},
+      {name:'FTSE 100',val:'8,241',chg:'-0.23%',up:false},
+      {name:'DAX',val:'18,903',chg:'+0.47%',up:true},
+      {name:'NIKKEI',val:'38,502',chg:'+0.91%',up:true},
+      {name:'KSE-100',val:'79,341',chg:'+1.34%',up:true},
+      {name:'GOLD',val:'$2,341',chg:'-0.18%',up:false},
+      {name:'OIL(WTI)',val:'$78.42',chg:'+0.67%',up:true},
+      {name:'USD/PKR',val:'278.45',chg:'-0.12%',up:false},
+      {name:'EUR/USD',val:'1.0842',chg:'+0.09%',up:true},
+    ];
+    let h = staticItems.map(s=>`<div class="stock-item"><span class="stock-name">${s.name}</span><span class="stock-val">${s.val}</span><span class="${s.up?'stock-up':'stock-down'}">${s.up?'▲':'▼'} ${s.chg}</span></div>`).join('');
+    crypto.forEach(c=>{
+      const pct=c.price_change_percentage_24h||0;
+      const up=pct>=0;
+      const price=c.current_price>=1000?'$'+Math.round(c.current_price).toLocaleString():'$'+c.current_price.toFixed(3);
+      h+=`<div class="stock-item"><span class="stock-name">${c.symbol.toUpperCase()}</span><span class="stock-val">${price}</span><span class="${up?'stock-up':'stock-down'}">${up?'▲':'▼'} ${Math.abs(pct).toFixed(2)}%</span></div>`;
+    });
+    const el=document.getElementById('homeTickerInner');
+    if(el) el.innerHTML=h+h;
+  } catch(e) {
+    const el=document.getElementById('homeTickerInner');
+    if(el) el.innerHTML='<div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341</span><span class="stock-up">▲ 1.34%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div>';
+  }
+}
+loadHomeTicker();
+setInterval(loadHomeTicker,60000);
+</script>
 </body>
 </html>
