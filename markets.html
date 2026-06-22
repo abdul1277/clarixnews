@@ -146,13 +146,13 @@ const TV={
   ripple:'BINANCE:XRPUSDT',cardano:'BINANCE:ADAUSDT',
   dogecoin:'BINANCE:DOGEUSDT',toncoin:'BINANCE:TONUSDT',
   'S&P 500':'SP:SPX','DOW JONES':'DJ:DJI','NASDAQ':'NASDAQ:QQQ',
-  'FTSE 100':'SPREADEX:FTSE','DAX':'XETR:DAX','NIKKEI 225':'INDEX:NKY',
-  'KSE-100':'KHI:KSE100','SENSEX':'BSE:SENSEX',
-  'GOLD':'COMEX:GC1!','SILVER':'COMEX:SI1!','OIL (WTI)':'NYMEX:CL1!',
-  'OIL (BRENT)':'NYMEX:BB1!','NATURAL GAS':'NYMEX:NG1!','COPPER':'COMEX:HG1!',
-  'USD/PKR':'FX_IDC:USDPKR','EUR/USD':'FX:EURUSD','GBP/USD':'FX:GBPUSD',
-  'USD/JPY':'FX:USDJPY','USD/SAR':'FX_IDC:USDSAR','USD/AED':'FX_IDC:USDAED',
-  'USD/CNY':'FX_IDC:USDCNY','USD/INR':'FX_IDC:USDINR'
+  'FTSE 100':'TVC:UKX','DAX':'TVC:DEU30','NIKKEI 225':'TVC:JPN225',
+  'KSE-100':'TVC:PSX','SENSEX':'BSE:SENSEX30',
+  'GOLD':'TVC:GOLD','SILVER':'TVC:SILVER','OIL (WTI)':'TVC:USOIL',
+  'OIL (BRENT)':'TVC:USOIL','NATURAL GAS':'TVC:NATURALGAS','COPPER':'CAPITALCOM:COPPER',
+  'USD/PKR':'FX:USDPKR','EUR/USD':'FX:EURUSD','GBP/USD':'FX:GBPUSD',
+  'USD/JPY':'FX:USDJPY','USD/SAR':'FX:USDSAR','USD/AED':'FX:USDAED',
+  'USD/CNY':'FX:USDCNY','USD/INR':'FX:USDINR'
 };
 
 let curSym='BINANCE:BTCUSDT', curRange='1D';
@@ -245,7 +245,7 @@ async function fetchCrypto(){
       const price=c.current_price>=1000?'$'+Math.round(c.current_price).toLocaleString():'$'+c.current_price.toFixed(3);
       return`<div class="stock-item" onclick="openChart('${c.name}','${TV[c.id]||'BINANCE:BTCUSDT'}')" style="cursor:pointer"><span class="stock-name">${c.symbol.toUpperCase()}</span><span class="stock-val">${price}</span><span class="${up?'stock-up':'stock-down'}">${up?'▲':'▼'} ${Math.abs(pct).toFixed(2)}%</span></div>`;
     }).join('');
-    const staticTH='<div class="stock-item" onclick="openChart(\'S&P 500\',\'SP:SPX\')" style="cursor:pointer"><span class="stock-name">S&P 500</span><span class="stock-val">5,421</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item" onclick="openChart(\'DOW\',\'DJ:DJI\')" style="cursor:pointer"><span class="stock-name">DOW</span><span class="stock-val">39,872</span><span class="stock-up">▲ 0.56%</span></div><div class="stock-item" onclick="openChart(\'NASDAQ\',\'NASDAQ:QQQ\')" style="cursor:pointer"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453</span><span class="stock-up">▲ 1.12%</span></div><div class="stock-item" onclick="openChart(\'KSE-100\',\'KHI:KSE100\')" style="cursor:pointer"><span class="stock-name">KSE-100</span><span class="stock-val">79,341</span><span class="stock-up">▲ 1.34%</span></div><div class="stock-item" onclick="openChart(\'GOLD\',\'COMEX:GC1!\')" style="cursor:pointer"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item" onclick="openChart(\'OIL\',\'NYMEX:CL1!\')" style="cursor:pointer"><span class="stock-name">OIL(WTI)</span><span class="stock-val">$78.42</span><span class="stock-up">▲ 0.67%</span></div>';
+    const staticTH='<div class="stock-item" onclick="openChart(\'S&P 500\',\'SP:SPX\')" style="cursor:pointer"><span class="stock-name">S&P 500</span><span class="stock-val">5,421</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item" onclick="openChart(\'DOW\',\'DJ:DJI\')" style="cursor:pointer"><span class="stock-name">DOW</span><span class="stock-val">39,872</span><span class="stock-up">▲ 0.56%</span></div><div class="stock-item" onclick="openChart(\'NASDAQ\',\'NASDAQ:QQQ\')" style="cursor:pointer"><span class="stock-name">NASDAQ</span><span class="stock-val">17,453</span><span class="stock-up">▲ 1.12%</span></div><div class="stock-item" onclick="openChart(\'KSE-100\',\'TVC:PSX\')" style="cursor:pointer"><span class="stock-name">KSE-100</span><span class="stock-val">79,341</span><span class="stock-up">▲ 1.34%</span></div><div class="stock-item" onclick="openChart(\'GOLD\',\'TVC:GOLD\')" style="cursor:pointer"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item" onclick="openChart(\'OIL\',\'TVC:USOIL\')" style="cursor:pointer"><span class="stock-name">OIL(WTI)</span><span class="stock-val">$78.42</span><span class="stock-up">▲ 0.67%</span></div>';
     const ticker=document.getElementById('mkTickerInner');
     if(ticker) ticker.innerHTML=staticTH+th+staticTH+th;
     document.getElementById('lastUpdate').textContent=new Date().toLocaleTimeString();
@@ -258,11 +258,11 @@ function renderStocks(){
     {name:'S&P 500',sym:'SPX',val:'5,421.23',chg:'+0.84%',up:true,info:'US Large Cap',tv:'SP:SPX'},
     {name:'DOW JONES',sym:'DJI',val:'39,872.15',chg:'+0.56%',up:true,info:'30 Blue Chips',tv:'DJ:DJI'},
     {name:'NASDAQ',sym:'QQQ',val:'17,453.08',chg:'+1.12%',up:true,info:'Tech Index',tv:'NASDAQ:QQQ'},
-    {name:'FTSE 100',sym:'FTSE',val:'8,241.30',chg:'-0.23%',up:false,info:'UK Blue Chips',tv:'SPREADEX:FTSE'},
-    {name:'DAX',sym:'DAX',val:'18,903.44',chg:'+0.47%',up:true,info:'Germany',tv:'XETR:DAX'},
-    {name:'NIKKEI 225',sym:'NI225',val:'38,502.77',chg:'+0.91%',up:true,info:'Japan',tv:'INDEX:NKY'},
-    {name:'KSE-100',sym:'KSE',val:'79,341.60',chg:'+1.34%',up:true,info:'Pakistan',tv:'KHI:KSE100'},
-    {name:'SENSEX',sym:'BSE',val:'81,224.30',chg:'+0.67%',up:true,info:'India',tv:'BSE:SENSEX'},
+    {name:'FTSE 100',sym:'FTSE',val:'8,241.30',chg:'-0.23%',up:false,info:'UK Blue Chips',tv:'TVC:UKX'},
+    {name:'DAX',sym:'DAX',val:'18,903.44',chg:'+0.47%',up:true,info:'Germany',tv:'TVC:DEU30'},
+    {name:'NIKKEI 225',sym:'NI225',val:'38,502.77',chg:'+0.91%',up:true,info:'Japan',tv:'TVC:JPN225'},
+    {name:'KSE-100',sym:'KSE',val:'79,341.60',chg:'+1.34%',up:true,info:'Pakistan',tv:'TVC:PSX'},
+    {name:'SENSEX',sym:'BSE',val:'81,224.30',chg:'+0.67%',up:true,info:'India',tv:'BSE:SENSEX30'},
   ];
   document.getElementById('stocksGrid').innerHTML=items.map(s=>`
     <div class="price-card" onclick="openChart('${s.name}','${s.tv}')">
@@ -277,12 +277,12 @@ function renderStocks(){
 // COMMODITIES
 function renderCommodities(){
   const items=[
-    {name:'Gold',sym:'XAU',val:'$2,341.50',chg:'-0.18%',up:false,info:'Per Troy Ounce',tv:'COMEX:GC1!'},
-    {name:'Silver',sym:'XAG',val:'$29.84',chg:'+0.42%',up:true,info:'Per Troy Ounce',tv:'COMEX:SI1!'},
-    {name:'Oil (WTI)',sym:'WTI',val:'$78.42',chg:'+0.67%',up:true,info:'Per Barrel',tv:'NYMEX:CL1!'},
-    {name:'Oil (Brent)',sym:'BRENT',val:'$82.15',chg:'+0.54%',up:true,info:'Per Barrel',tv:'NYMEX:BB1!'},
-    {name:'Natural Gas',sym:'NG',val:'$2.84',chg:'-1.23%',up:false,info:'Per MMBtu',tv:'NYMEX:NG1!'},
-    {name:'Copper',sym:'HG',val:'$4.52',chg:'+0.31%',up:true,info:'Per Pound',tv:'COMEX:HG1!'},
+    {name:'Gold',sym:'XAU',val:'$2,341.50',chg:'-0.18%',up:false,info:'Per Troy Ounce',tv:'TVC:GOLD'},
+    {name:'Silver',sym:'XAG',val:'$29.84',chg:'+0.42%',up:true,info:'Per Troy Ounce',tv:'TVC:SILVER'},
+    {name:'Oil (WTI)',sym:'WTI',val:'$78.42',chg:'+0.67%',up:true,info:'Per Barrel',tv:'TVC:USOIL'},
+    {name:'Oil (Brent)',sym:'BRENT',val:'$82.15',chg:'+0.54%',up:true,info:'Per Barrel',tv:'TVC:USOIL'},
+    {name:'Natural Gas',sym:'NG',val:'$2.84',chg:'-1.23%',up:false,info:'Per MMBtu',tv:'TVC:NATURALGAS'},
+    {name:'Copper',sym:'HG',val:'$4.52',chg:'+0.31%',up:true,info:'Per Pound',tv:'CAPITALCOM:COPPER'},
   ];
   document.getElementById('comGrid').innerHTML=items.map(s=>`
     <div class="price-card" onclick="openChart('${s.name}','${s.tv}')">
@@ -297,14 +297,14 @@ function renderCommodities(){
 // FOREX
 function renderForex(){
   const items=[
-    {name:'USD/PKR',val:'278.45',chg:'-0.12%',up:false,tv:'FX_IDC:USDPKR'},
+    {name:'USD/PKR',val:'278.45',chg:'-0.12%',up:false,tv:'FX:USDPKR'},
     {name:'EUR/USD',val:'1.0842',chg:'+0.09%',up:true,tv:'FX:EURUSD'},
     {name:'GBP/USD',val:'1.2734',chg:'+0.14%',up:true,tv:'FX:GBPUSD'},
     {name:'USD/JPY',val:'157.23',chg:'-0.21%',up:false,tv:'FX:USDJPY'},
-    {name:'USD/SAR',val:'3.7501',chg:'0.00%',up:true,tv:'FX_IDC:USDSAR'},
-    {name:'USD/AED',val:'3.6725',chg:'0.00%',up:true,tv:'FX_IDC:USDAED'},
-    {name:'USD/CNY',val:'7.2541',chg:'-0.08%',up:false,tv:'FX_IDC:USDCNY'},
-    {name:'USD/INR',val:'83.42',chg:'-0.15%',up:false,tv:'FX_IDC:USDINR'},
+    {name:'USD/SAR',val:'3.7501',chg:'0.00%',up:true,tv:'FX:USDSAR'},
+    {name:'USD/AED',val:'3.6725',chg:'0.00%',up:true,tv:'FX:USDAED'},
+    {name:'USD/CNY',val:'7.2541',chg:'-0.08%',up:false,tv:'FX:USDCNY'},
+    {name:'USD/INR',val:'83.42',chg:'-0.15%',up:false,tv:'FX:USDINR'},
   ];
   document.getElementById('fxGrid').innerHTML=items.map(p=>`
     <div class="price-card" onclick="openChart('${p.name}','${p.tv}')">
