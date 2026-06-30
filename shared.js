@@ -35,7 +35,41 @@ function initMobileNav() {
   const btn = document.getElementById('mobileNavBtn');
   const links = document.getElementById('navLinks');
   if (!btn || !links) return;
-  btn.addEventListener('click', () => links.classList.toggle('open'));
+
+  function toggleMenu() {
+    const isOpen = links.classList.toggle('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    btn.textContent = isOpen ? '✕' : '☰';
+  }
+
+  btn.addEventListener('click', toggleMenu);
+
+  // Close menu when a nav link is tapped
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.textContent = '☰';
+    });
+  });
+
+  // Close menu when tapping outside the link list (on the background)
+  links.addEventListener('click', (e) => {
+    if (e.target === links) {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.textContent = '☰';
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.textContent = '☰';
+    }
+  });
 }
 
 // ── SCROLL TO TOP ──
