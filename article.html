@@ -5,20 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026? – ClarixNews</title>
   <meta name="description" content="A comprehensive head-to-head comparison of the top AI models in 2026. We tested all three so you don't have to." />
-  
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://clarixnews.vercel.app/article.html" />
+  <meta name="theme-color" content="#0a0a0a" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://clarixnews.vercel.app/article" />
-  <meta property="og:title" content="ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026? – ClarixNews" />
-  <meta property="og:description" content="We ran hundreds of real-world tests across writing, coding, reasoning and creativity to find the best AI in 2026." />
+  <meta property="og:url" content="https://clarixnews.vercel.app/article.html" />
+  <meta property="og:title" content="Article – ClarixNews" />
+  <meta property="og:description" content="Read breaking international news and in-depth analysis on ClarixNews." />
+  <meta property="og:image" content="https://clarixnews.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="ClarixNews" />
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@clarixnews" />
-  <meta name="twitter:title" content="ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026? – ClarixNews" />
-  <meta name="twitter:description" content="We ran hundreds of real-world tests across writing, coding, reasoning and creativity to find the best AI in 2026." />
-  <!-- Favicon -->
-  <meta name="robots" content="index, follow" />
+  <meta name="twitter:site" content="@ClarixNews" />
+  <meta name="twitter:title" content="Article – ClarixNews" />
+  <meta name="twitter:description" content="Read breaking international news and in-depth analysis on ClarixNews." />
+  <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
@@ -398,6 +412,74 @@
   document.title = article.title + ' – ClarixNews';
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', article.subtitle);
+  
+  // Update OG tags dynamically
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', article.title + ' – ClarixNews');
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute('content', article.subtitle);
+  const ogImg = document.querySelector('meta[property="og:image"]');
+  if (ogImg) ogImg.setAttribute('content', article.image);
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', 'https://clarixnews.vercel.app/article.html?id=' + id);
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute('content', article.title);
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute('content', article.subtitle);
+  const twImg = document.querySelector('meta[name="twitter:image"]');
+  if (twImg) twImg.setAttribute('content', article.image);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute('href', 'https://clarixnews.vercel.app/article.html?id=' + id);
+
+  // Inject NewsArticle structured data (critical for Google News)
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": article.title,
+    "description": article.subtitle,
+    "image": [article.image],
+    "datePublished": new Date(article.date + " 08:00:00").toISOString(),
+    "dateModified": new Date(article.date + " 08:00:00").toISOString(),
+    "author": [{
+      "@type": "Person",
+      "name": article.author
+    }],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClarixNews",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://clarixnews.vercel.app/icon-512.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://clarixnews.vercel.app/article.html?id=" + id
+    },
+    "articleSection": article.category,
+    "keywords": article.tags.join(", ")
+  };
+  const schemaScript = document.createElement('script');
+  schemaScript.type = 'application/ld+json';
+  schemaScript.textContent = JSON.stringify(articleSchema);
+  document.head.appendChild(schemaScript);
+
+  // Breadcrumb structured data
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://clarixnews.vercel.app/"},
+      {"@type": "ListItem", "position": 2, "name": article.category, "item": "https://clarixnews.vercel.app/category.html?cat=" + article.catClass},
+      {"@type": "ListItem", "position": 3, "name": article.title, "item": "https://clarixnews.vercel.app/article.html?id=" + id}
+    ]
+  };
+  const bcScript = document.createElement('script');
+  bcScript.type = 'application/ld+json';
+  bcScript.textContent = JSON.stringify(breadcrumbSchema);
+  document.head.appendChild(bcScript);
 
   // Update breadcrumb category
   const breadCat = document.getElementById('breadCat');
