@@ -107,7 +107,7 @@ const ARTICLES = [
 <p>For viewers, immediate changes may be limited. For the streaming industry, however, the competitive landscape may never look the same again.</p>
 
 `
-}
+},
 
   {
   id: "messi-hattrick-world-cup-2026-argentina",
