@@ -397,8 +397,25 @@
 <script src="shared.js"></script>
 
 <script>
+// ── SAFETY CHECK: if articles.js failed to load/parse (e.g. a missing
+// comma broke the file), send the visitor to the normal, professional
+// 404 page instead of silently showing stale/wrong article content.
+// Full technical detail is logged to the console for developers only
+// (visible via F12 → Console) — the visitor never sees raw error text. ──
+function showLoadError(reason) {
+  console.error('ClarixNews — article failed to load.');
+  console.error('Reason:', reason);
+  console.error('Tip: this is almost always a missing comma or bracket between two article entries in articles.js.');
+  window.location.href = '404.html';
+}
+
 // Load article dynamically based on URL ?id=
-(function() {
+try {
+  if (typeof ARTICLES === 'undefined' || typeof getArticle !== 'function') {
+    throw new Error('articles.js did not load correctly (ARTICLES or getArticle is undefined). Check for a missing comma or bracket between article entries.');
+  }
+
+  (function() {
   const params = new URLSearchParams(location.search);
   const id = params.get('id') || 'ai-comparison-2026';
   const article = getArticle(id);
@@ -551,7 +568,10 @@
         <div class="most-read-title">${a.title}</div>
       </a>`).join('');
   }
-})();
+  })();
+} catch (err) {
+  showLoadError(err.message);
+}
 </script>
 <script>
   // Reading progress bar
