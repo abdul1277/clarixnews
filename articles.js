@@ -1,6 +1,53 @@
 const ARTICLES = [
 
   {
+  id: "keir-starmer-resigns-uk-pm-andy-burnham-2026",
+  title: "UK Prime Minister Keir Starmer Resigns — Andy Burnham Set to Become Britain's Seventh Leader in a Decade",
+  subtitle: "Starmer announced his resignation on June 22 after mounting pressure from within his own Labour Party, clearing the path for Greater Manchester's popular former mayor Andy Burnham to take over. Nominations open July 9, with a new leader expected by mid-July if Burnham runs unopposed.",
+  category: "World",
+  catClass: "world",
+  author: "Eleanor Walsh",
+  authorRole: "Europe Correspondent",
+  authorInitials: "EW",
+  date: "July 4, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=1400&q=80&fit=crop",
+  tags: ["Keir Starmer", "UK Politics", "Andy Burnham", "Labour Party", "United Kingdom", "World"],
+  content: `
+    <p>Britain's Prime Minister Keir Starmer announced on June 22, 2026 that he will resign as leader of the Labour Party and the country, clearing the way for Greater Manchester's popular former mayor Andy Burnham to become the UK's seventh prime minister in just over a decade — a remarkable and rapid fall for a leader who led Labour to a landslide election victory less than two years earlier.</p>
+
+    <blockquote>"Every decision I have taken has been about putting the country I love first." — Keir Starmer, resignation speech outside 10 Downing Street, June 22, 2026</blockquote>
+
+    <h2>From Landslide to Downfall</h2>
+    <p>Starmer swept Labour back into power in July 2024, winning 411 of 650 seats in the House of Commons and ending 14 years of Conservative rule. Standing outside 10 Downing Street the next day, he pledged to restore stability and public service to British politics after years of turmoil under successive Conservative leaders.</p>
+    <p>Less than two years later, that promise had unravelled. Economic growth failed to meet expectations, public services remained under strain, and a series of political missteps steadily eroded his standing with both his party and the public.</p>
+
+    <h2>The May Elections That Changed Everything</h2>
+    <p>The turning point came on May 7, 2026, when Labour suffered one of its worst results in local and regional elections in years. Nigel Farage's hard-right Reform UK made historic gains, while the Green Party also drew away disillusioned left-leaning voters. The result triggered a wave of internal criticism and calls for Starmer to step aside.</p>
+    <p>Adding to the pressure, Starmer's decision to appoint Peter Mandelson — a longtime ally with past ties to Jeffrey Epstein — as UK ambassador to the United States had already damaged his judgment in the eyes of many MPs. A dispute over defence spending in June also cost him two senior figures: Defence Secretary John Healey and Armed Forces Minister Al Carns both resigned in protest.</p>
+
+    <h2>Andy Burnham's Path Back to Westminster</h2>
+    <p>As pressure mounted, attention turned to Andy Burnham, the popular Mayor of Greater Manchester known for rebuilding the city's transport network and earning the nickname "King of the North." Because Labour rules require leadership candidates to be sitting MPs, Burnham needed a seat in Parliament first.</p>
+    <p>A Labour MP in Makerfield stood down to allow Burnham to contest the seat, and on June 18, 2026, Burnham won the by-election with 55% of the vote — more than 9,000 votes ahead of his nearest rival. He was sworn in as an MP on June 22, the very same day Starmer announced his resignation.</p>
+    <p>Burnham subsequently resigned as Greater Manchester Mayor, since MPs cannot simultaneously hold that office. A mayoral by-election has been scheduled for July 30, with his deputy serving as acting mayor in the meantime.</p>
+
+    <h2>Streeting's Endorsement Clears the Path</h2>
+    <p>Wes Streeting, the former Health Secretary who had resigned the previous month and was seen as Burnham's most likely rival for the leadership, announced he would back Burnham instead of running himself. Political analysts say this makes a contested race increasingly unlikely, raising the prospect of what commentators have called a "coronation" rather than a genuine leadership contest.</p>
+    <p>Former Armed Forces Minister Al Carns has been mentioned as a potential alternative candidate but has not committed to running. Any candidate needs the backing of at least 81 Labour MPs — one-fifth of the parliamentary party — simply to enter the race.</p>
+
+    <h2>What Happens Next</h2>
+    <p>Nominations for the Labour leadership officially open on July 9 and close on July 16. If Burnham faces no serious challenger, the contest will end immediately at the close of nominations, and he could formally become prime minister within a day or two — as early as July 17 or 18.</p>
+    <p>If a genuine contest does emerge, Labour Party members will vote using a preferential ballot system, with a winner expected to be declared by September 1, in time for the new leader to be in place before Parliament returns from its summer recess.</p>
+    <p>Starmer has said he will remain in office as caretaker prime minister throughout this process, informing King Charles III of his decision and pledging an orderly transition of power.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>Starmer's resignation makes him the sixth British prime minister to leave office outside Downing Street in just seven years — a level of political instability that stands out even by the UK's recent turbulent standards, following the rapid successions of Boris Johnson and Liz Truss. For a government that won one of the largest parliamentary majorities in decades, the speed of the collapse in public and party confidence is striking.</p>
+    <p>For Burnham, the challenge ahead is significant. He inherits a party bruised by infighting, a resurgent hard-right in Reform UK, and an electorate that has grown skeptical of Westminster promises. Whether his brand of northern, community-focused politics can translate into a national governing strategy — and revive Labour's fortunes before the next general election, due by 2029 — will shape not just his premiership, but the UK's political direction for years to come.</p>
+  `
+},
+
+  {
   id: "fox-roku-22-billion-streaming-deal-2026",
 
   title: "Fox's $22 Billion Roku Deal Could Reshape the Future of Streaming and Digital Media",
