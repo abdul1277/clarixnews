@@ -1,6 +1,52 @@
 const ARTICLES = [
 
   {
+  id: "openai-unveils-gpt5-human-level-reasoning-2026",
+  title: "OpenAI Unveils GPT-5: The AI Model That Can Now 'Reason' Like Humans",
+  subtitle: "In a groundbreaking announcement, OpenAI has launched GPT-5, claiming it achieves human-level reasoning across science, math, and coding. Experts debate whether this marks the first true step toward Artificial General Intelligence (AGI).",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "July 7, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80&fit=crop",
+  tags: ["OpenAI", "GPT-5", "Artificial Intelligence", "AGI", "Machine Learning", "Technology", "AI Regulation", "Sam Altman", "Future of AI"],
+  content: `
+    <p>In what is being hailed as the most significant leap in artificial intelligence since the launch of ChatGPT, OpenAI officially unveiled its next-generation model, GPT-5, on July 6, 2026. The San Francisco-based company claims that GPT-5 represents a qualitative shift in AI capabilities, moving beyond simple pattern matching to achieve what researchers call "system 2 thinking" — the ability to reason, plan, and solve complex multi-step problems with human-like accuracy.</p>
+
+    <blockquote>"GPT-5 isn't just bigger or faster; it thinks differently. For the first time, we have a model that can spend minutes or even hours reasoning through a problem before giving an answer, much like a human expert would." — Sam Altman, CEO of OpenAI, during the GPT-5 keynote, July 6, 2026</blockquote>
+
+    <h2>What Makes GPT-5 Different from Its Predecessors?</h2>
+    <p>While GPT-4 and its variants were impressive at generating text, code, and images, they often struggled with complex logic, advanced mathematics, and multi-step reasoning tasks. GPT-5, however, introduces a new "deep reasoning" architecture that allows the model to internally simulate different approaches to a problem, evaluate them, and select the most logical path before generating a response.</p>
+    <p>In benchmark tests released alongside the launch, GPT-5 scored 96.3% on the graduate-level Google-proof reasoning test (GPQA), compared to GPT-4's 53.6%. It also achieved near-perfect scores on international math olympiad problems and outperformed human PhD students in molecular biology and quantum physics tasks.</p>
+
+    <h2>The Path to AGI: Breakthrough or Hype?</h2>
+    <p>The term "Artificial General Intelligence" (AGI) — an AI system that can perform any intellectual task that a human can — has long been the holy grail of AI research. OpenAI's announcement has reignited fierce debate about whether GPT-5 represents the first genuine step toward AGI.</p>
+    <p>"GPT-5's reasoning capabilities are undeniably impressive, but we must be cautious," says Dr. Demis Hassabis, Nobel laureate and CEO of Google DeepMind. "True AGI requires not just reasoning, but embodiment, common sense, and the ability to learn from sparse data in the real world. GPT-5 is a monumental tool, but it is not yet a conscious agent."</p>
+    <p>Other experts are more bullish. "If this isn't AGI, it's at least 90% of the way there," argues Dr. Yann LeCun, chief AI scientist at Meta. "The gap between GPT-5 and a human expert in most cognitive tasks is now negligible."</p>
+
+    <h2>Implications for the Workforce and Economy</h2>
+    <p>The launch of GPT-5 has sent shockwaves through global financial markets. Shares in major tech companies surged, while staffing and outsourcing firms saw significant declines as investors anticipate widespread automation of knowledge work. Analysts at Goldman Sachs estimate that GPT-5 could automate up to 25% of current tasks performed by lawyers, financial analysts, software developers, and medical researchers within the next three years.</p>
+    <p>OpenAI has announced that GPT-5 will be available through its API and ChatGPT Pro subscription, with pricing structured to make it accessible to enterprise clients while maintaining premium tiers for the most computationally intensive reasoning tasks.</p>
+
+    <h2>The Regulatory Firestorm</h2>
+    <p>The capabilities of GPT-5 have immediately triggered calls for stricter AI regulation worldwide. The European Union's AI Office announced an emergency review of the bloc's existing AI Act, while US lawmakers are expected to introduce new legislation addressing "frontier AI models" within the coming weeks.</p>
+    <p>Critics argue that OpenAI and other frontier labs are moving too quickly without adequate safety testing. "We are deploying systems that can out-reason most humans in specialized domains, and we still don't fully understand how they arrive at their conclusions," warns Dr. Stuart Russell, a leading AI safety researcher at UC Berkeley. "The risk of unintended consequences is higher than ever."</p>
+
+    <h2>What Happens Next?</h2>
+    <p>OpenAI has promised to release a comprehensive "system card" detailing GPT-5's safety evaluations, red-teaming results, and known limitations. The company has also announced partnerships with leading pharmaceutical companies and climate research institutions to deploy GPT-5's reasoning capabilities toward solving some of humanity's most pressing challenges, including drug discovery and fusion energy optimization.</p>
+    <p>Meanwhile, competitors like Google, Anthropic, and Meta are expected to accelerate their own next-generation model releases, setting the stage for an unprecedented AI arms race in the second half of 2026.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>GPT-5 is not just another product launch; it is a civilizational inflection point. The ability to outsource complex cognitive work to machines at near-zero marginal cost will fundamentally reshape education, employment, and the very nature of expertise. </p>
+    <p>The real question is no longer whether AI can match human intelligence in narrow domains — it clearly can. The question is whether society can adapt quickly enough to harness this technology for broad-based prosperity, rather than allowing it to concentrate wealth and power in the hands of a few tech giants. The next 12 months will be critical in determining whether GPT-5 becomes humanity's greatest tool or its most disruptive force.</p>
+  `
+},
+
+  {
   id: "usa-stun-brazil-world-cup-2026-quarter-final",
   title: "FIFA World Cup 2026: Hosts USA Stun Brazil in Historic Quarter-Final Penalty Shootout",
   subtitle: "In one of the greatest upsets in tournament history, the United States men's national team defeats five-time champions Brazil 4-2 on penalties after a 1-1 draw, booking their spot in the semi-finals.",
