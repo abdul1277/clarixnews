@@ -1,6 +1,47 @@
 const ARTICLES = [
 
   {
+  id: "usa-stun-brazil-world-cup-2026-quarter-final",
+  title: "FIFA World Cup 2026: Hosts USA Stun Brazil in Historic Quarter-Final Penalty Shootout",
+  subtitle: "In one of the greatest upsets in tournament history, the United States men's national team defeats five-time champions Brazil 4-2 on penalties after a 1-1 draw, booking their spot in the semi-finals.",
+  category: "Sports",
+  catClass: "sports",
+  author: "David Miller",
+  authorRole: "Senior Sports Analyst",
+  authorInitials: "DM",
+  date: "July 7, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1400&q=80&fit=crop",
+  tags: ["FIFA World Cup 2026", "USA vs Brazil", "World Cup Quarter-Finals", "USMNT", "Football", "Sports", "Penalty Shootout", "MetLife Stadium"],
+  content: `
+    <p>In a night that will be etched into the annals of sporting history, the United States men's national team (USMNT) pulled off a monumental upset, eliminating five-time World Cup champions Brazil in the quarter-finals of the 2026 FIFA World Cup. The dramatic encounter at a roaring MetLife Stadium ended 1-1 after extra time, before the hosts clinched a 4-2 victory in a nerve-wracking penalty shootout.</p>
+
+    <blockquote>"This is for every kid who ever kicked a ball in this country dreaming of this exact moment. We didn't just play for ourselves tonight; we played for the future of American soccer." — USMNT Captain, post-match interview, July 6, 2026</blockquote>
+
+    <h2>A Night of Drama at MetLife Stadium</h2>
+    <p>From the first whistle, the atmosphere in New Jersey was electric. The USMNT, buoyed by the relentless support of 82,500 fans, played with a tactical discipline and high pressing intensity that completely unsettled the Brazilian side. Brazil, boasting a star-studded attack, struggled to find their rhythm in the first half, repeatedly thwarted by a resolute American defensive wall.</p>
+    <p>The breakthrough came in the 34th minute when the USMNT capitalized on a rare defensive error. A swift counter-attack ended with a clinical finish from the American striker, sending the stadium into absolute pandemonium. Brazil responded in the second half, equalizing in the 68th minute through a brilliant free-kick that curled perfectly into the top corner, setting the stage for a tense finale.</p>
+
+    <h2>The Penalty Shootout Heroics</h2>
+    <p>With neither side able to find a winner in the 30 minutes of extra time, the match was destined for the dreaded spot-kicks. This is where the American goalkeeper became the undisputed hero of the night. Saving two crucial penalties—one with a spectacular diving stop to his left and another by reading the striker's body language perfectly—he shifted the momentum entirely.</p>
+    <p>While Brazil's Neymar missed the crucial final kick, sending the South American giants into early exit, the USMNT's final penalty taker calmly slotting the ball into the net confirmed a historic 4-2 shootout victory.</p>
+
+    <h2>Brazil's Heartbreak and Tactical Missteps</h2>
+    <p>For Brazil, the result is a devastating blow. The Seleção arrived in North America as one of the pre-tournament favorites, but they ultimately paid the price for a lack of clinical finishing and an over-reliance on individual brilliance. Head Coach faced immediate scrutiny post-match for his substitution patterns, with critics arguing that the midfield was overrun by the relentless American press.</p>
+    <p>The early exit marks a transitional low for Brazilian football, sparking intense debate back home about the need to rebuild the national team's squad and tactical identity ahead of future tournaments.</p>
+
+    <h2>What This Means for the USMNT</h2>
+    <p>Reaching the semi-finals of a home World Cup is a achievement that transcends sports; it is a cultural milestone for the United States. The victory has instantly ignited a wave of national pride and is expected to trigger a massive surge in soccer participation and investment at the grassroots level across the country.</p>
+    <p>The team now prepares for a semi-final clash against the winner of the France-Spain matchup. Regardless of the outcome, this USMNT squad has already secured its legacy, proving that American soccer has firmly arrived on the global stage.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>Beating Brazil is always a monumental task in world football, but doing it in a World Cup quarter-final on home soil is the stuff of fairytales. This victory is not just a tactical triumph for the USMNT; it is a psychological breakthrough. For decades, the American team was viewed as a plucky underdog that lacked the pedigree to go toe-to-toe with the elite. That narrative was shattered at MetLife Stadium.</p>
+    <p>For Brazil, the pain of this exit will linger for years. It exposes a systemic fragility when facing highly organized, physical pressing teams. As the dust settles, the USMNT's historic run continues, carrying the hopes of a nation that is finally realizing its decades-long soccer dream.</p>
+  `
+},
+
+  {
   id: "brics-launches-unified-digital-currency-2026",
   title: "BRICS Nations Launch Unified 'BRICS Pay' Digital Currency, Challenging US Dollar Dominance",
   subtitle: "In a historic move at the 2026 Rio summit, the emerging economic bloc has officially rolled out a unified digital payment system. Experts weigh in on how this could reshape global trade and accelerate de-dollarization.",
