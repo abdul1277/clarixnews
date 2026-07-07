@@ -1,6 +1,59 @@
 const ARTICLES = [
 
   {
+  id: "europe-record-heatwave-climate-crisis-2026",
+  title: "Europe Burns: Record Heatwave Shatters Temperature Records Across 15 Countries",
+  subtitle: "As temperatures soar past 48°C in southern Europe and wildfires rage across Spain and Greece, scientists warn the 2026 heatwave is the most severe in recorded history, accelerating the climate crisis timeline.",
+  category: "World",
+  catClass: "world",
+  author: "Isabella Romano",
+  authorRole: "Environment Correspondent",
+  authorInitials: "IR",
+  date: "July 7, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=1400&q=80&fit=crop",
+  tags: ["Climate Change", "Europe Heatwave", "Global Warming", "Extreme Weather", "Environment", "Wildfires", "Temperature Records", "Climate Crisis 2026"],
+  content: `
+    <p>Europe is grappling with its most severe heatwave in recorded history as temperatures shattered all-time records across 15 countries in what meteorologists are calling a "climate emergency of unprecedented scale." The extreme weather event, which began in late June and has intensified through early July, has pushed temperatures past 48°C (118°F) in parts of Spain, Italy, and Greece, triggering widespread wildfires, power outages, and health emergencies.</p>
+
+    <blockquote>"We are no longer talking about climate change as a future threat. This is the present. What we are witnessing in Europe this week is the new normal if we do not act decisively." — Dr. Petra Kelly, Chief Climatologist at the European Environment Agency, July 6, 2026</blockquote>
+
+    <h2>Record-Breaking Temperatures Across the Continent</h2>
+    <p>The mercury has soared to levels never before documented in European history. Seville, Spain recorded 47.8°C on July 5, breaking its previous record by nearly 2 degrees. Athens, Greece hit 46.5°C, while Rome experienced 44.2°C — the highest temperature ever measured in Italy's capital. Even northern European countries like Germany and the Netherlands saw temperatures exceed 40°C, a rarity for regions unaccustomed to such extreme heat.</p>
+    <p>The European Centre for Medium-Range Weather Forecasts (ECMWF) has issued red-alert warnings for most of southern Europe, with forecasts suggesting the heatwave will persist for at least another 10 days. Meteorologists attribute the crisis to a combination of a persistent high-pressure system over the Mediterranean and the long-term effects of global warming, which has raised baseline temperatures across the continent by approximately 1.8°C since pre-industrial times.</p>
+
+    <h2>Wildfires Rage Across Spain and Greece</h2>
+    <p>The extreme heat has ignited devastating wildfires, particularly in Spain's Andalusia region and Greece's Peloponnese peninsula. Over 50,000 hectares of forest and farmland have been consumed by flames, forcing the evacuation of more than 30,000 residents. Spanish Prime Minister described the situation as "a national catastrophe," deploying military units to assist firefighting efforts.</p>
+    <p>Greece has activated its civil protection plan, with firefighters battling blazes on multiple fronts simultaneously. The Greek fire service reported that it has received over 1,200 wildfire calls in the past 72 hours alone — four times the normal volume. Air quality in Athens has deteriorated to hazardous levels, with authorities urging residents to remain indoors.</p>
+
+    <h2>Health Systems Under Strain</h2>
+    <p>Hospitals across southern Europe are overwhelmed with heat-related illnesses. Spain's health ministry reported 2,400 emergency room visits for heatstroke and dehydration in the past week, with at least 87 confirmed heat-related deaths. Italy has recorded 112 deaths, while Greece's toll stands at 64. Elderly populations and those with pre-existing conditions are particularly vulnerable.</p>
+    <p>Several countries have implemented emergency measures, including opening cooling centers, distributing water, and restricting outdoor work during peak heat hours. Schools in Spain, Italy, and Greece have been closed indefinitely, with authorities shifting to remote learning where possible.</p>
+
+    <h2>Economic Impact and Infrastructure Failures</h2>
+    <p>The heatwave has caused massive disruptions to infrastructure and economic activity. Power grids in Spain and France have struggled to meet surging demand for air conditioning, leading to rolling blackouts in several regions. Rail services have been suspended on multiple high-speed lines as tracks warped under the extreme heat. The agricultural sector faces catastrophic losses, with crop yields expected to drop by 30-40% in affected areas.</p>
+    <p>Tourism, a critical economic driver for southern Europe, has ground to a halt. Hotels in Greece and Spain report mass cancellations, while airlines have suspended flights to several destinations due to safety concerns. The European Commission estimates the economic impact could exceed €50 billion if the heatwave persists through August.</p>
+
+    <h2>Global Climate Implications</h2>
+    <p>Scientists warn that the 2026 European heatwave is not an isolated event but part of a broader pattern of escalating climate extremes. Similar record temperatures have been recorded in North Africa, the Middle East, and parts of Asia. The Arctic is experiencing its second-lowest sea ice extent on record for July, while ocean temperatures in the Mediterranean are 3°C above average — fueling the intensity of the heatwave.</p>
+    <p>"What we are seeing is the acceleration of climate breakdown," explains Dr. Michael Mann, Distinguished Professor of Atmospheric Science at Penn State University. "The models predicted this would happen by 2040 or 2050. It's happening now, in 2026. We have lost a decade."</p>
+
+    <h2>Political Response and International Cooperation</h2>
+    <p>The crisis has triggered urgent political action across Europe. The European Union announced an emergency summit of environment ministers scheduled for July 12, where member states are expected to agree on accelerated emissions reduction targets and a €100 billion climate adaptation fund. France and Germany have proposed banning new fossil fuel infrastructure by 2030, a decade earlier than previously planned.</p>
+    <p>However, critics argue that the response is too slow. "We need systemic change, not emergency meetings," says Greenpeace European Director. "The same politicians who are now declaring emergencies have spent years approving new oil and gas projects. The time for half-measures is over."</p>
+
+    <h2>What Happens Next?</h2>
+    <p>Forecasters predict the heatwave will peak around July 10-12 before gradually weakening. However, the damage has already been done, and recovery will take months, if not years. Agricultural losses will impact food prices across Europe, while infrastructure repairs will strain national budgets already stretched thin by previous climate disasters.</p>
+    <p>The psychological impact is also significant. A recent survey found that 78% of Europeans under 35 experience "climate anxiety," with many questioning whether they should have children in a world facing such existential threats. Mental health services across the continent report a 40% increase in calls related to climate distress.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>The 2026 European heatwave is a watershed moment that should fundamentally alter how humanity approaches the climate crisis. This is no longer a distant threat discussed in academic papers — it is a visceral, deadly reality unfolding in real-time across one of the world's most developed regions.</p>
+    <p>The political and economic responses will determine whether Europe can adapt to this new reality or whether it will be overwhelmed by escalating climate disasters. The decisions made in the coming weeks and months — regarding emissions targets, infrastructure investment, and international cooperation — will shape the continent's future for generations. One thing is certain: the world as we knew it is gone. The question is what we build in its place.</p>
+  `
+},
+
+  {
   id: "openai-unveils-gpt5-human-level-reasoning-2026",
   title: "OpenAI Unveils GPT-5: The AI Model That Can Now 'Reason' Like Humans",
   subtitle: "In a groundbreaking announcement, OpenAI has launched GPT-5, claiming it achieves human-level reasoning across science, math, and coding. Experts debate whether this marks the first true step toward Artificial General Intelligence (AGI).",
