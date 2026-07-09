@@ -118,6 +118,7 @@ function initSearch() {
 }
 
 // ── WEATHER WIDGET ──
+// ── WEATHER WIDGET ──
 async function initWeather() {
   const el = document.getElementById('weatherWidget');
   if (!el) return;
