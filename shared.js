@@ -122,21 +122,55 @@ async function initWeather() {
   const el = document.getElementById('weatherWidget');
   if (!el) return;
 
-  // Simulated weather data (in real use, connect OpenWeatherMap free API)
   const cities = [
-    { city: 'Karachi', temp: 34, icon: '☀', cond: 'Sunny' },
-    { city: 'London', temp: 16, icon: '⛅', cond: 'Cloudy' },
-    { city: 'New York', temp: 24, icon: '🌤', cond: 'Partly Cloudy' },
-    { city: 'Dubai', temp: 41, icon: '☀', cond: 'Hot' },
+    { name: 'Karachi', lat: 24.8607, lon: 67.0011 },
+    { name: 'London', lat: 51.5074, lon: -0.1278 },
+    { name: 'New York', lat: 40.7128, lon: -74.0060 },
+    { name: 'Dubai', lat: 25.2048, lon: 55.2708 },
   ];
 
   el.innerHTML = cities.map(c =>
-    `<div class="weather-item">
-      <span class="weather-city">${c.city}</span>
-      <span class="weather-icon">${c.icon}</span>
-      <span class="weather-temp">${c.temp}°C</span>
-    </div>`
+    `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">⏳</span><span class="weather-temp">--°C</span></div>`
   ).join('');
+
+  function weatherIcon(code, isDay) {
+    const day = isDay !== 0;
+    if (code === 0 || code === 1) return day ? '☀' : '🌙';
+    if (code === 2) return '⛅';
+    if (code === 3) return '☁';
+    if (code === 45 || code === 48) return '🌫';
+    if (code >= 51 && code <= 67) return '🌧';
+    if (code >= 71 && code <= 86) return '❄';
+    if (code >= 95) return '⛈';
+    return '🌤';
+  }
+
+  try {
+    const results = await Promise.all(cities.map(c =>
+      fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code,is_day&timezone=auto`)
+        .then(r => r.json())
+        .catch(() => null)
+    ));
+
+    el.innerHTML = cities.map((c, i) => {
+      const data = results[i];
+      if (!data || !data.current) {
+        return `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">--</span><span class="weather-temp">--°C</span></div>`;
+      }
+      const temp = Math.round(data.current.temperature_2m);
+      const icon = weatherIcon(data.current.weather_code, data.current.is_day);
+      return `<a href="weather.html" class="weather-item" style="text-decoration:none;color:inherit;">
+        <span class="weather-city">${c.name}</span>
+        <span class="weather-icon">${icon}</span>
+        <span class="weather-temp">${temp}°C</span>
+      </a>`;
+    }).join('');
+  } catch (e) {
+    console.error('Weather widget failed to load:', e);
+    el.innerHTML = cities.map(c =>
+      `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">--</span><span class="weather-temp">--°C</span></div>`
+    ).join('');
+  }
 }
 
 // ── COMMENTS (SIMULATED) ──
