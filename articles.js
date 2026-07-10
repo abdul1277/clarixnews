@@ -1,6 +1,55 @@
 const ARTICLES = [
 
   {
+  id: "pakistan-cricket-world-cup-2026-babar-azam-century",
+  title: "Babar Azam's Masterclass: Pakistan Crushes Australia by 8 Wickets in World Cup 2026 Thriller",
+  subtitle: "Captain Babar Azam's unbeaten 142 leads Pakistan to a historic chase at Lord's, as the Green Shirts deliver their most dominant performance of the tournament to keep semi-final hopes alive.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Cricket Correspondent",
+  authorInitials: "AR",
+  date: "July 7, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1400&q=80&fit=crop",
+  tags: ["Pakistan Cricket", "Babar Azam", "World Cup 2026", "Cricket News", "Pakistan vs Australia", "ICC World Cup", "Sports", "Cricket"],
+  content: `
+    <p>In what will be remembered as one of the greatest innings in World Cup history, Pakistan captain Babar Azam produced a masterful unbeaten 142 to guide his team to a stunning 8-wicket victory over Australia at the iconic Lord's Cricket Ground on July 7, 2026. The chase of 329, completed with 12 balls to spare, has reignited Pakistan's semi-final hopes and sent shockwaves through the tournament.</p>
+
+    <blockquote>"This is what Pakistan cricket is all about. We never give up, we never say die. Today, the boys showed the world what we are capable of." — Babar Azam, post-match presentation, Lord's, July 7, 2026</blockquote>
+
+    <h2>A Chase for the Ages</h2>
+    <p>Australia, batting first after winning the toss, posted a formidable 328/7 thanks to a brilliant 98 from Travis Head and a quickfire 67 from Glenn Maxwell. Pakistan's reply started shakily, with opener Fakhar Zaman dismissed for just 4 in the third over. But what followed was a batting masterclass that will be etched in cricket folklore.</p>
+    <p>Babar Azam, walking in at number three, anchored the innings with a combination of elegant cover drives, precise flicks off his pads, and calculated aggression. His partnership with Mohammad Rizwan (78) added 156 runs for the second wicket, completely shifting the momentum in Pakistan's favor.</p>
+
+    <h2>The Babar-Rizwan Partnership</h2>
+    <p>The 156-run stand between Babar and Rizwan was the foundation of Pakistan's successful chase. While Rizwan played the perfect supporting role, rotating the strike and finding gaps consistently, Babar was in a class of his own. His innings included 14 fours and 3 sixes, with a strike rate of 94.6 — remarkable for a chase of this magnitude on a tricky Lord's surface.</p>
+    <p>When Rizwan was dismissed in the 34th over, Pakistan still needed 97 runs from 96 balls. Enter Shaheen Afridi, who played a cameo of 31 off 18 balls, including three consecutive sixes off Pat Cummins that completely broke Australia's spirit.</p>
+
+    <h2>Australia's Bowling Collapse</h2>
+    <p>Australia's bowling attack, which had looked so potent in the first 15 overs, completely unraveled under the pressure of Pakistan's relentless chase. Pat Cummins, who had taken 3/58 in the first innings, was hammered for 67 runs in his 10 overs of the second innings. Mitchell Starc, usually lethal with the new ball, was taken apart by Babar in the middle overs.</p>
+    <p>The turning point came in the 42nd over when Babar hit Cummins for three consecutive boundaries to bring up his century. The Australian captain had no answers, and the game was effectively over as a contest.</p>
+
+    <h2>What This Means for Pakistan's Tournament</h2>
+    <p>The victory is massive for Pakistan's World Cup campaign. Before this match, the Green Shirts were struggling at 6th position in the points table with just two wins from five matches. This triumph, combined with other results, has moved them up to 4th position, keeping their semi-final hopes very much alive.</p>
+    <p>Pakistan now needs to win at least two of their remaining three group stage matches to secure a semi-final spot. Their next match is against New Zealand on July 10, followed by crucial encounters with South Africa and Bangladesh.</p>
+
+    <h2>Reactions from the Cricket World</h2>
+    <p>The cricketing world has been quick to praise Babar's innings. Former England captain Joe Root called it "one of the best World Cup innings I've ever seen," while Indian batting legend Sachin Tendulkar tweeted: "Babar Azam is in a class of his own. What a captain's knock!"</p>
+    <p>Australian captain Pat Cummins was gracious in defeat, admitting: "They were simply better than us today. Babar played out of his skin, and we had no answers. Credit to Pakistan."</p>
+
+    <h2>The Road Ahead</h2>
+    <p>For Pakistan, the challenge now is to maintain this momentum. The team has shown that they can beat the best on their day, but consistency remains a concern. The middle order, apart from Babar and Rizwan, still needs to step up. Shadab Khan and Iftikhar Ahmed will need to contribute more with the bat in the coming matches.</p>
+    <p>The bowling attack, led by Shaheen Afridi (3/52 in the first innings) and Haris Rauf (2/48), has been Pakistan's strength throughout the tournament. If they can continue to take early wickets, Pakistan's batting lineup has the firepower to chase down any total.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>This victory is more than just two points in the World Cup table; it's a statement of intent from Pakistan cricket. After weeks of criticism and doubt, the team has responded in the most emphatic way possible. Babar Azam's leadership and batting have been exceptional, and if he continues in this vein, Pakistan are a dangerous side.</p>
+    <p>However, the real test will be consistency. Can Pakistan replicate this performance against New Zealand and South Africa? The next week will define their World Cup journey. One thing is certain: when Babar Azam is in this kind of form, Pakistan can beat anyone on any given day.</p>
+  `
+},
+
+  {
   id: "europe-record-heatwave-climate-crisis-2026",
   title: "Europe Burns: Record Heatwave Shatters Temperature Records Across 15 Countries",
   subtitle: "As temperatures soar past 48°C in southern Europe and wildfires rage across Spain and Greece, scientists warn the 2026 heatwave is the most severe in recorded history, accelerating the climate crisis timeline.",
