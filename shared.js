@@ -160,7 +160,7 @@ async function initWeather() {
       }
       const temp = Math.round(data.current.temperature_2m);
       const icon = weatherIcon(data.current.weather_code, data.current.is_day);
-      return `<a href="weather.html" class="weather-item" style="text-decoration:none;color:inherit;">
+      return `<a href="weather.html?lat=${c.lat}&lon=${c.lon}&name=${encodeURIComponent(c.name)}" class="weather-item" style="text-decoration:none;color:inherit;">
         <span class="weather-city">${c.name}</span>
         <span class="weather-icon">${icon}</span>
         <span class="weather-temp">${temp}°C</span>
