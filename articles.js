@@ -1,6 +1,91 @@
 const ARTICLES = [
 
   {
+  id: "avengers-secret-wars-box-office-record-2026",
+  title: "'Avengers: Secret Wars' Shatters All-Time Global Box Office Record in Opening Weekend",
+  subtitle: "Marvel's epic conclusion to the Multiverse Saga grossed a staggering $1.2 billion globally in just three days, dethroning 'Avatar' and redefining cinematic history.",
+  category: "Entertainment",
+  catClass: "entertainment",
+  author: "Jessica Vale",
+  authorRole: "Entertainment Editor",
+  authorInitials: "JV",
+  date: "July 14, 2026",
+  readTime: "5 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=1400&q=80&fit=crop",
+  tags: ["Avengers Secret Wars", "Marvel", "MCU", "Box Office", "Entertainment", "Movies", "Robert Downey Jr"],
+  content: `<p>Cinema history has been rewritten. 'Avengers: Secret Wars' has officially become the highest-grossing film of all time, raking in an unprecedented $1.2 billion globally during its opening weekend. The film dethrones James Cameron's 'Avatar' and solidifies the Marvel Cinematic Universe's dominance.</p><blockquote>"We wanted to give the fans a love letter to 20 years of storytelling, and the world responded in a way we could have never imagined." — Kevin Feige, President of Marvel Studios</blockquote><h2>The Multiverse Payoff</h2><p>Directed by the Russo Brothers, the film features the return of Robert Downey Jr. as Doctor Doom and brings together heroes from across the multiverse. Critics have praised the emotional depth and spectacular visual effects, calling it a "perfect culmination" of the MCU's ambitious narrative.</p><h2>ClarixNews Analysis</h2><p>This record-breaking performance proves that theatrical cinema is far from dead. When studios deliver high-quality, event-level storytelling, audiences will still flock to theaters in record numbers. The MCU has successfully navigated its most challenging era and emerged stronger than ever.</p>`
+},
+
+  {
+  id: "bitcoin-hits-150k-wall-street-adoption-2026",
+  title: "Bitcoin Surges Past $150,000 as Major Global Banks Officially Adopt it for Cross-Border Settlements",
+  subtitle: "JPMorgan, HSBC, and Deutsche Bank announce the integration of Bitcoin Lightning Network for instant international transfers, triggering a massive institutional rally.",
+  category: "Business",
+  catClass: "business",
+  author: "Marcus Thorne",
+  authorRole: "Global Economics Correspondent",
+  authorInitials: "MT",
+  date: "July 14, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=1400&q=80&fit=crop",
+  tags: ["Bitcoin", "BTC Price", "Crypto News", "Wall Street", "Finance", "Lightning Network", "Institutional Adoption"],
+  content: `<p>Bitcoin has shattered all previous records, surging past the $150,000 milestone today following a coordinated announcement from three of the world's largest financial institutions. JPMorgan, HSBC, and Deutsche Bank revealed they are officially integrating the Bitcoin Lightning Network for instant, low-cost cross-border settlements.</p><blockquote>"This is not speculation; this is utility. Bitcoin has proven to be the most efficient settlement layer for global finance." — CEO, JPMorgan Chase</blockquote><h2>The End of the SWIFT Monopoly?</h2><p>By bypassing traditional correspondent banking, these institutions can settle international transactions in seconds rather than days, saving billions in fees. This institutional validation has triggered a massive rally, with Bitcoin's market capitalization now exceeding $3 trillion.</p><h2>ClarixNews Analysis</h2><p>The narrative has permanently shifted. Bitcoin is no longer just a 'store of value' or a speculative asset; it is now critical financial infrastructure. While regulatory frameworks will continue to evolve, Wall Street's embrace guarantees Bitcoin's dominance in the digital asset space for the foreseeable future.</p>`
+},
+
+  {
+  id: "japan-commercial-fusion-energy-reactor-2026",
+  title: "Historic Breakthrough: Japan Activates World's First Commercial Nuclear Fusion Reactor",
+  subtitle: "The JT-60SA facility in Naka achieves sustained net-positive energy output for 45 minutes, marking a monumental leap toward limitless, clean, and safe global energy.",
+  category: "World",
+  catClass: "world",
+  author: "Dr. Kenji Sato",
+  authorRole: "Science & Environment Editor",
+  authorInitials: "KS",
+  date: "July 14, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1400&q=80&fit=crop",
+  tags: ["Nuclear Fusion", "Japan", "Clean Energy", "Science Breakthrough", "Climate Change", "Technology"],
+  content: `<p>Humanity has crossed a historic threshold. Scientists at Japan's National Institutes for Quantum Science and Technology (QST) announced today that the JT-60SA tokamak reactor has successfully achieved sustained net-positive energy output for 45 consecutive minutes. This is the first time a fusion reaction has produced significantly more energy than it consumed in a commercial-scale prototype.</p><blockquote>"Today, we have proven that the power of the stars can be harnessed safely on Earth. This is the end of the fossil fuel era." — Project Director, QST</blockquote><h2>How It Changes the World</h2><p>Unlike nuclear fission, fusion produces no long-lived radioactive waste and carries zero risk of meltdown. The fuel, derived from seawater, is virtually limitless. While widespread grid integration is still a decade away, this breakthrough accelerates the global transition to zero-carbon energy.</p><h2>ClarixNews Analysis</h2><p>This is the most significant scientific achievement of the 21st century. While geopolitical tensions over oil and gas will persist in the short term, Japan's success guarantees that the long-term future of human energy is clean, abundant, and secure.</p>`
+},
+
+  {
+  id: "argentina-beats-france-world-cup-semi-final-2026",
+  title: "World Cup 2026: Argentina Defeats France in Epic Penalty Shootout to Reach Final",
+  subtitle: "Lionel Messi orchestrates another masterclass as Argentina edges past defending champions France 4-3 on penalties after a thrilling 2-2 draw in the semi-final at AT&T Stadium.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Cricket & Football Correspondent",
+  authorInitials: "AR",
+  date: "July 14, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80&fit=crop",
+  tags: ["FIFA World Cup 2026", "Argentina", "France", "Lionel Messi", "Football", "Semi-Final", "Sports"],
+  content: `<p>In a match that will be replayed for generations, Argentina defeated France 4-3 in a dramatic penalty shootout to book their place in the 2026 FIFA World Cup Final. The semi-final clash at a sold-out AT&T Stadium in Texas ended 2-2 after extra time, echoing the drama of their 2022 final meeting.</p><blockquote>"The heart of this team is unbreakable. We knew it would go to penalties, and we were ready." — Lionel Scaloni, Argentina Manager</blockquote><h2>Messi's Magical Assist and France's Fightback</h2><p>Lionel Messi, playing in what is widely considered his final World Cup, provided a sublime assist for Julián Álvarez in the 23rd minute. France responded fiercely, with Kylian Mbappé scoring a stunning brace in the second half to force extra time. Emiliano Martínez once again proved to be Argentina's hero, saving two crucial penalties in the shootout.</p><h2>ClarixNews Analysis</h2><p>This victory solidifies Argentina's status as the tournament favorites. For France, the heartbreak is palpable, but their young core, led by Mbappé, remains a terrifying prospect for the future. The stage is now set for a historic final.</p>`
+},
+
+  {
+  id: "apple-unveils-ai-glasses-vision-pro-2026",
+  title: "Apple Unveils 'Apple Intelligence Glasses': The AR Device That Translates Reality in Real-Time",
+  subtitle: "Tim Cook introduces the lightweight, $999 AR glasses powered by a new M4 chip, featuring real-time language translation and seamless iOS integration, marking a massive leap in consumer AI hardware.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "July 14, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1629737956897-1a4c0206337d?w=1400&q=80&fit=crop",
+  tags: ["Apple", "AR Glasses", "Apple Intelligence", "Tech News", "Vision Pro", "AI Hardware", "Tim Cook"],
+  content: `<p>In a highly anticipated keynote at Apple Park, CEO Tim Cook unveiled the 'Apple Intelligence Glasses,' a lightweight, $999 augmented reality device that promises to fundamentally change how humans interact with the digital world. Unlike the bulky Vision Pro, these glasses look like premium everyday eyewear but pack the computational power of the new M4 chip.</p><blockquote>"This isn't just a display on your face; it's a contextual layer of intelligence over the real world." — Tim Cook, Apple CEO</blockquote><h2>Real-Time Translation and AI Integration</h2><p>The standout feature is 'Live Translate,' which uses on-device AI to provide real-time, subtitle-like translations of spoken conversations in over 40 languages, directly in the user's field of view. The glasses seamlessly integrate with iOS 20, allowing users to read iMessages, navigate maps, and control smart home devices with subtle hand gestures.</p><h2>Market Reaction and ClarixNews Analysis</h2><p>Apple shares surged 4% in after-hours trading. While Meta and Google have struggled to make AR glasses a mainstream consumer product, Apple's focus on privacy (all AI processing happens on-device) and sleek design could finally crack the code. This is a defining moment for spatial computing in 2026.</p>`
+},
+
+  {
   id: "pakistan-cricket-world-cup-2026-babar-azam-century",
   title: "Babar Azam's Masterclass: Pakistan Crushes Australia by 8 Wickets in World Cup 2026 Thriller",
   subtitle: "Captain Babar Azam's unbeaten 142 leads Pakistan to a historic chase at Lord's, as the Green Shirts deliver their most dominant performance of the tournament to keep semi-final hopes alive.",
