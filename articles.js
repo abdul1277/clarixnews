@@ -1,6 +1,91 @@
 const ARTICLES = [
 
   {
+  id: "universal-cancer-vaccine-breakthrough-2026",
+  title: "Medical Miracle: Universal mRNA Cancer Vaccine Shows 90% Efficacy in Phase 3 Trials",
+  subtitle: "A collaborative global trial reveals a groundbreaking vaccine that trains the immune system to recognize and destroy multiple types of early-stage tumors, promising a new era in oncology.",
+  category: "World",
+  catClass: "world",
+  author: "Dr. Sarah Lin",
+  authorRole: "Health & Science Correspondent",
+  authorInitials: "SL",
+  date: "July 14, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1400&q=80&fit=crop",
+  tags: ["Cancer Vaccine", "mRNA", "Medical Breakthrough", "Health", "Science", "Oncology", "Clinical Trials"],
+  content: `<p>The medical community is celebrating what many are calling the most significant breakthrough in oncology in the last century. A universal mRNA cancer vaccine, developed through a collaboration between BioNTech, Moderna, and leading global research institutes, has demonstrated a 90% efficacy rate in preventing the recurrence of multiple early-stage solid tumors in Phase 3 clinical trials.</p><blockquote>"We are no longer just treating cancer; we are teaching the body to eliminate it before it can take hold. This is the dawn of preventive oncology." — Lead Researcher, Global Oncology Consortium</blockquote><h2>How the Vaccine Works</h2><p>Unlike traditional vaccines that prevent viral infections, this therapeutic vaccine is personalized. It uses a patient's own tumor biopsy to identify unique neoantigens. The mRNA then instructs the patient's immune system to produce T-cells specifically targeted to hunt down and destroy any remaining cancer cells, significantly reducing the risk of relapse.</p><h2>ClarixNews Analysis</h2><p>While regulatory approval and mass manufacturing will take a few more years, this data is unequivocally revolutionary. It promises to transform cancer from a deadly disease into a manageable, and often preventable, condition, saving millions of lives and trillions in global healthcare costs.</p>`
+},
+
+  {
+  id: "pakistan-women-cricket-t20-world-cup-win-2026",
+  title: "History Made: Pakistan Women's Cricket Team Wins First-Ever ICC T20 World Cup",
+  subtitle: "Led by a brilliant all-round performance from Fatima Sana, the Green Shirts defeat Australia in a thrilling final in Dubai, sparking nationwide celebrations.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Sports Correspondent",
+  authorInitials: "AR",
+  date: "July 14, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1400&q=80&fit=crop",
+  tags: ["Pakistan Women's Cricket", "T20 World Cup 2026", "Fatima Sana", "Cricket", "Sports", "ICC"],
+  content: `<p>In a moment that will forever be etched in the annals of sporting history, the Pakistan Women's Cricket Team has won their first-ever ICC T20 World Cup, defeating defending champions Australia by 15 runs in a nail-biting final in Dubai.</p><blockquote>"This trophy belongs to every little girl in Pakistan who was told she couldn't play cricket. Today, we proved them wrong." — Fatima Sana, Player of the Match</blockquote><h2>The Final Showdown</h2><p>Batting first, Pakistan posted a competitive 156/7, anchored by a gritty 68 from captain Fatima Sana. In response, Australia fought hard, but a devastating spell of fast bowling by Naseem Shah (3/22) and tight bowling from Diana Baig in the death overs restricted them to 141/9.</p><h2>ClarixNews Analysis</h2><p>This victory is a watershed moment for women's sports in Pakistan. It transcends cricket, serving as a powerful symbol of empowerment and perseverance. The Pakistan Cricket Board (PCB) must now capitalize on this momentum by investing heavily in grassroots women's cricket to sustain this golden generation.</p>`
+},
+
+  {
+  id: "spacex-nasa-crewed-mars-mission-launch-2026",
+  title: "Historic Launch: SpaceX and NASA Successfully Send First Crewed Mission to Mars",
+  subtitle: "The Starship 'Ares I' lifts off from Texas carrying four astronauts on a 7-month journey, marking the beginning of humanity's multi-planetary future.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Dr. Elena Rostova",
+  authorRole: "Space & Science Editor",
+  authorInitials: "ER",
+  date: "July 14, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1400&q=80&fit=crop",
+  tags: ["SpaceX", "NASA", "Mars Mission", "Space Exploration", "Starship", "Science", "Technology"],
+  content: `<p>Humanity has taken its most significant leap since the Apollo moon landings. Today, the SpaceX Starship 'Ares I', in partnership with NASA, successfully launched from Starbase, Texas, carrying a four-person international crew on a historic 7-month journey to Mars.</p><blockquote>"Today, we leave Earth not as visitors, but as pioneers. This is the first step toward making life multi-planetary." — Mission Commander, pre-launch broadcast</blockquote><h2>The Mission Profile</h2><p>The crew, consisting of two Americans, one European, and one Japanese astronaut, will attempt the first crewed landing on the Martian surface. They carry advanced life-support systems, a compact nuclear reactor for surface power, and the first prototype of a Mars habitat designed to withstand the planet's harsh radiation and dust storms.</p><h2>ClarixNews Analysis</h2><p>This mission is a monumental triumph of public-private partnership. While the technical challenges of landing and sustaining human life on Mars are immense, this launch proves that the vision of a multi-planetary species is no longer science fiction, but an active, unfolding reality.</p>`
+},
+
+  {
+  id: "saudi-neom-the-line-first-phase-opens-2026",
+  title: "Saudi Arabia's NEOM 'The Line' Opens First Residential Phase to Global Citizens",
+  subtitle: "The futuristic, car-free linear city welcomes its first 50,000 residents, featuring 100% renewable energy, AI-driven infrastructure, and high-speed underground transit.",
+  category: "Middle East",
+  catClass: "middleeast",
+  author: "Omar Al-Fayed",
+  authorRole: "Middle East Correspondent",
+  authorInitials: "OF",
+  date: "July 14, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1400&q=80&fit=crop",
+  tags: ["NEOM", "Saudi Arabia", "The Line", "Future Cities", "Middle East", "Smart City", "Renewable Energy"],
+  content: `<p>In a landmark moment for urban development, Saudi Arabia has officially opened the first residential phase of 'The Line' in NEOM to its initial 50,000 residents. The 170-kilometer-long, 200-meter-tall linear city represents a radical reimagining of human habitation, operating with zero cars, zero roads, and 100% renewable energy.</p><blockquote>"We are not just building a city; we are building a new paradigm for human civilization that respects nature and leverages technology." — NEOM CEO</blockquote><h2>Life Inside The Line</h2><p>Residents will experience a 'five-minute city' concept, where all daily essentials are within a short walk. A high-speed, autonomous underground transit system connects the entire length of the city, while AI manages everything from energy distribution to waste management, ensuring zero carbon emissions.</p><h2>ClarixNews Analysis</h2><p>While critics have long questioned the feasibility and environmental impact of such a massive desert project, the successful opening of Phase 1 proves that NEOM is transitioning from architectural renderings to tangible reality. It sets a new global benchmark for sustainable urban planning.</p>`
+},
+
+  {
+  id: "pakistan-it-exports-record-high-2026",
+  title: "Pakistan's IT Exports Hit Record $4 Billion in a Single Quarter",
+  subtitle: "Driven by a massive surge in AI development and freelance tech services, Pakistan's technology sector achieves an unprecedented milestone, creating over 100,000 new jobs.",
+  category: "Pakistan",
+  catClass: "pakistan",
+  author: "Fatima Khan",
+  authorRole: "Economics Correspondent",
+  authorInitials: "FK",
+  date: "July 14, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80&fit=crop",
+  tags: ["Pakistan", "IT Exports", "Tech Boom", "Freelancing", "Economy", "Digital Pakistan"],
+  content: `<p>Pakistan's technology sector has achieved a historic milestone, with IT and IT-enabled services (ITeS) exports surpassing $4 billion in a single quarter for the first time in the country's history. This represents a 45% year-over-year growth, driven primarily by a surge in artificial intelligence development, software engineering, and freelance digital services.</p><blockquote>"This is not just a number; it is a testament to the resilience and brilliance of Pakistan's youth. We are no longer just consumers of technology; we are global creators." — Minister of IT & Telecom, July 2026</blockquote><h2>The Freelance Revolution</h2><p>Pakistan has now firmly established itself as the 4th largest freelance market globally. Platforms like Upwork and Fiverr report that Pakistani developers, particularly those specializing in Python, React, and machine learning, are in unprecedented demand from North American and European clients.</p><h2>ClarixNews Analysis</h2><p>This exponential growth in the tech sector provides a crucial buffer for Pakistan's economy. By diversifying away from traditional textile exports and focusing on high-margin digital services, Pakistan is building a sustainable, future-proof economic model that empowers its youth and attracts vital foreign exchange.</p>`
+},
+
+  {
   id: "avengers-secret-wars-box-office-record-2026",
   title: "'Avengers: Secret Wars' Shatters All-Time Global Box Office Record in Opening Weekend",
   subtitle: "Marvel's epic conclusion to the Multiverse Saga grossed a staggering $1.2 billion globally in just three days, dethroning 'Avatar' and redefining cinematic history.",
