@@ -1,6 +1,91 @@
 const ARTICLES = [
 
   {
+  id: "fda-approves-groundbreaking-alzheimers-gene-therapy-2026",
+  title: "FDA Approves Groundbreaking Gene Therapy That Reverses Early-Stage Alzheimer's",
+  subtitle: "A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.",
+  category: "World",
+  catClass: "world",
+  author: "Dr. Sarah Lin",
+  authorRole: "Health & Science Correspondent",
+  authorInitials: "SL",
+  date: "July 16, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1400&q=80&fit=crop",
+  tags: ["Alzheimer's", "Gene Therapy", "FDA Approval", "Medical Breakthrough", "Health", "Neuroscience"],
+  content: `<p>In a monumental victory for modern medicine, the US Food and Drug Administration (FDA) has granted accelerated approval to a novel gene therapy that successfully reverses cognitive decline in early-stage Alzheimer's patients. The treatment, developed by a consortium of leading neuroscientific institutes, works by repairing the specific genetic mutations responsible for amyloid plaque buildup in the brain.</p><blockquote>"We are witnessing the transition of Alzheimer's from a terminal diagnosis to a treatable condition. This is the dawn of a new era in neurology." — Lead Clinical Researcher</blockquote><h2>ClarixNews Analysis</h2><p>While the $2 million price tag per dose presents significant healthcare system challenges, the long-term economic and human benefits are undeniable. This approval will trigger a massive shift in neurological research, with competing therapies already in late-stage trials, promising to make this life-changing treatment more accessible within the next five years.</p>`
+},
+
+  {
+  id: "gta-6-release-date-preorder-records-2026",
+  title: "GTA VI Official Release Date Confirmed: Breaks All-Time Pre-Order Records",
+  subtitle: "Rockstar Games announces November 2026 launch for Grand Theft Auto VI, with pre-orders surpassing 15 million copies in the first 24 hours, shattering industry benchmarks.",
+  category: "Entertainment",
+  catClass: "entertainment",
+  author: "Jessica Vale",
+  authorRole: "Gaming & Entertainment Editor",
+  authorInitials: "JV",
+  date: "July 16, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1552820728-8b83bb6b2b0a?w=1400&q=80&fit=crop",
+  tags: ["GTA 6", "Rockstar Games", "Gaming News", "Grand Theft Auto", "Entertainment", "Video Games"],
+  content: `<p>The wait is finally over. Rockstar Games has officially confirmed that *Grand Theft Auto VI* will launch globally on November 15, 2026, for PlayStation 5 and Xbox Series X|S. Alongside the announcement, the company revealed that pre-orders have already shattered all industry records, surpassing 15 million copies in just 24 hours.</p><blockquote>"Vice City is bigger, more alive, and more reactive than anything we have ever built. This is the future of open-world gaming." — Rockstar Games President</blockquote><h2>ClarixNews Analysis</h2><p>The unprecedented demand for GTA VI highlights the enduring power of legacy gaming franchises. With an estimated development budget exceeding $2 billion, Rockstar is not just releasing a game; they are launching a cultural phenomenon that will dominate the entertainment landscape for the next decade.</p>`
+},
+
+  {
+  id: "un-global-plastic-treaty-signed-geneva-2026",
+  title: "Historic Global Plastic Treaty Signed by 170 Nations in Geneva",
+  subtitle: "In a landmark environmental agreement, countries commit to legally binding targets to cut virgin plastic production by 60% by 2035, marking the most significant climate action since the Paris Agreement.",
+  category: "World",
+  catClass: "world",
+  author: "Dr. Elena Rostova",
+  authorRole: "Environment Correspondent",
+  authorInitials: "ER",
+  date: "July 16, 2026",
+  readTime: "5 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=1400&q=80&fit=crop",
+  tags: ["Plastic Treaty", "UN Environment", "Climate Change", "Sustainability", "Global Politics", "Pollution"],
+  content: `<p>After three years of intense negotiations, 170 nations have officially signed the landmark Global Plastic Treaty in Geneva today. The legally binding agreement mandates a 60% reduction in virgin plastic production by 2035 and establishes a global fund to help developing nations transition to sustainable alternatives.</p><blockquote>"Today, we turned the tide on plastic pollution. This is the most significant multilateral environmental agreement since the Paris Climate Accord." — UN Environment Programme Executive Director</blockquote><h2>ClarixNews Analysis</h2><p>While the treaty is a monumental diplomatic achievement, the real test lies in enforcement. Major petrochemical-producing nations have already signaled potential resistance to the strict production caps. However, the inclusion of financial mechanisms for the Global South ensures this treaty has a much higher chance of success than previous environmental accords.</p>`
+},
+
+  {
+  id: "pakistan-beats-india-t20-world-cup-2026-thriller",
+  title: "T20 World Cup 2026: Pakistan Stuns India in Last-Ball Thriller at Melbourne",
+  subtitle: "Shaheen Afridi defends 8 runs in the final over as Pakistan secures a historic 4-run victory against arch-rivals India, keeping their semi-final hopes alive in front of a record 90,000 crowd.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Cricket Correspondent",
+  authorInitials: "AR",
+  date: "July 16, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1400&q=80&fit=crop",
+  tags: ["Pakistan Cricket", "India vs Pakistan", "T20 World Cup 2026", "Shaheen Afridi", "Babar Azam", "Virat Kohli", "Cricket"],
+  content: `<p>In what will be remembered as one of the greatest T20 World Cup matches in history, Pakistan defeated India by 4 runs in a nail-biting finish at the Melbourne Cricket Ground (MCG) today. Chasing a formidable target of 182, India fell agonizingly short at 177/8, with Shaheen Afridi producing a spell of sheer brilliance in the 20th over.</p><blockquote>"This is for the fans who traveled thousands of miles. We knew the pressure, but we embraced it. This is Pakistan cricket at its absolute best." — Babar Azam, Player of the Match</blockquote><h2>The Final Over Drama</h2><p>Needing 12 runs off the final 6 balls, India's Hardik Pandya smashed a six off the first delivery. However, Shaheen responded with a perfect yorker to dismiss Pandya, followed by two dot balls. A desperate single on the fourth ball left India needing 5 off 2. Shaheen delivered a slower-ball bouncer, inducing a mistimed pull shot that was safely caught at deep mid-wicket, sealing a historic victory for the Green Shirts.</p><h2>ClarixNews Analysis</h2><p>This victory transcends cricket; it is a massive psychological boost for the Pakistani squad. Defeating India in a high-stakes World Cup match, especially in the final over, requires nerves of steel. Pakistan's bowling attack, led by Shaheen and Haris Rauf, has proven once again that they are the most lethal in the tournament when it matters most.</p>`
+},
+
+  {
+  id: "nvidia-blackwell-ultra-ai-chip-stock-surge-2026",
+  title: "Nvidia Unveils 'Blackwell Ultra' AI Chip, Sending Tech Stocks to Record Highs",
+  subtitle: "The new semiconductor promises 4x the processing power of its predecessor, triggering a massive rally in global tech markets and solidifying Nvidia's dominance in the AI race.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "July 16, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1555664424-778a69022365?w=1400&q=80&fit=crop",
+  tags: ["Nvidia", "AI Chip", "Blackwell Ultra", "Stock Market", "Technology", "Semiconductors", "Jensen Huang"],
+  content: `<p>In a move that has sent shockwaves through global financial markets, Nvidia officially unveiled its next-generation 'Blackwell Ultra' AI semiconductor today. The new chip, announced by CEO Jensen Huang at a packed conference in Taipei, promises up to 4x the processing power and energy efficiency of the current Blackwell architecture, specifically designed for training massive, multi-trillion parameter AI models.</p><blockquote>"This is not just an incremental upgrade; it is a fundamental leap in computational physics. Blackwell Ultra will power the next decade of artificial general intelligence." — Jensen Huang, CEO of Nvidia</blockquote><h2>Market Reaction and ClarixNews Analysis</h2><p>The announcement triggered an immediate and massive rally in global tech stocks. Nvidia's shares surged 8% in pre-market trading, pulling the Nasdaq Composite to a new all-time high. Competitors like AMD and Intel saw their shares dip as investors reassessed the competitive landscape. For the broader economy, this signals that the AI infrastructure boom is far from over, with enterprise demand continuing to outstrip supply well into 2027.</p>`
+},
+
+  {
   id: "universal-cancer-vaccine-breakthrough-2026",
   title: "Medical Miracle: Universal mRNA Cancer Vaccine Shows 90% Efficacy in Phase 3 Trials",
   subtitle: "A collaborative global trial reveals a groundbreaking vaccine that trains the immune system to recognize and destroy multiple types of early-stage tumors, promising a new era in oncology.",
