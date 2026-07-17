@@ -1,6 +1,57 @@
 const ARTICLES = [
 
   {
+  id: "record-breaking-virtual-reality-concert-metaverse-2026",
+  title: "The Future of Live Music: Global Superstar Shatters Attendance Records with 50 Million Viewer VR Concert",
+  subtitle: "Blending cutting-edge haptic feedback suits with photorealistic avatars, the groundbreaking 'MetaLive' event redefines the boundaries of digital entertainment and fan engagement.",
+  category: "Entertainment",
+  catClass: "entertainment",
+  author: "Jessica Vale",
+  authorRole: "Entertainment & Culture Editor",
+  authorInitials: "JV",
+  date: "July 17, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1400&q=80&fit=crop",
+  tags: ["Virtual Reality", "Metaverse", "Music Industry", "Live Concert", "Entertainment News", "Digital Innovation"],
+  content: `<p>The music industry has witnessed a paradigm shift. Last night, a groundbreaking virtual reality concert hosted on the 'MetaLive' platform drew a simultaneous global audience of over 50 million viewers, shattering all previous records for digital live events. The performance seamlessly blended photorealistic avatars with next-generation haptic feedback technology.</p><blockquote>"We didn't just stream a concert; we transported 50 million people into the same digital arena. Fans could feel the bass, see the crowd, and interact with the artist in real-time. This is the future of live entertainment." — MetaLive CEO</blockquote><h2>Technology Meets Artistry</h2><p>Unlike early 2020s virtual concerts, this event utilized advanced volumetric capture and real-time ray tracing, making the digital performance indistinguishable from reality. Viewers wearing haptic vests reported feeling the thump of the bass and the energy of the crowd, creating an immersive experience that rivals, and in some aspects surpasses, physical attendance.</p><h2>ClarixNews Analysis</h2><p>This event proves that the metaverse is no longer a speculative concept but a viable, highly lucrative medium for global entertainment. For artists, it offers unlimited scalability and creative freedom without the logistical nightmares of physical touring. The traditional concert model isn't dying; it is evolving into a hybrid ecosystem where digital and physical experiences coexist.</p>`
+},
+
+  {
+  id: "jwst-discovers-definitive-biosignatures-exoplanet-2026",
+  title: "Cosmic Milestone: James Webb Telescope Detects Definitive Biosignatures on Exoplanet K2-18b",
+  subtitle: "NASA and ESA scientists confirm the presence of dimethyl sulfide (DMS) in the atmosphere of a distant habitable-zone exoplanet, marking the strongest evidence yet for extraterrestrial life.",
+  category: "World",
+  catClass: "world",
+  author: "Dr. Elena Rostova",
+  authorRole: "Space & Science Editor",
+  authorInitials: "ER",
+  date: "July 17, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1400&q=80&fit=crop",
+  tags: ["James Webb Space Telescope", "NASA", "Exoplanet", "Astrobiology", "Space Exploration", "K2-18b", "Science News"],
+  content: `<p>Humanity may no longer be alone in the universe. In a press conference that will be remembered for centuries, NASA and the European Space Agency (ESA) announced today that the James Webb Space Telescope (JWST) has detected definitive biosignatures in the atmosphere of K2-18b, an exoplanet located 120 light-years away in the habitable zone of its star.</p><blockquote>"We have detected dimethyl sulfide (DMS), a molecule that, on Earth, is only produced by living organisms. While we must remain cautious, this is the most compelling evidence for extraterrestrial life we have ever gathered." — NASA Administrator</blockquote><h2>The Science Behind the Discovery</h2><p>Using its advanced Mid-Infrared Instrument (MIRI), JWST analyzed the starlight filtering through K2-18b's atmosphere. The spectral data revealed not only water vapor and methane but also the distinct chemical fingerprint of DMS. The planet is classified as a 'Hycean' world—featuring a hydrogen-rich atmosphere and a vast, global ocean.</p><h2>ClarixNews Analysis</h2><p>This discovery fundamentally alters our understanding of our place in the cosmos. While skeptics rightly point out that non-biological processes must be rigorously ruled out, the sheer precision of JWST's data has sent shockwaves through the scientific community. The next decade of astronomy will be entirely focused on verifying and expanding upon this monumental finding.</p>`
+},
+
+  {
+  id: "gcc-pakistan-10bn-green-energy-deal-2026",
+  title: "GCC Nations Pledge $10 Billion for Pakistan's Green Energy Transition",
+  subtitle: "In a landmark economic agreement, Saudi Arabia and the UAE commit to massive investments in solar and wind infrastructure, aiming to add 5,000 MW to Pakistan's national grid by 2028.",
+  category: "World",
+  catClass: "world",
+  author: "Fatima Khan",
+  authorRole: "Economics Correspondent",
+  authorInitials: "FK",
+  date: "July 17, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1400&q=80&fit=crop",
+  tags: ["Pakistan Economy", "GCC Investment", "Green Energy", "Saudi Arabia", "UAE", "Solar Power", "Economic Development"],
+  content: `<p>Pakistan's economic landscape is poised for a transformative shift following a historic $10 billion green energy investment pledge from Gulf Cooperation Council (GCC) nations, primarily Saudi Arabia and the United Arab Emirates. Announced in Islamabad today, the agreement targets the development of large-scale solar and wind farms across Punjab and Sindh.</p><blockquote>"This partnership is not just about capital; it is about transferring technology and building a sustainable, self-reliant energy future for Pakistan." — Pakistani Minister of Energy</blockquote><h2>Impact on the Economy</h2><p>The influx of foreign direct investment (FDI) is expected to significantly ease Pakistan's balance of payments pressure. By adding 5,000 MW of renewable energy to the national grid, the country aims to reduce its reliance on expensive imported fossil fuels, potentially saving billions in annual energy bills and mitigating the chronic load-shedding that has hampered industrial growth.</p><h2>ClarixNews Analysis</h2><p>This deal represents a strategic realignment. The GCC is diversifying its investment portfolio beyond traditional oil and gas, while Pakistan secures vital, long-term capital for infrastructure. If executed transparently, this initiative could serve as a blueprint for sustainable economic recovery in developing nations.</p>`
+},
+
+  {
   id: "pakistan-historic-test-series-win-england-2026",
   title: "History at Lord's: Pakistan Secures First Test Series Victory in England Since 2016",
   subtitle: "Led by a majestic century from Babar Azam and a devastating five-wicket haul by Shaheen Afridi, the Green Shirts clinch a memorable 2-1 series victory, revitalizing their World Test Championship hopes.",
