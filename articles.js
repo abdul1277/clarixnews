@@ -1,6 +1,40 @@
 const ARTICLES = [
 
   {
+  id: "pakistan-historic-test-series-win-england-2026",
+  title: "History at Lord's: Pakistan Secures First Test Series Victory in England Since 2016",
+  subtitle: "Led by a majestic century from Babar Azam and a devastating five-wicket haul by Shaheen Afridi, the Green Shirts clinch a memorable 2-1 series victory, revitalizing their World Test Championship hopes.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Cricket Correspondent",
+  authorInitials: "AR",
+  date: "July 17, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1400&q=80&fit=crop",
+  tags: ["Pakistan Cricket", "Test Cricket", "England vs Pakistan", "Babar Azam", "Shaheen Afridi", "Lord's", "Sports News"],
+  content: `<p>It is a victory that will be etched in the annals of Pakistani cricket history. On a dramatic final day at the iconic Lord's Cricket Ground, Pakistan defeated England by 7 wickets to secure a historic 2-1 Test series victory on English soil, their first since the legendary 2016 tour.</p><blockquote>"We believed in our process. To win at Lord's, the 'Home of Cricket', is a dream come true for every Pakistani cricketer. This is for our fans back home." — Babar Azam, Player of the Series</blockquote><h2>The Turning Point: Day 4 and 5</h2><p>Chasing a tricky target of 285 on a deteriorating fourth-day pitch, Pakistan's top order showed remarkable resilience. Babar Azam anchored the chase with a masterful, unbeaten 112, expertly negotiating both the swinging new ball and the turning older ball. When England pushed for a breakthrough, Shaheen Afridi's explosive lower-order hitting, including a crucial 45-run partnership with Mohammad Rizwan, sealed the deal.</p><h2>ClarixNews Analysis</h2><p>This series win is a massive psychological and strategic breakthrough for Pakistan. It proves that the current squad possesses the temperament and skill to succeed in the toughest conditions. With this victory, Pakistan has vaulted into the top 4 of the World Test Championship standings, making them genuine contenders for the final.</p>`
+},
+
+  {
+  id: "eu-ai-act-full-enforcement-tech-giants-2026",
+  title: "EU AI Act Takes Full Effect: Tech Giants Face Unprecedented Compliance Overhaul",
+  subtitle: "As the world's first comprehensive artificial intelligence law becomes fully enforceable, companies like Google, Meta, and OpenAI must radically alter their algorithms or face fines up to 7% of global revenue.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "July 17, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1400&q=80&fit=crop",
+  tags: ["EU AI Act", "Artificial Intelligence", "Tech Regulation", "GDPR", "Meta", "Google", "OpenAI", "Technology News"],
+  content: `<p>The digital landscape has fundamentally shifted. As of July 17, 2026, the European Union's landmark AI Act is now fully enforceable, marking the end of the 'wild west' era of artificial intelligence development. The legislation, the first of its kind globally, categorizes AI systems by risk levels and imposes strict transparency, accountability, and safety mandates.</p><blockquote>"This is not about stifling innovation; it is about ensuring that innovation serves humanity, respects fundamental rights, and operates within the bounds of democratic values." — EU Commissioner for Digital Affairs</blockquote><h2>The Cost of Non-Compliance</h2><p>For 'high-risk' AI applications—such as those used in hiring, law enforcement, and critical infrastructure—companies must now conduct rigorous conformity assessments. Violations can result in fines of up to 7% of a company's global annual turnover, a figure that could amount to tens of billions of dollars for tech giants.</p><h2>ClarixNews Analysis</h2><p>The EU has once again set the global standard for digital regulation, much like it did with GDPR. While US and Asian tech firms may initially complain about the bureaucratic burden, this framework will likely become the de facto global standard, forcing a necessary and long-overdue cleanup of algorithmic bias and data privacy violations.</p>`
+},
+
+  {
   id: "fda-approves-groundbreaking-alzheimers-gene-therapy-2026",
   title: "FDA Approves Groundbreaking Gene Therapy That Reverses Early-Stage Alzheimer's",
   subtitle: "A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.",
