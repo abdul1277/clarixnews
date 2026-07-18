@@ -1,6 +1,1 @@
-# ClarixNews ads.txt
-# This file is required by Google AdSense to verify publisher identity.
-# Replace YOUR-PUBLISHER-ID with your actual AdSense publisher ID (e.g. pub-1234567890123456)
-# You can find your publisher ID at: https://www.google.com/adsense
-
-google.com, YOUR-PUBLISHER-ID, DIRECT, f08c47fec0942fa0
+google.com, pub-4603226403653034, DIRECT, f08c47fec0942fa0
