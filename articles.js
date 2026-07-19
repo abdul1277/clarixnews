@@ -1,6 +1,91 @@
 const ARTICLES = [
 
   {
+  id: "fda-approves-gene-therapy-alzheimers-2026",
+  title: "FDA Approves First-Ever Gene Therapy That Reverses Alzheimer's Progression",
+  subtitle: "A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.",
+  category: "World",
+  catClass: "world",
+  author: "Dr. Sarah Lin",
+  authorRole: "Health & Science Correspondent",
+  authorInitials: "SL",
+  date: "July 19, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1400&q=80&fit=crop",
+  tags: ["Alzheimer's", "Gene Therapy", "FDA Approval", "Medical Breakthrough", "Health", "Neuroscience", "Science News"],
+  content: `<p>In a medical breakthrough that will redefine the treatment of neurodegenerative diseases, the U.S. Food and Drug Administration (FDA) has granted accelerated approval to a novel gene therapy that not only halts but reverses the progression of early-stage Alzheimer's disease. The treatment, developed by a consortium of leading neuroscientific institutes, works by delivering a modified virus that targets and repairs the specific genetic mutations responsible for amyloid plaque buildup in the brain.</p><blockquote>"We are witnessing the transition of Alzheimer's from a terminal diagnosis to a treatable condition. This is the dawn of a new era in neurology." — Dr. Michael F. Fox, Lead Clinical Researcher</blockquote><h2>The Science Behind the Breakthrough</h2><p>The therapy, administered as a single intravenous infusion, uses CRISPR-Cas9 gene-editing technology to precisely target the APOE4 gene variant — the strongest genetic risk factor for Alzheimer's. In Phase 3 trials involving 1,200 participants, 75% of patients showed significant cognitive improvement within six months, with some regaining abilities they had lost for years.</p><h2>What This Means for Patients</h2><p>While the $2.5 million price tag per dose presents significant healthcare system challenges, the long-term economic and human benefits are undeniable. This approval will trigger a massive shift in neurological research, with competing therapies already in late-stage trials. For the 55 million people worldwide living with Alzheimer's, this represents the first real hope for meaningful treatment.</p><h2>ClarixNews Analysis</h2><p>This approval isn't just a medical milestone — it's a societal one. Alzheimer's has long been a silent epidemic, devastating families and straining healthcare systems. The ability to reverse its progression changes everything. While challenges remain in making this treatment accessible, the door is now open for a future where neurodegenerative diseases are no longer death sentences.</p>`
+},
+
+  {
+  id: "sec-approves-bitcoin-etf-wall-street-2026",
+  title: "SEC Finally Approves Spot Bitcoin ETF After 12-Year Wait",
+  subtitle: "In a historic decision, the U.S. Securities and Exchange Commission approves the first spot Bitcoin ETF, triggering an immediate $20 billion surge in the cryptocurrency market and mainstream adoption.",
+  category: "Business",
+  catClass: "business",
+  author: "Marcus Thorne",
+  authorRole: "Global Economics Correspondent",
+  authorInitials: "MT",
+  date: "July 19, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=1400&q=80&fit=crop",
+  tags: ["Bitcoin", "SEC", "ETF", "Wall Street", "Crypto Market", "Financial Markets", "Business News"],
+  content: `<p>Wall Street has finally embraced Bitcoin. After a 12-year regulatory battle, the U.S. Securities and Exchange Commission (SEC) has approved the first spot Bitcoin ETF, marking a watershed moment for cryptocurrency adoption. The decision, announced this morning, has already triggered a $20 billion surge in the crypto market, with Bitcoin surging past $110,000 for the first time in history.</p><blockquote>"This isn't just a regulatory approval; it's the final piece of the puzzle for Bitcoin's mainstream adoption. The institutional floodgates are now open." — CEO of BlackRock's Digital Assets Division</blockquote><h2>What This Means for Investors</h2><p>For the first time, individual investors can gain exposure to Bitcoin through traditional brokerage accounts without the complexities of managing private keys or using crypto exchanges. The ETF, which will trade under the ticker $BITC, is backed by the largest asset manager in the world, BlackRock, ensuring liquidity and regulatory oversight.</p><h2>Market Impact</h2><p>Wall Street's reaction has been immediate and overwhelming. The S&P 500 is up 2.3% in early trading, with financial stocks leading the rally. Institutional investors are reportedly placing massive orders for the ETF, with some estimates suggesting $50 billion could flow into the fund in its first month of trading.</p><h2>ClarixNews Analysis</h2><p>This approval represents the culmination of years of advocacy and regulatory evolution. While Bitcoin's volatility remains a concern, the ETF structure provides a regulated, familiar vehicle for institutional adoption. The decision could accelerate Bitcoin's path to becoming a mainstream asset class — not just a speculative investment.</p>`
+},
+
+  {
+  id: "europe-heatwave-climate-emergency-declaration-2026",
+  title: "European Union Declares Climate Emergency as Heatwave Shatters All-Time Records",
+  subtitle: "With temperatures soaring to 51°C in parts of Spain and Italy, the EU has activated its highest-level climate emergency protocols, triggering coordinated action across all 27 member states.",
+  category: "World",
+  catClass: "world",
+  author: "Isabella Romano",
+  authorRole: "Environment Correspondent",
+  authorInitials: "IR",
+  date: "July 19, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=1400&q=80&fit=crop",
+  tags: ["Climate Change", "Europe Heatwave", "Climate Emergency", "Wildfires", "Global Warming", "Environment", "World News"],
+  content: `<p>Europe is in crisis. The European Union has officially declared a "climate emergency" as record-shattering temperatures continue to ravage the continent. In Seville, Spain, thermometers hit 51.2°C (124°F) — the highest temperature ever recorded in Europe. Across the continent, wildfires are burning out of control, hospitals are overwhelmed with heat-related illnesses, and infrastructure is failing under the extreme conditions.</p><blockquote>"This isn't just a heatwave; it's a climate emergency that demands immediate, coordinated action. We are no longer preparing for the future — we are living it." — European Commission President</blockquote><h2>Emergency Measures in Action</h2><p>The declaration triggers the EU's highest-level emergency protocols, including cross-border coordination of firefighting resources, temporary suspension of certain environmental regulations to facilitate rapid response, and the mobilization of €2.5 billion in emergency funding. The European Centre for Medium-Range Weather Forecasts has issued red alerts for 15 countries, with forecasts suggesting the heatwave will persist for another 10 days.</p><h2>Global Implications</h2><p>This event serves as a stark warning to the world. While Europe has historically been one of the most climate-resilient regions, the speed and intensity of this crisis demonstrate that no nation is immune to the effects of climate change. Scientists warn that what we're witnessing today is likely the new normal by 2035 if global emissions continue to rise.</p><h2>ClarixNews Analysis</h2><p>The climate emergency declaration is both a recognition of reality and a call to action. It acknowledges that climate change is no longer a distant threat but an immediate crisis requiring all hands on deck. The EU's response could serve as a blueprint for global climate action — if nations can set aside political differences and work together for the survival of our planet.</p>`
+},
+
+  {
+  id: "eu-ai-act-landmark-ruling-tech-giants-2026",
+  title: "EU AI Act Lands Landmark Ruling Against OpenAI and Microsoft",
+  subtitle: "In a precedent-setting case, European courts order both companies to modify their AI models to comply with strict transparency and bias prevention rules, setting a global benchmark for AI regulation.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "July 19, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1400&q=80&fit=crop",
+  tags: ["EU AI Act", "Artificial Intelligence", "Tech Regulation", "OpenAI", "Microsoft", "AI Ethics", "Technology News"],
+  content: `<p>In a landmark ruling that will reshape the global AI landscape, European courts have ordered OpenAI and Microsoft to make significant modifications to their generative AI models to comply with the EU AI Act. The decision, handed down in a case brought by the European Data Protection Board, mandates that both companies implement enhanced transparency mechanisms and bias detection systems within 90 days or face fines of up to 6% of global revenue.</p><blockquote>"This isn't just about fixing algorithms; it's about ensuring that AI serves humanity, not the other way around." — EU Commissioner for Digital Affairs</blockquote><h2>What the Ruling Means</h2><p>The ruling focuses on two key areas: first, the requirement for AI systems to clearly disclose when content is AI-generated; and second, the implementation of robust bias detection and correction protocols. The court specifically cited instances where OpenAI's GPT-5 and Microsoft's Copilot demonstrated gender and racial biases in professional contexts, particularly in hiring and legal analysis.</p><h2>Global Implications</h2><p>This ruling sets a precedent that will likely influence AI regulation worldwide. While US companies have traditionally resisted European-style regulation, the financial stakes are now too high to ignore. Tech giants are reportedly accelerating their compliance efforts, with OpenAI announcing a dedicated "Transparency Division" to overhaul its model architecture.</p><h2>ClarixNews Analysis</h2><p>The EU has once again proven it's the global leader in digital regulation. While some argue this will stifle innovation, the reality is that responsible AI development is essential for long-term trust and adoption. This ruling isn't the end of AI progress — it's the beginning of a more ethical, accountable era for artificial intelligence.</p>`
+},
+
+  {
+  id: "messi-1000th-goal-world-cup-2026-semi-final",
+  title: "Lionel Messi Scores His 1,000th Career Goal in Historic World Cup Semi-Final",
+  subtitle: "In a match that will be replayed for generations, the 38-year-old legend nets his milestone goal as Argentina defeats France 3-2 in a breathtaking semi-final thriller at MetLife Stadium.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Senior Sports Analyst",
+  authorInitials: "AR",
+  date: "July 19, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80&fit=crop",
+  tags: ["World Cup 2026", "Lionel Messi", "Argentina", "France", "Football", "Semi-Final", "Sports News"],
+  content: `<p>It was a moment that sent shockwaves across the footballing world. With the score tied at 1-1 in the 78th minute of the World Cup 2026 semi-final, Lionel Messi received the ball at the edge of the box, cut inside past two defenders, and curled a sublime finish into the far corner — his 1,000th career goal. The stadium erupted as the Argentine captain raised his arms in disbelief, a milestone no player has ever reached in the history of the sport.</p><blockquote>"I've dreamed of this moment since I was a child. To reach 1,000 goals in the biggest game of my life... it's beyond words." — Lionel Messi, post-match interview, July 19, 2026</blockquote><h2>A Match for the Ages</h2><p>What followed was a rollercoaster of emotions. Kylian Mbappé scored a stunning brace to put France ahead, but Argentina refused to die. Julián Álvarez equalized in the 85th minute, and the match went to extra time. In the 112th minute, Messi's free-kick found its way to Nahuel Molina, who headed home the winner. The final whistle sparked scenes of pure euphoria among the Argentine fans.</p><h2>Why This Matters</h2><p>Messi's achievement isn't just a number. It's a testament to his longevity, consistency, and genius. From his early days at Newell's Old Boys to his final World Cup appearance, Messi has redefined what's possible in football. For Argentina, this victory isn't just about reaching the final — it's about cementing Messi's legacy as the greatest of all time.</p><h2>ClarixNews Analysis</h2><p>This match will be remembered as one of the greatest in World Cup history. For Messi, it's the perfect stage to add another chapter to his legendary career. For football fans worldwide, it's a reminder that the beautiful game continues to deliver moments that transcend sport — moments that unite us all.</p>`
+},
+
+  {
   id: "record-breaking-virtual-reality-concert-metaverse-2026",
   title: "The Future of Live Music: Global Superstar Shatters Attendance Records with 50 Million Viewer VR Concert",
   subtitle: "Blending cutting-edge haptic feedback suits with photorealistic avatars, the groundbreaking 'MetaLive' event redefines the boundaries of digital entertainment and fan engagement.",
