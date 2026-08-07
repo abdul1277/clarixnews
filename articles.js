@@ -1,6 +1,110 @@
 const ARTICLES = [
 
   {
+  id: "bts-comeback-world-tour-ticket-records-2026",
+  title: "BTS Is Back: Reunion World Tour Shatters Global Ticket Records in Under an Hour",
+  subtitle: "Following the completion of military service, all seven members announce the 'ARIRANG: Forever' world tour — 45 stadium dates across 20 countries — as 12 million fans crash ticketing sites in the biggest presale in history.",
+  category: "Entertainment",
+  catClass: "entertainment",
+  author: "Jessica Vale",
+  authorRole: "Entertainment & Culture Editor",
+  authorInitials: "JV",
+  date: "August 7, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1400&q=80&fit=crop",
+  tags: ["BTS", "BTS Comeback", "K-pop", "World Tour", "ARMY", "Entertainment News", "Music"],
+  content: `<p>The internet, quite literally, broke again. At midnight KST, HYBE confirmed what millions of fans had prayed for through four years of military service and solo projects: all seven members of BTS are reuniting for the 'ARIRANG: Forever' world tour. Within 40 minutes of tickets opening, an estimated 12 million fans were queued across ticketing platforms, and all 45 stadium dates — spanning 20 countries — sold out in under an hour, setting the fastest sell-out record in live music history.</p><blockquote>"We promised we would come back to you as seven. The stage was empty without you — the army that never left." — RM, BTS leader, comeback announcement film</blockquote><h2>The Numbers Behind the Madness</h2><p>The scale defies the industry: 45 stadiums, an expected 6.5 million attendees, and projected gross revenue exceeding $1.2 billion — which would make it the highest-grossing tour of all time. Economists have already revived the term "BTS effect," with host cities estimating hundreds of millions in tourism revenue per stop, from Seoul and Tokyo to London, São Paulo, and Karachi's neighbor Dubai.</p><h2>What the Tour Will Look Like</h2><p>Production teasers promise the group's most ambitious show yet: a 360-degree stage, 40-meter holographic sky visuals, and a three-hour setlist weaving through all eras of their discography, from 'No More Dream' to their latest solo-era collaborations. The members have reportedly been in intensive vocal and choreography training since spring.</p><h2>Why This Comeback Matters Culturally</h2><p>BTS's return is more than a concert cycle; it is a cultural event. The group that carried K-pop to the UN General Assembly and topped the Billboard charts as a complete unit has become a symbol of continuity for a generation of fans who grew up alongside them. Psychologists quoted in Korean media describe the reunion as "a collective homecoming" for the global ARMY community.</p><h2>ClarixNews Analysis</h2><p>In an era of fragmented streaming and short attention spans, BTS's presale numbers prove something remarkable: nothing replaces the gravitational pull of a shared story told over a decade. The music industry will study this tour for years. For now, the world's biggest band is back — and the world, quite predictably, stopped to watch.</p>`
+},
+
+  {
+  id: "india-gaganyaan-first-crewed-space-mission-2026",
+  title: "India Makes History: Gaganyaan Carries the Nation's First Astronauts Into Space",
+  subtitle: "ISRO's crewed mission lifts off from Sriharikota, making India the fourth country to independently send humans to orbit — a moment of national pride watched live by over a billion people.",
+  category: "Asia",
+  catClass: "asia",
+  author: "Elena Rostova",
+  authorRole: "Space & Science Editor",
+  authorInitials: "ER",
+  date: "August 7, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1400&q=80&fit=crop",
+  tags: ["Gaganyaan", "ISRO", "India Space Mission", "Astronauts", "Space Exploration", "Asia", "Science News"],
+  content: `<p>At 7:15 this morning, a hush fell over a billion television screens as the LVM3 rocket thundered off the pad at Sriharikota, carrying three Indian astronauts into orbit aboard the Gaganyaan spacecraft. With the successful insertion into a 400-kilometer orbit confirmed twelve minutes later, India became only the fourth nation in history — after the Soviet Union/Russia, the United States, and China — to independently send humans to space.</p><blockquote>"Today, every Indian can look up at the sky and say: we belong there too." — ISRO Chairman, mission control, Sriharikota</blockquote><h2>The Mission Profile</h2><p>The three-member crew, led by Group Captain Shubhanshu Shukla, will spend three days in orbit conducting microgravity experiments in materials science, agriculture, and human physiology before splashing down in the Bay of Bengal. Every critical system — from the life-support module to the crew escape system tested in a series of flawless abort trials — is indigenously designed and built.</p><h2>A Dream Four Decades in the Making</h2><p>India's last human spaceflight connection was in 1984, when Rakesh Sharma flew aboard a Soviet Soyuz and famously described his homeland from orbit as "Saare Jahan Se Achha." For four decades, the dream of an Indian flag on an Indian spacecraft remained deferred — until today. The mission caps a two-decade buildup that included Chandrayaan's lunar landing and the Mangalyaan Mars orbiter, both achieved at a fraction of the cost of comparable Western programs.</p><h2>Regional and Global Reactions</h2><p>Congratulatory messages arrived from NASA, ESA, and JAXA within the hour. Notably, Pakistan's SUPARCO and China's CNSA also extended formal congratulations, with regional analysts describing the moment as a rare instance of space achievement transcending rivalry. Across South Asia, students gathered in schools and universities to watch the launch live.</p><h2>ClarixNews Analysis</h2><p>Gaganyaan is far more than a prestige mission. It validates India's end-to-end space capability, strengthens its position in the emerging commercial launch market, and lays groundwork for its stated ambitions: a space station by the early 2030s and a crewed lunar landing later in the decade. In a century increasingly shaped by space capability, today's launch announces that South Asia has a permanent seat at the table.</p>`
+},
+
+  {
+  id: "kse-100-crosses-80000-record-psx-rally-2026",
+  title: "Historic Day for Pakistan: KSE-100 Crosses the 80,000 Mark for the First Time",
+  subtitle: "Fueled by record IT exports, Gulf investment pledges, and IMF-backed stability, the Pakistan Stock Exchange rallies past the psychological milestone, adding Rs 2.1 trillion in investor wealth in a single week.",
+  category: "Business",
+  catClass: "business",
+  author: "Fatima Khan",
+  authorRole: "Economics Correspondent",
+  authorInitials: "FK",
+  date: "August 7, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop",
+  tags: ["KSE-100", "Pakistan Stock Exchange", "PSX", "Pakistan Economy", "Stock Market", "Investment", "Business News"],
+  content: `<p>It was a morning traders at the Pakistan Stock Exchange will be describing for decades. At 11:42 AM on Friday, the KSE-100 index crossed the historic 80,000-point mark for the first time in the country's history, triggering spontaneous applause on the trading floor and a wave of celebratory posts across social media. The index closed at 80,412, capping a week that added Rs 2.1 trillion to investor wealth.</p><blockquote>"This is not a speculative rally; it is a confidence rally. The world is finally pricing in a Pakistan that exports technology, attracts Gulf capital, and honors its commitments." — Chief Economist, Karachi brokerage house</blockquote><h2>What Fueled the Rally</h2><p>The momentum is built on a sequence of genuine fundamentals: record IT exports hitting $4 billion in a single quarter, the GCC's $10 billion green energy investment pledge, the renewed $6 billion IMF Standby Arrangement, and inflation cooling to a three-year low. Foreign portfolio investment posted its strongest monthly inflow since 2017, with overseas Pakistanis increasingly routing savings into PSX through Roshan Digital Accounts.</p><h2>Which Sectors Led the Charge</h2><p>Technology and energy stocks led the surge, followed by banks benefiting from improved credit ratings and narrowing fiscal deficits. Analysts note that valuations remain among the cheapest in emerging markets, with the index trading at under 6x earnings — a discount that global funds are finally beginning to chase.</p><h2>ClarixNews Analysis</h2><p>The 80,000 milestone matters more as psychology than mathematics. For years, Pakistan's market was priced for perpetual crisis; today it is being priced for stability, however fragile. The challenge now is to convert this financial confidence into real-economy outcomes — jobs, exports, and productivity — so that the rally is felt in households, not just in portfolios.</p>`
+},
+
+  {
+  id: "tesla-optimus-humanoid-robots-paid-work-2026",
+  title: "Tesla's Optimus Humanoid Robots Begin First Paid Factory Shifts, Ushering in a New Labor Era",
+  subtitle: "One hundred Optimus Gen-3 units are now working alongside human employees at Gigafactory Texas, performing repetitive tasks at a fraction of labor cost — sparking excitement over productivity and heated debate over the future of work.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "August 7, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1400&q=80&fit=crop",
+  tags: ["Tesla", "Optimus", "Humanoid Robots", "AI", "Future of Work", "Elon Musk", "Technology News"],
+  content: `<p>The future of work quietly clocked in this week. Tesla has confirmed that 100 Optimus Gen-3 humanoid robots are now performing paid, productive shifts at its Gigafactory in Texas — sorting battery cells, transporting components, and conducting quality inspections alongside human workers, 24 hours a day, without breaks, without fatigue, and without error rates that exceed 0.1%.</p><blockquote>"Optimus is no longer a prototype. It is a colleague. By the end of next year, we expect humanoid robots to outnumber human workers on repetitive lines at our factories." — Elon Musk, during Tesla's Q2 earnings call</blockquote><h2>The Economics: $4 an Hour vs $25 an Hour</h2><p>The numbers driving adoption are staggering. Tesla estimates the fully-loaded cost of an Optimus shift at roughly $4 per hour when amortized over the robot's five-year lifespan, compared to an average of $25 per hour for human labor in similar roles. With units priced at approximately $30,000, analysts project a market of 2 million industrial humanoids by 2030, led by Tesla, Figure, Boston Dynamics, and China's Unitree.</p><h2>Workers' Reactions: Fear and Fascination</h2><p>On the factory floor, reactions are mixed. Some employees describe the robots as tireless assistants that have eliminated the most back-breaking tasks from their day. Others worry aloud about what happens when the next hiring cycle arrives. Tesla insists no layoffs have resulted from the deployment, stating that human workers are being retrained for supervisory and maintenance roles that pay 18% more on average.</p><h2>ClarixNews Analysis</h2><p>The Optimus deployment is the clearest signal yet that humanoid robotics has crossed from demo to deployment. The productivity gains are real and enormous — but so is the societal question of what happens to low-skill industrial employment over the next decade. History says technology creates more jobs than it destroys, but the transition period is where policy, retraining, and social safety nets will be tested like never before.</p>`
+},
+
+  {
+  id: "lionel-messi-retires-international-football-2026",
+  title: "The End of an Era: Lionel Messi Retires From International Football After World Cup Glory",
+  subtitle: "Fresh off leading Argentina to a second consecutive World Cup title, the 39-year-old legend confirms the 2026 final was his last match in an Argentina shirt, closing the greatest international career in football history.",
+  category: "Sports",
+  catClass: "sports",
+  author: "Ahmed Raza",
+  authorRole: "Senior Football Correspondent",
+  authorInitials: "AR",
+  date: "August 7, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&q=80&fit=crop",
+  tags: ["Lionel Messi", "Messi Retirement", "Argentina", "World Cup 2026", "Football News", "GOAT", "Sports"],
+  content: `
+    <p>The footballing world woke up today to the news it always knew would come but never wanted to face. Lionel Messi — the 39-year-old from Rosario who carried a nation's hopes for two decades — has officially retired from international football. The announcement, made through a heartfelt video released by the Argentine Football Association (AFA), confirms that the 2026 World Cup final victory over the United States at MetLife Stadium was his final appearance in the famous albiceleste shirt.</p>
+
+    <blockquote>"I leave with a full heart. Everything I dreamed of as a boy in Rosario, I lived a hundred times over. The shirt stays with you forever — but now it belongs to the next generation." — Lionel Messi, retirement video, August 7, 2026</blockquote>
+
+    <h2>A Farewell Fit for a King</h2>
+    <p>Messi's exit could not have been more perfectly scripted. In the final on July 19, he scored Argentina's opening goal and assisted the winner in a 2-1 victory over the host nation, lifting his second World Cup trophy in front of 84,000 fans — half of whom, by every account, had come to see him one last time. He finishes his international career with back-to-back World Cup titles, two Copa América trophies, and the Finalissima, a haul unmatched in the modern era.</p>
+
+    <h2>The Numbers Behind the Legend</h2>
+    <p>The statistics read like fiction: over 190 caps, more than 110 international goals, and a career total that crossed the 1,000-goal mark during this very tournament. He is the only player in history to win the World Cup Golden Ball twice, and the only one to score in every round of a single World Cup. But as fans across Buenos Aires lit flares within minutes of the announcement, it was never really about the numbers. It was about the way he made the impossible look inevitable.</p>
+
+    <h2>Tributes Pour In From Around the World</h2>
+    <p>The reaction was immediate and universal. Kylian Mbappé wrote simply: "Thank you for everything." Cristiano Ronaldo called him "the greatest rival I ever had, and the greatest partner football ever gave me." Argentina's president announced a national tribute match at the Estadio Monumental, while thousands of fans spontaneously gathered outside the Obelisco in Buenos Aires, chanting his name well into the night.</p>
+
+    <h2>What Comes Next for Messi</h2>
+    <p>Messi will continue his club career with Inter Miami, where he has two seasons remaining on his contract. Beyond that, he hinted at staying connected to the game — possibly through coaching badges, an ambassadorial role with the AFA, or developing young talent through his academy network. One thing he ruled out with a smile in the video: "Don't expect me to be a manager shouting on the sideline. I prefer the quiet of the training pitch."</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>Messi's retirement closes not just a career but a chapter of collective memory. For twenty years, his presence gave football a fixed point of reference — a standard against which every pass, every goal, every moment of magic was measured. The sport now passes to a new generation led by Mbappé, Haaland, and Lamine Yamal, all of whom grew up watching him. The GOAT debate, long argued in cafés and stadiums, now quietly settles itself: we were not just watching greatness. We were lucky enough to be watching Messi.</p>
+  `
+},
+
+  {
   id: "fda-approves-gene-therapy-alzheimers-2026",
   title: "FDA Approves First-Ever Gene Therapy That Reverses Alzheimer's Progression",
   subtitle: "A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.",
