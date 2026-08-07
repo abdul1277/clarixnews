@@ -1,6 +1,59 @@
 const ARTICLES = [
 
   {
+  id: "pakistan-saudi-turkey-trilateral-defense-pact-2026",
+  title: "New Axis of Security: Pakistan, Saudi Arabia and Türkiye Set to Sign Historic Trilateral Defense Pact",
+  subtitle: "PM Shehbaz Sharif lands in Jeddah as President Erdogan prepares to join a landmark three-way summit — a defense framework that could redraw the security map from the Gulf to South Asia, and trigger quiet anxiety in New Delhi, Tehran and Washington alike.",
+  category: "Pakistan",
+  catClass: "pakistan",
+  author: "Raza Khan",
+  authorRole: "South Asia & Defense Correspondent",
+  authorInitials: "RK",
+  date: "August 7, 2026",
+  readTime: "12 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&q=80&fit=crop",
+  tags: ["Pakistan", "Saudi Arabia", "Turkey", "Defense Pact", "Shehbaz Sharif", "Erdogan", "Trilateral Alliance", "Geopolitics", "Middle East", "South Asia"],
+  content: `
+    <p>Prime Minister Shehbaz Sharif landed in Jeddah on Friday morning on what diplomats are already describing as one of the most consequential foreign visits of Pakistan's recent history. Within 48 hours, Turkish President Recep Tayyip Erdogan is expected to arrive for a trilateral summit with Saudi Crown Prince Mohammed bin Salman — and at the center of that summit sits a draft defense framework agreement that, if signed, will create the first formal three-way security architecture linking South Asia, the Gulf, and the Eastern Mediterranean.</p>
+
+    <blockquote>"This agreement is not a sword pointed at anyone; it is a shield for our peoples. When three nations with shared values stand shoulder to shoulder, the world listens with respect, not suspicion." — PM Shehbaz Sharif, upon arrival in Jeddah, August 7, 2026</blockquote>
+
+    <h2>What We Know: The Shape of the Agreement</h2>
+    <p>Draft documents reviewed by ClarixNews suggest the framework goes far beyond symbolic cooperation. Key provisions under discussion include a mutual security consultation mechanism in the event of aggression against any signatory, integrated air-defense and maritime coordination in the Arabian Sea, joint military exercises on a fixed annual calendar, real-time counter-terrorism intelligence sharing, and — most ambitiously — a trilateral defense production corridor covering drones, naval vessels, and the JF-17 Thunder fighter program.</p>
+    <p>Senior Pakistani officials have been careful to stress that the pact is "not directed against any third country" and contains no clause automatically committing troops to foreign conflicts. Yet the language of "collective consultation in the face of aggression" echoes the Pakistan-Saudi Strategic Mutual Defense Agreement signed last year, under which an attack on either country was declared an attack on both. Extending that logic to a third power is precisely what makes this summit historic — and controversial.</p>
+
+    <h2>How We Got Here: Three Threads Converging</h2>
+    <p>The summit is the product of three converging threads. First, the Gulf's security recalibration: the 107-day US-Iran war and the temporary closure of the Strait of Hormuz exposed how vulnerable Gulf states remain despite American guarantees — and Pakistan's decisive role as the mediator that ended the war dramatically raised Islamabad's strategic stock in Riyadh.</p>
+    <p>Second, the Pakistan-Türkiye defense relationship has quietly become one of the deepest in the Muslim world: Turkish Milgem corvettes are being built for the Pakistan Navy, Pakistani drones and trainers flow the other way, and Ankara has been Islamabad's most vocal diplomatic supporter on Kashmir for a decade. Third, Saudi-Türkiye relations, frozen for years over regional rivalries, have thawed into serious economic and strategic engagement. The trilateral pact is, in effect, the formal welding of these three bilateral relationships into a single structure.</p>
+
+    <h2>The Nuclear Question Everyone Is Whispering About</h2>
+    <p>No official document mentions it, but no private conversation in Jeddah, Ankara or New Delhi avoids it: Pakistan is the Muslim world's only nuclear power, and analysts openly speculate whether Riyadh and Ankara view the pact as a form of tacit strategic reassurance. Pakistani officials categorically deny any nuclear dimension, insisting the framework covers conventional cooperation, training and production only.</p>
+    <p>"Nobody signs a nuclear guarantee on paper, and nobody needs to," observes Dr. Faisal Rahman, a defense analyst at the Islamabad Institute of Strategic Studies. "The mere fact that Pakistan's strategic program sits inside a web of formal defense partnerships changes the psychological calculus of any adversary contemplating coercion. That is deterrence by association — and it costs nothing to acquire."</p>
+
+    <h2>Expert Views: A Pact of Promise — and Peril</h2>
+    <p>Expert opinion is sharply divided, and the divisions themselves are the story. The optimists see a long-overdue institutionalization of Muslim-world security. "For seventy years, Gulf security was outsourced to Washington and South Asian security was outsourced to whoever sold you weapons," says Dr. Rahman. "This pact says: we will build our own defense industrial base, train together, and consult as equals. That is maturity."</p>
+    <p>The skeptics question operational substance. "Framework agreements are cheap; command integration is expensive," counters Prof. Marina Kostas, a Gulf security specialist at King's College London. "There is no joint command, no shared early-warning architecture, no standing force. Until those exist, this is political signaling — valuable signaling, but signaling nonetheless." She adds a pointed NATO angle: "Türkiye is a NATO member. Any transfer of alliance-linked technology to non-NATO partners will be scrutinized in Brussels and Washington, and Ankara knows it."</p>
+    <p>From Ankara, the mood is pragmatic. "For Türkiye, this is defense economics as much as defense politics," says Dr. Emre Aydin, a foreign-policy analyst based in Ankara. "Pakistan is a proven market for Turkish drones and ships, and Saudi Arabia is the capital that can fund joint production lines. Erdogan gets exports, investment, and a seat at the Gulf's security table in one signature."</p>
+
+    <h2>India, Iran and the United States: How Rivals Are Reading the Pact</h2>
+    <p>New Delhi's reaction has been swift if carefully worded. India's External Affairs Ministry called for "regional arrangements that do not target third countries," while Indian strategic commentators were blunter, framing the pact as an attempt to internationalize Kashmir through Ankara's vocal diplomacy. "India will respond where it hurts — by deepening its own security axis with the UAE, Israel and France, and by raising the Kashmir question against Turkish statements at every multilateral forum," predicts Dr. Kavita Sharma, a New Delhi-based strategic analyst.</p>
+    <p>Iran, which shares a long border with Pakistan and a fragile détente with Saudi Arabia, has remained officially silent — but the silence itself is eloquent. A retired Pakistani diplomat, Ambassador (retd.) Salman Ahmed, warns: "Tehran will read any 'Muslim bloc' through the lens of its own isolation. Islamabad must walk a razor's edge: honor the pact while keeping the Chabahar border trade, Iran gas discussions, and our traditional neutrality intact. One careless sentence can cost us a neighbor."</p>
+    <p>Washington's posture is equally layered. US officials publicly welcome "partners taking responsibility for regional security," yet behind the scenes, analysts note, there is concern that a Riyadh-Ankara-Islamabad axis further diversifies the Gulf away from American arms and guarantees — and that any co-production involving Pakistan's Chinese-built platforms could leak sensitive technology toward Beijing.</p>
+
+    <h2>The Economic Undercurrent Nobody Should Ignore</h2>
+    <p>Strip away the flags and the pact is also a financial document. It sits atop a fast-growing economic stack: the GCC's $10 billion green-energy pledge to Pakistan, Saudi deposits supporting the State Bank, the renewed $6 billion IMF program that Riyadh quietly backed, and Türkiye's expanding trade and reconstruction contracts. Defense ties, in other words, are the roof over a house built of investment, oil facilities, remittances and labor flows. "Security guarantees are the currency Pakistan now exports," says one Karachi-based economist. "In exchange, we import capital, energy security and diplomatic cover. It is the most favorable trade Pakistan has negotiated in decades."</p>
+
+    <h2>Risks on the Horizon</h2>
+    <p>The dangers are as real as the promise. First, entanglement: should Saudi-Iran or Saudi-Israeli tensions flare, Pakistan's consultation obligations will be tested, and Islamabad's historic neutrality could fracture. Second, perception: a pact read as a "Sunni bloc" could complicate Pakistan's relations with Iran and its own sectarian sensitivities. Third, capacity: a country still stabilizing its economy must ask what it can actually guarantee. And fourth, the China factor: Beijing has welcomed the pact publicly, but Pakistan will have to ensure its Chinese defense partnerships and its new trilateral commitments never pull in opposite directions.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>The Jeddah summit is Pakistan's most ambitious strategic wager in a generation. For decades, Islamabad was the Muslim world's security consumer-turned-supplier — training armies, guarding borders, and receiving aid in return. This pact inverts that relationship: Pakistan now offers deterrence, diplomacy and defense industry, and receives investment, energy security and great-power relevance in return. That is not charity; it is statecraft.</p>
+    <p>Yet history is littered with Muslim-world alliances that died in communiqués. The pact will be judged not by its signature but by its machinery: joint commands, production lines that actually produce, exercises that actually integrate, and a foreign ministry nimble enough to reassure Tehran, Beijing and Washington simultaneously. If Pakistan can institutionalize the pact while preserving its balancing act, it will have converted its geography, its army and its nuclear status into durable national wealth. If it cannot, the agreement will join the long shelf of fraternal declarations that meant everything on paper and nothing in practice. The summit is the easy part. The statecraft begins the day after.</p>
+  `
+},
+
+  {
   id: "bts-comeback-world-tour-ticket-records-2026",
   title: "BTS Is Back: Reunion World Tour Shatters Global Ticket Records in Under an Hour",
   subtitle: "Following the completion of military service, all seven members announce the 'ARIRANG: Forever' world tour — 45 stadium dates across 20 countries — as 12 million fans crash ticketing sites in the biggest presale in history.",
