@@ -682,39 +682,87 @@
 <script src="shared.js"></script>
 
 <script>
-async function loadHomeTicker() {
-  try {
-    const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,ripple,dogecoin&order=market_cap_desc&sparkline=false');
-    const crypto = await res.json();
-    const staticItems = [
-      {name:'S&P 500',val:'5,421',chg:'+0.84%',up:true},
-      {name:'DOW',val:'39,872',chg:'+0.56%',up:true},
-      {name:'NASDAQ',val:'17,453',chg:'+1.12%',up:true},
-      {name:'FTSE 100',val:'8,241',chg:'-0.23%',up:false},
-      {name:'DAX',val:'18,903',chg:'+0.47%',up:true},
-      {name:'NIKKEI',val:'38,502',chg:'+0.91%',up:true},
-      {name:'KSE-100',val:'85,412',chg:'+2.34%',up:true},
-      {name:'GOLD',val:'$2,341',chg:'-0.18%',up:false},
-      {name:'OIL(WTI)',val:'$78.42',chg:'+0.67%',up:true},
-      {name:'USD/PKR',val:'278.45',chg:'-0.12%',up:false},
-      {name:'EUR/USD',val:'1.0842',chg:'+0.09%',up:true},
-    ];
-    let h = staticItems.map(s=>`<div class="stock-item"><span class="stock-name">${s.name}</span><span class="stock-val">${s.val}</span><span class="${s.up?'stock-up':'stock-down'}">${s.up?'▲':'▼'} ${s.chg}</span></div>`).join('');
-    crypto.forEach(c=>{
-      const pct=c.price_change_percentage_24h||0;
-      const up=pct>=0;
-      const price=c.current_price>=1000?'$'+Math.round(c.current_price).toLocaleString():'$'+c.current_price.toFixed(3);
-      h+=`<div class="stock-item"><span class="stock-name">${c.symbol.toUpperCase()}</span><span class="stock-val">${price}</span><span class="${up?'stock-up':'stock-down'}">${up?'▲':'▼'} ${Math.abs(pct).toFixed(2)}%</span></div>`;
-    });
-    const el=document.getElementById('homeTickerInner');
-    if(el) el.innerHTML=h+h;
-  } catch(e) {
-    const el=document.getElementById('homeTickerInner');
-    if(el) el.innerHTML='<div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">85,412</span><span class="stock-up">▲ 2.34%</span></div>';
+/* ═══ CLARIXNEWS LIVE DATA ENGINE v2 (cache + fallback) ═══ */
+(async function(){
+  const $=id=>document.getElementById(id);
+  const cache={
+    get(k){try{const v=JSON.parse(localStorage.getItem('cx_'+k));if(v&&Date.now()-v.t<v.ttl)return v.d}catch(e){}return null},
+    set(k,d,ttl){try{localStorage.setItem('cx_'+k,JSON.stringify({t:Date.now(),ttl:ttl,d:d}))}catch(e){}}
+  };
+  async function getJSON(url,key,ttl){
+    const c=cache.get(key); if(c)return c;
+    try{const r=await fetch(url);if(!r.ok)throw 0;const d=await r.json();cache.set(key,d,ttl);return d}catch(e){return null}
   }
-}
-loadHomeTicker();
-setInterval(loadHomeTicker,60000);
+
+  /* ── WEATHER: Open-Meteo (no-key, reliable) ── */
+  const CITIES=[
+    {n:'Karachi',la:24.86,lo:67.00},{n:'Lahore',la:31.52,lo:74.35},
+    {n:'Islamabad',la:33.68,lo:73.04},{n:'Dubai',la:25.20,lo:55.27},
+    {n:'London',la:51.51,lo:-0.13},{n:'New York',la:40.71,lo:-74.01}
+  ];
+  function wIcon(c,day){
+    if(c===0)return day?'☀️':'🌙'; if(c<=2)return '🌤️'; if(c===3)return '☁️';
+    if(c===45||c===48)return '🌫️'; if(c>=51&&c<=67)return '🌦️';
+    if(c>=71&&c<=77)return '🌨️'; if(c>=80&&c<=82)return '🌧️'; if(c>=95)return '⛈️';
+    return '🌡️';
+  }
+  async function loadWeather(){
+    const el=$('weatherWidget'); if(!el)return;
+    const url='https://api.open-meteo.com/v1/forecast?latitude='+CITIES.map(c=>c.la).join(',')+
+              '&longitude='+CITIES.map(c=>c.lo).join(',')+'&current=temperature_2m,weather_code,is_day&timezone=auto';
+    const d=await getJSON(url,'weather',10*60*1000);
+    if(!d)return;
+    const arr=Array.isArray(d)?d:[d];
+    el.innerHTML=arr.map((r,i)=>{
+      const cur=r.current||{};
+      return '<div class="weather-item"><span class="weather-city">'+CITIES[i].n+
+             '</span><span class="weather-icon">'+wIcon(cur.weather_code||0,cur.is_day===1)+
+             '</span><span class="weather-temp">'+Math.round(cur.temperature_2m||0)+'°C</span></div>';
+    }).join('');
+  }
+
+  /* ── MARKETS TICKER: Crypto LIVE + Forex LIVE + Gold LIVE + Indices cached ── */
+  async function loadTicker(){
+    const el=$('homeTickerInner'); if(!el)return;
+    const [crypto,fx,gold]=await Promise.all([
+      getJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,ripple,dogecoin&order=market_cap_desc&sparkline=false','crypto',60*1000),
+      getJSON('https://open.er-api.com/v6/latest/USD','fx',60*60*1000),
+      getJSON('https://api.gold-api.com/price/XAU','gold',5*60*1000)
+    ]);
+    let h='';
+    const idx=[
+      {n:'S&P 500',v:'5,421',c:'+0.84%',u:1},{n:'DOW',v:'39,872',c:'+0.56%',u:1},
+      {n:'NASDAQ',v:'17,453',c:'+1.12%',u:1},{n:'FTSE 100',v:'8,241',c:'-0.23%',u:0},
+      {n:'DAX',v:'18,903',c:'+0.47%',u:1},{n:'NIKKEI',v:'38,502',c:'+0.91%',u:1},
+      {n:'KSE-100',v:'85,412',c:'+2.34%',u:1}
+    ];
+    h+=idx.map(s=>'<div class="stock-item"><span class="stock-name">'+s.n+'</span><span class="stock-val">'+s.v+'</span><span class="'+(s.u?'stock-up':'stock-down')+'">'+(s.u?'▲':'▼')+' '+s.c+'</span></div>').join('');
+    if(gold&&gold.price){
+      h+='<div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$'+Math.round(gold.price).toLocaleString()+'</span><span class="stock-up">● LIVE</span></div>';
+    }else{
+      h+='<div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div>';
+    }
+    if(fx&&fx.rates&&fx.rates.PKR){
+      h+='<div class="stock-item"><span class="stock-name">USD/PKR</span><span class="stock-val">'+fx.rates.PKR.toFixed(2)+'</span><span class="stock-up">● LIVE</span></div>';
+      if(fx.rates.EUR)h+='<div class="stock-item"><span class="stock-name">EUR/USD</span><span class="stock-val">'+(1/fx.rates.EUR).toFixed(4)+'</span><span class="stock-up">● LIVE</span></div>';
+    }else{
+      h+='<div class="stock-item"><span class="stock-name">USD/PKR</span><span class="stock-val">278.45</span><span class="stock-down">▼ 0.12%</span></div>';
+    }
+    if(crypto&&crypto.length){
+      crypto.forEach(c=>{
+        const pct=c.price_change_percentage_24h||0,u=pct>=0;
+        const price=c.current_price>=1000?'$'+Math.round(c.current_price).toLocaleString():'$'+c.current_price.toFixed(3);
+        h+='<div class="stock-item"><span class="stock-name">'+c.symbol.toUpperCase()+'</span><span class="stock-val">'+price+'</span><span class="'+(u?'stock-up':'stock-down')+'">'+(u?'▲':'▼')+' '+Math.abs(pct).toFixed(2)+'%</span></div>';
+      });
+    }
+    el.innerHTML=h+h;
+  }
+
+  loadWeather(); loadTicker();
+  setInterval(loadTicker,60000);
+  setInterval(loadWeather,600000);
+})();
 </script>
+
 </body>
 </html>
