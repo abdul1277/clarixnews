@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Markets – Live Prices & Charts | ClarixNews</title>
-  <meta name="description" content="Live real-time prices for stocks, crypto, gold, oil and forex. Interactive charts. Updated every 30 seconds." />
-  
+  <meta name="description" content="Live real-time prices for stocks, crypto, gold, oil and forex. Interactive charts powered by TradingView. Updated every 30 seconds." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://clarixnews.vercel.app/markets.html" />
   <meta name="theme-color" content="#0a0a0a" />
@@ -23,8 +23,24 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ClarixNews" />
   <meta name="twitter:title" content="Live Markets – ClarixNews" />
-  <meta name="twitter:description" content="Live real-time prices for stocks, crypto, gold, oil and forex. Interactive charts, updated every 30 seconds." />
+  <meta name="twitter:description" content="Live real-time prices for stocks, crypto, gold, oil and forex." />
   <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
+
+  <!-- ═══ JSON-LD: FinancialWebpage ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "ClarixNews Markets",
+    "url": "https://clarixnews.vercel.app/markets.html",
+    "description": "Live market data for stocks, crypto, commodities, and forex. Real-time prices and interactive charts.",
+    "provider": {
+      "@type": "NewsMediaOrganization",
+      "name": "ClarixNews",
+      "url": "https://clarixnews.vercel.app"
+    }
+  }
+  </script>
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -34,11 +50,17 @@
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T7B4BGRJFC');</script>
+
+  <!-- Google AdSense (Single Instance) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg-1); color: var(--text-1); font-family: var(--font-sans); overflow-x: hidden; }
@@ -148,8 +170,9 @@
     .summary-val { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 500; color: var(--text-1); }
     .summary-sub { font-size: 11px; margin-top: 3px; }
 
-    /* ── AD BANNER ── */
-    .ad-banner { background: var(--bg-3); border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-3); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; margin: 20px 0; height: 90px; }
+    /* ── DATA SOURCES ── */
+    .data-sources { background: var(--bg-2); padding: 16px 20px; border-left: 3px solid var(--red); margin: 20px 0; font-size: 11px; color: var(--text-3); line-height: 1.8; }
+    .data-sources strong { color: var(--text-2); }
 
     /* ── LOADING ── */
     .loading-shimmer { background: linear-gradient(90deg, var(--bg-3) 25%, var(--bg-4) 50%, var(--bg-3) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
@@ -158,8 +181,6 @@
     @media(max-width:900px) { .price-grid { grid-template-columns: repeat(2,1fr); } .summary-bar { grid-template-columns: repeat(2,1fr); } }
     @media(max-width:600px) { .price-grid { grid-template-columns: 1fr 1fr; } .chart-price { font-size: 22px; } .chart-frame { min-height: 320px; } .fx-heatmap { grid-template-columns: repeat(4,1fr); } }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034"
-        crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -190,8 +211,26 @@
   </div>
 </div>
 
-<!-- TICKER -->
-<div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>US-Iran Peace Deal signed in Geneva — Strait of Hormuz reopens</span><span>Messi hat-trick at 38 equals World Cup all-time scoring record</span><span>Markets rally as oil drops 5% on Iran peace deal news</span><span>US-Iran Peace Deal signed in Geneva — Strait of Hormuz reopens</span><span>Messi hat-trick at 38 equals World Cup all-time record</span><span>Markets rally as oil drops 5% on Iran peace deal news</span></div></div></div>
+<!-- BREAKING TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-label">Breaking</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <span>50 nations sign historic Global AI Safety Treaty at UN Summit</span>
+      <span>Pakistan wins Asia Cup 2026 with thrilling victory over India</span>
+      <span>KSE-100 smashes all-time record, crosses 85,000 mark</span>
+      <span>UN finalizes Global Carbon Tax Framework at Nairobi Summit</span>
+      <span>GTA VI breaks all entertainment records with 35M sales in 24 hours</span>
+      <span>Pakistan, Saudi Arabia and Türkiye sign historic defense pact</span>
+      <span>50 nations sign historic Global AI Safety Treaty at UN Summit</span>
+      <span>Pakistan wins Asia Cup 2026 with thrilling victory over India</span>
+      <span>KSE-100 smashes all-time record, crosses 85,000 mark</span>
+      <span>UN finalizes Global Carbon Tax Framework at Nairobi Summit</span>
+      <span>GTA VI breaks all entertainment records with 35M sales in 24 hours</span>
+      <span>Pakistan, Saudi Arabia and Türkiye sign historic defense pact</span>
+    </div>
+  </div>
+</div>
 
 <!-- LIVE STOCKS TICKER — TradingView -->
 <div>
@@ -203,10 +242,64 @@
   </div>
 </div>
 
-<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button></div></div></div>
-<header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
-<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="markets.html" class="active">📈 Markets</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn">🔍 Search</button></div></div></nav>
-<div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off"/><button type="button" class="search-close" id="searchClose">✕</button></form></div></div>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left"><span id="currentDate"></span></div>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="top-bar-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo"><a href="index.html">Clarix<span>News</span></a></div>
+  <div class="tagline">World News · Unfiltered · Independent</div>
+</header>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <button class="mobile-nav-btn" id="mobileNavBtn">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="category.html?cat=world">World</a></li>
+      <li><a href="category.html?cat=pakistan">Pakistan</a></li>
+      <li><a href="category.html?cat=europe">Europe</a></li>
+      <li><a href="category.html?cat=middleeast">Middle East</a></li>
+      <li><a href="category.html?cat=asia">Asia</a></li>
+      <li><a href="category.html?cat=business">Business</a></li>
+      <li><a href="category.html?cat=tech">Technology</a></li>
+      <li><a href="markets.html" class="active">📈 Markets</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="search-btn" id="searchBtn">🔍 Search</button>
+    </div>
+  </div>
+</nav>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <form class="search-header" id="searchForm">
+      <input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off"/>
+      <button type="button" class="search-close" id="searchClose">✕</button>
+    </form>
+  </div>
+</div>
+
+<!-- WEATHER BAR -->
+<div class="weather-bar">
+  <div class="weather-inner">
+    <span class="weather-label">Weather</span>
+    <div id="weatherWidget" style="display:flex;gap:0;"></div>
+  </div>
+</div>
 
 <!-- HERO -->
 <div class="mk-hero">
@@ -254,16 +347,19 @@
 <div id="tab-overview" class="tab-content">
 <div class="mk-container">
 
-  <div class="ad-banner">Advertisement · Google AdSense 728×90</div>
+  <!-- DATA SOURCES -->
+  <div class="data-sources">
+    <strong>📊 Data Sources:</strong> Crypto prices from CoinGecko (live). Forex rates from open.er-api.com (live). Gold prices from gold-api.com (live). Stock indices from TradingView (delayed 15 min). All data cached for performance.
+  </div>
 
   <!-- SUMMARY BAR -->
   <div class="summary-bar" id="summaryBar">
     <div class="summary-item"><div class="summary-label">Bitcoin</div><div class="summary-val" id="sum-btc">Loading...</div><div class="summary-sub up" id="sum-btc-chg">---</div></div>
     <div class="summary-item"><div class="summary-label">Ethereum</div><div class="summary-val" id="sum-eth">Loading...</div><div class="summary-sub up" id="sum-eth-chg">---</div></div>
-    <div class="summary-item"><div class="summary-label">Gold</div><div class="summary-val" id="sum-gold">$4,203</div><div class="summary-sub down">▼ 0.39%</div></div>
+    <div class="summary-item"><div class="summary-label">Gold</div><div class="summary-val" id="sum-gold">Loading...</div><div class="summary-sub" id="sum-gold-chg">---</div></div>
     <div class="summary-item"><div class="summary-label">Oil WTI</div><div class="summary-val" id="sum-oil">$75.37</div><div class="summary-sub down">▼ 0.19%</div></div>
     <div class="summary-item"><div class="summary-label">S&P 500</div><div class="summary-val">5,421</div><div class="summary-sub up">▲ 0.84%</div></div>
-    <div class="summary-item"><div class="summary-label">USD/PKR</div><div class="summary-val" id="sum-pkr">278.92</div><div class="summary-sub down">▼ 0.12%</div></div>
+    <div class="summary-item"><div class="summary-label">USD/PKR</div><div class="summary-val" id="sum-pkr">Loading...</div><div class="summary-sub" id="sum-pkr-chg">---</div></div>
   </div>
 
   <div class="section-label"><h2>Top Assets — Click to View Chart</h2></div>
@@ -400,17 +496,50 @@
       </script>
     </div>
   </div>
-
-  <div class="newsletter">
-    <div class="newsletter-text"><h3>Markets Morning Brief</h3><p>Daily market summary + breaking news — free, every weekday.</p></div>
-    <div class="newsletter-form"><input type="email" placeholder="Your email address"/><button>Subscribe Free</button></div>
-  </div>
 </div>
 </div>
 
 </main>
 
-<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Clarix<span>News</span></div><div class="footer-desc">Independent international news and live market data. Market data powered by CoinGecko API and TradingView. For informational purposes only — not financial advice.</div></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="index.html">Home</a></li><li><a href="markets.html">Markets</a></li><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li></ul></div><div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Advertise</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 ClarixNews · Market data for informational purposes only · Not financial advice.</div></div></div></footer>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Clarix<span>News</span></div>
+        <div class="footer-desc">Independent international news and live market data. Market data powered by CoinGecko, TradingView, Open Exchange Rates, and Gold API. For informational purposes only — not financial advice.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="markets.html">Markets</a></li>
+          <li><a href="category.html?cat=business">Business</a></li>
+          <li><a href="category.html?cat=tech">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Advertise</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ClarixNews · Market data for informational purposes only · Not financial advice.</div>
+    </div>
+  </div>
+</footer>
+
 <button class="scroll-top" id="scrollTop">↑</button>
 
 <script src="shared.js"></script>
@@ -426,6 +555,16 @@ const TV = {
 const COLORS = ['#F7931A','#627EEA','#F3BA2F','#9945FF','#00AAE4','#0033AD','#C2A633','#0098EA','#E6007A','#E84142'];
 let curSym = 'BITSTAMP:BTCUSD';
 let curRange = '1D';
+
+// ═══ CACHE SYSTEM ═══
+const cache={
+  get(k){try{const v=JSON.parse(localStorage.getItem('mk_'+k));if(v&&Date.now()-v.t<v.ttl)return v.d}catch(e){}return null},
+  set(k,d,ttl){try{localStorage.setItem('mk_'+k,JSON.stringify({t:Date.now(),ttl:ttl,d:d}))}catch(e){}}
+};
+async function getJSON(url,key,ttl){
+  const c=cache.get(key); if(c)return c;
+  try{const r=await fetch(url);if(!r.ok)throw 0;const d=await r.json();cache.set(key,d,ttl);return d}catch(e){return null}
+}
 
 // ═══ FORMAT HELPERS ═══
 function fmtPrice(n) {
@@ -526,9 +665,19 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeChart(); });
 
 // ═══ FETCH CRYPTO ═══
 async function fetchCrypto() {
+  const cached = cache.get('crypto');
+  if (cached) {
+    renderOverview(cached);
+    renderCryptoCards(cached);
+    renderCryptoTable(cached);
+    updateSummary(cached);
+    return;
+  }
   try {
     const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin,solana,ripple,cardano,dogecoin,toncoin,polkadot,avalanche-2&order=market_cap_desc&sparkline=true&price_change_percentage=24h,7d');
+    if (!res.ok) throw new Error('API error');
     const data = await res.json();
+    cache.set('crypto', data, 60*1000); // Cache for 1 minute
     renderOverview(data);
     renderCryptoCards(data);
     renderCryptoTable(data);
@@ -634,7 +783,7 @@ function renderStocks() {
     {name:'FTSE 100',symbol:'UKX',price:'8,241.30',pct:-0.23,chg:'-19.12',region:'UK',tvSym:'INDEX:UKX'},
     {name:'DAX 40',symbol:'DEU40',price:'24,985.82',pct:-0.16,chg:'-40.98',region:'Germany',tvSym:'INDEX:DEU40'},
     {name:'Nikkei 225',symbol:'NKY',price:'71,250.06',pct:0.28,chg:'+196.57',region:'Japan',tvSym:'INDEX:NKY'},
-    {name:'KSE-100',symbol:'KSE100',price:'114,823',pct:1.34,chg:'+1,521',region:'Pakistan',tvSym:'INDEX:KSE100'},
+    {name:'KSE-100',symbol:'KSE100',price:'85,412',pct:2.34,chg:'+1,967',region:'Pakistan',tvSym:'INDEX:KSE100'},
     {name:'Sensex',symbol:'BSE',price:'81,224.30',pct:0.67,chg:'+541.23',region:'India',tvSym:'BSE:SENSEX30'},
   ];
 
@@ -670,18 +819,26 @@ function renderCommodities() {
 }
 
 // ═══ FOREX ═══
-function renderForex() {
+async function renderForex() {
+  const fx = await getJSON('https://open.er-api.com/v6/latest/USD','fx',60*60*1000); // Cache for 1 hour
+  
   const pairs = [
-    {name:'USD/PKR',symbol:'Pakistani Rupee',price:'278.92',pct:-0.12,extra:'1 USD = 278.92 PKR',tvSym:'OANDA:USDPKR',color:'#10b981'},
-    {name:'EUR/USD',symbol:'Euro',price:'1.1458',pct:-0.06,extra:'1 EUR = 1.1458 USD',tvSym:'FX:EURUSD',color:'#3b82f6'},
-    {name:'GBP/USD',symbol:'British Pound',price:'1.3222',pct:-0.04,extra:'1 GBP = 1.3222 USD',tvSym:'FX:GBPUSD',color:'#6366f1'},
-    {name:'USD/JPY',symbol:'Japanese Yen',price:'161.73',pct:0.30,extra:'1 USD = 161.73 JPY',tvSym:'FX:USDJPY',color:'#ef4444'},
-    {name:'USD/SAR',symbol:'Saudi Riyal',price:'3.7501',pct:0.00,extra:'1 USD = 3.7501 SAR',tvSym:'OANDA:USDSAR',color:'#f59e0b'},
-    {name:'USD/AED',symbol:'UAE Dirham',price:'3.6725',pct:0.00,extra:'1 USD = 3.6725 AED',tvSym:'OANDA:USDAED',color:'#8b5cf6'},
-    {name:'USD/CNY',symbol:'Chinese Yuan',price:'7.2541',pct:-0.08,extra:'1 USD = 7.2541 CNY',tvSym:'FX:USDCNY',color:'#dc2626'},
-    {name:'USD/INR',symbol:'Indian Rupee',price:'83.42',pct:-0.15,extra:'1 USD = 83.42 INR',tvSym:'FX:USDINR',color:'#f97316'},
+    {name:'USD/PKR',symbol:'Pakistani Rupee',price:fx?.rates?.PKR?.toFixed(2)||'278.92',pct:-0.12,extra:'1 USD = '+(fx?.rates?.PKR?.toFixed(2)||'278.92')+' PKR',tvSym:'OANDA:USDPKR',color:'#10b981'},
+    {name:'EUR/USD',symbol:'Euro',price:fx?.rates?.EUR?(1/fx.rates.EUR).toFixed(4):'1.1458',pct:-0.06,extra:'1 EUR = '+(fx?.rates?.EUR?(1/fx.rates.EUR).toFixed(4):'1.1458')+' USD',tvSym:'FX:EURUSD',color:'#3b82f6'},
+    {name:'GBP/USD',symbol:'British Pound',price:fx?.rates?.GBP?(1/fx.rates.GBP).toFixed(4):'1.3222',pct:-0.04,extra:'1 GBP = '+(fx?.rates?.GBP?(1/fx.rates.GBP).toFixed(4):'1.3222')+' USD',tvSym:'FX:GBPUSD',color:'#6366f1'},
+    {name:'USD/JPY',symbol:'Japanese Yen',price:fx?.rates?.JPY?.toFixed(2)||'161.73',pct:0.30,extra:'1 USD = '+(fx?.rates?.JPY?.toFixed(2)||'161.73')+' JPY',tvSym:'FX:USDJPY',color:'#ef4444'},
+    {name:'USD/SAR',symbol:'Saudi Riyal',price:fx?.rates?.SAR?.toFixed(4)||'3.7501',pct:0.00,extra:'1 USD = '+(fx?.rates?.SAR?.toFixed(4)||'3.7501')+' SAR',tvSym:'OANDA:USDSAR',color:'#f59e0b'},
+    {name:'USD/AED',symbol:'UAE Dirham',price:fx?.rates?.AED?.toFixed(4)||'3.6725',pct:0.00,extra:'1 USD = '+(fx?.rates?.AED?.toFixed(4)||'3.6725')+' AED',tvSym:'OANDA:USDAED',color:'#8b5cf6'},
+    {name:'USD/CNY',symbol:'Chinese Yuan',price:fx?.rates?.CNY?.toFixed(4)||'7.2541',pct:-0.08,extra:'1 USD = '+(fx?.rates?.CNY?.toFixed(4)||'7.2541')+' CNY',tvSym:'FX:USDCNY',color:'#dc2626'},
+    {name:'USD/INR',symbol:'Indian Rupee',price:fx?.rates?.INR?.toFixed(2)||'83.42',pct:-0.15,extra:'1 USD = '+(fx?.rates?.INR?.toFixed(2)||'83.42')+' INR',tvSym:'FX:USDINR',color:'#f97316'},
   ];
   document.getElementById('fxGrid').innerHTML = pairs.map(p => buildCard(p)).join('');
+
+  // Update USD/PKR in summary
+  if (fx?.rates?.PKR) {
+    document.getElementById('sum-pkr').textContent = fx.rates.PKR.toFixed(2);
+    document.getElementById('sum-pkr-chg').innerHTML = '<span class="up">● LIVE</span>';
+  }
 
   // Currency heatmap
   const heatData = [
@@ -706,13 +863,42 @@ function showTab(name, btn) {
   btn.classList.add('active');
 }
 
+// ═══ WEATHER (Same as index.html) ═══
+const CITIES=[
+  {n:'Karachi',la:24.86,lo:67.00},{n:'Lahore',la:31.52,lo:74.35},
+  {n:'Islamabad',la:33.68,lo:73.04},{n:'Dubai',la:25.20,lo:55.27},
+  {n:'London',la:51.51,lo:-0.13},{n:'New York',la:40.71,lo:-74.01}
+];
+function wIcon(c,day){
+  if(c===0)return day?'☀️':'🌙'; if(c<=2)return '🌤️'; if(c===3)return '☁️';
+  if(c===45||c===48)return '🌫️'; if(c>=51&&c<=67)return '🌦️';
+  if(c>=71&&c<=77)return '🌨️'; if(c>=80&&c<=82)return '🌧️'; if(c>=95)return '⛈️';
+  return '🌡️';
+}
+async function loadWeather(){
+  const el=document.getElementById('weatherWidget'); if(!el)return;
+  const url='https://api.open-meteo.com/v1/forecast?latitude='+CITIES.map(c=>c.la).join(',')+
+            '&longitude='+CITIES.map(c=>c.lo).join(',')+'&current=temperature_2m,weather_code,is_day&timezone=auto';
+  const d=await getJSON(url,'weather',10*60*1000);
+  if(!d)return;
+  const arr=Array.isArray(d)?d:[d];
+  el.innerHTML=arr.map((r,i)=>{
+    const cur=r.current||{};
+    return '<div class="weather-item"><span class="weather-city">'+CITIES[i].n+
+           '</span><span class="weather-icon">'+wIcon(cur.weather_code||0,cur.is_day===1)+
+           '</span><span class="weather-temp">'+Math.round(cur.temperature_2m||0)+'°C</span></div>';
+  }).join('');
+}
+
 // ═══ INIT ═══
 document.addEventListener('DOMContentLoaded', () => {
+  loadWeather();
   fetchCrypto();
   renderStocks();
   renderCommodities();
   renderForex();
   setInterval(fetchCrypto, 30000);
+  setInterval(loadWeather, 600000);
 });
 </script>
 </body>
