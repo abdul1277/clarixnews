@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClarixNews – World News, Unfiltered</title>
   <meta name="description" content="ClarixNews delivers breaking international news from Pakistan, America, Europe and beyond. Fast. Clear. Unfiltered." />
-  <meta name="keywords" content="world news, international news, Pakistan news, breaking news, politics, business, technology, career, AI" />
+  <meta name="keywords" content="world news, international news, Pakistan news, breaking news, politics, business, technology, career, AI, KSE-100, Asia Cup 2026, Global AI Treaty" />
   <meta name="author" content="ClarixNews Editorial Team" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://clarixnews.vercel.app/" /><!-- Favicon -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <link rel="canonical" href="https://clarixnews.vercel.app/" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="application-name" content="ClarixNews" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
   <style>
@@ -136,32 +141,24 @@
       .video-grid { grid-template-columns: 1fr; }
     }
   </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T7B4BGRJFC');
-</script>
-  <!-- ═══ GOOGLE ADSENSE (yahan paste karein) ═══ -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034"
-     crossorigin="anonymous"></script>
-  <!-- ═══ SEO META TAGS ═══ -->
-  <meta name="keywords" content="world news, international news, breaking news, Pakistan news, US news, Europe news, Middle East news, business news, technology news, AI news, career guide, FIFA World Cup 2026, US Iran war" />
-  <meta name="author" content="ClarixNews Editorial Team" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="bingbot" content="index, follow" />
-  <link rel="canonical" href="https://clarixnews.vercel.app/" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="application-name" content="ClarixNews" />
 
-  <!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ═══ -->
+  <!-- ═══ GOOGLE ANALYTICS ═══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T7B4BGRJFC');
+  </script>
+
+  <!-- ═══ GOOGLE ADSENSE (Single Instance) ═══ -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
+
+  <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://clarixnews.vercel.app/" />
   <meta property="og:title" content="ClarixNews – World News, Unfiltered" />
-  <meta property="og:description" content="Breaking international news from Pakistan, America, Europe and beyond. US-Iran peace deal, FIFA World Cup 2026, AI comparisons, career guides and live markets — fast, clear, unfiltered." />
+  <meta property="og:description" content="Breaking international news from Pakistan, America, Europe and beyond. Fast, clear, unfiltered." />
   <meta property="og:image" content="https://clarixnews.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -193,21 +190,19 @@
       "height": 512
     },
     "image": "https://clarixnews.vercel.app/og-image.png",
-    "description": "Independent international news coverage from South Asia, America, Europe and beyond. Fast, clear, and unfiltered journalism for a connected world.",
+    "description": "Independent international news coverage from South Asia, America, Europe and beyond.",
     "foundingDate": "2026",
     "sameAs": [
       "https://x.com/ClarixNews",
       "https://www.youtube.com/@ClarixNews"
     ],
     "publishingPrinciples": "https://clarixnews.vercel.app/about.html",
-    "masthead": "https://clarixnews.vercel.app/about.html",
-    "diversityPolicy": "https://clarixnews.vercel.app/about.html",
     "ethicsPolicy": "https://clarixnews.vercel.app/about.html",
     "correctionsPolicy": "https://clarixnews.vercel.app/about.html"
   }
   </script>
 
-  <!-- ═══ JSON-LD: WebSite + Sitelinks Search ═══ -->
+  <!-- ═══ JSON-LD: WebSite ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -222,17 +217,6 @@
       },
       "query-input": "required name=search_term_string"
     }
-  }
-  </script>
-
-  <!-- ═══ JSON-LD: Breadcrumb ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://clarixnews.vercel.app/"}
-    ]
   }
   </script>
 
@@ -268,27 +252,27 @@
   <div class="ticker-label">Breaking</div>
   <div class="ticker-track">
     <div class="ticker-inner">
-      <span>G7 leaders reach landmark AI governance agreement</span>
-      <span>Pakistan PM holds bilateral talks with US Secretary of State</span>
-      <span>EU announces €500bn energy independence package</span>
-      <span>Fed signals rate pause as inflation retreats</span>
-      <span>Middle East ceasefire talks enter critical final stage</span>
-      <span>Global markets rally on positive IMF outlook</span>
-      <span>G7 leaders reach landmark AI governance agreement</span>
-      <span>Pakistan PM holds bilateral talks with US Secretary of State</span>
-      <span>EU announces €500bn energy independence package</span>
-      <span>Fed signals rate pause as inflation retreats</span>
-      <span>Middle East ceasefire talks enter critical final stage</span>
-      <span>Global markets rally on positive IMF outlook</span>
+      <span>50 nations sign historic Global AI Safety Treaty at UN Summit</span>
+      <span>Pakistan wins Asia Cup 2026 with thrilling victory over India</span>
+      <span>KSE-100 smashes all-time record, crosses 85,000 mark</span>
+      <span>UN finalizes Global Carbon Tax Framework at Nairobi Summit</span>
+      <span>GTA VI breaks all entertainment records with 35M sales in 24 hours</span>
+      <span>Pakistan, Saudi Arabia and Türkiye sign historic defense pact</span>
+      <span>50 nations sign historic Global AI Safety Treaty at UN Summit</span>
+      <span>Pakistan wins Asia Cup 2026 with thrilling victory over India</span>
+      <span>KSE-100 smashes all-time record, crosses 85,000 mark</span>
+      <span>UN finalizes Global Carbon Tax Framework at Nairobi Summit</span>
+      <span>GTA VI breaks all entertainment records with 35M sales in 24 hours</span>
+      <span>Pakistan, Saudi Arabia and Türkiye sign historic defense pact</span>
     </div>
   </div>
 </div>
 
 <!-- STOCKS TICKER -->
 <div class="stocks-bar" style="cursor:pointer;" onclick="window.location='markets.html'" title="Click for live markets">
-<div class="stocks-inner" id="homeTickerInner">
-<div class="stock-item"><span class="stock-name">Loading live prices</span><span class="stock-val" style="color:var(--text-3)">⟳</span></div>
-</div></div>
+  <div class="stocks-inner" id="homeTickerInner">
+    <div class="stock-item"><span class="stock-name">Loading live prices</span><span class="stock-val" style="color:var(--text-3)">⟳</span></div>
+  </div>
 </div>
 
 <!-- TOP BAR -->
@@ -349,7 +333,7 @@
 <main>
   <div class="container">
 
-    <!-- HERO -->
+    <!-- ═══ HERO ═══ -->
     <div class="hero-border">
       <div class="hero-grid">
         <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="hero-main">
@@ -361,21 +345,18 @@
             <div class="hero-meta"><span>By Raza Khan</span><span>·</span><span>7 August 2026</span><span>·</span><span>12 min read</span></div>
           </div>
         </a>
-        <a href="article.html?id=keir-starmer-resigns-uk-pm-andy-burnham-2026" class="hero-main">
-          <div class="hm-img"><img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=1200&q=80&fit=crop" alt="UK Prime Minister Resign" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <span class="cat-pill world">Breaking — World Exclusive</span>
-            <h1 class="hero-title">UK Prime Minister Keir Starmer Resigns — Andy Burnham Set to Become Britain's Seventh Leader</h1>
-            <div class="hero-meta"><span>By Eleanor Walsh</span><span>·</span><span>4 July 2026</span><span>·</span><span>5 min read</span></div>
-          </div>
-        </a>
         <div class="hero-side">
-          <a href="article.html?id=europe-record-heatwave-climate-crisis-2026" class="side-story">
-            <div class="side-img"><img src="https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=600&q=80&fit=crop" alt="Europe Heatwave" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
-            <span class="cat-pill world">World</span>
-            <div class="side-title">Europe Burns: Record Heatwave Shatters Temperature Records</div>
-            <div class="side-meta">7 July 2026 · 8 min read</div>
+          <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="side-story">
+            <div class="side-img"><img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&q=80&fit=crop" alt="Pakistan Asia Cup Win" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+            <span class="cat-pill sports">Sports</span>
+            <div class="side-title">Asia Cup 2026: Pakistan Stuns India in Thrilling Final to Lift the Trophy</div>
+            <div class="side-meta">15 August 2026 · 7 min read</div>
+          </a>
+          <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="side-story">
+            <div class="side-img"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&fit=crop" alt="UN AI Treaty" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+            <span class="cat-pill tech">Technology</span>
+            <div class="side-title">50 Nations Sign First-Ever Global AI Safety Treaty at UN Summit</div>
+            <div class="side-meta">15 August 2026 · 8 min read</div>
           </a>
         </div>
       </div>
@@ -383,23 +364,22 @@
 
   </div>
 
-  <!-- LATEST STRIP -->
+  <!-- ═══ LATEST STRIP ═══ -->
   <div class="latest-strip">
     <div class="latest-inner">
-      <a href="article.html?id=saudi-neom-the-line-first-phase-opens-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Saudi Arabia's NEOM 'The Line' opens first residential phase to global citizens</div></a>
-      <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">BREAKING: US-Iran peace deal signed — Pakistan hails historic diplomatic achievement</div></a>
-      <a href="article.html?id=us-iran-airstrikes-2026" class="latest-item"><div class="latest-time">3 days ago</div><div class="latest-headline">How the US-Iran war started — and what happened day by day</div></a>
-      <a href="article.html?id=fifa-world-cup-2026-opening" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">World Cup 2026: Germany vs Curaçao kicks off in Houston today</div></a>
-      <a href="article.html?id=south-korea-yoon-sentenced" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">South Korea's Yoon sentenced to 30 years over Pyongyang drone plot</div></a>
-      <a href="article.html?id=china-detains-us-citizen-2026" class="latest-item"><div class="latest-time">3 hrs ago</div><div class="latest-headline">China confirms arrest of US think tank director Min Zin on espionage charges</div></a>
-      <a href="article.html?id=pakistan-gulf-investment" class="latest-item"><div class="latest-time">5 hrs ago</div><div class="latest-headline">Pakistan secures $3bn Gulf energy investment deal</div></a>
+      <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">50 nations sign historic Global AI Safety Treaty at UN Summit in Geneva</div></a>
+      <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Pakistan wins Asia Cup 2026 with thrilling 5-wicket victory over India</div></a>
+      <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">KSE-100 smashes all-time record, crosses 85,000 mark as FDI pours in</div></a>
+      <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">UN finalizes Global Carbon Tax Framework at Nairobi Summit</div></a>
+      <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="latest-item"><div class="latest-time">3 hrs ago</div><div class="latest-headline">GTA VI breaks records with 35 million copies sold in 24 hours</div></a>
+      <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="latest-item"><div class="latest-time">5 hrs ago</div><div class="latest-headline">Pakistan, Saudi Arabia and Türkiye sign historic trilateral defense pact</div></a>
+      <a href="article.html?id=saudi-neom-the-line-first-phase-opens-2026" class="latest-item"><div class="latest-time">6 hrs ago</div><div class="latest-headline">Saudi Arabia's NEOM 'The Line' opens first residential phase</div></a>
     </div>
   </div>
 
   <div class="container">
-    
 
-    <!-- TOP STORIES -->
+    <!-- ═══ TOP STORIES ═══ -->
     <div class="section-label"><h2>Top Stories</h2></div>
     <div class="top-grid">
       <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="card">
@@ -413,31 +393,31 @@
           <div class="card-meta">Ahmed Raza · August 15, 2026</div>
         </div>
       </a>
-      <a href="article.html?id=eu-ai-act-landmark-ruling-tech-giants-2026" class="card">
+      <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="card">
         <div class="card-img" style="height:185px;">
-          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&fit=crop" alt="EU AI Act Ruling" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&fit=crop" alt="UN AI Treaty" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div class="card-body">
           <div class="card-cat"><span class="cat-pill tech">Technology</span></div>
-          <div class="card-title" style="font-size:18px;">EU AI Act Lands Landmark Ruling Against OpenAI and Microsoft</div>
-          <div class="card-excerpt">European courts order tech giants to modify AI models to comply with transparency and bias prevention rules, setting a global benchmark for AI regulation.</div>
-          <div class="card-meta">Sarah Chen · July 19, 2026</div>
+          <div class="card-title" style="font-size:18px;">Historic Milestone: 50 Nations Sign First-Ever Global AI Safety Treaty</div>
+          <div class="card-excerpt">At the UN Summit in Geneva, world leaders agree on binding frameworks for artificial intelligence development.</div>
+          <div class="card-meta">Sarah Chen · August 15, 2026</div>
         </div>
       </a>
-      <a href="article.html?id=pakistan-women-cricket-t20-world-cup-win-2026" class="card">
+      <a href="article.html?id=openai-unveils-gpt5-human-level-reasoning-2026" class="card">
         <div class="card-img" style="height:185px;">
-          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800&q=80&fit=crop" alt="Pakistan Women Cricket" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&fit=crop" alt="OpenAI GPT-5 Launch" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
         </div>
         <div class="card-body">
-          <div class="card-cat"><span class="cat-pill sports">Sports</span></div>
-          <div class="card-title" style="font-size:18px;">History Made: Pakistan Women's Team Wins First-Ever T20 World Cup</div>
-          <div class="card-excerpt">Led by Fatima Sana's brilliant all-round performance, the Green Shirts defeat Australia in a thrilling final, sparking nationwide celebrations.</div>
-          <div class="card-meta">Ahmed Raza · July 14, 2026</div>
+          <div class="card-cat"><span class="cat-pill tech">Technology</span></div>
+          <div class="card-title" style="font-size:18px;">OpenAI Unveils GPT-5: The AI Model That Can Now 'Reason' Like Humans</div>
+          <div class="card-excerpt">OpenAI launches GPT-5, claiming human-level reasoning across science, math, and coding. Experts debate the path to AGI.</div>
+          <div class="card-meta">Sarah Chen · August 7, 2026</div>
         </div>
       </a>
     </div>
 
-    <!-- SPECIAL SERIES: AI & CAREER -->
+    <!-- ═══ FEATURED SERIES ═══ -->
     <div class="section-label"><h2>Featured Series</h2></div>
     <div class="series-grid">
       <a href="article.html?id=fda-approves-gene-therapy-alzheimers-2026" class="series-card">
@@ -448,51 +428,138 @@
       <a href="article.html?id=ai-comparison-2026" class="series-card">
         <div class="series-tag">AI Comparison Series</div>
         <div class="series-title">ChatGPT vs Claude vs Gemini: Which AI Is Actually Best in 2026?</div>
-        <div class="series-desc">A comprehensive head-to-head comparison across writing, coding, reasoning, and real-world tasks. We tested all three so you don't have to.</div>
+        <div class="series-desc">A comprehensive head-to-head comparison across writing, coding, reasoning, and real-world tasks.</div>
       </a>
       <a href="article.html?id=career-guide-2026" class="series-card">
         <div class="series-tag">Career Guide</div>
         <div class="series-title">Which Career Should You Choose? The Complete 2026 Field Guide</div>
-        <div class="series-desc">From technology to medicine to law — we break down salary, demand, future outlook, and what skills you actually need to succeed in each field.</div>
+        <div class="series-desc">From technology to medicine to law — we break down salary, demand, future outlook, and required skills.</div>
       </a>
-      <a href="article.html?id=ai-jobs-future" class="series-card">
-        <div class="series-tag">Jobs & AI</div>
-        <div class="series-title">AI Is Changing Every Industry — Here Are the Jobs That Will Thrive</div>
-        <div class="series-desc">Which careers are AI-proof, which will be transformed, and which are at risk? Our experts analyze 50 professions for the decade ahead.</div>
+      <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="series-card">
+        <div class="series-tag">Entertainment & Culture</div>
+        <div class="series-title">GTA VI Shatters All Entertainment Records with 35 Million Sales in 24 Hours</div>
+        <div class="series-desc">Rockstar Games' masterpiece becomes the fastest-selling media property in history.</div>
       </a>
     </div>
 
-    <!-- VIDEO SECTION -->
+    <!-- ═══ AROUND THE WORLD ═══ -->
+    <div class="section-label"><h2>Around the World</h2></div>
+    <div class="world-section">
+      <div class="world-list">
+        <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="world-item">
+          <div class="world-num">01</div>
+          <div class="world-body">
+            <div class="world-cat">Business — Markets</div>
+            <div class="world-title">Economic Turnaround: KSE-100 Smashes All-Time Record at 85,000</div>
+            <div class="world-meta">August 15, 2026 · 6 min read</div>
+          </div>
+          <div class="world-img">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80&fit=crop" alt="Pakistan Stock Market" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          </div>
+        </a>
+        <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="world-item">
+          <div class="world-num">02</div>
+          <div class="world-body">
+            <div class="world-cat">World — Environment</div>
+            <div class="world-title">UN Summit Finalizes Historic Global Carbon Tax Framework</div>
+            <div class="world-meta">August 15, 2026 · 9 min read</div>
+          </div>
+          <div class="world-img">
+            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=400&q=80&fit=crop" alt="UN Climate Summit" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          </div>
+        </a>
+        <a href="article.html?id=europe-record-heatwave-climate-crisis-2026" class="world-item">
+          <div class="world-num">03</div>
+          <div class="world-body">
+            <div class="world-cat">World — Climate</div>
+            <div class="world-title">European Union Declares Climate Emergency as Heatwave Shatters Records</div>
+            <div class="world-meta">July 19, 2026 · 6 min read</div>
+          </div>
+          <div class="world-img">
+            <img src="https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=400&q=80&fit=crop" alt="Europe Heatwave" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          </div>
+        </a>
+        <a href="article.html?id=brics-launches-unified-digital-currency-2026" class="world-item">
+          <div class="world-num">04</div>
+          <div class="world-body">
+            <div class="world-cat">World — Finance</div>
+            <div class="world-title">BRICS Nations Launch Unified 'BRICS Pay' Digital Currency</div>
+            <div class="world-meta">July 6, 2026 · 7 min read</div>
+          </div>
+          <div class="world-img">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80&fit=crop" alt="BRICS Currency" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          </div>
+        </a>
+        <a href="article.html?id=us-iran-peace-deal-pakistan-mediator" class="world-item">
+          <div class="world-num">05</div>
+          <div class="world-body">
+            <div class="world-cat">Middle East — Peace</div>
+            <div class="world-title">US-Iran Peace Deal: How Pakistan Ended a 107-Day War</div>
+            <div class="world-meta">June 16, 2026 · 10 min read</div>
+          </div>
+          <div class="world-img">
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&q=80&fit=crop" alt="US Iran Peace" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          </div>
+        </a>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-title">Opinion & Analysis</div>
+        <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="opinion-item">
+          <div class="opinion-av">RK</div>
+          <div>
+            <div class="opinion-author">Raza Khan</div>
+            <div class="opinion-headline">The New Axis of Security: Pakistan's Strategic Wager</div>
+          </div>
+        </a>
+        <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="opinion-item">
+          <div class="opinion-av">SC</div>
+          <div>
+            <div class="opinion-author">Sarah Chen</div>
+            <div class="opinion-headline">The End of AI's Wild West: A New Regulatory Era</div>
+          </div>
+        </a>
+        <a href="article.html?id=ai-comparison-2026" class="opinion-item">
+          <div class="opinion-av">JT</div>
+          <div>
+            <div class="opinion-author">James Thornton</div>
+            <div class="opinion-headline">Why Claude Is Quietly Winning the AI Race in 2026</div>
+          </div>
+        </a>
+        <a href="article.html?id=career-guide-2026" class="opinion-item">
+          <div class="opinion-av">SL</div>
+          <div>
+            <div class="opinion-author">Sarah Lee</div>
+            <div class="opinion-headline">Stop Asking "What Job Is Safe From AI" — Ask This Instead</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══ VIDEO REPORTS ═══ -->
     <div class="section-label"><h2>Video Reports</h2></div>
     <div class="video-grid">
-      
-      <!-- Video Card 1 -->
-      <a href="article.html?id=us-iran-airstrikes-2026" class="video-card">
+      <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="video-card">
         <div class="video-thumb">
-          <img src="https://images.unsplash.com/photo-1580128660010-fd027e1e587a?w=600&q=80&fit=crop" alt="US Iran War" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&q=80&fit=crop" alt="Pakistan Asia Cup Win" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
           <div class="video-play">▶</div>
-          <div class="video-duration">9:14</div>
+          <div class="video-duration">8:42</div>
         </div>
         <div class="video-body">
-          <div class="video-title">US-Iran War Explained: How It Started and Where It's Heading</div>
-          <div class="video-meta">Middle East · 3 hours ago</div>
+          <div class="video-title">Pakistan Wins Asia Cup 2026: Full Match Highlights</div>
+          <div class="video-meta">Sports · August 15, 2026</div>
         </div>
       </a>
-      
-      <!-- Video Card 2 -->
-      <a href="article.html?id=fifa-world-cup-2026-opening" class="video-card">
+      <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="video-card">
         <div class="video-thumb">
-          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80&fit=crop" alt="FIFA World Cup 2026" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80&fit=crop" alt="UN Climate Summit" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
           <div class="video-play">▶</div>
-          <div class="video-duration">6:32</div>
+          <div class="video-duration">12:30</div>
         </div>
         <div class="video-body">
-          <div class="video-title">World Cup 2026: Best Goals and Moments from Day Three</div>
-          <div class="video-meta">Sports · 1 hour ago</div>
+          <div class="video-title">Climate Breakthrough: UN Finalizes Global Carbon Tax</div>
+          <div class="video-meta">World · August 15, 2026</div>
         </div>
       </a>
-      
-      <!-- Video Card 3 -->
       <a href="article.html?id=ai-comparison-2026" class="video-card">
         <div class="video-thumb">
           <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80&fit=crop" alt="AI Comparison" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
@@ -500,36 +567,57 @@
           <div class="video-duration">11:05</div>
         </div>
         <div class="video-body">
-          <div class="video-title">ChatGPT vs Claude vs Gemini: Full 2026 Comparison Test</div>
+          <div class="video-title">ChatGPT vs Claude vs Gemini: Full 2026 Comparison</div>
           <div class="video-meta">Technology · 5 hours ago</div>
         </div>
       </a>
-
     </div>
 
-    <!-- NEWSLETTER -->
+    <!-- ═══ NEWSLETTER ═══ -->
     <div class="newsletter">
-      <div class="newsletter-text"><h3>Stay Ahead of the News</h3><p>Get ClarixNews Morning Brief delivered to your inbox — free, every weekday.</p></div>
-      <div class="newsletter-form"><input type="email" placeholder="Your email address" /><button>Subscribe Free</button></div>
+      <div class="newsletter-text">
+        <h3>Stay Ahead of the News</h3>
+        <p>Get ClarixNews Morning Brief delivered to your inbox — free, every weekday.</p>
+      </div>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Your email address" />
+        <button>Subscribe Free</button>
+      </div>
     </div>
 
   </div>
 
-  <!-- TRENDING -->
+  <!-- ═══ TRENDING ═══ -->
   <div class="trending-bg">
     <div class="container">
       <div class="section-label"><h2>Trending Now</h2></div>
       <div class="trending-grid">
-        <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="trending-card"><div class="trending-num">01</div><div class="trending-title">Historic Milestone: 50 Nations Sign First-Ever Global AI Safety Treaty</div><div class="trending-meta">Technology · August 15, 2026</div></a>
-        <a href="article.html?id=messi-1000th-goal-world-cup-2026-semi-final" class="trending-card"><div class="trending-num">01</div><div class="trending-title">Lionel Messi Scores His 1,000th Career Goal in Historic World Cup Semi-Final</div><div class="trending-meta">Sports · July 19, 2026</div></a>
-        <a href="article.html?id=japan-commercial-fusion-energy-reactor-2026" class="trending-card"><div class="trending-num">03</div><div class="trending-title">Japan Activates World's First Commercial Nuclear Fusion Reactor</div><div class="trending-meta">World · July 14, 2026</div></a>
-        <a href="article.html?id=argentina-beats-france-world-cup-semi-final-2026" class="trending-card"><div class="trending-num">02</div><div class="trending-title">World Cup 2026: Argentina Defeats France in Epic Penalty Shootout</div><div class="trending-meta">Sports · July 14, 2026</div></a>
+        <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="trending-card">
+          <div class="trending-num">01</div>
+          <div class="trending-title">50 Nations Sign Historic Global AI Safety Treaty</div>
+          <div class="trending-meta">Technology · August 15, 2026</div>
+        </a>
+        <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="trending-card">
+          <div class="trending-num">02</div>
+          <div class="trending-title">KSE-100 Smashes Record, Crosses 85,000 Mark</div>
+          <div class="trending-meta">Business · August 15, 2026</div>
+        </a>
+        <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="trending-card">
+          <div class="trending-num">03</div>
+          <div class="trending-title">GTA VI Breaks All Entertainment Records in 24 Hours</div>
+          <div class="trending-meta">Entertainment · August 15, 2026</div>
+        </a>
+        <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="trending-card">
+          <div class="trending-num">04</div>
+          <div class="trending-title">UN Summit Finalizes Historic Global Carbon Tax</div>
+          <div class="trending-meta">World · August 15, 2026</div>
+        </a>
       </div>
     </div>
   </div>
 </main>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -544,14 +632,47 @@
           <a href="#" title="YouTube">▶</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=middleeast">Middle East</a></li><li><a href="category.html?cat=asia">Asia</a></li></ul></div>
-      <div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li>
-      <li><a href="markets.html">📈 Markets</a></li><li><a href="#">Video</a></li><li><a href="#">Podcasts</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Advertise</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="#">Sitemap</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="category.html?cat=world">World</a></li>
+          <li><a href="category.html?cat=pakistan">Pakistan</a></li>
+          <li><a href="category.html?cat=usa">US & Americas</a></li>
+          <li><a href="category.html?cat=europe">Europe</a></li>
+          <li><a href="category.html?cat=middleeast">Middle East</a></li>
+          <li><a href="category.html?cat=asia">Asia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="category.html?cat=business">Business</a></li>
+          <li><a href="category.html?cat=tech">Technology</a></li>
+          <li><a href="category.html?cat=career">Career & AI</a></li>
+          <li><a href="category.html?cat=opinion">Opinion</a></li>
+          <li><a href="markets.html">📈 Markets</a></li>
+          <li><a href="#">Video</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       <div>© 2026 ClarixNews. All rights reserved.</div>
-      <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="#">Cookies</a></div>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="#">Cookies</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -572,7 +693,7 @@ async function loadHomeTicker() {
       {name:'FTSE 100',val:'8,241',chg:'-0.23%',up:false},
       {name:'DAX',val:'18,903',chg:'+0.47%',up:true},
       {name:'NIKKEI',val:'38,502',chg:'+0.91%',up:true},
-      {name:'KSE-100',val:'79,341',chg:'+1.34%',up:true},
+      {name:'KSE-100',val:'85,412',chg:'+2.34%',up:true},
       {name:'GOLD',val:'$2,341',chg:'-0.18%',up:false},
       {name:'OIL(WTI)',val:'$78.42',chg:'+0.67%',up:true},
       {name:'USD/PKR',val:'278.45',chg:'-0.12%',up:false},
@@ -589,7 +710,7 @@ async function loadHomeTicker() {
     if(el) el.innerHTML=h+h;
   } catch(e) {
     const el=document.getElementById('homeTickerInner');
-    if(el) el.innerHTML='<div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">79,341</span><span class="stock-up">▲ 1.34%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div>';
+    if(el) el.innerHTML='<div class="stock-item"><span class="stock-name">S&P 500</span><span class="stock-val">5,421</span><span class="stock-up">▲ 0.84%</span></div><div class="stock-item"><span class="stock-name">BTC</span><span class="stock-val">$67,821</span><span class="stock-up">▲ 2.31%</span></div><div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$2,341</span><span class="stock-down">▼ 0.18%</span></div><div class="stock-item"><span class="stock-name">KSE-100</span><span class="stock-val">85,412</span><span class="stock-up">▲ 2.34%</span></div>';
   }
 }
 loadHomeTicker();
