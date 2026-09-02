@@ -410,9 +410,7 @@ function setFx(theme){
   } else if(theme==='snow'){
     R(30,s=>{s.className='flake';s.style.left=Math.random()*100+'%';s.style.animationDuration=(4+Math.random()*5)+'s';s.style.animationDelay=(Math.random()*4)+'s';s.style.opacity=(0.4+Math.random()*0.6);});
   } else if(theme==='clear-day'){
-    R(1,s=>{s.className='sun';});
-    R(2,s=>{s.className='cloud';s.style.top=(8+i=>0)+'%';});
-    fx.innerHTML+='<span class="sun"></span><span class="cloud" style="top:12%;animation-duration:44s;"></span><span class="cloud" style="top:30%;animation-duration:60s;animation-delay:-20s;"></span>';
+    fx.innerHTML='<span class="sun"></span><span class="cloud" style="top:12%;animation-duration:44s;"></span><span class="cloud" style="top:30%;animation-duration:60s;animation-delay:-20s;"></span>';
   } else if(theme==='clear-night'){
     R(24,s=>{s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*55+'%';s.style.animationDuration=(2+Math.random()*3)+'s';s.style.animationDelay=(Math.random()*3)+'s';});
   } else { // cloudy / partly / fog
