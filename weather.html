@@ -53,6 +53,13 @@
 
   <style>
     * { box-sizing: border-box; }
+    .search-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:1000; align-items:flex-start; justify-content:center; padding-top:80px; }
+    .search-box { background:var(--bg-2); width:100%; max-width:640px; border-top:3px solid var(--red); }
+    .search-header { display:flex; align-items:center; padding:0 20px; border-bottom:1px solid var(--border); }
+    .search-header input { flex:1; background:none; border:none; color:var(--text-1); font-size:20px; padding:20px 0; outline:none; font-family:var(--font-sans); }
+    .search-header input::placeholder { color:var(--text-3); }
+    .search-close { background:none; border:none; color:var(--text-3); font-size:24px; padding:8px; cursor:pointer; }
+    .search-close:hover { color:var(--text-1); }
     body { background: var(--bg-1); color: var(--text-1); font-family: var(--font-sans); overflow-x: hidden; }
     .mono { font-family: 'JetBrains Mono', monospace; }
 
@@ -555,7 +562,7 @@ function renderAll(){
   setFx(info.t);
 
   // Details
-  const nowIdx=Math.max(0,wx.hourly.time.indexOf(c.time));
+  let nowIdx=wx.hourly.time.findIndex(t=>t.slice(0,13)===c.time.slice(0,13)); if(nowIdx<0)nowIdx=0;
   document.getElementById('dHum').textContent=c.relative_humidity_2m+'%';
   document.getElementById('dWind').textContent=Math.round(c.wind_speed_10m)+' km/h';
   document.getElementById('dWindDir').textContent=windDir(c.wind_direction_10m);
@@ -587,7 +594,7 @@ function renderAll(){
   renderAlerts(c);
 
   // Hourly
-  let start=Math.max(0,wx.hourly.time.indexOf(c.time));
+  let start=wx.hourly.time.findIndex(t=>t.slice(0,13)===c.time.slice(0,13)); if(start<0)start=0;
   let hh='';
   for(let i=start;i<start+24&&i<wx.hourly.time.length;i++){
     const t=new Date(wx.hourly.time[i]);
