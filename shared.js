@@ -1,5 +1,5 @@
 /* ============================================================
-   CLARIXNEWS — SHARED JAVASCRIPT
+   CLARIXNEWS — SHARED JAVASCRIPT (v2.0 - Optimized)
    ============================================================ */
 
 // ── THEME TOGGLE ──
@@ -44,7 +44,6 @@ function initMobileNav() {
 
   btn.addEventListener('click', toggleMenu);
 
-  // Close menu when a nav link is tapped
   links.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       links.classList.remove('open');
@@ -53,7 +52,6 @@ function initMobileNav() {
     });
   });
 
-  // Close menu when tapping outside the link list (on the background)
   links.addEventListener('click', (e) => {
     if (e.target === links) {
       links.classList.remove('open');
@@ -62,7 +60,6 @@ function initMobileNav() {
     }
   });
 
-  // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && links.classList.contains('open')) {
       links.classList.remove('open');
@@ -117,11 +114,14 @@ function initSearch() {
   });
 }
 
-// ── WEATHER WIDGET ──
-// ── WEATHER WIDGET ──
+// ── WEATHER WIDGET (Only for article sidebar, NOT homepage) ──
+// Homepage uses its own Live Data Engine, so this only runs on article pages
 async function initWeather() {
   const el = document.getElementById('weatherWidget');
   if (!el) return;
+  
+  // Skip if on homepage (index.html) — homepage has its own engine
+  if (location.pathname.endsWith('index.html') || location.pathname === '/') return;
 
   const cities = [
     { name: 'Karachi', lat: 24.8607, lon: 67.0011 },
@@ -174,7 +174,7 @@ async function initWeather() {
   }
 }
 
-// ── COMMENTS (SIMULATED) ──
+// ── COMMENTS (Clean — no fake comments) ──
 function initComments() {
   const form = document.getElementById('commentForm');
   const list = document.getElementById('commentList');
@@ -199,13 +199,13 @@ function initComments() {
 }
 
 function renderComments(comments, list) {
-  const base = [
-    { name: 'Ahmad Raza', text: 'Very informative article. ClarixNews always delivers quality journalism.', time: 'Jun 7, 2026' },
-    { name: 'Sarah Johnson', text: 'Great coverage! This is exactly the kind of in-depth analysis we need.', time: 'Jun 7, 2026' },
-    { name: 'Bilal Khan', text: 'Excellent perspective. Sharing this with my colleagues.', time: 'Jun 6, 2026' },
-  ];
-  const all = [...comments, ...base];
-  list.innerHTML = all.map(c => `
+  // Empty state if no comments
+  if (comments.length === 0) {
+    list.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-3);font-size:13px;">No comments yet. Be the first to share your thoughts!</div>';
+    return;
+  }
+  
+  list.innerHTML = comments.map(c => `
     <div class="comment-item">
       <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
       <div class="comment-body">
@@ -248,6 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   setActiveNav();
   initSearch();
-  initWeather();
+  initWeather(); // Only runs on article pages, not homepage
   initComments();
 });
