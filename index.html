@@ -19,73 +19,86 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
   <style>
+    /* ═══ BRAND PASS: AURORA BODY ═══ */
+    body {
+      background:
+        radial-gradient(1100px 480px at 85% -10%, rgba(59,130,246,.07), transparent 60%),
+        radial-gradient(900px 420px at 8% -5%, rgba(200,16,46,.06), transparent 60%),
+        radial-gradient(700px 380px at 50% 110%, rgba(139,92,246,.05), transparent 60%),
+        var(--bg-1);
+    }
+
     /* HERO */
     .hero-border { border-top: 3px solid var(--red); padding-top: 28px; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 340px; gap: 2px; background: var(--border); }
-    .hero-main { grid-row: 1/3; position: relative; min-height: 500px; overflow: hidden; cursor: pointer; }
-    .hero-main:hover .hm-img { transform: scale(1.04); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 340px; gap: 12px; background: transparent; margin: 10px 0; }
+    .hero-main { grid-row: 1/3; position: relative; min-height: 500px; overflow: hidden; cursor: pointer; border-radius: 16px; transition: transform .3s ease; }
+    .hero-main:hover { transform: scale(1.01); }
+    .hero-main:hover .hm-img { transform: scale(1.06); }
     .hm-img { position: absolute; inset: 0; transition: transform .6s; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.35) 55%, transparent 100%); }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,.95) 100%); }
     .hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; }
     .hero-title { font-family: var(--font-display); font-size: clamp(24px,3vw,40px); font-weight: 700; line-height: 1.15; color: #fff; margin: 10px 0 12px; }
     .hero-meta { font-size: 12px; color: #ccc; display: flex; gap: 10px; align-items: center; }
-    .hero-side { background: var(--bg-3); display: flex; flex-direction: column; }
-    .side-story { flex: 1; padding: 18px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .2s; }
-    .side-story:hover { background: var(--bg-4); }
-    .side-story:last-child { border-bottom: none; }
-    .side-img { height: 100px; overflow: hidden; margin-bottom: 10px; }
-    .side-img .ph { background: linear-gradient(135deg,#1d4ed8,#7c3aed); color: #2a3a8f; }
+    .hero-side { background: transparent; display: flex; flex-direction: column; gap: 12px; }
+    .side-story { flex: 1; padding: 18px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-3); cursor: pointer; transition: all .25s ease; overflow: hidden; }
+    .side-story:hover { background: var(--bg-4); transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.3); border-color: rgba(59,130,246,.5); }
+    .side-img { height: 100px; overflow: hidden; margin-bottom: 10px; border-radius: 8px; }
+    .side-img img { transition: transform .4s; }
+    .side-story:hover .side-img img { transform: scale(1.05); }
     .side-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin: 6px 0 4px; }
     .side-meta { font-size: 11px; color: var(--text-3); }
 
     /* LATEST STRIP */
-    .latest-strip { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .latest-strip { background: var(--bg-2); border-radius: 12px; border: 1px solid var(--border); padding: 14px 0; margin: 16px 0; }
     .latest-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; overflow-x: auto; scrollbar-width: none; gap: 0; }
     .latest-inner::-webkit-scrollbar { display: none; }
-    .latest-item { flex-shrink: 0; padding: 0 24px; border-right: 1px solid var(--border); max-width: 210px; cursor: pointer; }
+    .latest-item { flex-shrink: 0; padding: 0 24px; border-right: 1px solid var(--border); max-width: 210px; cursor: pointer; transition: opacity .2s; }
+    .latest-item:hover { opacity: .8; }
     .latest-item:last-child { border-right: none; }
     .latest-time { font-size: 10px; color: var(--red); font-weight: 700; letter-spacing: .08em; margin-bottom: 3px; }
     .latest-headline { font-family: var(--font-serif); font-size: 13px; line-height: 1.4; color: var(--text-1); }
     .latest-item:hover .latest-headline { color: var(--red); }
 
     /* TOP STORIES GRID */
-    .top-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); }
+    .top-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; background: transparent; padding: 8px 0; }
 
     /* WORLD + SIDEBAR */
-    .world-section { display: grid; grid-template-columns: 1fr 300px; gap: 2px; background: var(--border); margin-top: 2px; }
-    .world-list { background: var(--bg-3); }
-    .world-item { display: flex; gap: 14px; padding: 16px 20px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .2s; align-items: flex-start; }
-    .world-item:hover { background: var(--bg-4); }
+    .world-section { display: grid; grid-template-columns: 1fr 300px; gap: 12px; background: transparent; margin-top: 12px; }
+    .world-list { background: var(--bg-3); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; }
+    .world-item { display: flex; gap: 14px; padding: 16px 20px; border-bottom: 1px solid var(--border); cursor: pointer; transition: all .2s; align-items: flex-start; }
+    .world-item:hover { background: var(--bg-4); transform: translateX(4px); }
+    .world-item:last-child { border-bottom: none; }
     .world-num { font-family: var(--font-display); font-size: 30px; font-weight: 900; color: var(--border); line-height: 1; flex-shrink: 0; width: 32px; }
     .world-body { flex: 1; }
     .world-cat { font-size: 10px; color: var(--red); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
     .world-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 3px; }
     .world-meta { font-size: 11px; color: var(--text-3); }
-    .world-img { width: 88px; height: 66px; flex-shrink: 0; overflow: hidden; }
+    .world-img { width: 88px; height: 66px; flex-shrink: 0; overflow: hidden; border-radius: 8px; }
 
     /* OPINION SIDEBAR */
-    .sidebar { background: var(--bg-2); padding: 22px 18px; }
+    .sidebar { background: var(--bg-2); padding: 22px 18px; border-radius: 14px; border: 1px solid var(--border); margin-left: 0; }
     .sidebar-title { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 16px; }
-    .opinion-item { display: flex; gap: 10px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); cursor: pointer; }
+    .opinion-item { display: flex; gap: 10px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); cursor: pointer; transition: all .2s; }
     .opinion-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .opinion-av { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-5); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--red); flex-shrink: 0; }
+    .opinion-item:hover { transform: translateX(3px); }
+    .opinion-av { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--red), #ff4d6d); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #fff; flex-shrink: 0; box-shadow: 0 6px 14px rgba(200,16,46,.3); }
     .opinion-author { font-size: 11px; font-weight: 600; color: var(--text-1); margin-bottom: 3px; }
     .opinion-headline { font-family: var(--font-serif); font-size: 12px; line-height: 1.4; color: var(--text-2); }
     .opinion-item:hover .opinion-headline { color: var(--text-1); }
 
     /* TRENDING */
-    .trending-bg { background: var(--bg-2); padding: 32px 0; border-top: 1px solid var(--border); }
-    .trending-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: var(--border); margin-top: 20px; }
-    .trending-card { background: var(--bg-3); padding: 20px; cursor: pointer; transition: background .2s; }
-    .trending-card:hover { background: var(--bg-4); }
-    .trending-num { font-family: var(--font-display); font-size: 44px; font-weight: 900; color: var(--red); opacity: .2; line-height: 1; margin-bottom: 8px; }
+    .trending-bg { background: transparent; padding: 32px 0; border-top: 1px solid var(--border); }
+    .trending-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; background: transparent; margin-top: 20px; padding: 8px 0; }
+    .trending-card { background: var(--bg-3); padding: 20px; cursor: pointer; transition: all .25s ease; border-radius: 14px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+    .trending-card:hover { background: var(--bg-4); transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,.35); border-color: rgba(200,16,46,.5); }
+    .trending-num { font-family: var(--font-display); font-size: 52px; font-weight: 900; opacity: .15; line-height: 1; margin-bottom: 8px; background: linear-gradient(180deg, var(--red), transparent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .trending-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 6px; }
     .trending-meta { font-size: 11px; color: var(--text-3); }
 
     /* SPECIAL SERIES */
-    .series-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: var(--border); }
-    .series-card { background: var(--bg-3); padding: 24px; cursor: pointer; transition: background .2s; border-left: 4px solid transparent; }
-    .series-card:hover { background: var(--bg-4); border-left-color: var(--red); }
+    .series-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; background: transparent; padding: 8px 0; }
+    .series-card { background: var(--bg-3); padding: 24px; cursor: pointer; transition: all .25s ease; border-radius: 14px; border: 1px solid var(--border); border-left: 4px solid transparent; }
+    .series-card:hover { background: var(--bg-4); border-left-color: var(--red); transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.3); }
     .series-tag { font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
     .series-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; line-height: 1.25; color: var(--text-1); margin-bottom: 8px; }
     .series-desc { font-size: 13px; color: var(--text-2); line-height: 1.6; }
@@ -94,36 +107,79 @@
     .weather-bar { background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 8px 0; }
     .weather-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 4px; }
     .weather-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); margin-right: 12px; flex-shrink: 0; }
-    .weather-item { display: flex; align-items: center; gap: 6px; padding: 0 16px; border-right: 1px solid var(--border); font-size: 12px; }
+    .weather-item { display: flex; align-items: center; gap: 6px; padding: 0 16px; border-right: 1px solid var(--border); font-size: 12px; transition: opacity .2s; }
+    .weather-item:hover { opacity: .8; }
     .weather-item:last-child { border-right: none; }
     .weather-city { color: var(--text-3); font-size: 11px; }
     .weather-icon { font-size: 14px; }
     .weather-temp { font-weight: 600; color: var(--text-1); }
 
     /* VIDEO SECTION */
-    .video-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: var(--border); }
-    .video-card { background: var(--bg-3); cursor: pointer; overflow: hidden; }
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; background: transparent; padding: 8px 0; }
+    .video-card { background: var(--bg-3); cursor: pointer; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); transition: all .25s ease; }
+    .video-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,.35); border-color: rgba(200,16,46,.5); }
     .video-thumb { position: relative; height: 160px; overflow: hidden; }
-    .video-thumb .ph { background: linear-gradient(135deg,#1a1a2e,#16213e); }
-    .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: rgba(200,16,46,.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #fff; transition: transform .2s; }
+    .video-thumb img { transition: transform .4s; }
+    .video-card:hover .video-thumb img { transform: scale(1.08); }
+    .video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: rgba(200,16,46,.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #fff; transition: transform .2s; box-shadow: 0 8px 20px rgba(200,16,46,.4); }
     .video-card:hover .video-play { transform: translate(-50%,-50%) scale(1.1); }
-    .video-duration { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 10px; padding: 2px 6px; font-weight: 600; }
+    .video-duration { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,.8); color: #fff; font-size: 10px; padding: 2px 6px; font-weight: 600; border-radius: 3px; }
     .video-body { padding: 14px; }
     .video-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--text-1); margin-bottom: 6px; }
     .video-meta { font-size: 11px; color: var(--text-3); }
 
     /* SEARCH OVERLAY */
     .search-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85); z-index: 1000; align-items: flex-start; justify-content: center; padding-top: 80px; }
-    .search-box { background: var(--bg-2); width: 100%; max-width: 640px; border-top: 3px solid var(--red); }
+    .search-box { background: var(--bg-2); width: 100%; max-width: 640px; border-top: 3px solid var(--red); border-radius: 12px; overflow: hidden; }
     .search-header { display: flex; align-items: center; padding: 0 20px; border-bottom: 1px solid var(--border); }
     .search-header input { flex: 1; background: none; border: none; color: var(--text-1); font-size: 20px; padding: 20px 0; outline: none; font-family: var(--font-sans); }
     .search-header input::placeholder { color: var(--text-3); }
-    .search-close { background: none; border: none; color: var(--text-3); font-size: 24px; padding: 8px; transition: color .2s; }
+    .search-close { background: none; border: none; color: var(--text-3); font-size: 24px; padding: 8px; transition: color .2s; cursor: pointer; }
     .search-close:hover { color: var(--text-1); }
     .search-hints { padding: 16px 20px; font-size: 12px; color: var(--text-3); }
     .search-hints strong { color: var(--text-2); display: block; margin-bottom: 8px; }
-    .search-hints span { display: inline-block; background: var(--bg-4); padding: 4px 12px; margin: 3px; border-radius: 2px; cursor: pointer; transition: background .2s; }
-    .search-hints span:hover { background: var(--red); color: #fff; }
+    .search-hints span { display: inline-block; background: var(--bg-4); padding: 6px 14px; margin: 3px; border-radius: 20px; cursor: pointer; transition: all .2s; font-size: 11px; font-weight: 600; }
+    .search-hints span:hover { background: var(--red); color: #fff; transform: translateY(-2px); }
+
+    /* ═══ BRAND PASS: PREMIUM CARDS ═══ */
+    .card { border-radius: 14px; border: 1px solid var(--border); margin: 4px; transition: all .25s ease; overflow: hidden; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,.35); border-color: rgba(200,16,46,.5); }
+    .card:hover .card-img img { transform: scale(1.06); }
+    .card-img { overflow: hidden; }
+    .card-img img { transition: transform .4s; }
+
+    /* Category pills */
+    .cat-pill { border-radius: 20px !important; padding: 4px 11px !important; letter-spacing: .1em !important; font-size: 9px !important; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+
+    /* Section labels with gradient line */
+    .section-label::after { background: linear-gradient(90deg, var(--red), transparent) !important; }
+
+    /* Newsletter glassmorphism */
+    .newsletter { border-radius: 16px !important; border: 1px solid rgba(200,16,46,.3) !important; background: linear-gradient(135deg, var(--bg-3), var(--bg-2)) !important; padding: 32px !important; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.3); margin: 32px 0; }
+    .newsletter::before { content: ''; position: absolute; inset: 0; background: radial-gradient(400px 200px at 100% 0%, rgba(200,16,46,.15), transparent 60%); pointer-events: none; }
+    .newsletter-form input { border-radius: 8px !important; padding: 12px 18px !important; }
+    .newsletter-form button { border-radius: 8px !important; background: linear-gradient(135deg, #c8102e, #ff4d6d) !important; padding: 12px 24px !important; transition: all .2s; }
+    .newsletter-form button:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(200,16,46,.4); }
+
+    /* Logo gradient */
+    .logo span { background: linear-gradient(90deg, #c8102e, #ff4d6d); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Search button */
+    .search-btn { border-radius: 20px !important; padding: 8px 18px !important; transition: all .2s; }
+    .search-btn:hover { background: var(--red) !important; border-color: var(--red) !important; color: #fff !important; }
+
+    /* Ticker pulse */
+    .ticker-bar { background: linear-gradient(90deg, #c8102e, #9e0c23, #c8102e); background-size: 200% 100%; animation: tickerPulse 8s ease-in-out infinite; }
+    @keyframes tickerPulse { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+    /* Footer */
+    footer { border-radius: 0; background: linear-gradient(180deg, var(--bg-2), var(--bg-1)); }
+    .footer-social a { border-radius: 50% !important; transition: all .2s; }
+    .footer-social a:hover { transform: translateY(-3px); background: var(--red); border-color: var(--red); color: #fff; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
 
     @media(max-width:900px) {
       .hero-grid { grid-template-columns: 1fr; }
@@ -139,10 +195,12 @@
       .hero-side { flex-direction: column; }
       .trending-grid { grid-template-columns: 1fr; }
       .video-grid { grid-template-columns: 1fr; }
+      .card, .series-card, .trending-card, .video-card { margin: 2px; border-radius: 10px; }
+      .newsletter { padding: 22px !important; }
     }
   </style>
 
-  <!-- ═══ GOOGLE ANALYTICS ═══ -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -151,10 +209,10 @@
     gtag('config', 'G-T7B4BGRJFC');
   </script>
 
-  <!-- ═══ GOOGLE ADSENSE (Single Instance) ═══ -->
+  <!-- Google AdSense (Single Instance) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
 
-  <!-- ═══ OPEN GRAPH ═══ -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://clarixnews.vercel.app/" />
   <meta property="og:title" content="ClarixNews – World News, Unfiltered" />
@@ -166,7 +224,7 @@
   <meta property="og:site_name" content="ClarixNews" />
   <meta property="og:locale" content="en_US" />
 
-  <!-- ═══ TWITTER CARD ═══ -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ClarixNews" />
   <meta name="twitter:creator" content="@ClarixNews" />
@@ -175,7 +233,7 @@
   <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
   <meta name="twitter:image:alt" content="ClarixNews logo" />
 
-  <!-- ═══ JSON-LD: NewsMediaOrganization ═══ -->
+  <!-- JSON-LD: NewsMediaOrganization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -202,7 +260,7 @@
   }
   </script>
 
-  <!-- ═══ JSON-LD: WebSite ═══ -->
+  <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -252,18 +310,18 @@
   <div class="ticker-label">Breaking</div>
   <div class="ticker-track">
     <div class="ticker-inner">
+      <span>Anthropic researcher resigns with viral AI safety warning</span>
       <span>50 nations sign historic Global AI Safety Treaty at UN Summit</span>
       <span>Pakistan wins Asia Cup 2026 with thrilling victory over India</span>
       <span>KSE-100 smashes all-time record, crosses 85,000 mark</span>
       <span>UN finalizes Global Carbon Tax Framework at Nairobi Summit</span>
       <span>GTA VI breaks all entertainment records with 35M sales in 24 hours</span>
-      <span>Pakistan, Saudi Arabia and Türkiye sign historic defense pact</span>
+      <span>Anthropic researcher resigns with viral AI safety warning</span>
       <span>50 nations sign historic Global AI Safety Treaty at UN Summit</span>
       <span>Pakistan wins Asia Cup 2026 with thrilling victory over India</span>
       <span>KSE-100 smashes all-time record, crosses 85,000 mark</span>
       <span>UN finalizes Global Carbon Tax Framework at Nairobi Summit</span>
       <span>GTA VI breaks all entertainment records with 35M sales in 24 hours</span>
-      <span>Pakistan, Saudi Arabia and Türkiye sign historic defense pact</span>
     </div>
   </div>
 </div>
@@ -333,9 +391,9 @@
 <main>
   <div class="container">
 
-    <!-- ═══ HERO ═══ -->
+    <!-- ═══ HERO (Premium) ═══ -->
     <div class="hero-border">
-      <div class="hero-grid">
+      <div class="hero-grid reveal">
         <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026" class="hero-main">
           <div class="hm-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&fit=crop" alt="Anthropic AI Warning" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
           <div class="hero-overlay"></div>
@@ -345,21 +403,24 @@
             <div class="hero-meta"><span>By Sarah Chen</span><span>·</span><span>10 September 2026</span><span>·</span><span>10 min read</span></div>
           </div>
         </a>
-        <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="hero-main">
-          <div class="hm-img"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80&fit=crop" alt="Pakistan Saudi Turkey Defense Pact" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
-          <div class="hero-overlay"></div>
-          <div class="hero-content">
-            <span class="cat-pill pakistan">Breaking — Pakistan Exclusive</span>
-            <h1 class="hero-title">New Axis of Security: Pakistan, Saudi Arabia and Türkiye Set to Sign Historic Trilateral Defense Pact</h1>
-            <div class="hero-meta"><span>By Raza Khan</span><span>·</span><span>7 August 2026</span><span>·</span><span>12 min read</span></div>
-          </div>
-        </a>
         <div class="hero-side">
+          <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="side-story">
+            <div class="side-img"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=80&fit=crop" alt="Pakistan Saudi Turkey Defense Pact" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+            <span class="cat-pill pakistan">Pakistan</span>
+            <div class="side-title">New Axis of Security: Pakistan, Saudi Arabia and Türkiye Set to Sign Historic Trilateral Defense Pact</div>
+            <div class="side-meta">7 August 2026 · 12 min read</div>
+          </a>
           <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="side-story">
             <div class="side-img"><img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&q=80&fit=crop" alt="Pakistan Asia Cup Win" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
             <span class="cat-pill sports">Sports</span>
             <div class="side-title">Asia Cup 2026: Pakistan Stuns India in Thrilling Final to Lift the Trophy</div>
             <div class="side-meta">15 August 2026 · 7 min read</div>
+          </a>
+          <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="side-story">
+            <div class="side-img"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&fit=crop" alt="UN AI Treaty" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+            <span class="cat-pill tech">Technology</span>
+            <div class="side-title">50 Nations Sign First-Ever Global AI Safety Treaty at UN Summit</div>
+            <div class="side-meta">15 August 2026 · 8 min read</div>
           </a>
         </div>
       </div>
@@ -368,23 +429,25 @@
   </div>
 
   <!-- ═══ LATEST STRIP ═══ -->
-  <div class="latest-strip">
-    <div class="latest-inner">
-      <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">50 nations sign historic Global AI Safety Treaty at UN Summit in Geneva</div></a>
-      <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Pakistan wins Asia Cup 2026 with thrilling 5-wicket victory over India</div></a>
-      <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">KSE-100 smashes all-time record, crosses 85,000 mark as FDI pours in</div></a>
-      <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">UN finalizes Global Carbon Tax Framework at Nairobi Summit</div></a>
-      <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="latest-item"><div class="latest-time">3 hrs ago</div><div class="latest-headline">GTA VI breaks records with 35 million copies sold in 24 hours</div></a>
-      <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="latest-item"><div class="latest-time">5 hrs ago</div><div class="latest-headline">Pakistan, Saudi Arabia and Türkiye sign historic trilateral defense pact</div></a>
-      <a href="article.html?id=saudi-neom-the-line-first-phase-opens-2026" class="latest-item"><div class="latest-time">6 hrs ago</div><div class="latest-headline">Saudi Arabia's NEOM 'The Line' opens first residential phase</div></a>
+  <div class="container">
+    <div class="latest-strip reveal">
+      <div class="latest-inner">
+        <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Anthropic researcher Jacob Coxon resigns — warns labs are 'gambling with our lives'</div></a>
+        <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">50 nations sign historic Global AI Safety Treaty at UN Summit in Geneva</div></a>
+        <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Pakistan wins Asia Cup 2026 with thrilling 5-wicket victory over India</div></a>
+        <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">KSE-100 smashes all-time record, crosses 85,000 mark as FDI pours in</div></a>
+        <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">UN finalizes Global Carbon Tax Framework at Nairobi Summit</div></a>
+        <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="latest-item"><div class="latest-time">3 hrs ago</div><div class="latest-headline">GTA VI breaks records with 35 million copies sold in 24 hours</div></a>
+        <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="latest-item"><div class="latest-time">5 hrs ago</div><div class="latest-headline">Pakistan, Saudi Arabia and Türkiye sign historic trilateral defense pact</div></a>
+      </div>
     </div>
   </div>
 
   <div class="container">
 
     <!-- ═══ TOP STORIES ═══ -->
-    <div class="section-label"><h2>Top Stories</h2></div>
-    <div class="top-grid">
+    <div class="section-label reveal"><h2>Top Stories</h2></div>
+    <div class="top-grid reveal">
       <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="card">
         <div class="card-img" style="height:185px;">
           <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800&q=80&fit=crop" alt="Pakistan Asia Cup Win" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
@@ -421,8 +484,8 @@
     </div>
 
     <!-- ═══ FEATURED SERIES ═══ -->
-    <div class="section-label"><h2>Featured Series</h2></div>
-    <div class="series-grid">
+    <div class="section-label reveal"><h2>Featured Series</h2></div>
+    <div class="series-grid reveal">
       <a href="article.html?id=fda-approves-gene-therapy-alzheimers-2026" class="series-card">
         <div class="series-tag">Health & Science</div>
         <div class="series-title">FDA Approves First-Ever Gene Therapy That Reverses Alzheimer's Progression</div>
@@ -446,8 +509,8 @@
     </div>
 
     <!-- ═══ AROUND THE WORLD ═══ -->
-    <div class="section-label"><h2>Around the World</h2></div>
-    <div class="world-section">
+    <div class="section-label reveal"><h2>Around the World</h2></div>
+    <div class="world-section reveal">
       <div class="world-list">
         <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="world-item">
           <div class="world-num">01</div>
@@ -539,8 +602,8 @@
     </div>
 
     <!-- ═══ VIDEO REPORTS ═══ -->
-    <div class="section-label"><h2>Video Reports</h2></div>
-    <div class="video-grid">
+    <div class="section-label reveal"><h2>Video Reports</h2></div>
+    <div class="video-grid reveal">
       <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="video-card">
         <div class="video-thumb">
           <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&q=80&fit=crop" alt="Pakistan Asia Cup Win" style="width:100%;height:100%;object-fit:cover;" loading="lazy" />
@@ -577,7 +640,7 @@
     </div>
 
     <!-- ═══ NEWSLETTER ═══ -->
-    <div class="newsletter">
+    <div class="newsletter reveal">
       <div class="newsletter-text">
         <h3>Stay Ahead of the News</h3>
         <p>Get ClarixNews Morning Brief delivered to your inbox — free, every weekday.</p>
@@ -593,27 +656,27 @@
   <!-- ═══ TRENDING ═══ -->
   <div class="trending-bg">
     <div class="container">
-      <div class="section-label"><h2>Trending Now</h2></div>
-      <div class="trending-grid">
-        <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="trending-card">
+      <div class="section-label reveal"><h2>Trending Now</h2></div>
+      <div class="trending-grid reveal">
+        <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026" class="trending-card">
           <div class="trending-num">01</div>
+          <div class="trending-title">Anthropic Researcher Quits: 'Racing to Self-Improving Superintelligence'</div>
+          <div class="trending-meta">Technology · September 10, 2026</div>
+        </a>
+        <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="trending-card">
+          <div class="trending-num">02</div>
           <div class="trending-title">50 Nations Sign Historic Global AI Safety Treaty</div>
           <div class="trending-meta">Technology · August 15, 2026</div>
         </a>
         <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="trending-card">
-          <div class="trending-num">02</div>
+          <div class="trending-num">03</div>
           <div class="trending-title">KSE-100 Smashes Record, Crosses 85,000 Mark</div>
           <div class="trending-meta">Business · August 15, 2026</div>
         </a>
         <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="trending-card">
-          <div class="trending-num">03</div>
+          <div class="trending-num">04</div>
           <div class="trending-title">GTA VI Breaks All Entertainment Records in 24 Hours</div>
           <div class="trending-meta">Entertainment · August 15, 2026</div>
-        </a>
-        <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="trending-card">
-          <div class="trending-num">04</div>
-          <div class="trending-title">UN Summit Finalizes Historic Global Carbon Tax</div>
-          <div class="trending-meta">World · August 15, 2026</div>
         </a>
       </div>
     </div>
@@ -654,7 +717,7 @@
           <li><a href="category.html?cat=career">Career & AI</a></li>
           <li><a href="category.html?cat=opinion">Opinion</a></li>
           <li><a href="markets.html">📈 Markets</a></li>
-          <li><a href="#">Video</a></li>
+          <li><a href="weather.html">🌤 Weather</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -665,7 +728,7 @@
           <li><a href="#">Advertise</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="#">Sitemap</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
         </ul>
       </div>
     </div>
@@ -718,9 +781,9 @@
     const arr=Array.isArray(d)?d:[d];
     el.innerHTML=arr.map((r,i)=>{
       const cur=r.current||{};
-      return '<div class="weather-item"><span class="weather-city">'+CITIES[i].n+
+      return '<a href="weather.html?lat='+CITIES[i].la+'&lon='+CITIES[i].lo+'&name='+encodeURIComponent(CITIES[i].n)+'" class="weather-item" style="text-decoration:none;color:inherit;"><span class="weather-city">'+CITIES[i].n+
              '</span><span class="weather-icon">'+wIcon(cur.weather_code||0,cur.is_day===1)+
-             '</span><span class="weather-temp">'+Math.round(cur.temperature_2m||0)+'°C</span></div>';
+             '</span><span class="weather-temp">'+Math.round(cur.temperature_2m||0)+'°C</span></a>';
     }).join('');
   }
 
@@ -764,6 +827,24 @@
   loadWeather(); loadTicker();
   setInterval(loadTicker,60000);
   setInterval(loadWeather,600000);
+})();
+
+/* ═══ BRAND PASS: Scroll Reveal ═══ */
+(function(){
+  var targets = document.querySelectorAll('.reveal');
+  if (window.IntersectionObserver) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    targets.forEach(function(el){ io.observe(el); });
+  } else {
+    targets.forEach(function(el){ el.classList.add('in'); });
+  }
 })();
 </script>
 
