@@ -560,3 +560,259 @@ img { max-width: 100%; height: auto; }
 @media (min-width: 1400px) {
   .container, .nav-inner, .top-bar-inner, .latest-inner, .footer-inner { max-width: 1400px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   CLARIXNEWS — BRAND PASS (Premium Polish Layer)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 1. AURORA BODY (weather.html jaisa subtle glow) ── */
+body {
+  background:
+    radial-gradient(1100px 480px at 85% -10%, rgba(59,130,246,.07), transparent 60%),
+    radial-gradient(900px 420px at 8% -5%, rgba(200,16,46,.06), transparent 60%),
+    radial-gradient(700px 380px at 50% 110%, rgba(139,92,246,.05), transparent 60%),
+    var(--bg-1);
+}
+
+/* ── 2. ROUNDED CARD SYSTEM ── */
+.card,
+.series-card,
+.trending-card,
+.world-item,
+.opinion-item,
+.video-card {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin: 4px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  overflow: hidden;
+}
+.card:hover,
+.series-card:hover,
+.trending-card:hover,
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  border-color: rgba(200,16,46,.5);
+}
+.world-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(200,16,46,.4);
+}
+
+/* Section labels with gradient line */
+.section-label::after {
+  background: linear-gradient(90deg, var(--red), transparent) !important;
+}
+
+/* ── 3. CATEGORY PILLS — rounded + glow ── */
+.cat-pill {
+  border-radius: 20px !important;
+  padding: 4px 11px !important;
+  letter-spacing: .1em !important;
+  font-size: 9px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+}
+
+/* ── 4. HERO — modern gradient overlay ── */
+.hero-main {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+.hero-overlay {
+  background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,.95) 100%) !important;
+}
+.hero-grid {
+  gap: 12px !important;
+  background: transparent !important;
+  margin: 10px 0;
+}
+.hero-main:hover .hm-img {
+  transform: scale(1.06) !important;
+}
+
+/* Hero side stories */
+.side-story {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin: 4px;
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.side-story:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.3);
+  border-color: rgba(59,130,246,.5);
+}
+
+/* ── 5. TRENDING CARDS — numbered with premium feel ── */
+.trending-num {
+  font-size: 52px !important;
+  opacity: .15 !important;
+  background: linear-gradient(180deg, var(--red), transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── 6. NEWSLETTER — glassmorphism + gradient border ── */
+.newsletter {
+  border-radius: 16px !important;
+  border: 1px solid rgba(200,16,46,.3) !important;
+  background: linear-gradient(135deg, var(--bg-3), var(--bg-2)) !important;
+  padding: 32px !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,.3);
+}
+.newsletter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(400px 200px at 100% 0%, rgba(200,16,46,.15), transparent 60%);
+  pointer-events: none;
+}
+.newsletter-form input {
+  border-radius: 8px !important;
+  padding: 12px 18px !important;
+}
+.newsletter-form button {
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #c8102e, #ff4d6d) !important;
+  padding: 12px 24px !important;
+  transition: transform .2s, box-shadow .2s;
+}
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(200,16,46,.4);
+}
+
+/* ── 7. TOP STORIES GRID — breathing room ── */
+.top-grid, .trending-grid, .video-grid {
+  gap: 12px !important;
+  background: transparent !important;
+  padding: 8px 0;
+}
+.series-grid {
+  gap: 12px !important;
+  background: transparent !important;
+}
+
+/* ── 8. WORLD LIST — cleaner cards ── */
+.world-list {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--bg-3) !important;
+}
+.world-item {
+  border-radius: 0 !important;
+  border-left: none !important;
+  border-right: none !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--border);
+}
+.world-item:last-child {
+  border-bottom: none;
+}
+.world-img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ── 9. SIDEBAR — matching premium feel ── */
+.sidebar {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin-left: 12px;
+}
+.opinion-item:last-child {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.opinion-av {
+  background: linear-gradient(135deg, var(--red), #ff4d6d) !important;
+  color: #fff !important;
+}
+
+/* ── 10. SCROLL REVEAL — entrance animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── 11. LATEST STRIP — premium horizontal rail ── */
+.latest-strip {
+  border-radius: 12px;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+}
+
+/* ── 12. BREAKING TICKER — red gradient pulse ── */
+.ticker-bar {
+  background: linear-gradient(90deg, #c8102e, #9e0c23, #c8102e);
+  background-size: 200% 100%;
+  animation: tickerPulse 8s ease-in-out infinite;
+}
+@keyframes tickerPulse {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ── 13. LOGO — subtle gradient ── */
+.logo a {
+  transition: opacity .2s;
+}
+.logo a:hover {
+  opacity: .85;
+}
+.logo span {
+  background: linear-gradient(90deg, #c8102e, #ff4d6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── 14. SEARCH BUTTON — rounded pill ── */
+.search-btn {
+  border-radius: 20px !important;
+  padding: 8px 18px !important;
+  transition: all .2s;
+}
+.search-btn:hover {
+  background: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #fff !important;
+}
+
+/* ── 15. FOOTER — matching premium ── */
+footer {
+  border-radius: 0;
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+}
+.footer-social a {
+  border-radius: 50% !important;
+}
+.footer-social a:hover {
+  transform: translateY(-3px);
+}
+
+/* ── 16. MOBILE POLISH ── */
+@media(max-width:600px){
+  .card, .series-card, .trending-card, .video-card {
+    margin: 2px;
+    border-radius: 10px;
+  }
+  .newsletter {
+    padding: 22px !important;
+  }
+  .hero-grid {
+    gap: 8px !important;
+  }
+}
