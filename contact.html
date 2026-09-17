@@ -1,173 +1,404 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us – ClarixNews</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact ClarixNews – News Tips, Corrections & Inquiries</title>
+  <meta name="description" content="Contact ClarixNews for news tips, correction requests, advertising inquiries, technical issues, or general questions." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://clarixnews.vercel.app/contact.html" />
   <meta name="theme-color" content="#0a0a0a" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://clarixnews.vercel.app/contact.html" />
-  <meta property="og:title" content="Contact Us – ClarixNews" />
-  <meta property="og:description" content="Contact ClarixNews for news tips, corrections, advertising inquiries, or general questions." />
+  <meta property="og:title" content="Contact ClarixNews" />
+  <meta property="og:description" content="Contact ClarixNews for news tips, corrections, advertising inquiries, technical issues, or general questions." />
   <meta property="og:image" content="https://clarixnews.vercel.app/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="ClarixNews" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@ClarixNews" />
-  <meta name="twitter:title" content="Contact Us – ClarixNews" />
-  <meta name="twitter:description" content="Contact ClarixNews for news tips, corrections, advertising inquiries, or general questions." />
+  <meta name="twitter:title" content="Contact ClarixNews" />
+  <meta name="twitter:description" content="Contact ClarixNews for news tips, corrections, advertising inquiries, technical issues, or general questions." />
   <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
+
   <style>
-    .contact-hero { background:var(--bg-2); border-bottom:3px solid var(--red); padding:48px 0; }
-    .contact-hero h1 { font-family:var(--font-display); font-size:clamp(32px,5vw,56px); font-weight:900; color:var(--text-1); margin-bottom:10px; }
-    .contact-hero h1 span { color:var(--red); }
-    .contact-hero p { font-family:var(--font-serif); font-size:17px; color:var(--text-2); max-width:560px; line-height:1.7; }
-    .contact-layout { display:grid; grid-template-columns:1fr 380px; gap:48px; padding:48px 0; }
-    .form-title { font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--text-1); margin-bottom:24px; }
-    .form-group { margin-bottom:18px; }
-    .form-label { display:block; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-2); margin-bottom:6px; }
-    .form-input { width:100%; background:var(--bg-3); border:1px solid var(--border); color:var(--text-1); padding:12px 16px; font-size:14px; font-family:var(--font-sans); outline:none; transition:border-color .2s; }
-    .form-input:focus { border-color:var(--red); }
-    .form-input::placeholder { color:var(--text-3); }
-    textarea.form-input { resize:vertical; min-height:130px; }
-    select.form-input option { background:var(--bg-3); }
-    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .submit-btn { background:var(--red); border:none; color:#fff; padding:14px 36px; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; transition:background .2s; font-family:var(--font-sans); width:100%; margin-top:8px; }
-    .submit-btn:hover { background:var(--red-dark); }
-    .success-msg { display:none; background:var(--bg-3); border-left:4px solid #22c55e; padding:20px 24px; margin-top:20px; }
-    .success-msg h3 { font-family:var(--font-display); font-size:20px; color:var(--text-1); margin-bottom:6px; }
-    .success-msg p { font-size:14px; color:var(--text-2); }
-    .contact-info { }
-    .info-card { background:var(--bg-3); padding:24px; margin-bottom:16px; border-left:3px solid var(--red); }
-    .info-card h3 { font-family:var(--font-display); font-size:18px; font-weight:700; color:var(--text-1); margin-bottom:8px; }
-    .info-card p { font-size:14px; color:var(--text-2); line-height:1.6; }
-    .info-card a { color:var(--red); }
-    .social-links { display:flex; gap:10px; margin-top:8px; flex-wrap:wrap; }
-    .soc-link { display:flex; align-items:center; gap:6px; padding:7px 14px; background:var(--bg-4); border:1px solid var(--border); font-size:12px; font-weight:600; color:var(--text-2); transition:all .2s; }
-    .soc-link:hover { background:var(--red); border-color:var(--red); color:#fff; }
-    .faq { margin-top:40px; }
-    .faq-title { font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--text-1); margin-bottom:20px; }
-    .faq-item { border-bottom:1px solid var(--border); }
-    .faq-q { display:flex; align-items:center; justify-content:space-between; padding:16px 0; cursor:pointer; font-size:15px; font-weight:600; color:var(--text-1); }
-    .faq-q:hover { color:var(--red); }
-    .faq-icon { font-size:18px; color:var(--text-3); transition:transform .2s; }
-    .faq-a { display:none; padding:0 0 16px; font-size:14px; color:var(--text-2); line-height:1.7; }
-    .faq-item.open .faq-icon { transform:rotate(45deg); }
-    .faq-item.open .faq-a { display:block; }
-    @media(max-width:900px){ .contact-layout { grid-template-columns:1fr; } .form-row { grid-template-columns:1fr; } }
+    .contact-hero{background:var(--bg-2);border-bottom:3px solid var(--red);padding:48px 0}
+    .contact-hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,56px);font-weight:900;color:var(--text-1);margin-bottom:10px}
+    .contact-hero h1 span{color:var(--red)}
+    .contact-hero p{font-family:var(--font-serif);font-size:17px;color:var(--text-2);max-width:620px;line-height:1.7}
+    .contact-layout{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;padding:48px 0}
+    .form-title,.faq-title{font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--text-1);margin-bottom:24px}
+    .form-group{margin-bottom:18px}
+    .form-label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);margin-bottom:6px}
+    .form-input{width:100%;box-sizing:border-box;background:var(--bg-3);border:1px solid var(--border);border-radius:0;color:var(--text-1);padding:12px 16px;font-size:14px;font-family:var(--font-sans);outline:none;transition:border-color .2s,box-shadow .2s}
+    .form-input:focus{border-color:var(--red);box-shadow:0 0 0 2px color-mix(in srgb,var(--red) 20%,transparent)}
+    .form-input[aria-invalid="true"]{border-color:#dc2626}
+    .form-input::placeholder{color:var(--text-3)}
+    textarea.form-input{resize:vertical;min-height:150px}
+    select.form-input option{background:var(--bg-3)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field-error{display:none;color:#dc2626;font-size:12px;margin-top:5px}
+    .field-error.show{display:block}
+    .honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+    .submit-btn{background:var(--red);border:none;color:#fff;padding:14px 36px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,opacity .2s;font-family:var(--font-sans);width:100%;margin-top:8px;cursor:pointer}
+    .submit-btn:hover{background:var(--red-dark)}
+    .submit-btn:disabled{opacity:.65;cursor:wait}
+    .form-status{display:none;padding:16px 18px;margin-top:18px;background:var(--bg-3);border-left:4px solid var(--red);font-size:14px;color:var(--text-2);line-height:1.6}
+    .form-status.show{display:block}
+    .form-status.success{border-left-color:#22c55e}
+    .form-status.error{border-left-color:#dc2626}
+    .info-card{background:var(--bg-3);padding:24px;margin-bottom:16px;border-left:3px solid var(--red)}
+    .info-card h3{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text-1);margin-bottom:8px}
+    .info-card p{font-size:14px;color:var(--text-2);line-height:1.6}
+    .info-card a{color:var(--red)}
+    .contact-note{font-size:12px!important;color:var(--text-3)!important;margin-top:8px}
+    .faq{margin-top:40px}
+    .faq-title{margin-bottom:20px}
+    .faq-item{border-bottom:1px solid var(--border)}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:16px 0;border:0;background:transparent;cursor:pointer;text-align:left;font-size:15px;font-weight:600;color:var(--text-1);font-family:var(--font-sans)}
+    .faq-q:hover{color:var(--red)}
+    .faq-icon{font-size:18px;color:var(--text-3);transition:transform .2s;flex:none}
+    .faq-a{display:none;padding:0 0 16px;font-size:14px;color:var(--text-2);line-height:1.7}
+    .faq-item.open .faq-icon{transform:rotate(45deg)}
+    .faq-item.open .faq-a{display:block}
+    @media(max-width:900px){.contact-layout{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){.form-input,.submit-btn,.faq-icon{transition:none}}
   </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T7B4BGRJFC');
-</script>
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034"
-        crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js',new Date());
+    gtag('config','G-T7B4BGRJFC');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
-<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><div class="top-bar-links"><a href="about.html">About</a><a href="#">Newsletter</a></div><button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button></div></div></div>
-<header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
-<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn">🔍 Search</button></div></div></nav>
+  <div class="ticker-bar">
+    <div class="ticker-label">Breaking</div>
+    <div class="ticker-track"><div class="ticker-inner">
+      <span>G7 leaders reach landmark AI governance agreement</span>
+      <span>Pakistan PM holds bilateral talks with US Secretary of State</span>
+      <span>G7 leaders reach landmark AI governance agreement</span>
+      <span>Pakistan PM holds bilateral talks with US Secretary of State</span>
+    </div></div>
+  </div>
 
-<div class="contact-hero"><div class="container"><h1>Contact <span>ClarixNews</span></h1><p>Questions, tips, corrections, or advertising inquiries — we want to hear from you. Our team typically responds within 24 hours.</p></div></div>
-
-<main><div class="container">
-  <div class="contact-layout">
-    <div>
-      <div class="form-title">Send Us a Message</div>
-      <form id="contactForm">
-        <div class="form-row">
-          <div class="form-group"><label class="form-label">First Name *</label><input type="text" class="form-input" placeholder="Your first name" required /></div>
-          <div class="form-group"><label class="form-label">Last Name *</label><input type="text" class="form-input" placeholder="Your last name" required /></div>
-        </div>
-        <div class="form-group"><label class="form-label">Email Address *</label><input type="email" class="form-input" placeholder="you@example.com" required /></div>
-        <div class="form-group"><label class="form-label">Subject *</label>
-          <select class="form-input" required>
-            <option value="">Select a subject...</option>
-            <option>News Tip or Story Idea</option>
-            <option>Correction Request</option>
-            <option>Advertising Inquiry</option>
-            <option>Press & Media Inquiry</option>
-            <option>Technical Issue</option>
-            <option>General Question</option>
-          </select>
-        </div>
-        <div class="form-group"><label class="form-label">Message *</label><textarea class="form-input" placeholder="Your message..." required></textarea></div>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-      <div class="success-msg" id="successMsg">
-        <h3>✅ Message Sent!</h3>
-        <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left"><span id="currentDate"></span></div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="top-bar-links"><a href="about.html">About</a><a href="index.html#newsletter">Newsletter</a></div>
+        <button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to light theme">☀ Light</button>
       </div>
-
-      <div class="faq">
-        <div class="faq-title">Frequently Asked Questions</div>
-        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>How do I submit a news tip?</span><span class="faq-icon">+</span></div><div class="faq-a">Use the contact form above and select "News Tip or Story Idea". Include as much detail as possible — what happened, where, when, and any sources or evidence you have. All tips are treated confidentially.</div></div>
-        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>How do I request a correction?</span><span class="faq-icon">+</span></div><div class="faq-a">Select "Correction Request" in the form above and explain what you believe is inaccurate and why. Include a link to the article. Our editorial team reviews all correction requests and responds within 12 hours.</div></div>
-        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>How can I advertise on ClarixNews?</span><span class="faq-icon">+</span></div><div class="faq-a">Select "Advertising Inquiry" in the contact form. We offer display advertising, sponsored content, and newsletter sponsorships. Our advertising team will send you a media kit with audience data and pricing.</div></div>
-        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>Can I republish ClarixNews content?</span><span class="faq-icon">+</span></div><div class="faq-a">All ClarixNews content is protected by copyright. For republication rights or licensing, please contact us via the form above with subject "Press & Media Inquiry". Short quotes with attribution are permitted under standard fair use.</div></div>
-        <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>How do I subscribe to the newsletter?</span><span class="faq-icon">+</span></div><div class="faq-a">You can subscribe using the newsletter form on our homepage or any category page. We send a morning briefing every weekday — a curated summary of the most important stories, completely free.</div></div>
-      </div>
-    </div>
-
-    <div class="contact-info">
-      <div class="info-card"><h3>📧 Editorial</h3><p>News tips, story ideas, and corrections:<br><a href="mailto:editorial@clarixnews.com">editorial@clarixnews.com</a></p></div>
-      <div class="info-card"><h3>📢 Advertising</h3><p>Sponsorships, display ads, and media partnerships:<br><a href="mailto:ads@clarixnews.com">ads@clarixnews.com</a></p></div>
-      <div class="info-card"><h3>🔧 Technical</h3><p>Website issues, bugs, or accessibility concerns:<br><a href="mailto:tech@clarixnews.com">tech@clarixnews.com</a></p></div>
-      <div class="info-card">
-        <h3>🌐 Follow Us</h3>
-        <p>Stay connected on social media for real-time updates.</p>
-        <div class="social-links">
-          <a href="#" class="soc-link">𝕏 Twitter</a>
-          <a href="#" class="soc-link">f Facebook</a>
-          <a href="#" class="soc-link">in LinkedIn</a>
-          <a href="#" class="soc-link">W WhatsApp</a>
-          <a href="#" class="soc-link">▶ YouTube</a>
-        </div>
-      </div>
-      <div class="ad-banner ad-banner-300">Ad · 300×250</div>
     </div>
   </div>
-</div></main>
 
-<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Clarix<span>News</span></div><div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond.</div></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div><div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=opinion">Opinion</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 ClarixNews. All rights reserved.</div></div></div></footer>
-<button class="scroll-top" id="scrollTop">↑</button>
-<div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" /><button type="button" class="search-close" id="searchClose">✕</button></form></div></div>
-<script src="shared.js"></script>
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-    window.scrollTo({ top: document.getElementById('successMsg').offsetTop - 100, behavior: 'smooth' });
-  });
-</script>
+  <header>
+    <div class="logo"><a href="index.html">Clarix<span>News</span></a></div>
+    <div class="tagline">World News · Clear Reporting · Global Perspective</div>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html?cat=world">World</a></li>
+        <li><a href="category.html?cat=pakistan">Pakistan</a></li>
+        <li><a href="category.html?cat=usa">US &amp; Americas</a></li>
+        <li><a href="category.html?cat=europe">Europe</a></li>
+        <li><a href="category.html?cat=tech">Technology</a></li>
+        <li><a href="category.html?cat=career">Career &amp; AI</a></li>
+      </ul>
+      <div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div>
+    </div>
+  </nav>
+
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contact <span>ClarixNews</span></h1>
+      <p>Questions, news tips, correction requests, advertising inquiries, or technical issues — send us a message and we will review it.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div class="contact-layout">
+        <section aria-labelledby="contact-form-title">
+          <h2 class="form-title" id="contact-form-title">Send Us a Message</h2>
+
+          <form id="contactForm" novalidate>
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name *</label>
+                <input id="firstName" name="firstName" type="text" class="form-input" placeholder="Your first name" autocomplete="given-name" maxlength="60" required />
+                <div class="field-error" id="firstNameError"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name *</label>
+                <input id="lastName" name="lastName" type="text" class="form-input" placeholder="Your last name" autocomplete="family-name" maxlength="60" required />
+                <div class="field-error" id="lastNameError"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address *</label>
+              <input id="email" name="email" type="email" class="form-input" placeholder="you@example.com" autocomplete="email" maxlength="160" required />
+              <div class="field-error" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject *</label>
+              <select id="subject" name="subject" class="form-input" required>
+                <option value="">Select a subject...</option>
+                <option value="News Tip or Story Idea">News Tip or Story Idea</option>
+                <option value="Correction Request">Correction Request</option>
+                <option value="Advertising Inquiry">Advertising Inquiry</option>
+                <option value="Press &amp; Media Inquiry">Press &amp; Media Inquiry</option>
+                <option value="Technical Issue">Technical Issue</option>
+                <option value="General Question">General Question</option>
+              </select>
+              <div class="field-error" id="subjectError"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form-input" placeholder="Write your message..." minlength="10" maxlength="5000" required></textarea>
+              <div class="field-error" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Continue to Email</button>
+          </form>
+
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+          <div class="faq" aria-labelledby="faq-title">
+            <h2 class="faq-title" id="faq-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How do I submit a news tip?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+              <div class="faq-a">Use the form above and select “News Tip or Story Idea”. Include what happened, where and when it happened, and any useful sources or evidence you can safely share.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How do I request a correction?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+              <div class="faq-a">Select “Correction Request” and provide the article link, the specific information you believe is inaccurate, and supporting details where available.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How can I advertise on ClarixNews?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+              <div class="faq-a">Select “Advertising Inquiry” or email our advertising contact directly. Please include the type of campaign or partnership you are considering.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Can I republish ClarixNews content?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+              <div class="faq-a">For republication or licensing questions, contact us with the article link and intended use. Permission requirements can vary by content and use case.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How do I subscribe to the newsletter?</span><span class="faq-icon" aria-hidden="true">+</span></button>
+              <div class="faq-a">Use the newsletter form on the homepage when it is available. You can also return to the homepage using the link below.</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="contact-info" aria-label="Contact details">
+          <div class="info-card">
+            <h3>📧 Editorial</h3>
+            <p>News tips, story ideas, and corrections:<br /><a href="mailto:editorial@clarixnews.com">editorial@clarixnews.com</a></p>
+          </div>
+          <div class="info-card">
+            <h3>📢 Advertising</h3>
+            <p>Sponsorships, display ads, and media partnerships:<br /><a href="mailto:ads@clarixnews.com">ads@clarixnews.com</a></p>
+          </div>
+          <div class="info-card">
+            <h3>🔧 Technical</h3>
+            <p>Website issues, bugs, or accessibility concerns:<br /><a href="mailto:tech@clarixnews.com">tech@clarixnews.com</a></p>
+          </div>
+          <div class="info-card">
+            <h3>🌐 About ClarixNews</h3>
+            <p>Learn about our mission, editorial approach, and correction policy.</p>
+            <p><a href="about.html">Read About ClarixNews →</a></p>
+          </div>
+          <div class="ad-banner ad-banner-300" aria-label="Advertisement">Ad · 300×250</div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Clarix<span>News</span></div>
+          <div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond.</div>
+        </div>
+        <div class="footer-col"><h4>Sections</h4><ul>
+          <li><a href="category.html?cat=world">World</a></li>
+          <li><a href="category.html?cat=pakistan">Pakistan</a></li>
+          <li><a href="category.html?cat=tech">Technology</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Topics</h4><ul>
+          <li><a href="category.html?cat=career">Career &amp; AI</a></li>
+          <li><a href="category.html?cat=business">Business</a></li>
+          <li><a href="category.html?cat=opinion">Opinion</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><div>© 2026 ClarixNews. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">↑</button>
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-box">
+      <form class="search-header" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" aria-label="Search ClarixNews" />
+        <button type="button" class="search-close" id="searchClose" aria-label="Close search">✕</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('submitBtn');
+      const subject = document.getElementById('subject');
+      const fields = {
+        firstName: document.getElementById('firstName'),
+        lastName: document.getElementById('lastName'),
+        email: document.getElementById('email'),
+        subject,
+        message: document.getElementById('message')
+      };
+
+      const errorFor = (name) => document.getElementById(name + 'Error');
+
+      function setError(name, message) {
+        const field = fields[name];
+        const error = errorFor(name);
+        if (!field || !error) return;
+        field.setAttribute('aria-invalid', 'true');
+        error.textContent = message;
+        error.classList.add('show');
+      }
+
+      function clearError(name) {
+        const field = fields[name];
+        const error = errorFor(name);
+        if (!field || !error) return;
+        field.removeAttribute('aria-invalid');
+        error.textContent = '';
+        error.classList.remove('show');
+      }
+
+      function clearErrors() {
+        Object.keys(fields).forEach(clearError);
+      }
+
+      function validate() {
+        clearErrors();
+        let valid = true;
+        const firstName = fields.firstName.value.trim();
+        const lastName = fields.lastName.value.trim();
+        const email = fields.email.value.trim();
+        const message = fields.message.value.trim();
+
+        if (firstName.length < 2) { setError('firstName', 'Please enter your first name.'); valid = false; }
+        if (lastName.length < 2) { setError('lastName', 'Please enter your last name.'); valid = false; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('email', 'Please enter a valid email address.'); valid = false; }
+        if (!subject.value) { setError('subject', 'Please select a subject.'); valid = false; }
+        if (message.length < 10) { setError('message', 'Please enter at least 10 characters.'); valid = false; }
+
+        return valid;
+      }
+
+      function recipientFor(value) {
+        if (value === 'Advertising Inquiry') return 'ads@clarixnews.com';
+        if (value === 'Technical Issue') return 'tech@clarixnews.com';
+        return 'editorial@clarixnews.com';
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        status.className = 'form-status';
+        status.textContent = '';
+
+        const honeypot = document.getElementById('website');
+        if (honeypot && honeypot.value.trim()) return;
+        if (!validate()) {
+          status.textContent = 'Please correct the highlighted fields and try again.';
+          status.classList.add('show', 'error');
+          const firstInvalid = form.querySelector('[aria-invalid="true"]');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        const firstName = fields.firstName.value.trim();
+        const lastName = fields.lastName.value.trim();
+        const email = fields.email.value.trim();
+        const selectedSubject = subject.value;
+        const message = fields.message.value.trim();
+        const recipient = recipientFor(selectedSubject);
+        const mailSubject = '[ClarixNews] ' + selectedSubject;
+        const body = [
+          'Name: ' + firstName + ' ' + lastName,
+          'Email: ' + email,
+          'Subject: ' + selectedSubject,
+          '',
+          message
+        ].join('\n');
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Opening Email…';
+        window.location.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent(mailSubject) + '&body=' + encodeURIComponent(body);
+
+        window.setTimeout(function () {
+          status.textContent = 'Your email application should now be open with the message prepared. Please review it and press Send. If nothing opened, email ' + recipient + ' directly.';
+          status.classList.add('show', 'success');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Continue to Email';
+        }, 700);
+      });
+
+      Object.keys(fields).forEach(function (name) {
+        fields[name].addEventListener('input', function () { clearError(name); });
+        fields[name].addEventListener('change', function () { clearError(name); });
+      });
+
+      document.querySelectorAll('.faq-q').forEach(function (button) {
+        button.addEventListener('click', function () {
+          const item = button.closest('.faq-item');
+          const isOpen = item.classList.toggle('open');
+          button.setAttribute('aria-expanded', String(isOpen));
+        });
+      });
+    }());
+  </script>
 </body>
 </html>
