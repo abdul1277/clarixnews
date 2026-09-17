@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 – Page Not Found – ClarixNews</title>
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
   <link rel="canonical" href="https://clarixnews.vercel.app/404.html" />
   <meta name="theme-color" content="#0a0a0a" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://clarixnews.vercel.app/404.html" />
   <meta property="og:title" content="Page Not Found – ClarixNews" />
@@ -17,14 +17,12 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="ClarixNews" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ClarixNews" />
   <meta name="twitter:title" content="Page Not Found – ClarixNews" />
   <meta name="twitter:description" content="The page you are looking for could not be found on ClarixNews." />
   <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
 
-  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -34,6 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
+
   <style>
     body { display:flex; flex-direction:column; min-height:100vh; }
     main { flex:1; display:flex; align-items:center; justify-content:center; padding:60px 24px; }
@@ -53,31 +52,24 @@
     .sug-link { padding:6px 14px; background:var(--bg-3); border:1px solid var(--border); font-size:12px; color:var(--text-2); transition:all .2s; }
     .sug-link:hover { background:var(--red); border-color:var(--red); color:#fff; }
   </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T7B4BGRJFC');
-</script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034"
-     crossorigin="anonymous"></script>
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034"
-        crossorigin="anonymous"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T7B4BGRJFC');
+  </script>
+
+  <!-- Google AdSense: single loader only -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
 <div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button></div></div></div>
 <header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
-<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn">🔍 Search</button></div></div></nav>
+<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" aria-label="Open navigation" aria-expanded="false">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" aria-label="Open search">🔍 Search</button></div></div></nav>
 
 <main>
   <div class="notfound">
@@ -104,7 +96,7 @@
 </main>
 
 <footer><div class="container"><div class="footer-bottom" style="padding:20px 0;"><div>© 2026 ClarixNews. All rights reserved.</div><div class="footer-bottom-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div></div></div></footer>
-<div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" /><button type="button" class="search-close" id="searchClose">✕</button></form></div></div>
+<div class="search-overlay" id="searchOverlay" aria-hidden="true"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" aria-label="Search ClarixNews" /><button type="button" class="search-close" id="searchClose" aria-label="Close search">✕</button></form></div></div>
 <script src="shared.js"></script>
 </body>
 </html>
