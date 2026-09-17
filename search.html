@@ -1,226 +1,434 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search – ClarixNews</title>
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://clarixnews.vercel.app/search.html" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Search ClarixNews for world news, Pakistan news, technology, business, career and opinion articles.">
+  <meta name="robots" content="noindex, follow, max-image-preview:large">
+  <link rel="canonical" href="https://clarixnews.vercel.app/search.html">
+  <meta name="theme-color" content="#0a0a0a">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://clarixnews.vercel.app/search.html" />
-  <meta property="og:title" content="Search – ClarixNews" />
-  <meta property="og:description" content="Search all ClarixNews articles, breaking news, and career guides." />
-  <meta property="og:image" content="https://clarixnews.vercel.app/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="ClarixNews" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clarixnews.vercel.app/search.html">
+  <meta property="og:title" content="Search – ClarixNews">
+  <meta property="og:description" content="Search ClarixNews articles, breaking news and career guides.">
+  <meta property="og:image" content="https://clarixnews.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="ClarixNews">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@ClarixNews" />
-  <meta name="twitter:title" content="Search – ClarixNews" />
-  <meta name="twitter:description" content="Search all ClarixNews articles, breaking news, and career guides." />
-  <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ClarixNews">
+  <meta name="twitter:title" content="Search – ClarixNews">
+  <meta name="twitter:description" content="Search ClarixNews articles, breaking news and career guides.">
+  <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="shared.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+
   <style>
-    .search-hero { background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 36px 0; }
-    .search-hero-inner { max-width: 700px; margin: 0 auto; padding: 0 24px; }
-    .search-title { font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--text-1); margin-bottom: 20px; }
-    .search-bar-big { display: flex; gap: 0; }
-    .search-bar-big input { flex: 1; background: var(--bg-1); border: 2px solid var(--border); border-right: none; color: var(--text-1); padding: 14px 20px; font-size: 18px; font-family: var(--font-sans); outline: none; transition: border-color .2s; }
-    .search-bar-big input:focus { border-color: var(--red); }
-    .search-bar-big input::placeholder { color: var(--text-3); }
-    .search-bar-big button { background: var(--red); border: none; color: #fff; padding: 14px 28px; font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: background .2s; font-family: var(--font-sans); }
-    .search-bar-big button:hover { background: var(--red-dark); }
-    .search-filters { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
-    .sf-btn { padding: 5px 14px; background: var(--bg-3); border: 1px solid var(--border); color: var(--text-2); font-size: 12px; font-weight: 600; cursor: pointer; transition: all .2s; border-radius: 2px; }
-    .sf-btn.active, .sf-btn:hover { background: var(--red); border-color: var(--red); color: #fff; }
-
-    .search-layout { display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 32px 0; }
-
-    .search-meta { font-size: 13px; color: var(--text-3); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-    .search-meta strong { color: var(--red); }
-
-    .result-item { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .15s; }
-    .result-item:hover { background: var(--bg-2); margin: 0 -12px; padding: 20px 12px; }
-    .result-img { width: 120px; height: 88px; flex-shrink: 0; overflow: hidden; }
-    .result-body { flex: 1; }
-    .result-cat { margin-bottom: 6px; }
-    .result-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; line-height: 1.25; color: var(--text-1); margin-bottom: 8px; }
-    .result-item:hover .result-title { color: var(--red); }
-    .result-excerpt { font-family: var(--font-serif); font-size: 14px; line-height: 1.6; color: var(--text-2); margin-bottom: 10px; }
-    .result-meta { font-size: 11px; color: var(--text-3); display: flex; gap: 10px; }
-    .highlight { color: var(--red); font-weight: 600; }
-
-    .no-results { text-align: center; padding: 60px 0; }
-    .no-results h2 { font-family: var(--font-display); font-size: 28px; color: var(--text-1); margin-bottom: 12px; }
-    .no-results p { color: var(--text-3); margin-bottom: 24px; }
-    .suggestions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-    .sug-tag { padding: 7px 16px; background: var(--bg-3); border: 1px solid var(--border); font-size: 13px; color: var(--text-2); cursor: pointer; transition: all .2s; }
-    .sug-tag:hover { background: var(--red); border-color: var(--red); color: #fff; }
-
-    .sidebar-widget { background: var(--bg-3); padding: 20px; margin-bottom: 20px; }
-    .widget-title { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--text-3); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 16px; }
-    .trend-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
-    .trend-item:last-child { border-bottom: none; }
-    .trend-num { font-family: var(--font-display); font-size: 18px; font-weight: 900; color: var(--red); opacity: .35; width: 22px; flex-shrink: 0; }
-    .trend-title { font-size: 13px; font-weight: 600; color: var(--text-1); line-height: 1.4; }
-    .trend-item:hover .trend-title { color: var(--red); }
-
-    @media(max-width:900px){ .search-layout { grid-template-columns: 1fr; } }
-    @media(max-width:600px){ .result-item { flex-direction: column; } .result-img { width: 100%; height: 160px; } }
+    .search-hero{background:var(--bg-2);border-bottom:1px solid var(--border);padding:36px 0}
+    .search-hero-inner{max-width:760px;margin:0 auto;padding:0 24px}
+    .search-title{font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--text-1);margin:0 0 20px}
+    .search-bar-big{display:flex}
+    .search-bar-big input{flex:1;min-width:0;background:var(--bg-1);border:2px solid var(--border);border-right:0;color:var(--text-1);padding:14px 20px;font-size:18px;font-family:var(--font-sans);outline:none}
+    .search-bar-big input:focus{border-color:var(--red)}
+    .search-bar-big input::placeholder{color:var(--text-3)}
+    .search-bar-big button{background:var(--red);border:0;color:#fff;padding:14px 28px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:var(--font-sans)}
+    .search-bar-big button:hover{background:var(--red-dark)}
+    .search-filters{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+    .sf-btn{padding:7px 14px;background:var(--bg-3);border:1px solid var(--border);color:var(--text-2);font-size:12px;font-weight:600;cursor:pointer;border-radius:2px}
+    .sf-btn.active,.sf-btn:hover,.sf-btn:focus-visible{background:var(--red);border-color:var(--red);color:#fff}
+    .search-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;padding:32px 0}
+    .search-meta{font-size:13px;color:var(--text-3);margin-bottom:8px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+    .search-meta strong{color:var(--red)}
+    .result-item{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:background .15s}
+    .result-item:hover{background:var(--bg-2);margin:0 -12px;padding:20px 12px}
+    .result-img-wrap{width:120px;height:88px;flex-shrink:0;overflow:hidden;background:var(--bg-3)}
+    .result-img{width:100%;height:100%;object-fit:cover;display:block}
+    .result-body{min-width:0;flex:1}
+    .result-cat{margin-bottom:6px}
+    .result-title{font-family:var(--font-display);font-size:20px;font-weight:700;line-height:1.25;color:var(--text-1);margin-bottom:8px}
+    .result-item:hover .result-title{color:var(--red)}
+    .result-excerpt{font-family:var(--font-serif);font-size:14px;line-height:1.6;color:var(--text-2);margin-bottom:10px}
+    .result-meta{font-size:11px;color:var(--text-3);display:flex;gap:10px;flex-wrap:wrap}
+    .search-highlight{background:transparent;color:var(--red);font-weight:700}
+    .no-results{text-align:center;padding:60px 0}
+    .no-results h2{font-family:var(--font-display);font-size:28px;color:var(--text-1);margin-bottom:12px}
+    .no-results p{color:var(--text-3);margin-bottom:24px}
+    .suggestions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .sug-tag{padding:7px 16px;background:var(--bg-3);border:1px solid var(--border);font-size:13px;color:var(--text-2);cursor:pointer}
+    .sug-tag:hover{background:var(--red);border-color:var(--red);color:#fff}
+    .sidebar-widget{background:var(--bg-3);padding:20px;margin-bottom:20px}
+    .widget-title{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3);border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:16px}
+    .trend-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none}
+    .trend-item:last-child{border-bottom:0}
+    .trend-num{font-family:var(--font-display);font-size:18px;font-weight:900;color:var(--red);opacity:.35;width:22px;flex-shrink:0}
+    .trend-title{font-size:13px;font-weight:600;color:var(--text-1);line-height:1.4}
+    .trend-item:hover .trend-title{color:var(--red)}
+    .topic-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .topic-tags a{padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);text-decoration:none}
+    .topic-tags a:hover{color:var(--red);border-color:var(--red)}
+    .loading{text-align:center;padding:50px 0;color:var(--text-3)}
+    @media(max-width:900px){.search-layout{grid-template-columns:1fr}.sidebar-search{position:static!important}}
+    @media(max-width:600px){.search-title{font-size:27px}.search-bar-big input{font-size:16px;padding:13px 14px}.search-bar-big button{padding:13px 17px}.result-item{flex-direction:column}.result-img-wrap{width:100%;height:180px}.result-title{font-size:19px}}
   </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T7B4BGRJFC');
-</script>
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034"
-        crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js',new Date());
+    gtag('config','G-T7B4BGRJFC');
+  </script>
+  <script src="articles.js" defer></script>
+  <script src="shared.js" defer></script>
 </head>
 <body>
+  <div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>EU announces €500bn energy independence package</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
 
-<div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>EU announces €500bn energy independence package</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
-<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button></div></div></div>
-<header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
-<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US & Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li>
-      <li><a href="markets.html">📈 Markets</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn">🔍 Search</button></div></div></nav>
+  <div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><button class="theme-toggle" id="themeBtn" type="button">☀ Light</button></div></div></div>
 
-<!-- SEARCH HERO -->
-<div class="search-hero">
-  <div class="search-hero-inner">
-    <div class="search-title">Search ClarixNews</div>
-    <div class="search-bar-big">
-      <input type="text" id="mainSearchInput" placeholder="Search for news, topics, people..." />
-      <button onclick="doSearch()">Search</button>
-    </div>
-    <div class="search-filters">
-      <button class="sf-btn active">All</button>
-      <button class="sf-btn">World</button>
-      <button class="sf-btn">Pakistan</button>
-      <button class="sf-btn">Technology</button>
-      <button class="sf-btn">Business</button>
-      <button class="sf-btn">Career</button>
-      <button class="sf-btn">Opinion</button>
-    </div>
-  </div>
-</div>
+  <header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
 
-<main>
-<div class="container">
-  <div class="search-layout">
-    <div>
-      <div class="search-meta" id="searchMeta"></div>
-      <div id="searchResults"></div>
-    </div>
-    <aside style="position:sticky;top:80px;">
-      <div class="ad-banner ad-banner-300" style="margin-bottom:20px;">Ad · 300×250</div>
-      <div class="sidebar-widget">
-        <div class="widget-title">Trending Searches</div>
-        <div class="trend-item" onclick="window.location='search.html?q=AI'"><div class="trend-num">1</div><div class="trend-title">Artificial Intelligence 2026</div></div>
-        <div class="trend-item" onclick="window.location='search.html?q=Pakistan'"><div class="trend-num">2</div><div class="trend-title">Pakistan Economy IMF</div></div>
-        <div class="trend-item" onclick="window.location='search.html?q=Career'"><div class="trend-num">3</div><div class="trend-title">Best Career Choices 2026</div></div>
-        <div class="trend-item" onclick="window.location='search.html?q=Europe'"><div class="trend-num">4</div><div class="trend-title">Europe Energy Crisis</div></div>
-        <div class="trend-item" onclick="window.location='search.html?q=ChatGPT'"><div class="trend-num">5</div><div class="trend-title">ChatGPT vs Claude</div></div>
+  <nav class="main-nav" aria-label="Main navigation"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US &amp; Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career &amp; AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="markets.html">📈 Markets</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div></div></nav>
+
+  <section class="search-hero" aria-labelledby="searchHeading">
+    <div class="search-hero-inner">
+      <h1 class="search-title" id="searchHeading">Search ClarixNews</h1>
+      <form class="search-bar-big" id="searchForm" role="search">
+        <input type="search" id="mainSearchInput" name="q" maxlength="120" autocomplete="off" placeholder="Search for news, topics, people..." aria-label="Search ClarixNews">
+        <button type="submit">Search</button>
+      </form>
+      <div class="search-filters" id="searchFilters" aria-label="Filter by category">
+        <button class="sf-btn active" type="button" data-category="all" aria-pressed="true">All</button>
+        <button class="sf-btn" type="button" data-category="world" aria-pressed="false">World</button>
+        <button class="sf-btn" type="button" data-category="pakistan" aria-pressed="false">Pakistan</button>
+        <button class="sf-btn" type="button" data-category="tech" aria-pressed="false">Technology</button>
+        <button class="sf-btn" type="button" data-category="business" aria-pressed="false">Business</button>
+        <button class="sf-btn" type="button" data-category="career" aria-pressed="false">Career</button>
+        <button class="sf-btn" type="button" data-category="opinion" aria-pressed="false">Opinion</button>
       </div>
-      <div class="sidebar-widget">
-        <div class="widget-title">Browse by Category</div>
-        <div class="topic-tags" style="display:flex;flex-wrap:wrap;gap:6px;">
-          <a href="category.html?cat=world" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">World</a>
-          <a href="category.html?cat=pakistan" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">Pakistan</a>
-          <a href="category.html?cat=tech" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">Technology</a>
-          <a href="category.html?cat=business" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">Business</a>
-          <a href="category.html?cat=career" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">Career</a>
-          <a href="category.html?cat=europe" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">Europe</a>
-          <a href="category.html?cat=opinion" style="padding:5px 12px;background:var(--bg-4);border:1px solid var(--border);font-size:12px;color:var(--text-2);">Opinion</a>
-        </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <div class="search-layout">
+        <section aria-live="polite" aria-atomic="false">
+          <div class="search-meta" id="searchMeta">Enter a search term to find ClarixNews articles.</div>
+          <div id="searchResults"><div class="loading">Loading articles…</div></div>
+        </section>
+
+        <aside class="sidebar-search" style="position:sticky;top:80px">
+          <div class="ad-banner ad-banner-300" style="margin-bottom:20px">Ad · 300×250</div>
+          <div class="sidebar-widget">
+            <div class="widget-title">Trending Searches</div>
+            <a class="trend-item" href="search.html?q=AI"><div class="trend-num">1</div><div class="trend-title">Artificial Intelligence 2026</div></a>
+            <a class="trend-item" href="search.html?q=Pakistan"><div class="trend-num">2</div><div class="trend-title">Pakistan Economy IMF</div></a>
+            <a class="trend-item" href="search.html?q=Career"><div class="trend-num">3</div><div class="trend-title">Best Career Choices 2026</div></a>
+            <a class="trend-item" href="search.html?q=Europe"><div class="trend-num">4</div><div class="trend-title">Europe Energy Crisis</div></a>
+            <a class="trend-item" href="search.html?q=ChatGPT"><div class="trend-num">5</div><div class="trend-title">ChatGPT vs Claude</div></a>
+          </div>
+          <div class="sidebar-widget">
+            <div class="widget-title">Browse by Category</div>
+            <div class="topic-tags">
+              <a href="category.html?cat=world">World</a><a href="category.html?cat=pakistan">Pakistan</a><a href="category.html?cat=tech">Technology</a><a href="category.html?cat=business">Business</a><a href="category.html?cat=career">Career</a><a href="category.html?cat=europe">Europe</a><a href="category.html?cat=opinion">Opinion</a>
+            </div>
+          </div>
+        </aside>
       </div>
-    </aside>
-  </div>
-</div>
-</main>
+    </div>
+  </main>
 
-<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Clarix<span>News</span></div><div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond.</div></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div><div class="footer-col"><h4>Topics</h4><ul><li><a href="search.html?q=AI">Artificial Intelligence</a></li><li><a href="search.html?q=Career">Career Guides</a></li><li><a href="search.html?q=Business">Business</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 ClarixNews. All rights reserved.</div></div></div></footer>
-<button class="scroll-top" id="scrollTop">↑</button>
-<div class="search-overlay" id="searchOverlay"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" /><button type="button" class="search-close" id="searchClose">✕</button></form></div></div>
+  <footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Clarix<span>News</span></div><div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond.</div></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=career">Career</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 ClarixNews. All rights reserved.</span></div></div></footer>
 
-<script src="articles.js"></script>
-<script src="shared.js"></script>
-<script>
-const articles = [
-  { title: 'ChatGPT vs Claude vs Gemini: Which AI Is Best in 2026?', excerpt: 'We ran hundreds of real-world tests across writing, coding, reasoning and creativity. Here is exactly what we found.', cat: 'Technology', catClass: 'tech', time: '2 hours ago', bg: '', id: 'ai-comparison-2026', id: 'pakistan-gulf-investment', id: 'us-infrastructure-package', id: 'ai-jobs-future', id: 'europe-ecb-rates', id: 'career-guide-2026', id: 'tech-career-options-2026', id: 'global-ai-governance', id: 'pakistan-gulf-investment', id: 'ai-jobs-future', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=300&q=80&fit=crop' },
-  { title: 'Pakistan PM Engages World Leaders on Debt Relief at UN', excerpt: 'Prime Minister held a series of high-level bilateral meetings at the United Nations headquarters in New York.', cat: 'Pakistan', catClass: 'pakistan', time: '3 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=300&q=80&fit=crop' },
-  { title: 'Senate Passes Sweeping $1.2 Trillion Infrastructure Package', excerpt: 'A bipartisan coalition in the US Senate approved the landmark bill after months of heated negotiations.', cat: 'US & Americas', catClass: 'usa', time: '6 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=300&q=80&fit=crop' },
-  { title: 'AI Jobs That Will Boom in the Next Five Years', excerpt: 'Which AI-related careers are growing fastest, paying most, and most likely to survive the next decade of automation?', cat: 'Career', catClass: 'career', time: '4 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&q=80&fit=crop' },
-  { title: 'ECB Holds Rates as Eurozone Economy Stabilizes', excerpt: 'The European Central Bank held interest rates steady as inflation continued its retreat toward the 2% target.', cat: 'Europe', catClass: 'europe', time: '5 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1467912407355-245f30185020?w=300&q=80&fit=crop' },
-  { title: 'Which Career Should You Choose? Complete 2026 Field Guide', excerpt: 'From medicine to law to technology — our comprehensive guide to every major career path, salary, and outlook.', cat: 'Career', catClass: 'career', time: '1 day ago', bg: '', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&q=80&fit=crop' },
-  { title: 'Japan Announces $200bn Green Hydrogen Investment Plan', excerpt: 'Tokyo unveiled the most ambitious clean energy investment in the nation\'s history, targeting net-zero by 2040.', cat: 'Asia', catClass: 'world', time: '9 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=300&q=80&fit=crop' },
-  { title: 'Middle East Regional Powers Back New Diplomatic Road Map', excerpt: 'Six governments signed a preliminary agreement in Riyadh committing to a phased process toward regional stability.', cat: 'Middle East', catClass: 'world', time: '8 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1565942999396-6879a3e32a90?w=300&q=80&fit=crop' },
-  { title: 'Pakistan Secures $3bn Energy Investment from Gulf Partners', excerpt: 'Saudi Arabia and UAE announced a joint energy investment package targeting Pakistan\'s power sector deficit.', cat: 'Pakistan', catClass: 'pakistan', time: '12 hours ago', bg: '', img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300&q=80&fit=crop' },
-  { title: 'Jobs AI Cannot Replace: The Complete 2026 Professional Guide', excerpt: 'Which careers are AI-proof? Our analysis of 50 professions identifies the skills that remain uniquely human.', cat: 'Career', catClass: 'career', time: '2 days ago', bg: '', img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&q=80&fit=crop' },
-];
+  <script>
+  (function(){
+    'use strict';
 
-function doSearch() {
-  const q = document.getElementById('mainSearchInput').value.trim();
-  if (q) window.location.href = 'search.html?q=' + encodeURIComponent(q);
-}
+    const state={query:'',category:'all'};
+    const categoryMap={
+      world:'world',
+      pakistan:'pakistan',
+      tech:'tech',
+      technology:'tech',
+      business:'business',
+      career:'career',
+      opinion:'opinion'
+    };
 
-document.getElementById('mainSearchInput').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+    const input=document.getElementById('mainSearchInput');
+    const form=document.getElementById('searchForm');
+    const resultsEl=document.getElementById('searchResults');
+    const metaEl=document.getElementById('searchMeta');
+    const filtersEl=document.getElementById('searchFilters');
 
-const params = new URLSearchParams(location.search);
-const query = params.get('q') || '';
-if (query) {
-  document.getElementById('mainSearchInput').value = query;
-  document.title = '"' + query + '" – Search – ClarixNews';
-  const filtered = articles.filter(a =>
-    a.title.toLowerCase().includes(query.toLowerCase()) ||
-    a.excerpt.toLowerCase().includes(query.toLowerCase()) ||
-    a.cat.toLowerCase().includes(query.toLowerCase())
-  );
-  const meta = document.getElementById('searchMeta');
-  const results = document.getElementById('searchResults');
-  if (filtered.length === 0) {
-    meta.innerHTML = 'No results found for <strong>"' + query + '"</strong>';
-    results.innerHTML = '<div class="no-results"><h2>No results for "' + query + '"</h2><p>Try different keywords or browse our categories below.</p><div class="suggestions"><span class="sug-tag" onclick="window.location=\'search.html?q=AI\'">AI</span><span class="sug-tag" onclick="window.location=\'search.html?q=Pakistan\'">Pakistan</span><span class="sug-tag" onclick="window.location=\'search.html?q=Career\'">Career</span><span class="sug-tag" onclick="window.location=\'search.html?q=Europe\'">Europe</span><span class="sug-tag" onclick="window.location=\'search.html?q=Business\'">Business</span></div></div>';
-  } else {
-    meta.innerHTML = '<strong>' + filtered.length + ' results</strong> for "<strong class=\'highlight\'>' + query + '</strong>"';
-    results.innerHTML = filtered.map(a => `
-      <a href="article.html?id=${a.id || 'ai-comparison-2026'}" class="result-item">
-        <div class="result-img"><img src="${a.img}" alt="${a.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
-        <div class="result-body">
-          <div class="result-cat"><span class="cat-pill ${a.catClass}">${a.cat}</span></div>
-          <div class="result-title">${a.title.replace(new RegExp(query,'gi'), m => '<span class="highlight">'+m+'</span>')}</div>
-          <div class="result-excerpt">${a.excerpt}</div>
-          <div class="result-meta"><span>${a.time}</span><span>·</span><span>5 min read</span></div>
-        </div>
-      </a>`).join('');
-  }
-} else {
-  document.getElementById('searchMeta').innerHTML = 'Enter a keyword to search all ClarixNews articles.';
-  document.getElementById('searchResults').innerHTML = '<div class="no-results"><h2>What are you looking for?</h2><p>Search our entire archive of international news, analysis, and career guides.</p><div class="suggestions"><span class="sug-tag" onclick="window.location=\'search.html?q=AI\'">AI</span><span class="sug-tag" onclick="window.location=\'search.html?q=Pakistan\'">Pakistan</span><span class="sug-tag" onclick="window.location=\'search.html?q=Career\'">Career</span><span class="sug-tag" onclick="window.location=\'search.html?q=Europe\'">Europe</span><span class="sug-tag" onclick="window.location=\'search.html?q=ChatGPT\'">ChatGPT</span></div></div>';
-}
-</script>
+    function getArticles(){
+      return Array.isArray(window.ARTICLES)?window.ARTICLES:[];
+    }
+
+    function cleanText(value){
+      const div=document.createElement('div');
+      div.innerHTML=String(value==null?'':value);
+      return (div.textContent||div.innerText||'').replace(/\s+/g,' ').trim();
+    }
+
+    function normalize(value){
+      return String(value||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'');
+    }
+
+    function articleCategory(article){
+      const raw=normalize(article.catClass||article.category||'').replace(/\s+/g,'');
+      return categoryMap[raw]||raw;
+    }
+
+    function articleSearchText(article){
+      return normalize([
+        article.title,article.subtitle,article.excerpt,article.category,article.author,article.authorRole,cleanText(article.content),
+        Array.isArray(article.tags)?article.tags.join(' '):article.tags
+      ].filter(Boolean).join(' '));
+    }
+
+    function safeImage(url){
+      try{
+        const parsed=new URL(String(url||''),window.location.href);
+        if(parsed.protocol==='https:'||parsed.protocol==='http:') return parsed.href;
+      }catch(e){}
+      return 'og-image.png';
+    }
+
+    function formatDate(article){
+      const date=new Date(article.date);
+      if(Number.isNaN(date.getTime())) return article.date||'';
+      return date.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    }
+
+    function dateValue(article){
+      const date=new Date(article.date);
+      return Number.isNaN(date.getTime())?0:date.getTime();
+    }
+
+    function escapeForHighlight(text,query){
+      const fragment=document.createDocumentFragment();
+      if(!query) { fragment.appendChild(document.createTextNode(text)); return fragment; }
+      const terms=query.trim().split(/\s+/).filter(Boolean).slice(0,6);
+      if(!terms.length){fragment.appendChild(document.createTextNode(text));return fragment;}
+      const pattern=terms.map(term=>term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|');
+      const regex=new RegExp('('+pattern+')','ig');
+      let last=0,match;
+      while((match=regex.exec(text))){
+        if(match.index>last) fragment.appendChild(document.createTextNode(text.slice(last,match.index)));
+        const mark=document.createElement('mark');
+        mark.className='search-highlight';
+        mark.textContent=match[0];
+        fragment.appendChild(mark);
+        last=regex.lastIndex;
+      }
+      if(last<text.length) fragment.appendChild(document.createTextNode(text.slice(last)));
+      return fragment;
+    }
+
+    function makeCategoryBadge(article){
+      const span=document.createElement('span');
+      span.className='category-badge '+(article.catClass||'');
+      span.textContent=article.category||'News';
+      return span;
+    }
+
+    function makeResult(article){
+      const link=document.createElement('a');
+      link.className='result-item';
+      const id=String(article.id||'').trim();
+      if(!id) return null;
+      link.href='article.html?id='+encodeURIComponent(id);
+      link.setAttribute('aria-label','Read '+String(article.title||'article'));
+
+      const imageWrap=document.createElement('div');
+      imageWrap.className='result-img-wrap';
+      const image=document.createElement('img');
+      image.className='result-img';
+      image.src=safeImage(article.image);
+      image.alt=String(article.title||'News article image');
+      image.loading='lazy';
+      image.decoding='async';
+      image.referrerPolicy='no-referrer-when-downgrade';
+      image.addEventListener('error',function(){
+        if(image.src.endsWith('/og-image.png')) return;
+        image.src='og-image.png';
+      });
+      imageWrap.appendChild(image);
+
+      const body=document.createElement('div');
+      body.className='result-body';
+      const cat=document.createElement('div');
+      cat.className='result-cat';
+      cat.appendChild(makeCategoryBadge(article));
+      body.appendChild(cat);
+
+      const title=document.createElement('div');
+      title.className='result-title';
+      title.appendChild(escapeForHighlight(String(article.title||'Untitled article'),state.query));
+      body.appendChild(title);
+
+      const excerpt=document.createElement('div');
+      excerpt.className='result-excerpt';
+      const excerptText=String(article.subtitle||article.excerpt||cleanText(article.content)||'').slice(0,260);
+      excerpt.appendChild(escapeForHighlight(excerptText,state.query));
+      body.appendChild(excerpt);
+
+      const meta=document.createElement('div');
+      meta.className='result-meta';
+      [formatDate(article),article.author,article.readTime].filter(Boolean).forEach(function(value){
+        const span=document.createElement('span');
+        span.textContent=String(value);
+        meta.appendChild(span);
+      });
+      body.appendChild(meta);
+
+      link.append(imageWrap,body);
+      return link;
+    }
+
+    function renderEmpty(message,showSuggestions){
+      resultsEl.replaceChildren();
+      const box=document.createElement('div');
+      box.className='no-results';
+      const heading=document.createElement('h2');
+      heading.textContent='No results found';
+      const text=document.createElement('p');
+      text.textContent=message;
+      box.append(heading,text);
+      if(showSuggestions){
+        const suggestions=document.createElement('div');
+        suggestions.className='suggestions';
+        ['AI','Pakistan','Technology','Career','Climate','Markets'].forEach(function(term){
+          const button=document.createElement('button');
+          button.className='sug-tag';
+          button.type='button';
+          button.textContent=term;
+          button.addEventListener('click',function(){
+            state.query=term;
+            input.value=term;
+            updateUrl();
+            render();
+          });
+          suggestions.appendChild(button);
+        });
+        box.appendChild(suggestions);
+      }
+      resultsEl.appendChild(box);
+    }
+
+    function updateFilterButtons(){
+      filtersEl.querySelectorAll('.sf-btn').forEach(function(button){
+        const active=button.dataset.category===state.category;
+        button.classList.toggle('active',active);
+        button.setAttribute('aria-pressed',String(active));
+      });
+    }
+
+    function updateUrl(){
+      const params=new URLSearchParams();
+      if(state.query) params.set('q',state.query);
+      if(state.category!=='all') params.set('cat',state.category);
+      const query=params.toString();
+      history.replaceState(null,'',query?'search.html?'+query:'search.html');
+    }
+
+    function readUrl(){
+      const params=new URLSearchParams(window.location.search);
+      state.query=(params.get('q')||'').trim().slice(0,120);
+      const requested=normalize(params.get('cat')||'all');
+      state.category=categoryMap[requested]||(['all','world','pakistan','tech','business','career','opinion'].includes(requested)?requested:'all');
+      input.value=state.query;
+      updateFilterButtons();
+    }
+
+    function render(){
+      const articles=getArticles();
+      if(!articles.length){
+        metaEl.textContent='Articles could not be loaded right now.';
+        renderEmpty('Please refresh the page and try again.',false);
+        return;
+      }
+
+      const query=normalize(state.query);
+      let matches=articles.filter(function(article){
+        if(state.category!=='all' && articleCategory(article)!==state.category) return false;
+        return !query || articleSearchText(article).includes(query);
+      });
+      matches.sort(function(a,b){return dateValue(b)-dateValue(a)});
+
+      const categoryLabel=state.category==='all'?'All':state.category.charAt(0).toUpperCase()+state.category.slice(1);
+      if(!state.query && state.category==='all'){
+        metaEl.textContent='Showing the latest ClarixNews articles.';
+      }else if(state.query){
+        metaEl.replaceChildren();
+        const count=document.createElement('strong');
+        count.textContent=String(matches.length);
+        metaEl.append('Found ',count,' result'+(matches.length===1?'':'s')+' for “'+state.query+'”'+(state.category!=='all'?' in '+categoryLabel:'')+'.');
+      }else{
+        metaEl.replaceChildren();
+        const count=document.createElement('strong');
+        count.textContent=String(matches.length);
+        metaEl.append(count,' article'+(matches.length===1?'':'s')+' in '+categoryLabel+'.');
+      }
+
+      resultsEl.replaceChildren();
+      if(!matches.length){
+        renderEmpty(state.query?'Try a different keyword or choose another category.':'No articles are available in this category yet.',Boolean(state.query));
+        return;
+      }
+      const fragment=document.createDocumentFragment();
+      matches.slice(0,100).forEach(function(article){
+        const result=makeResult(article);
+        if(result) fragment.appendChild(result);
+      });
+      resultsEl.appendChild(fragment);
+    }
+
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+      state.query=input.value.trim().slice(0,120);
+      updateUrl();
+      render();
+    });
+
+    input.addEventListener('keydown',function(event){
+      if(event.key==='Escape'){
+        input.value='';
+        state.query='';
+        updateUrl();
+        render();
+      }
+    });
+
+    filtersEl.addEventListener('click',function(event){
+      const button=event.target.closest('.sf-btn');
+      if(!button) return;
+      state.category=button.dataset.category||'all';
+      updateFilterButtons();
+      updateUrl();
+      render();
+    });
+
+    window.addEventListener('popstate',function(){readUrl();render()});
+
+    function start(){readUrl();render()}
+    if(Array.isArray(window.ARTICLES)) start();
+    else window.addEventListener('load',start,{once:true});
+  })();
+  </script>
 </body>
 </html>
