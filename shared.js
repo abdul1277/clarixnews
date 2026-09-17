@@ -1,96 +1,85 @@
 /* ============================================================
-   CLARIXNEWS — SHARED JAVASCRIPT (v2.0 - Optimized)
+   CLARIXNEWS — SHARED JAVASCRIPT (v2.1 - Hardened)
    ============================================================ */
 
-// ── THEME TOGGLE ──
 function initTheme() {
-  const saved = localStorage.getItem('cnTheme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
-  updateThemeBtn(saved);
+  let saved = null;
+  try { saved = localStorage.getItem('cnTheme'); } catch (_) {}
+  const theme = saved === 'light' || saved === 'dark' ? saved : 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+  updateThemeBtn(theme);
 }
 
 function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme');
+  const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('cnTheme', next);
+  try { localStorage.setItem('cnTheme', next); } catch (_) {}
   updateThemeBtn(next);
 }
 
 function updateThemeBtn(theme) {
   const btn = document.getElementById('themeBtn');
-  if (btn) btn.innerHTML = theme === 'dark' ? '☀ Light' : '🌙 Dark';
+  if (!btn) return;
+  btn.textContent = theme === 'dark' ? '☀ Light' : '🌙 Dark';
+  btn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
 }
 
-// ── DATE ──
 function setDate() {
   const el = document.getElementById('currentDate');
   if (!el) return;
-  const opts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-  el.textContent = new Date().toLocaleDateString('en-US', opts).toUpperCase();
+  el.textContent = new Date().toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  }).toUpperCase();
 }
 
-// ── MOBILE NAV ──
 function initMobileNav() {
   const btn = document.getElementById('mobileNavBtn');
   const links = document.getElementById('navLinks');
   if (!btn || !links) return;
 
-  function toggleMenu() {
-    const isOpen = links.classList.toggle('open');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    btn.textContent = isOpen ? '✕' : '☰';
-  }
+  const closeMenu = () => {
+    links.classList.remove('open');
+    document.body.style.overflow = '';
+    btn.textContent = '☰';
+    btn.setAttribute('aria-expanded', 'false');
+  };
 
-  btn.addEventListener('click', toggleMenu);
-
-  links.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-      btn.textContent = '☰';
-    });
+  btn.setAttribute('aria-expanded', 'false');
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    document.body.style.overflow = open ? 'hidden' : '';
+    btn.textContent = open ? '✕' : '☰';
+    btn.setAttribute('aria-expanded', String(open));
   });
 
-  links.addEventListener('click', (e) => {
-    if (e.target === links) {
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-      btn.textContent = '☰';
-    }
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('click', e => {
+    if (links.classList.contains('open') && !links.contains(e.target) && !btn.contains(e.target)) closeMenu();
   });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && links.classList.contains('open')) {
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-      btn.textContent = '☰';
-    }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && links.classList.contains('open')) closeMenu();
   });
 }
 
-// ── SCROLL TO TOP ──
 function initScrollTop() {
   const btn = document.getElementById('scrollTop');
   if (!btn) return;
   window.addEventListener('scroll', () => {
     btn.classList.toggle('visible', window.scrollY > 400);
-  });
+  }, { passive: true });
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// ── ACTIVE NAV LINK ──
 function setActiveNav() {
   const page = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(a => {
-    const href = a.getAttribute('href');
-    if (href === page || (page === '' && href === 'index.html')) {
-      a.classList.add('active');
-    }
+    const href = a.getAttribute('href') || '';
+    const hrefPage = href.split('?')[0].split('#')[0].split('/').pop();
+    if (hrefPage === page) a.classList.add('active');
   });
 }
 
-// ── SEARCH ──
 function initSearch() {
   const btn = document.getElementById('searchBtn');
   const overlay = document.getElementById('searchOverlay');
@@ -99,44 +88,41 @@ function initSearch() {
   const form = document.getElementById('searchForm');
   if (!btn || !overlay) return;
 
-  btn.addEventListener('click', () => {
+  const closeSearch = () => {
+    overlay.style.display = 'none';
+    overlay.setAttribute('aria-hidden', 'true');
+  };
+  const openSearch = () => {
     overlay.style.display = 'flex';
-    setTimeout(() => input && input.focus(), 100);
-  });
-  close && close.addEventListener('click', () => overlay.style.display = 'none');
-  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.style.display = 'none'; });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.style.display = 'none'; });
+    overlay.setAttribute('aria-hidden', 'false');
+    setTimeout(() => input && input.focus(), 50);
+  };
 
-  form && form.addEventListener('submit', e => {
+  btn.addEventListener('click', openSearch);
+  if (close) close.addEventListener('click', closeSearch);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+
+  if (form) form.addEventListener('submit', e => {
     e.preventDefault();
-    const q = input.value.trim();
+    const q = input ? input.value.trim() : '';
     if (q) window.location.href = `search.html?q=${encodeURIComponent(q)}`;
   });
 }
 
-// ── WEATHER WIDGET (Only for article sidebar, NOT homepage) ──
-// Homepage uses its own Live Data Engine, so this only runs on article pages
 async function initWeather() {
   const el = document.getElementById('weatherWidget');
-  if (!el) return;
-  
-  // Skip if on homepage (index.html) — homepage has its own engine
-  if (location.pathname.endsWith('index.html') || location.pathname === '/') return;
+  if (!el || location.pathname.endsWith('index.html') || location.pathname === '/') return;
 
   const cities = [
     { name: 'Karachi', lat: 24.8607, lon: 67.0011 },
     { name: 'London', lat: 51.5074, lon: -0.1278 },
     { name: 'New York', lat: 40.7128, lon: -74.0060 },
-    { name: 'Dubai', lat: 25.2048, lon: 55.2708 },
+    { name: 'Dubai', lat: 25.2048, lon: 55.2708 }
   ];
 
-  el.innerHTML = cities.map(c =>
-    `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">⏳</span><span class="weather-temp">--°C</span></div>`
-  ).join('');
-
-  function weatherIcon(code, isDay) {
-    const day = isDay !== 0;
-    if (code === 0 || code === 1) return day ? '☀' : '🌙';
+  const iconFor = (code, isDay) => {
+    if (code <= 1) return isDay ? '☀' : '🌙';
     if (code === 2) return '⛅';
     if (code === 3) return '☁';
     if (code === 45 || code === 48) return '🌫';
@@ -144,82 +130,91 @@ async function initWeather() {
     if (code >= 71 && code <= 86) return '❄';
     if (code >= 95) return '⛈';
     return '🌤';
-  }
+  };
 
+  el.innerHTML = cities.map(c => `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">⏳</span><span class="weather-temp">--°C</span></div>`).join('');
+
+  const results = await Promise.all(cities.map(async c => {
+    try {
+      const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code,is_day&timezone=auto`);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const data = await r.json();
+      return data && data.current ? data.current : null;
+    } catch (e) {
+      console.warn(`Weather unavailable for ${c.name}`, e);
+      return null;
+    }
+  }));
+
+  el.innerHTML = cities.map((c, i) => {
+    const current = results[i];
+    if (!current) return `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">--</span><span class="weather-temp">--°C</span></div>`;
+    const temp = Number(current.temperature_2m);
+    const icon = iconFor(Number(current.weather_code), Number(current.is_day) !== 0);
+    return `<a href="weather.html?lat=${c.lat}&lon=${c.lon}&name=${encodeURIComponent(c.name)}" class="weather-item" style="text-decoration:none;color:inherit"><span class="weather-city">${c.name}</span><span class="weather-icon">${icon}</span><span class="weather-temp">${Number.isFinite(temp) ? Math.round(temp) : '--'}°C</span></a>`;
+  }).join('');
+}
+
+function readComments() {
   try {
-    const results = await Promise.all(cities.map(c =>
-      fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code,is_day&timezone=auto`)
-        .then(r => r.json())
-        .catch(() => null)
-    ));
-
-    el.innerHTML = cities.map((c, i) => {
-      const data = results[i];
-      if (!data || !data.current) {
-        return `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">--</span><span class="weather-temp">--°C</span></div>`;
-      }
-      const temp = Math.round(data.current.temperature_2m);
-      const icon = weatherIcon(data.current.weather_code, data.current.is_day);
-      return `<a href="weather.html?lat=${c.lat}&lon=${c.lon}&name=${encodeURIComponent(c.name)}" class="weather-item" style="text-decoration:none;color:inherit;">
-        <span class="weather-city">${c.name}</span>
-        <span class="weather-icon">${icon}</span>
-        <span class="weather-temp">${temp}°C</span>
-      </a>`;
-    }).join('');
-  } catch (e) {
-    console.error('Weather widget failed to load:', e);
-    el.innerHTML = cities.map(c =>
-      `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">--</span><span class="weather-temp">--°C</span></div>`
-    ).join('');
+    const data = JSON.parse(localStorage.getItem('cn_comments') || '[]');
+    return Array.isArray(data) ? data : [];
+  } catch (_) {
+    try { localStorage.removeItem('cn_comments'); } catch (_) {}
+    return [];
   }
 }
 
-// ── COMMENTS (Clean — no fake comments) ──
+function escapeHTML(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[ch]);
+}
+
 function initComments() {
   const form = document.getElementById('commentForm');
   const list = document.getElementById('commentList');
   if (!form || !list) return;
 
-  const stored = JSON.parse(localStorage.getItem('cn_comments') || '[]');
-  renderComments(stored, list);
-
+  renderComments(readComments(), list);
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const name = document.getElementById('commentName').value.trim();
-    const text = document.getElementById('commentText').value.trim();
+    const nameEl = document.getElementById('commentName');
+    const textEl = document.getElementById('commentText');
+    const name = nameEl ? nameEl.value.trim().slice(0, 80) : '';
+    const text = textEl ? textEl.value.trim().slice(0, 2000) : '';
     if (!name || !text) return;
 
-    const comments = JSON.parse(localStorage.getItem('cn_comments') || '[]');
-    const newComment = { name, text, time: new Date().toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }) };
-    comments.unshift(newComment);
-    localStorage.setItem('cn_comments', JSON.stringify(comments.slice(0, 50)));
-    renderComments(comments, list);
-    form.reset();
+    const comments = readComments();
+    comments.unshift({
+      name, text,
+      time: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    });
+    const limited = comments.slice(0, 50);
+    try {
+      localStorage.setItem('cn_comments', JSON.stringify(limited));
+      renderComments(limited, list);
+      form.reset();
+    } catch (e) {
+      console.error('Could not save comment:', e);
+    }
   });
 }
 
 function renderComments(comments, list) {
-  // Empty state if no comments
-  if (comments.length === 0) {
-    list.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-3);font-size:13px;">No comments yet. Be the first to share your thoughts!</div>';
+  if (!Array.isArray(comments) || comments.length === 0) {
+    list.textContent = 'No comments yet. Be the first to share your thoughts!';
     return;
   }
-  
-  list.innerHTML = comments.map(c => `
-    <div class="comment-item">
-      <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
-      <div class="comment-body">
-        <div class="comment-header">
-          <span class="comment-name">${c.name}</span>
-          <span class="comment-time">${c.time}</span>
-        </div>
-        <div class="comment-text">${c.text}</div>
-      </div>
-    </div>
-  `).join('');
+  list.innerHTML = comments.map(c => {
+    const name = escapeHTML(c.name || 'Anonymous');
+    const text = escapeHTML(c.text || '');
+    const time = escapeHTML(c.time || '');
+    const initial = escapeHTML((String(c.name || 'A').trim()[0] || 'A').toUpperCase());
+    return `<div class="comment-item"><div class="comment-avatar">${initial}</div><div class="comment-body"><div class="comment-header"><span class="comment-name">${name}</span><span class="comment-time">${time}</span></div><div class="comment-text">${text}</div></div></div>`;
+  }).join('');
 }
 
-// ── SOCIAL SHARE ──
 function share(platform) {
   const url = encodeURIComponent(window.location.href);
   const title = encodeURIComponent(document.title);
@@ -227,20 +222,41 @@ function share(platform) {
     twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
-    whatsapp: `https://wa.me/?text=${title}%20${url}`,
+    whatsapp: `https://wa.me/?text=${title}%20${url}`
   };
-  if (links[platform]) window.open(links[platform], '_blank', 'width=600,height=400');
+  if (links[platform]) window.open(links[platform], '_blank', 'noopener,noreferrer,width=600,height=400');
 }
 
-// ── COPY LINK ──
-function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    const btn = document.getElementById('copyBtn');
-    if (btn) { btn.textContent = '✓ Copied!'; setTimeout(() => btn.textContent = '🔗 Copy Link', 2000); }
-  });
+async function copyLink() {
+  const btn = document.getElementById('copyBtn');
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(window.location.href);
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = window.location.href;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand('copy');
+      ta.remove();
+      if (!ok) throw new Error('Clipboard copy was rejected');
+    }
+    if (btn) {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.textContent = '🔗 Copy Link'; }, 2000);
+    }
+  } catch (e) {
+    console.error('Copy link failed:', e);
+    if (btn) {
+      btn.textContent = 'Copy failed';
+      setTimeout(() => { btn.textContent = '🔗 Copy Link'; }, 2000);
+    }
+  }
 }
 
-// ── INIT ALL ──
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   setDate();
@@ -248,6 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   setActiveNav();
   initSearch();
-  initWeather(); // Only runs on article pages, not homepage
+  initWeather();
   initComments();
 });
