@@ -19,6 +19,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
   <style>
+    .skip-link { position: fixed; top: 10px; left: 10px; z-index: 2000; transform: translateY(-160%); padding: 10px 14px; border-radius: 8px; background: var(--bg-2); color: var(--text-1); border: 2px solid var(--red); font: 600 13px/1 var(--font-sans); text-decoration: none; transition: transform .2s ease; }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid rgba(200,16,46,.35); outline-offset: 2px; }
     body {
       background:
         radial-gradient(1100px 480px at 85% -10%, rgba(59,130,246,.07), transparent 60%),
@@ -221,6 +223,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="search-overlay" id="searchOverlay" aria-hidden="true">
   <div class="search-box" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
@@ -313,12 +316,12 @@
   </div>
 </div>
 
-<main>
+<main id="main-content">
   <div class="container">
     <div class="hero-border">
       <div class="hero-grid reveal">
         <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026" class="hero-main">
-          <div class="hm-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&fit=crop" alt="Anthropic AI Warning" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
+          <div class="hm-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&fit=crop" alt="Anthropic AI Warning" width="1200" height="675" style="width:100%;height:100%;object-fit:cover;" loading="eager" fetchpriority="high" decoding="async" /></div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
             <span class="cat-pill tech">Breaking — Technology Exclusive</span>
@@ -327,7 +330,7 @@
           </div>
         </a>
         <div class="hero-side">
-          <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=80&fit=crop" alt="Pakistan Saudi Turkey Defense Pact" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div><span class="cat-pill pakistan">Pakistan</span><div class="side-title">New Axis of Security: Pakistan, Saudi Arabia and Türkiye Set to Sign Historic Trilateral Defense Pact</div><div class="side-meta">7 August 2026 · 12 min read</div></a>
+          <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=80&fit=crop" alt="Pakistan Saudi Turkey Defense Pact" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" /></div><span class="cat-pill pakistan">Pakistan</span><div class="side-title">New Axis of Security: Pakistan, Saudi Arabia and Türkiye Set to Sign Historic Trilateral Defense Pact</div><div class="side-meta">7 August 2026 · 12 min read</div></a>
           <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=600&q=80&fit=crop" alt="Pakistan Asia Cup Win" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div><span class="cat-pill sports">Sports</span><div class="side-title">Asia Cup 2026: Pakistan Stuns India in Thrilling Final to Lift the Trophy</div><div class="side-meta">15 August 2026 · 7 min read</div></a>
           <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&fit=crop" alt="UN AI Treaty" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div><span class="cat-pill tech">Technology</span><div class="side-title">50 Nations Sign First-Ever Global AI Safety Treaty at UN Summit</div><div class="side-meta">15 August 2026 · 8 min read</div></a>
         </div>
@@ -338,13 +341,13 @@
   <div class="container">
     <div class="latest-strip reveal">
       <div class="latest-inner">
-        <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Anthropic researcher Jacob Coxon resigns — warns labs are 'gambling with our lives'</div></a>
+        <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026" class="latest-item"><div class="latest-time">Latest</div><div class="latest-headline">Anthropic researcher Jacob Coxon resigns — warns labs are 'gambling with our lives'</div></a>
         <a href="article.html?id=global-ai-safety-treaty-signed-un-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">50 nations sign historic Global AI Safety Treaty at UN Summit in Geneva</div></a>
         <a href="article.html?id=pakistan-beats-india-asia-cup-final-2026" class="latest-item"><div class="latest-time">Just now</div><div class="latest-headline">Pakistan wins Asia Cup 2026 with thrilling 5-wicket victory over India</div></a>
-        <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="latest-item"><div class="latest-time">1 hr ago</div><div class="latest-headline">KSE-100 smashes all-time record, crosses 85,000 mark as FDI pours in</div></a>
-        <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="latest-item"><div class="latest-time">2 hrs ago</div><div class="latest-headline">UN finalizes Global Carbon Tax Framework at Nairobi Summit</div></a>
-        <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="latest-item"><div class="latest-time">3 hrs ago</div><div class="latest-headline">GTA VI breaks records with 35 million copies sold in 24 hours</div></a>
-        <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="latest-item"><div class="latest-time">5 hrs ago</div><div class="latest-headline">Pakistan, Saudi Arabia and Türkiye sign historic trilateral defense pact</div></a>
+        <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026" class="latest-item"><div class="latest-time">Published</div><div class="latest-headline">KSE-100 smashes all-time record, crosses 85,000 mark as FDI pours in</div></a>
+        <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026" class="latest-item"><div class="latest-time">Published</div><div class="latest-headline">UN finalizes Global Carbon Tax Framework at Nairobi Summit</div></a>
+        <a href="article.html?id=gta-6-shatters-all-entertainment-records-2026" class="latest-item"><div class="latest-time">Published</div><div class="latest-headline">GTA VI breaks records with 35 million copies sold in 24 hours</div></a>
+        <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026" class="latest-item"><div class="latest-time">Published</div><div class="latest-headline">Pakistan, Saudi Arabia and Türkiye sign historic trilateral defense pact</div></a>
       </div>
     </div>
   </div>
@@ -492,6 +495,23 @@
   });
 
   const hints=document.querySelectorAll('[data-search]');hints.forEach(btn=>btn.addEventListener('click',()=>{const q=btn.getAttribute('data-search')||'';window.location.href='search.html?q='+encodeURIComponent(q);}));
+
+  // Replace misleading relative labels with the actual publication date from the shared article dataset.
+  if(Array.isArray(window.ARTICLES)){
+    const byId=new Map(window.ARTICLES.map(a=>[String(a.id),a]));
+    document.querySelectorAll('.latest-item').forEach(item=>{
+      const href=item.getAttribute('href')||'';
+      const id=new URL(href,window.location.href).searchParams.get('id');
+      const article=byId.get(String(id));
+      const label=item.querySelector('.latest-time');
+      if(article&&label){
+        const d=new Date(article.date);
+        if(!Number.isNaN(d.getTime())){
+          label.textContent='Published '+d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+        }
+      }
+    });
+  }
 
   loadWeather();loadTicker();setInterval(loadTicker,60000);setInterval(loadWeather,600000);
 })();
