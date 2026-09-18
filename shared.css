@@ -58,6 +58,44 @@ a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 button { cursor: pointer; font-family: var(--font-sans); }
 
+/* ── ACCESSIBILITY + PERFORMANCE BASELINE ── */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+.nav-links li a:focus-visible,
+.footer-social a:focus-visible,
+button:focus-visible {
+  border-radius: 6px;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Keep long article/list pages responsive without changing their visual layout. */
+main {
+  min-width: 0;
+}
+
+/* Respect users who prefer less animation. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ── TICKER ── */
 .ticker-bar { background: var(--red); height: 36px; display: flex; align-items: center; overflow: hidden; }
 .ticker-label { background: var(--bg-1); color: var(--text-1); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: 0 18px; height: 100%; display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
@@ -814,5 +852,27 @@ footer {
   }
   .hero-grid {
     gap: 8px !important;
+  }
+}
+
+
+/* ── FINAL RESPONSIVE SAFETY ── */
+@media (max-width: 600px) {
+  .top-bar-inner,
+  .nav-inner,
+  .latest-inner,
+  .weather-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .nav-links li a {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .ticker-label {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
