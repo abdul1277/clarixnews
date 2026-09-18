@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="shared.css">
 
   <style>
+    .skip-link{position:fixed;left:12px;top:8px;z-index:10000;padding:9px 12px;background:var(--bg-3);color:var(--text-1);border:2px solid var(--red);border-radius:8px;transform:translateY(-150%);transition:transform .15s}.skip-link:focus{transform:translateY(0)}
     .search-hero{background:var(--bg-2);border-bottom:1px solid var(--border);padding:36px 0}
     .search-hero-inner{max-width:760px;margin:0 auto;padding:0 24px}
     .search-title{font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--text-1);margin:0 0 20px}
@@ -95,13 +96,14 @@
   <script src="shared.js" defer></script>
 </head>
 <body>
-  <div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>EU announces €500bn energy independence package</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>Search ClarixNews for the latest published stories</span><span>Explore world, Pakistan, technology, business and career coverage</span><span>Use the search filters to narrow your results</span><span>Search ClarixNews for the latest published stories</span><span>Explore world, Pakistan, technology, business and career coverage</span></div></div></div>
 
   <div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><button class="theme-toggle" id="themeBtn" type="button">☀ Light</button></div></div></div>
 
   <header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
 
-  <nav class="main-nav" aria-label="Main navigation"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US &amp; Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career &amp; AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="markets.html">📈 Markets</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div></div></nav>
+  <nav class="main-nav" aria-label="Main navigation"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=usa">US &amp; Americas</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career &amp; AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="markets.html">📈 Markets</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div></div></nav>
 
   <section class="search-hero" aria-labelledby="searchHeading">
     <div class="search-hero-inner">
@@ -122,12 +124,12 @@
     </div>
   </section>
 
-  <main>
+  <main id="main-content">
     <div class="container">
       <div class="search-layout">
         <section aria-live="polite" aria-atomic="false">
           <div class="search-meta" id="searchMeta">Enter a search term to find ClarixNews articles.</div>
-          <div id="searchResults"><div class="loading">Loading articles…</div></div>
+          <div id="searchResults" aria-busy="true"><div class="loading">Loading articles…</div></div>
         </section>
 
         <aside class="sidebar-search" style="position:sticky;top:80px">
@@ -249,6 +251,7 @@
     function makeResult(article){
       const link=document.createElement('a');
       link.className='result-item';
+      link.setAttribute('data-result','article');
       const id=String(article.id||'').trim();
       if(!id) return null;
       link.href='article.html?id='+encodeURIComponent(id);
@@ -264,7 +267,8 @@
       image.decoding='async';
       image.referrerPolicy='no-referrer-when-downgrade';
       image.addEventListener('error',function(){
-        if(image.src.endsWith('/og-image.png')) return;
+        if(image.dataset.fallback==='1') return;
+        image.dataset.fallback='1';
         image.src='og-image.png';
       });
       imageWrap.appendChild(image);
@@ -302,6 +306,7 @@
 
     function renderEmpty(message,showSuggestions){
       resultsEl.replaceChildren();
+      resultsEl.setAttribute('aria-busy','false');
       const box=document.createElement('div');
       box.className='no-results';
       const heading=document.createElement('h2');
@@ -359,6 +364,7 @@
       const articles=getArticles();
       if(!articles.length){
         metaEl.textContent='Articles could not be loaded right now.';
+        resultsEl.setAttribute('aria-busy','false');
         renderEmpty('Please refresh the page and try again.',false);
         return;
       }
@@ -386,6 +392,7 @@
       }
 
       resultsEl.replaceChildren();
+      resultsEl.setAttribute('aria-busy','false');
       if(!matches.length){
         renderEmpty(state.query?'Try a different keyword or choose another category.':'No articles are available in this category yet.',Boolean(state.query));
         return;
