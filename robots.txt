@@ -1,35 +1,10 @@
+# ClarixNews robots.txt
+# Public news content is crawlable; private/platform paths are not.
+
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://clarixnews.vercel.app/sitemap.xml
-
-# Block any private/admin paths
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_vercel/
 
-# Major search engines - explicit allow
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-News
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
+Sitemap: https://clarixnews.vercel.app/sitemap.xml
