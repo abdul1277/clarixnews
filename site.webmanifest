@@ -1,8 +1,12 @@
 {
+  "id": "/",
   "name": "ClarixNews",
   "short_name": "ClarixNews",
-  "description": "World News, Unfiltered",
+  "description": "Independent international news coverage from South Asia, America, Europe and beyond.",
+  "lang": "en",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#C8102E",
