@@ -90,9 +90,9 @@ const ARTICLES = [
   date: "August 15, 2026",
   readTime: "6 min read",
   views: "0",
-  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&.fit=crop",
+  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop",
   tags: ["KSE-100", "Pakistan Economy", "Stock Market", "Foreign Investment", "IMF", "Business News"],
-  content: `<p>Pakistan's financial markets witnessed a historic day as the KSE-100 index surged past the 85,000-point milestone for the first time in history, adding over Rs 3 trillion to investor wealth in a single month. The unprecedented rally is a direct reflection of growing international confidence in the country's economic trajectory.</p><blockquote>"This is not a speculative bubble; it is a fundamentals-driven rally. The world is finally pricing in a Pakistan that honors its commitments, controls inflation, and welcomes foreign capital." — Chief Economist, Top Karachi Brokerage</blockquote><h2>The Catalysts Behind the Surge</h2><p>The market euphoria is underpinned by three major developments: the successful completion of the $6 billion IMF Extended Fund Facility, a landmark $10 billion green energy investment pledge from GCC nations, and a dramatic 40% year-over-year increase in IT exports. Furthermore, inflation has cooled to a three-year low of 4.5%, prompting the State Bank to initiate a rate-cutting cycle.</p><h2>Sectoral Performance</h2><p>Technology, banking, and energy sectors led the charge. Foreign Portfolio Investment (FPI) recorded its highest monthly inflow since 2 and 2017, with overseas Pakistanis actively routing savings into the market through the Roshan Digital Account initiative.</p><h2>ClarixNews Analysis</h2><p>The 85,000 milestone is a powerful psychological victory. For years, the market was priced for perpetual crisis; today, it is being priced for stability and growth. The challenge now for policymakers is to ensure this financial market confidence translates into real-economy outcomes: job creation, industrial expansion, and export diversification.</p>`
+  content: `<p>Pakistan's financial markets witnessed a historic day as the KSE-100 index surged past the 85,000-point milestone for the first time in history, adding over Rs 3 trillion to investor wealth in a single month. The unprecedented rally is a direct reflection of growing international confidence in the country's economic trajectory.</p><blockquote>"This is not a speculative bubble; it is a fundamentals-driven rally. The world is finally pricing in a Pakistan that honors its commitments, controls inflation, and welcomes foreign capital." — Chief Economist, Top Karachi Brokerage</blockquote><h2>The Catalysts Behind the Surge</h2><p>The market euphoria is underpinned by three major developments: the successful completion of the $6 billion IMF Extended Fund Facility, a landmark $10 billion green energy investment pledge from GCC nations, and a dramatic 40% year-over-year increase in IT exports. Furthermore, inflation has cooled to a three-year low of 4.5%, prompting the State Bank to initiate a rate-cutting cycle.</p><h2>Sectoral Performance</h2><p>Technology, banking, and energy sectors led the charge. Foreign Portfolio Investment (FPI) recorded its highest monthly inflow since 2017, with overseas Pakistanis actively routing savings into the market through the Roshan Digital Account initiative.</p><h2>ClarixNews Analysis</h2><p>The 85,000 milestone is a powerful psychological victory. For years, the market was priced for perpetual crisis; today, it is being priced for stability and growth. The challenge now for policymakers is to ensure this financial market confidence translates into real-economy outcomes: job creation, industrial expansion, and export diversification.</p>`
 },
 
   {
@@ -1599,10 +1599,31 @@ function getArticle(id) {
 }
 
 function getRelatedArticles(currentId, count = 3) {
-  return ARTICLES.filter(a => a.id !== currentId).slice(0, count);
+  const current = getArticle(currentId);
+  if (!current) return [];
+
+  const sameCategory = ARTICLES.filter(
+    article => article.id !== currentId && article.catClass === current.catClass
+  );
+
+  const fallback = ARTICLES.filter(
+    article => article.id !== currentId && article.catClass !== current.catClass
+  );
+
+  return [...sameCategory, ...fallback].slice(0, Math.max(0, count));
 }
 
 function getArticlesByCategory(cat, count = 10) {
-  if (cat === 'all') return ARTICLES.slice(0, count);
-  return ARTICLES.filter(a => a.catClass === cat || a.category.toLowerCase().includes(cat)).slice(0, count);
+  const limit = Math.max(0, Number.parseInt(count, 10) || 0);
+  const normalizedCat = String(cat || 'all').trim().toLowerCase();
+
+  if (normalizedCat === 'all') return ARTICLES.slice(0, limit);
+
+  return ARTICLES
+    .filter(article => {
+      const articleCat = String(article.catClass || '').toLowerCase();
+      const articleCategory = String(article.category || '').toLowerCase();
+      return articleCat === normalizedCat || articleCategory === normalizedCat;
+    })
+    .slice(0, limit);
 }
