@@ -23,17 +23,19 @@
   <meta name="twitter:description" content="The page you are looking for could not be found on ClarixNews." />
   <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
 
   <style>
+    .skip-link{position:absolute;left:16px;top:-60px;z-index:9999;padding:10px 14px;background:var(--bg-1);color:var(--text-1);border:2px solid var(--red);border-radius:6px;font-family:var(--font-sans);font-weight:600;text-decoration:none}
+    .skip-link:focus{top:12px}
     body { display:flex; flex-direction:column; min-height:100vh; }
     main { flex:1; display:flex; align-items:center; justify-content:center; padding:60px 24px; }
     .notfound { text-align:center; max-width:560px; }
@@ -53,7 +55,6 @@
     .sug-link:hover { background:var(--red); border-color:var(--red); color:#fff; }
   </style>
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -62,18 +63,18 @@
     gtag('config', 'G-T7B4BGRJFC');
   </script>
 
-  <!-- Google AdSense: single loader only -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
-<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">☀ Light</button></div></div></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="ticker-bar"><div class="ticker-label">ClarixNews</div><div class="ticker-track"><div class="ticker-inner"><span>Page not found · ClarixNews</span><span>Use search or browse a section to continue</span><span>Page not found · ClarixNews</span><span>Use search or browse a section to continue</span></div></div></div>
+<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><button class="theme-toggle" id="themeBtn" type="button">☀ Light</button></div></div></div>
 <header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
-<nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" aria-label="Open navigation" aria-expanded="false">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" aria-label="Open search">🔍 Search</button></div></div></nav>
+<nav class="main-nav" aria-label="Main navigation"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career &amp; AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button" aria-label="Open search">🔍 Search</button></div></div></nav>
 
-<main>
+<main id="main-content">
   <div class="notfound">
-    <div class="notfound-num">4<span>0</span>4</div>
+    <div class="notfound-num" aria-hidden="true">4<span>0</span>4</div>
     <h1>Story Not Found</h1>
     <p>The page you are looking for may have been moved, deleted, or the link may be incorrect. Our newsroom is always changing — but the homepage is always there.</p>
     <div class="notfound-actions">
@@ -85,10 +86,10 @@
     <div class="suggestion-links">
       <a href="category.html?cat=world" class="sug-link">World</a>
       <a href="category.html?cat=pakistan" class="sug-link">Pakistan</a>
-      <a href="category.html?cat=usa" class="sug-link">US & Americas</a>
+      <a href="category.html?cat=usa" class="sug-link">US &amp; Americas</a>
       <a href="category.html?cat=europe" class="sug-link">Europe</a>
       <a href="category.html?cat=tech" class="sug-link">Technology</a>
-      <a href="category.html?cat=career" class="sug-link">Career & AI</a>
+      <a href="category.html?cat=career" class="sug-link">Career &amp; AI</a>
       <a href="category.html?cat=business" class="sug-link">Business</a>
       <a href="category.html?cat=opinion" class="sug-link">Opinion</a>
     </div>
@@ -96,7 +97,7 @@
 </main>
 
 <footer><div class="container"><div class="footer-bottom" style="padding:20px 0;"><div>© 2026 ClarixNews. All rights reserved.</div><div class="footer-bottom-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div></div></div></footer>
-<div class="search-overlay" id="searchOverlay" aria-hidden="true"><div class="search-box"><form class="search-header" id="searchForm"><input type="text" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" aria-label="Search ClarixNews" /><button type="button" class="search-close" id="searchClose" aria-label="Close search">✕</button></form></div></div>
+<div class="search-overlay" id="searchOverlay" aria-hidden="true"><div class="search-box"><form class="search-header" id="searchForm"><input type="search" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" aria-label="Search ClarixNews" /><button type="button" class="search-close" id="searchClose" aria-label="Close search">✕</button></form></div></div>
 <script src="shared.js"></script>
 </body>
 </html>
