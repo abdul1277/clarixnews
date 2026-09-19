@@ -28,6 +28,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="shared.css">
   <style>
+    .skip-link{position:absolute;left:16px;top:-60px;z-index:9999;padding:10px 14px;background:var(--bg-1);color:var(--text-1);border:2px solid var(--red);border-radius:6px;font-family:var(--font-sans);font-weight:600;text-decoration:none}
+    .skip-link:focus{top:12px}
     .policy-hero{background:var(--bg-2);border-bottom:3px solid var(--red);padding:48px 0}
     .policy-hero h1{font-family:var(--font-display);font-size:clamp(28px,4vw,52px);font-weight:900;color:var(--text-1);margin-bottom:10px}
     .policy-hero p{font-size:14px;color:var(--text-3)}
@@ -49,13 +51,14 @@
   </script>
 </head>
 <body>
-  <div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span><span>G7 leaders reach landmark AI governance agreement</span><span>Pakistan PM holds bilateral talks with US Secretary of State</span></div></div></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="ticker-bar"><div class="ticker-label">ClarixNews</div><div class="ticker-track"><div class="ticker-inner"><span>Terms of Use · ClarixNews</span><span>Read the rules for using our website and content</span><span>Terms of Use · ClarixNews</span><span>Read the rules for using our website and content</span></div></div></div>
   <div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><button class="theme-toggle" id="themeBtn" type="button">☀ Light</button></div></div></div>
   <header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
-  <nav class="main-nav"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career &amp; AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div></div></nav>
+  <nav class="main-nav" aria-label="Main navigation"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career &amp; AI</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div></div></nav>
 
   <div class="policy-hero"><div class="container"><h1>Terms of Use</h1><p>Last updated: September 18, 2026</p></div></div>
-  <main>
+  <main id="main-content">
     <article class="policy-body">
       <div class="last-updated" role="note">These Terms were last updated on <strong>September 18, 2026</strong>.</div>
       <nav class="toc" aria-label="Table of contents">
