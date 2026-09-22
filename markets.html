@@ -47,74 +47,360 @@
 <script src="shared.js"></script>
 <script>
 'use strict';
-const ASSETS=[
-{id:'bitcoin',name:'Bitcoin',sym:'BTC',type:'crypto',cg:'bitcoin',tv:'BITSTAMP:BTCUSD',icon:'₿',color:'#f59e0b'},
-{id:'ethereum',name:'Ethereum',sym:'ETH',type:'crypto',cg:'ethereum',tv:'BITSTAMP:ETHUSD',icon:'Ξ',color:'#627eea'},
-{id:'bnb',name:'BNB',sym:'BNB',type:'crypto',cg:'binancecoin',tv:'BINANCE:BNBUSDT',icon:'B',color:'#f3ba2f'},
-{id:'solana',name:'Solana',sym:'SOL',type:'crypto',cg:'solana',tv:'BINANCE:SOLUSDT',icon:'S',color:'#9945ff'},
-{id:'xrp',name:'XRP',sym:'XRP',type:'crypto',cg:'ripple',tv:'BINANCE:XRPUSDT',icon:'X',color:'#64748b'},
-{id:'cardano',name:'Cardano',sym:'ADA',type:'crypto',cg:'cardano',tv:'BINANCE:ADAUSDT',icon:'A',color:'#0033ad'},
-{id:'dogecoin',name:'Dogecoin',sym:'DOGE',type:'crypto',cg:'dogecoin',tv:'BINANCE:DOGEUSDT',icon:'Ð',color:'#c2a633'},
-{id:'toncoin',name:'Toncoin',sym:'TON',type:'crypto',cg:'toncoin',tv:'BINANCE:TONUSDT',icon:'T',color:'#0098ea'},
-{id:'polkadot',name:'Polkadot',sym:'DOT',type:'crypto',cg:'polkadot',tv:'BINANCE:DOTUSDT',icon:'P',color:'#e6007a'},
-{id:'avalanche',name:'Avalanche',sym:'AVAX',type:'crypto',cg:'avalanche-2',tv:'BINANCE:AVAXUSDT',icon:'A',color:'#e84142'},
-{id:'spx',name:'S&P 500',sym:'SPX',type:'index',tv:'FOREXCOM:SPXUSD',icon:'📈',color:'#3b82f6',ref:'5,453.91',refPct:0.32,region:'USA'},
-{id:'nasdaq',name:'NASDAQ',sym:'NDX',type:'index',tv:'FOREXCOM:NSXUSD',icon:'📊',color:'#8b5cf6',ref:'19,035.05',refPct:0.21,region:'USA'},
-{id:'dow',name:'Dow Jones',sym:'DJI',type:'index',tv:'FOREXCOM:DJI',icon:'📈',color:'#06b6d4',ref:'40,861.71',refPct:0.09,region:'USA'},
-{id:'ftse',name:'FTSE 100',sym:'FTSE',type:'index',tv:'INDEX:UKX',icon:'🇬🇧',color:'#6366f1',ref:'8,279.46',refPct:-0.24,region:'UK'},
-{id:'dax',name:'DAX',sym:'DAX',type:'index',tv:'INDEX:DEU40',icon:'🇩🇪',color:'#ef4444',ref:'18,365.59',refPct:0.17,region:'Germany'},
-{id:'nikkei',name:'Nikkei 225',sym:'N225',type:'index',tv:'INDEX:NKY',icon:'🇯🇵',color:'#f43f5e',ref:'38,482.11',refPct:0.48,region:'Japan'},
-{id:'kse100',name:'KSE-100',sym:'KSE100',type:'index',tv:'PSX:KSE100',icon:'🇵🇰',color:'#10b981',ref:'117,925.78',refPct:0.67,region:'Pakistan'},
-{id:'sensex',name:'BSE Sensex',sym:'SENSEX',type:'index',tv:'BSE:SENSEX30',icon:'📈',color:'#f97316',ref:'81,224.30',refPct:0.67,region:'India'},
-{id:'gold',name:'Gold',sym:'XAU/USD',type:'commodity',tv:'TVC:GOLD',icon:'🥇',color:'#f59e0b'},
-{id:'silver',name:'Silver',sym:'XAG/USD',type:'commodity',tv:'TVC:SILVER',icon:'🥈',color:'#94a3b8'},
-{id:'wti',name:'Oil WTI',sym:'WTI',type:'commodity',tv:'TVC:USOIL',icon:'🛢️',color:'#374151',ref:'$75.37',refPct:-0.19},
-{id:'brent',name:'Oil Brent',sym:'BRENT',type:'commodity',tv:'TVC:UKOIL',icon:'🛢️',color:'#1f2937',ref:'$79.26',refPct:-1.38},
-{id:'natgas',name:'Natural Gas',sym:'NG',type:'commodity',tv:'TVC:NATURALGAS',icon:'🔥',color:'#4b5563',ref:'$3.21',refPct:-2.14},
-{id:'copper',name:'Copper',sym:'HG',type:'commodity',tv:'TVC:COPPER',icon:'🔶',color:'#b45309',ref:'$4.52',refPct:0.31},
-{id:'pkr',name:'USD/PKR',sym:'PKR',type:'forex',tv:'OANDA:USDPKR',icon:'₨',color:'#10b981'},
-{id:'eur',name:'EUR/USD',sym:'EUR',type:'forex',tv:'FX:EURUSD',icon:'€',color:'#3b82f6'},
-{id:'gbp',name:'GBP/USD',sym:'GBP',type:'forex',tv:'FX:GBPUSD',icon:'£',color:'#6366f1'},
-{id:'jpy',name:'USD/JPY',sym:'JPY',type:'forex',tv:'FX:USDJPY',icon:'¥',color:'#ef4444'},
-{id:'sar',name:'USD/SAR',sym:'SAR',type:'forex',tv:'OANDA:USDSAR',icon:'ر',color:'#f59e0b'},
-{id:'aed',name:'USD/AED',sym:'AED',type:'forex',tv:'OANDA:USDAED',icon:'د',color:'#8b5cf6'},
-{id:'cny',name:'USD/CNY',sym:'CNY',type:'forex',tv:'FX:USDCNY',icon:'¥',color:'#dc2626'},
-{id:'inr',name:'USD/INR',sym:'INR',type:'forex',tv:'FX:USDINR',icon:'₹',color:'#f97316'}];
-const liveMap={};
-const $=id=>document.getElementById(id);
-function fmtP(n){if(typeof n!=='number'||!Number.isFinite(n))return'--';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'T';if(n>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(2)+'M';if(n>=1000)return'$'+n.toLocaleString('en-US',{maximumFractionDigits:2});if(n>=1)return'$'+n.toFixed(2);return'$'+n.toFixed(4)}
-function safeText(v,max=80){return String(v??'').slice(0,max)}
-function esc(v){return safeText(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function spark(prices,positive){if(!Array.isArray(prices)||prices.length<2)return'';const vals=prices.filter(Number.isFinite),min=Math.min(...vals),max=Math.max(...vals),range=max-min||1,pts=prices.map((p,i)=>Number.isFinite(p)?((i/(prices.length-1))*78+1)+','+(28-((p-min)/range)*26):'').filter(Boolean).join(' ');return'<svg viewBox="0 0 80 30" preserveAspectRatio="none" aria-hidden="true"><polyline points="'+pts+'" fill="none" stroke="'+(positive?'#22c55e':'#C8102E')+'" stroke-width="1.5"/></svg>'}
-function chgText(p){const n=Number(p);if(!Number.isFinite(n))return'<span>--</span>';return'<span class="'+(n>=0?'up':'down')+'">'+(n>=0?'▲':'▼')+' '+Math.abs(n).toFixed(2)+'%</span>'}
-function chgBadge(p){return'<span class="badge '+(Number(p)>=0?'up':'down')+'">'+chgText(p)+'</span>'}
-function priceFor(a){const l=liveMap[a.id];return l||a.ref?{p:l?.price??a.ref,pct:Number.isFinite(l?.pct)?l.pct:(a.refPct??0),live:Boolean(l)}:null}
-let lastFocusedElement=null;
-function openChartFor(a){if(!a)return;lastFocusedElement=document.activeElement;const pf=priceFor(a);$('chartName').textContent=a.name+' ('+a.sym+')';$('chartPrice').textContent=pf?.p??'--';$('chartChg').innerHTML=pf?chgText(pf.pct):'--';$('chartFrame').src='https://s3.tradingview.com/widgetembed/?frameElementId=tv_chart&symbol='+encodeURIComponent(a.tv)+'&interval='+({ '1D':'60','1W':'240','1M':'D','3M':'D','6M':'D','1Y':'W'}[curRange]||'60')+'&hidesidetoolbar=0&saveimage=0&toolbarbg=131722&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&locale=en&utm_source=clarixnews.vercel.app';$('chartModal').classList.add('open');$('chartModal').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';$('chartClose').focus()}
-function closeChart(){ $('chartModal').classList.remove('open');$('chartModal').setAttribute('aria-hidden','true');$('chartFrame').src='';document.body.style.overflow='';if(lastFocusedElement&&typeof lastFocusedElement.focus==='function')lastFocusedElement.focus();}
-let curRange='1D';
-$('chartClose').addEventListener('click',closeChart);$('chartModal').addEventListener('click',e=>{if(e.target===$('chartModal'))closeChart()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('chartModal').classList.contains('open'))closeChart()});
-document.querySelectorAll('.crt').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.crt').forEach(x=>x.classList.remove('active'));b.classList.add('active');curRange=b.dataset.range;const name=$('chartName').textContent.split(' (')[0],a=ASSETS.find(x=>x.name===name);if(a)openChartFor(a)});
-const msInput=$('msInput'),msSugg=$('msSugg');let msActive=-1,msResults=[];
-function renderSugg(){const q=msInput.value.trim().toLowerCase();if(!q){msSugg.classList.remove('open');return}msResults=ASSETS.filter(a=>a.name.toLowerCase().includes(q)||a.sym.toLowerCase().includes(q)).slice(0,8);msActive=-1;if(!msResults.length){msSugg.innerHTML='<div class="ms-empty">No assets found.</div>';msSugg.classList.add('open');return}msSugg.innerHTML=msResults.map((a,i)=>{const pf=priceFor(a);return'<button type="button" class="ms-item" role="option" data-id="'+esc(a.id)+'"><span class="ms-ico" style="background:'+esc(a.color)+'">'+esc(a.icon)+'</span><span><span class="ms-name">'+esc(a.name)+'</span><br><span class="ms-sym">'+esc(a.sym)+'</span></span><span class="ms-right"><span class="ms-price">'+esc(pf?.p??'--')+'</span><br><span class="ms-type t-'+esc(a.type)+'">'+esc(a.type)+'</span></span></button>'}).join('');msSugg.classList.add('open');msSugg.querySelectorAll('.ms-item').forEach(b=>b.addEventListener('click',()=>{const a=ASSETS.find(x=>x.id===b.dataset.id);msSugg.classList.remove('open');if(a)openChartFor(a)}))}
-msInput.addEventListener('input',renderSugg);msInput.addEventListener('keydown',e=>{const items=[...msSugg.querySelectorAll('.ms-item')];if(e.key==='ArrowDown'){e.preventDefault();msActive=Math.min(msActive+1,items.length-1)}else if(e.key==='ArrowUp'){e.preventDefault();msActive=Math.max(msActive-1,0)}else if(e.key==='Enter'){e.preventDefault();if(items[msActive])items[msActive].click();else if(items[0])items[0].click()}else if(e.key==='Escape')msSugg.classList.remove('open');items.forEach((x,i)=>x.classList.toggle('active',i===msActive))});document.addEventListener('click',e=>{if(!e.target.closest('.ms-search-wrap'))msSugg.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement?.tagName!=='INPUT'&&document.activeElement?.tagName!=='TEXTAREA'){e.preventDefault();msInput.focus()}});
-const tvLoaded={};function loadTV(id,src,cfg){const box=$(id);if(!box||tvLoaded[id])return;tvLoaded[id]=true;box.textContent='';const w=document.createElement('div');w.className='tradingview-widget-container';const inner=document.createElement('div');inner.className='tradingview-widget-container__widget';const s=document.createElement('script');s.async=true;s.src=src;s.text=JSON.stringify(cfg);w.append(inner,s);box.appendChild(w)}
-const TV_OVERVIEW={colorTheme:'dark',dateRange:'1D',showChart:true,locale:'en',isTransparent:true,showSymbolLogo:true,width:'100%',height:'480',tabs:[{title:'Indices',symbols:[{s:'FOREXCOM:SPXUSD',d:'S&P 500'},{s:'FOREXCOM:NSXUSD',d:'NASDAQ'},{s:'FOREXCOM:DJI',d:'DOW'},{s:'INDEX:UKX',d:'FTSE 100'},{s:'INDEX:DEU40',d:'DAX'},{s:'INDEX:NKY',d:'Nikkei'}]},{title:'Crypto',symbols:[{s:'BITSTAMP:BTCUSD',d:'Bitcoin'},{s:'BITSTAMP:ETHUSD',d:'Ethereum'},{s:'BINANCE:SOLUSDT',d:'Solana'},{s:'BINANCE:XRPUSDT',d:'XRP'}]},{title:'Commodities',symbols:[{s:'TVC:GOLD',d:'Gold'},{s:'TVC:SILVER',d:'Silver'},{s:'TVC:USOIL',d:'Oil WTI'}]},{title:'Forex',symbols:[{s:'FX:EURUSD',d:'EUR/USD'},{s:'OANDA:USDPKR',d:'USD/PKR'},{s:'FX:USDJPY',d:'USD/JPY'}]}]};
-const TV_ADV=sym=>({autosize:false,width:'100%',height:'460',symbol:sym,interval:'60',timezone:'Etc/UTC',theme:'dark',style:'1',locale:'en',allow_symbol_change:true,calendar:false});
-const TV_HEAT={width:'100%',height:'420',currencies:['EUR','USD','JPY','GBP','CHF','AUD','CAD','CNY','INR','PKR'],isTransparent:true,colorTheme:'dark',locale:'en'};
-function showTab(name,btn){document.querySelectorAll('.tab-content').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-hidden','true')});document.querySelectorAll('.mk-tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false')});const tab=$('tab-'+name);if(tab){tab.classList.add('active');tab.setAttribute('aria-hidden','false')}if(btn){btn.classList.add('active');btn.setAttribute('aria-selected','true')}if(name==='overview')loadTV('tvOverview','https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js',TV_OVERVIEW);if(name==='crypto')loadTV('tvCrypto','https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js',TV_ADV('BITSTAMP:BTCUSD'));if(name==='stocks')loadTV('tvStocks','https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js',TV_ADV('FOREXCOM:SPXUSD'));if(name==='commodities'){loadTV('tvCom1','https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js',TV_ADV('TVC:GOLD'));loadTV('tvCom2','https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js',TV_ADV('TVC:USOIL'))}if(name==='forex'){loadTV('tvForexHeat','https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js',TV_HEAT);loadTV('tvForexChart','https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js',TV_ADV('OANDA:USDPKR'))}}
-document.querySelectorAll('.mk-tab').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab,b))); 
-function renderStats(){const ids=['bitcoin','ethereum','gold','pkr','spx','wti','kse100','silver'];$('statsRibbon').innerHTML=ids.map(id=>{const a=ASSETS.find(x=>x.id===id),pf=priceFor(a);return'<button type="button" class="stat-card" data-id="'+id+'"><span class="stat-label">'+esc(a.name)+(pf?.live?'<span class="tag-live">LIVE</span>':'<span class="tag-ref">REFERENCE</span>')+'</span><span class="stat-val">'+esc(pf?.p??'--')+'</span><span class="stat-chg">'+(pf?chgText(pf.pct):'--')+'</span></button>'}).join('');$('statsRibbon').querySelectorAll('.stat-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))))}
-function renderTicker(){const ids=['bitcoin','ethereum','gold','silver','pkr','spx','wti','eur'];const h=ids.map(id=>{const a=ASSETS.find(x=>x.id===id),pf=priceFor(a);return pf?'<div class="stock-item"><span class="stock-name">'+esc(a.sym)+'</span><span class="stock-val">'+esc(pf.p)+'</span><span class="'+(pf.pct>=0?'stock-up':'stock-down')+'">'+(pf.pct>=0?'▲':'▼')+' '+Math.abs(pf.pct).toFixed(2)+'%</span></div>':''}).join('');if(h)$('mkTickerInner').innerHTML=h+h}
-function renderMovers(){const list=ASSETS.filter(a=>a.type==='crypto'&&liveMap[a.id]).sort((a,b)=>Math.abs(liveMap[b.id].pct)-Math.abs(liveMap[a.id].pct)).slice(0,6);$('moversGrid').innerHTML=list.map(a=>{const l=liveMap[a.id];return'<button type="button" class="mover" data-id="'+a.id+'"><div class="top"><div><div class="nm">'+esc(a.name)+'</div><div class="sym">'+esc(a.sym)+'</div></div>'+chgBadge(l.pct)+'</div><div class="px">'+esc(l.price)+'</div><div class="spark">'+spark(l.spark||[],l.pct>=0)+'</div></button>'}).join('')||'<div class="ms-empty" style="grid-column:1/-1">No live crypto movers available.</div>';document.querySelectorAll('.mover').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))))}
-function renderCrypto(data){if(!Array.isArray(data)){ $('cryptoGrid').innerHTML='<div class="ms-empty">Crypto data is temporarily unavailable.</div>';return }const valid=data.filter(c=>c&&typeof c.current_price==='number');$('cryptoGrid').innerHTML=valid.map(c=>{const a=ASSETS.find(x=>x.cg===c.id);if(!a)return'';const p=Number(c.price_change_percentage_24h)||0;return'<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+'</div></div>'+chgBadge(p)+'</div><div class="pc-price">'+esc(fmtP(c.current_price))+'</div><div class="pc-spark">'+spark(c.sparkline_in_7d?.price,p>=0)+'</div><div class="pc-tap">VIEW CHART →</div></button>'}).join('');$('cryptoTable').innerHTML=valid.map((c,i)=>{const a=ASSETS.find(x=>x.cg===c.id);if(!a)return'';return'<tr><td>'+String(i+1)+'</td><td><div class="asset-col"><div class="asset-ico" style="background:'+esc(a.color)+'">'+esc(a.icon)+'</div><div><strong>'+esc(a.name)+'</strong><div class="ms-sym">'+esc(a.sym)+'</div></div></div></td><td class="price-cell">'+esc(fmtP(c.current_price))+'</td><td>'+chgText(c.price_change_percentage_24h)+'</td><td>'+chgText(c.price_change_percentage_7d_in_currency)+'</td><td>'+esc(fmtP(c.market_cap))+'</td><td>'+esc(fmtP(c.total_volume))+'</td><td>'+spark((c.sparkline_in_7d?.price||[]).slice(-24),Number(c.price_change_percentage_24h)>=0)+'</td><td><button type="button" class="chart-link" data-id="'+a.id+'">📈 Chart</button></td></tr>'}).join('');document.querySelectorAll('.price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));document.querySelectorAll('.chart-link').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();openChartFor(ASSETS.find(a=>a.id===b.dataset.id))}))}
-function renderStocks(){const idx=ASSETS.filter(a=>a.type==='index');$('stocksGrid').innerHTML=idx.map(a=>'<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+' · '+esc(a.region)+'</div></div><span class="tag-ref">REFERENCE</span></div><div class="pc-price">'+esc(a.ref)+'</div><div class="pc-chg">'+chgText(a.refPct)+'</div><div class="pc-tap">VIEW CHART →</div></button>').join('');$('stocksTable').innerHTML=idx.map((a,i)=>'<tr><td>'+String(i+1)+'</td><td><strong>'+esc(a.name)+'</strong> <span class="ms-sym">'+esc(a.sym)+'</span></td><td class="price-cell">'+esc(a.ref)+'</td><td>'+chgText(a.refPct)+'</td><td>'+chgText(a.refPct)+'</td><td>'+esc(a.region)+'</td><td><button type="button" class="chart-link" data-id="'+a.id+'">📈 Chart</button></td></tr>').join('');document.querySelectorAll('#stocksGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));document.querySelectorAll('#stocksTable .chart-link').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();openChartFor(ASSETS.find(a=>a.id===b.dataset.id))}))}
-function renderComs(){const coms=ASSETS.filter(a=>a.type==='commodity');$('comGrid').innerHTML=coms.map(a=>{const pf=priceFor(a);return'<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.icon)+' '+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+'</div></div><span class="'+(pf?.live?'tag-live':'tag-ref')+'">'+(pf?.live?'LIVE':'REFERENCE')+'</span></div><div class="pc-price">'+esc(pf?.p??'--')+'</div><div class="pc-chg">'+(pf?chgText(pf.pct):'--')+'</div><div class="pc-tap">VIEW CHART →</div></button>'}).join('');document.querySelectorAll('#comGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))))}
-function renderFx(){const fxs=ASSETS.filter(a=>a.type==='forex');$('fxGrid').innerHTML=fxs.map(a=>{const pf=priceFor(a);return'<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+'</div></div><span class="'+(pf?.live?'tag-live':'tag-ref')+'">'+(pf?.live?'LIVE':'REFERENCE')+'</span></div><div class="pc-price">'+esc(pf?.p??'--')+'</div><div class="pc-tap">VIEW CHART →</div></button>'}).join('');document.querySelectorAll('#fxGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))))}
-function renderFNG(fng){const d=fng?.data?.[0],v=Number(d?.value);if(!Number.isFinite(v)){ $('fngValue').textContent='--';$('fngClass').textContent='Unavailable';return }$('fngValue').textContent=String(v);$('fngClass').textContent=safeText(d.value_classification,40)||'Unavailable'}
-async function getJSON(url,cacheKey,ttl){try{const key='mk:'+cacheKey,now=Date.now(),raw=localStorage.getItem(key);if(raw){const o=JSON.parse(raw);if(o.t&&now-o.t<ttl)return o.d}const r=await fetch(url,{headers:{Accept:'application/json'},cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const d=await r.json();localStorage.setItem(key,JSON.stringify({t:now,d}));return d}catch(e){try{const o=JSON.parse(localStorage.getItem('mk:'+cacheKey)||'null');return o?.d??null}catch{return null}}}
-async function loadAll(){$('lastUpdate').textContent='Refreshing…';const [crypto,fx,gold,silver,fng]=await Promise.all([getJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin,solana,ripple,cardano,dogecoin,toncoin,polkadot,avalanche-2&order=market_cap_desc&sparkline=true&price_change_percentage=24h,7d','crypto',60000),getJSON('https://open.er-api.com/v6/latest/USD','fx',3600000),getJSON('https://api.gold-api.com/price/XAU','gold',300000),getJSON('https://api.gold-api.com/price/XAG','silver',300000),getJSON('https://api.alternative.me/fng/','fng',1800000)]);if(Array.isArray(crypto))crypto.forEach(c=>{if(c?.id&&Number.isFinite(c.current_price))liveMap[c.id]={price:fmtP(c.current_price),pct:Number(c.price_change_percentage_24h)||0,live:true,spark:c.sparkline_in_7d?.price}});if(Number.isFinite(gold?.price))liveMap.gold={price:'$'+Number(gold.price).toLocaleString(),pct:0,live:true};if(Number.isFinite(silver?.price))liveMap.silver={price:'$'+Number(silver.price).toFixed(2),pct:0,live:true};if(fx?.rates){const r=fx.rates;[['pkr','PKR',2],['eur','EUR',4],['gbp','GBP',4],['jpy','JPY',2],['sar','SAR',4],['aed','AED',4],['cny','CNY',4],['inr','INR',2]].forEach(([id,k,d])=>{if(Number.isFinite(r[k]))liveMap[id]={price:(id==='eur'||id==='gbp'?'': '')+(id==='eur'||id==='gbp'? (1/r[k]).toFixed(d):r[k].toFixed(d)),pct:0,live:true}})}renderStats();renderTicker();renderMovers();renderCrypto(crypto);renderStocks();renderComs();renderFx();renderFNG(fng);$('lastUpdate').textContent=new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
-document.addEventListener('DOMContentLoaded',()=>{showTab('overview',document.querySelector('.mk-tab.active'));loadAll();setInterval(loadAll,60000)});
+
+const ASSETS = [
+  {id:'bitcoin',name:'Bitcoin',sym:'BTC',type:'crypto',cg:'bitcoin',cc:'bitcoin',tv:'BITSTAMP:BTCUSD',icon:'₿',color:'#f59e0b'},
+  {id:'ethereum',name:'Ethereum',sym:'ETH',type:'crypto',cg:'ethereum',cc:'ethereum',tv:'BITSTAMP:ETHUSD',icon:'Ξ',color:'#627eea'},
+  {id:'bnb',name:'BNB',sym:'BNB',type:'crypto',cg:'binancecoin',cc:'binance-coin',tv:'BINANCE:BNBUSDT',icon:'B',color:'#f3ba2f'},
+  {id:'solana',name:'Solana',sym:'SOL',type:'crypto',cg:'solana',cc:'solana',tv:'BINANCE:SOLUSDT',icon:'S',color:'#9945ff'},
+  {id:'xrp',name:'XRP',sym:'XRP',type:'crypto',cg:'ripple',cc:'xrp',tv:'BINANCE:XRPUSDT',icon:'X',color:'#64748b'},
+  {id:'cardano',name:'Cardano',sym:'ADA',type:'crypto',cg:'cardano',cc:'cardano',tv:'BINANCE:ADAUSDT',icon:'A',color:'#0033ad'},
+  {id:'dogecoin',name:'Dogecoin',sym:'DOGE',type:'crypto',cg:'dogecoin',cc:'dogecoin',tv:'BINANCE:DOGEUSDT',icon:'Ð',color:'#c2a633'},
+  {id:'toncoin',name:'Toncoin',sym:'TON',type:'crypto',cg:'toncoin',cc:'toncoin',tv:'BINANCE:TONUSDT',icon:'T',color:'#0098ea'},
+  {id:'polkadot',name:'Polkadot',sym:'DOT',type:'crypto',cg:'polkadot',cc:'polkadot',tv:'BINANCE:DOTUSDT',icon:'P',color:'#e6007a'},
+  {id:'avalanche',name:'Avalanche',sym:'AVAX',type:'crypto',cg:'avalanche-2',cc:'avalanche',tv:'BINANCE:AVAXUSDT',icon:'A',color:'#e84142'},
+  {id:'spx',name:'S&P 500',sym:'SPX',type:'index',tv:'FOREXCOM:SPXUSD',icon:'📈',color:'#3b82f6',ref:'5,453.91',refPct:0.32,region:'USA'},
+  {id:'nasdaq',name:'NASDAQ',sym:'NDX',type:'index',tv:'FOREXCOM:NSXUSD',icon:'📊',color:'#8b5cf6',ref:'19,035.05',refPct:0.21,region:'USA'},
+  {id:'dow',name:'Dow Jones',sym:'DJI',type:'index',tv:'FOREXCOM:DJI',icon:'📈',color:'#06b6d4',ref:'40,861.71',refPct:0.09,region:'USA'},
+  {id:'ftse',name:'FTSE 100',sym:'FTSE',type:'index',tv:'INDEX:UKX',icon:'🇬🇧',color:'#6366f1',ref:'8,279.46',refPct:-0.24,region:'UK'},
+  {id:'dax',name:'DAX',sym:'DAX',type:'index',tv:'INDEX:DEU40',icon:'🇩🇪',color:'#ef4444',ref:'18,365.59',refPct:0.17,region:'Germany'},
+  {id:'nikkei',name:'Nikkei 225',sym:'N225',type:'index',tv:'INDEX:NKY',icon:'🇯🇵',color:'#f43f5e',ref:'38,482.11',refPct:0.48,region:'Japan'},
+  {id:'kse100',name:'KSE-100',sym:'KSE100',type:'index',tv:'PSX:KSE100',icon:'🇵🇰',color:'#10b981',ref:'117,925.78',refPct:0.67,region:'Pakistan'},
+  {id:'sensex',name:'BSE Sensex',sym:'SENSEX',type:'index',tv:'BSE:SENSEX30',icon:'📈',color:'#f97316',ref:'81,224.30',refPct:0.67,region:'India'},
+  {id:'gold',name:'Gold',sym:'XAU/USD',type:'commodity',tv:'TVC:GOLD',icon:'🥇',color:'#f59e0b',ref:'--',refPct:0},
+  {id:'silver',name:'Silver',sym:'XAG/USD',type:'commodity',tv:'TVC:SILVER',icon:'🥈',color:'#94a3b8',ref:'--',refPct:0},
+  {id:'wti',name:'Oil WTI',sym:'WTI',type:'commodity',tv:'TVC:USOIL',icon:'🛢️',color:'#374151',ref:'$75.37',refPct:-0.19},
+  {id:'brent',name:'Oil Brent',sym:'BRENT',type:'commodity',tv:'TVC:UKOIL',icon:'🛢️',color:'#1f2937',ref:'$79.26',refPct:-1.38},
+  {id:'natgas',name:'Natural Gas',sym:'NG',type:'commodity',tv:'TVC:NATURALGAS',icon:'🔥',color:'#4b5563',ref:'$3.21',refPct:-2.14},
+  {id:'copper',name:'Copper',sym:'HG',type:'commodity',tv:'TVC:COPPER',icon:'🔶',color:'#b45309',ref:'$4.52',refPct:0.31},
+  {id:'pkr',name:'USD/PKR',sym:'PKR',type:'forex',tv:'OANDA:USDPKR',icon:'₨',color:'#10b981'},
+  {id:'eur',name:'EUR/USD',sym:'EUR',type:'forex',tv:'FX:EURUSD',icon:'€',color:'#3b82f6'},
+  {id:'gbp',name:'GBP/USD',sym:'GBP',type:'forex',tv:'FX:GBPUSD',icon:'£',color:'#6366f1'},
+  {id:'jpy',name:'USD/JPY',sym:'JPY',type:'forex',tv:'FX:USDJPY',icon:'¥',color:'#ef4444'},
+  {id:'sar',name:'USD/SAR',sym:'SAR',type:'forex',tv:'OANDA:USDSAR',icon:'ر',color:'#f59e0b'},
+  {id:'aed',name:'USD/AED',sym:'AED',type:'forex',tv:'OANDA:USDAED',icon:'د',color:'#8b5cf6'},
+  {id:'cny',name:'USD/CNY',sym:'CNY',type:'forex',tv:'FX:USDCNY',icon:'¥',color:'#dc2626'},
+  {id:'inr',name:'USD/INR',sym:'INR',type:'forex',tv:'FX:USDINR',icon:'₹',color:'#f97316'}
+];
+
+const liveMap = {};
+const $ = id => document.getElementById(id);
+
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function fmtP(n) {
+  n = Number(n);
+  if (!Number.isFinite(n)) return '--';
+  if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + 'T';
+  if (n >= 1e9) return '$' + (n/1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return '$' + (n/1e6).toFixed(2) + 'M';
+  if (n >= 1000) return '$' + n.toLocaleString('en-US',{maximumFractionDigits:2});
+  if (n >= 1) return '$' + n.toFixed(2);
+  return '$' + n.toFixed(4);
+}
+function chgText(p) {
+  const n = Number(p);
+  if (!Number.isFinite(n)) return '<span>--</span>';
+  return '<span class="' + (n >= 0 ? 'up' : 'down') + '">' + (n >= 0 ? '▲' : '▼') + ' ' + Math.abs(n).toFixed(2) + '%</span>';
+}
+function chgBadge(p) {
+  const n = Number(p);
+  return '<span class="badge ' + (n >= 0 ? 'up' : 'down') + '">' + (Number.isFinite(n) ? (n >= 0 ? '▲' : '▼') + ' ' + Math.abs(n).toFixed(2) + '%' : '--') + '</span>';
+}
+function spark(prices, positive) {
+  if (!Array.isArray(prices) || prices.length < 2) return '';
+  const vals = prices.map(Number).filter(Number.isFinite);
+  if (vals.length < 2) return '';
+  const min = Math.min(...vals), max = Math.max(...vals), range = max - min || 1;
+  const pts = prices.map((p,i) => {
+    p = Number(p);
+    return Number.isFinite(p) ? ((i/(prices.length-1))*78+1) + ',' + (28-((p-min)/range)*26) : '';
+  }).filter(Boolean).join(' ');
+  return '<svg viewBox="0 0 80 30" preserveAspectRatio="none" aria-hidden="true"><polyline points="' + pts + '" fill="none" stroke="' + (positive ? '#22c55e' : '#C8102E') + '" stroke-width="1.5"/></svg>';
+}
+function priceFor(a) {
+  if (!a) return null;
+  const l = liveMap[a.id];
+  if (l) return {p:l.price,pct:Number.isFinite(l.pct) ? l.pct : 0,live:true};
+  if (a.ref && a.ref !== '--') return {p:a.ref,pct:Number(a.refPct) || 0,live:false};
+  return null;
+}
+
+let lastFocusedElement = null;
+let curRange = '1D';
+
+function openChartFor(a) {
+  if (!a) return;
+  lastFocusedElement = document.activeElement;
+  const pf = priceFor(a);
+  $('chartName').textContent = a.name + ' (' + a.sym + ')';
+  $('chartPrice').textContent = pf?.p ?? '--';
+  $('chartChg').innerHTML = pf ? chgText(pf.pct) : '--';
+  const intervals = {'1D':'60','1W':'240','1M':'D','3M':'D','6M':'D','1Y':'W'};
+  $('chartFrame').src = 'https://www.tradingview.com/widgetembed/?frameElementId=tv_chart&symbol=' + encodeURIComponent(a.tv) + '&interval=' + (intervals[curRange] || '60') + '&hidesidetoolbar=0&saveimage=0&toolbarbg=131722&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&locale=en';
+  $('chartModal').classList.add('open');
+  $('chartModal').setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  $('chartClose').focus();
+}
+function closeChart() {
+  $('chartModal').classList.remove('open');
+  $('chartModal').setAttribute('aria-hidden','true');
+  $('chartFrame').src = '';
+  document.body.style.overflow = '';
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') lastFocusedElement.focus();
+}
+$('chartClose').addEventListener('click',closeChart);
+$('chartModal').addEventListener('click',e=>{if(e.target === $('chartModal')) closeChart();});
+document.addEventListener('keydown',e=>{if(e.key === 'Escape' && $('chartModal').classList.contains('open')) closeChart();});
+document.querySelectorAll('.crt').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.crt').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  curRange = b.dataset.range;
+  const name = $('chartName').textContent.split(' (')[0];
+  const a = ASSETS.find(x=>x.name === name);
+  if (a) openChartFor(a);
+}));
+
+const msInput = $('msInput'), msSugg = $('msSugg');
+let msActive = -1, msResults = [];
+function renderSugg() {
+  const q = msInput.value.trim().toLowerCase();
+  if (!q) { msSugg.classList.remove('open'); return; }
+  msResults = ASSETS.filter(a => a.name.toLowerCase().includes(q) || a.sym.toLowerCase().includes(q)).slice(0,8);
+  msActive = -1;
+  if (!msResults.length) {
+    msSugg.innerHTML = '<div class="ms-empty">No assets found.</div>';
+    msSugg.classList.add('open');
+    return;
+  }
+  msSugg.innerHTML = msResults.map(a => {
+    const pf = priceFor(a);
+    return '<button type="button" class="ms-item" role="option" data-id="' + esc(a.id) + '">' +
+      '<span class="ms-ico" style="background:' + esc(a.color) + '">' + esc(a.icon) + '</span>' +
+      '<span><span class="ms-name">' + esc(a.name) + '</span><br><span class="ms-sym">' + esc(a.sym) + '</span></span>' +
+      '<span class="ms-right"><span class="ms-price">' + esc(pf?.p ?? '--') + '</span><br><span class="ms-type t-' + esc(a.type) + '">' + esc(a.type) + '</span></span></button>';
+  }).join('');
+  msSugg.classList.add('open');
+  msSugg.querySelectorAll('.ms-item').forEach(b=>b.addEventListener('click',()=>{
+    const a = ASSETS.find(x=>x.id === b.dataset.id);
+    msSugg.classList.remove('open');
+    if (a) openChartFor(a);
+  }));
+}
+msInput.addEventListener('input',renderSugg);
+msInput.addEventListener('keydown',e=>{
+  const items = [...msSugg.querySelectorAll('.ms-item')];
+  if (e.key === 'ArrowDown') { e.preventDefault(); msActive = Math.min(msActive + 1, items.length - 1); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); msActive = Math.max(msActive - 1, 0); }
+  else if (e.key === 'Enter') { e.preventDefault(); if (items[msActive]) items[msActive].click(); else if (items[0]) items[0].click(); }
+  else if (e.key === 'Escape') msSugg.classList.remove('open');
+  items.forEach((x,i)=>x.classList.toggle('active',i===msActive));
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.ms-search-wrap')) msSugg.classList.remove('open');});
+document.addEventListener('keydown',e=>{if(e.key==='/' && document.activeElement?.tagName!=='INPUT' && document.activeElement?.tagName!=='TEXTAREA'){e.preventDefault();msInput.focus();}});
+
+const tvLoaded = {};
+function loadTV(id, symbol) {
+  const box = $(id);
+  if (!box || tvLoaded[id]) return;
+  tvLoaded[id] = true;
+  box.innerHTML = '';
+  const frame = document.createElement('iframe');
+  frame.className = 'chart-frame';
+  frame.loading = 'lazy';
+  frame.title = 'TradingView ' + symbol + ' chart';
+  frame.src = 'https://www.tradingview.com/widgetembed/?frameElementId=' + encodeURIComponent(id) +
+    '&symbol=' + encodeURIComponent(symbol) + '&interval=60&timezone=Etc%2FUTC&theme=dark&style=1&locale=en&hide_top_toolbar=0&withdateranges=1&allow_symbol_change=1';
+  box.appendChild(frame);
+}
+function showTab(name,btn) {
+  document.querySelectorAll('.tab-content').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-hidden','true');});
+  document.querySelectorAll('.mk-tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');});
+  const tab = $('tab-' + name);
+  if (tab) { tab.classList.add('active'); tab.setAttribute('aria-hidden','false'); }
+  if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
+  if (name==='overview') loadTV('tvOverview','FOREXCOM:SPXUSD');
+  if (name==='crypto') loadTV('tvCrypto','BITSTAMP:BTCUSD');
+  if (name==='stocks') loadTV('tvStocks','FOREXCOM:SPXUSD');
+  if (name==='commodities') loadTV('tvCom1','TVC:GOLD');
+  if (name==='forex') loadTV('tvForexChart','OANDA:USDPKR');
+}
+document.querySelectorAll('.mk-tab').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab,b)));
+
+function renderStats() {
+  const ids = ['bitcoin','ethereum','gold','pkr','spx','wti','kse100','silver'];
+  $('statsRibbon').innerHTML = ids.map(id=>{
+    const a = ASSETS.find(x=>x.id===id), pf = priceFor(a);
+    return '<button type="button" class="stat-card" data-id="' + id + '">' +
+      '<span class="stat-label">' + esc(a.name) + (pf?.live ? '<span class="tag-live">LIVE</span>' : '<span class="tag-ref">REFERENCE</span>') + '</span>' +
+      '<span class="stat-val">' + esc(pf?.p ?? '--') + '</span>' +
+      '<span class="stat-chg">' + (pf ? chgText(pf.pct) : '--') + '</span></button>';
+  }).join('');
+  $('statsRibbon').querySelectorAll('.stat-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));
+}
+function renderTicker() {
+  const ids = ['bitcoin','ethereum','gold','silver','pkr','spx','wti','eur'];
+  const h = ids.map(id=>{
+    const a=ASSETS.find(x=>x.id===id), pf=priceFor(a);
+    if (!pf) return '';
+    return '<div class="stock-item"><span class="stock-name">' + esc(a.sym) + '</span><span class="stock-val">' + esc(pf.p) + '</span><span class="' + (pf.pct>=0?'stock-up':'stock-down') + '">' + (pf.pct>=0?'▲':'▼') + ' ' + Math.abs(pf.pct).toFixed(2) + '%</span></div>';
+  }).join('');
+  $('mkTickerInner').innerHTML = h || '<div class="stock-item"><span class="stock-name">Market data unavailable</span><span class="stock-val">--</span></div>';
+  if (h) $('mkTickerInner').innerHTML = h + h;
+}
+function renderMovers() {
+  const list = ASSETS.filter(a=>a.type==='crypto' && liveMap[a.id]).sort((a,b)=>Math.abs(liveMap[b.id].pct)-Math.abs(liveMap[a.id].pct)).slice(0,6);
+  $('moversGrid').innerHTML = list.length ? list.map(a=>{
+    const l=liveMap[a.id];
+    return '<button type="button" class="mover" data-id="' + a.id + '"><div class="top"><div><div class="nm">' + esc(a.name) + '</div><div class="sym">' + esc(a.sym) + '</div></div>' + chgBadge(l.pct) + '</div><div class="px">' + esc(l.price) + '</div><div class="spark">' + spark(l.spark||[],l.pct>=0) + '</div></button>';
+  }).join('') : '<div class="ms-empty" style="grid-column:1/-1">Live crypto movers are unavailable right now. Crypto prices below may still load.</div>';
+  document.querySelectorAll('.mover').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));
+}
+function renderCrypto(data) {
+  if (!Array.isArray(data) || !data.length) {
+    $('cryptoGrid').innerHTML='<div class="ms-empty">Live crypto feed is unavailable. Try refresh in a moment.</div>';
+    $('cryptoTable').innerHTML='<tr><td colspan="9" class="ms-empty">Live crypto data is unavailable.</td></tr>';
+    return;
+  }
+  const valid=data.filter(c=>c && Number.isFinite(Number(c.current_price)));
+  $('cryptoGrid').innerHTML=valid.map(c=>{
+    const a=ASSETS.find(x=>x.cg===c.id); if(!a)return'';
+    const p=Number(c.price_change_percentage_24h)||0;
+    return '<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+'</div></div>'+chgBadge(p)+'</div><div class="pc-price">'+esc(fmtP(c.current_price))+'</div><div class="pc-spark">'+spark(c.sparkline_in_7d?.price,p>=0)+'</div><div class="pc-tap">VIEW CHART →</div></button>';
+  }).join('');
+  $('cryptoTable').innerHTML=valid.map((c,i)=>{
+    const a=ASSETS.find(x=>x.cg===c.id); if(!a)return'';
+    return '<tr><td>'+(i+1)+'</td><td><div class="asset-col"><div class="asset-ico" style="background:'+esc(a.color)+'">'+esc(a.icon)+'</div><div><strong>'+esc(a.name)+'</strong><div class="ms-sym">'+esc(a.sym)+'</div></div></div></td><td class="price-cell">'+esc(fmtP(c.current_price))+'</td><td>'+chgText(c.price_change_percentage_24h)+'</td><td>'+chgText(c.price_change_percentage_7d_in_currency)+'</td><td>'+esc(fmtP(c.market_cap))+'</td><td>'+esc(fmtP(c.total_volume))+'</td><td>'+spark((c.sparkline_in_7d?.price||[]).slice(-24),Number(c.price_change_percentage_24h)>=0)+'</td><td><button type="button" class="chart-link" data-id="'+a.id+'">📈 Chart</button></td></tr>';
+  }).join('');
+  document.querySelectorAll('#cryptoGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));
+  document.querySelectorAll('#cryptoTable .chart-link').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();openChartFor(ASSETS.find(a=>a.id===b.dataset.id));}));
+}
+function renderStocks() {
+  const idx=ASSETS.filter(a=>a.type==='index');
+  $('stocksGrid').innerHTML=idx.map(a=>'<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+' · '+esc(a.region)+'</div></div><span class="tag-ref">REFERENCE</span></div><div class="pc-price">'+esc(a.ref)+'</div><div class="pc-chg">'+chgText(a.refPct)+'</div><div class="pc-tap">VIEW CHART →</div></button>').join('');
+  $('stocksTable').innerHTML=idx.map((a,i)=>'<tr><td>'+(i+1)+'</td><td><strong>'+esc(a.name)+'</strong> <span class="ms-sym">'+esc(a.sym)+'</span></td><td class="price-cell">'+esc(a.ref)+'</td><td>'+chgText(a.refPct)+'</td><td>'+chgText(a.refPct)+'</td><td>'+esc(a.region)+'</td><td><button type="button" class="chart-link" data-id="'+a.id+'">📈 Chart</button></td></tr>').join('');
+  document.querySelectorAll('#stocksGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));
+  document.querySelectorAll('#stocksTable .chart-link').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();openChartFor(ASSETS.find(a=>a.id===b.dataset.id));}));
+}
+function renderComs() {
+  const coms=ASSETS.filter(a=>a.type==='commodity');
+  $('comGrid').innerHTML=coms.map(a=>{const pf=priceFor(a);return '<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.icon)+' '+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+'</div></div><span class="'+(pf?.live?'tag-live':'tag-ref')+'">'+(pf?.live?'LIVE':'REFERENCE')+'</span></div><div class="pc-price">'+esc(pf?.p??'--')+'</div><div class="pc-chg">'+(pf?chgText(pf.pct):'--')+'</div><div class="pc-tap">VIEW CHART →</div></button>';}).join('');
+  document.querySelectorAll('#comGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));
+}
+function renderFx() {
+  const fxs=ASSETS.filter(a=>a.type==='forex');
+  $('fxGrid').innerHTML=fxs.map(a=>{const pf=priceFor(a);return '<button type="button" class="price-card" data-id="'+a.id+'"><div class="pc-head"><div><div class="pc-name">'+esc(a.name)+'</div><div class="pc-sym">'+esc(a.sym)+'</div></div><span class="'+(pf?.live?'tag-live':'tag-ref')+'">'+(pf?.live?'LIVE':'REFERENCE')+'</span></div><div class="pc-price">'+esc(pf?.p??'--')+'</div><div class="pc-tap">VIEW CHART →</div></button>';}).join('');
+  document.querySelectorAll('#fxGrid .price-card').forEach(b=>b.addEventListener('click',()=>openChartFor(ASSETS.find(a=>a.id===b.dataset.id))));
+}
+function renderFNG(fng) {
+  const d=fng?.data?.[0],v=Number(d?.value);
+  $('fngValue').textContent=Number.isFinite(v)?String(v):'--';
+  $('fngClass').textContent=Number.isFinite(v)?String(d?.value_classification||'Unavailable'):'Unavailable';
+}
+
+async function fetchJSON(url, timeout=10000) {
+  const controller = new AbortController();
+  const timer = setTimeout(()=>controller.abort(),timeout);
+  try {
+    const r = await fetch(url,{headers:{Accept:'application/json'},cache:'no-store',signal:controller.signal});
+    if (!r.ok) throw new Error('HTTP '+r.status);
+    return await r.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+async function getCached(key, urls, ttl) {
+  const now=Date.now();
+  try {
+    const raw=localStorage.getItem('mk:'+key);
+    if(raw){const o=JSON.parse(raw);if(o?.t && now-o.t<ttl)return o.d;}
+  } catch (_) {}
+  for(const url of urls){
+    try{
+      const data=await fetchJSON(url);
+      try{localStorage.setItem('mk:'+key,JSON.stringify({t:now,d:data}));}catch(_){}
+      return data;
+    }catch(_){}
+  }
+  try{return JSON.parse(localStorage.getItem('mk:'+key)||'null')?.d??null;}catch(_){return null;}
+}
+
+async function loadCrypto() {
+  const ids=ASSETS.filter(a=>a.type==='crypto').map(a=>a.cg).join(',');
+  const data=await getCached('crypto',[
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+encodeURIComponent(ids)+'&order=market_cap_desc&sparkline=true&price_change_percentage=24h,7d',
+    'https://api.coincap.io/v2/assets?limit=20'
+  ],60000);
+  if(Array.isArray(data)) return data;
+  if(Array.isArray(data?.data)){
+    return data.data.filter(x=>ASSETS.some(a=>a.cc===x.id)).map(x=>({
+      id:ASSETS.find(a=>a.cc===x.id)?.cg,
+      current_price:Number(x.priceUsd),
+      price_change_percentage_24h:Number(x.changePercent24Hr),
+      market_cap:Number(x.marketCapUsd),
+      total_volume:Number(x.volumeUsd24Hr)
+    }));
+  }
+  return null;
+}
+
+async function loadAll() {
+  $('lastUpdate').textContent='Refreshing…';
+
+  // Render local/reference content first so the page never looks broken when a feed is down.
+  renderStats(); renderTicker(); renderMovers(); renderCrypto(null); renderStocks(); renderComs(); renderFx(); renderFNG(null);
+
+  const results = await Promise.allSettled([
+    loadCrypto(),
+    getCached('fx',['https://open.er-api.com/v6/latest/USD','https://api.frankfurter.app/latest?from=USD'],3600000),
+    getCached('gold',['https://api.gold-api.com/price/XAU','https://api.metals.live/v1/spot'],300000),
+    getCached('silver',['https://api.gold-api.com/price/XAG'],300000),
+    getCached('fng',['https://api.alternative.me/fng/'],1800000)
+  ]);
+
+  const crypto=results[0].status==='fulfilled'?results[0].value:null;
+  const fx=results[1].status==='fulfilled'?results[1].value:null;
+  const gold=results[2].status==='fulfilled'?results[2].value:null;
+  const silver=results[3].status==='fulfilled'?results[3].value:null;
+  const fng=results[4].status==='fulfilled'?results[4].value:null;
+
+  if(Array.isArray(crypto)) crypto.forEach(c=>{
+    if(c?.id && Number.isFinite(Number(c.current_price))){
+      liveMap[c.id]={price:fmtP(c.current_price),pct:Number(c.price_change_percentage_24h)||0,live:true,spark:c.sparkline_in_7d?.price||[]};
+    }
+  });
+
+  const goldPrice=Number(gold?.price);
+  if(Number.isFinite(goldPrice)) liveMap.gold={price:'$'+goldPrice.toLocaleString('en-US',{maximumFractionDigits:2}),pct:0,live:true};
+  const silverPrice=Number(silver?.price);
+  if(Number.isFinite(silverPrice)) liveMap.silver={price:'$'+silverPrice.toFixed(2),pct:0,live:true};
+
+  if(fx?.rates){
+    const r=fx.rates;
+    [['pkr','PKR',2],['eur','EUR',4],['gbp','GBP',4],['jpy','JPY',2],['sar','SAR',4],['aed','AED',4],['cny','CNY',4],['inr','INR',2]].forEach(([id,k,d])=>{
+      if(Number.isFinite(Number(r[k]))) liveMap[id]={price:(id==='eur'||id==='gbp')?(1/Number(r[k])).toFixed(d):Number(r[k]).toFixed(d),pct:0,live:true};
+    });
+  }
+
+  renderStats(); renderTicker(); renderMovers(); renderCrypto(crypto); renderStocks(); renderComs(); renderFx(); renderFNG(fng);
+  const ok=[crypto,fx,gold,silver,fng].filter(Boolean).length;
+  $('lastUpdate').textContent=new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'}) + (ok?'':' · feeds unavailable');
+}
+
+window.addEventListener('error',e=>{
+  console.error('Markets page error:',e.error||e.message);
+  const el=$('lastUpdate');
+  if(el && el.textContent==='Refreshing…') el.textContent='A market feed error occurred; reference data remains available.';
+});
+window.addEventListener('unhandledrejection',e=>console.error('Markets data error:',e.reason));
+
+document.addEventListener('DOMContentLoaded',()=>{
+  showTab('overview',document.querySelector('.mk-tab.active'));
+  loadAll();
+  setInterval(loadAll,60000);
+});
 </script>
 </body>
 </html>
