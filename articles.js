@@ -1590,7 +1590,7 @@ const ARTICLES = [
       <h2>Market Reaction</h2>
       <p>European equity markets rose modestly on the news, with the EURO STOXX 50 gaining 0.6%. The euro strengthened slightly against the dollar to 1.0842, reflecting investor confidence in the eurozone's economic trajectory relative to the uncertainty surrounding US monetary policy.</p>
     `
-  }
+  },
 
   // ── 58. ALIBABA AI MODEL & CHIP ──
   {
