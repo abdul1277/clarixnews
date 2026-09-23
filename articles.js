@@ -1592,6 +1592,111 @@ const ARTICLES = [
     `
   }
 
+  // ── 58. ALIBABA AI MODEL & CHIP ──
+  {
+    id: "alibaba-5-trillion-10-trillion-ai-model-chip-2026",
+    title: "Alibaba Plans 5–10 Trillion-Parameter AI Model, Unveils New Chip",
+    subtitle: "Alibaba is expanding its full-stack AI strategy with a much larger Qwen model, a new AI processor and plans to scale its global data-center capacity.",
+    category: "Technology",
+    catClass: "tech",
+    author: "ClarixNews Technology Desk",
+    authorRole: "Technology Desk",
+    authorInitials: "CN",
+    date: "September 23, 2026",
+    readTime: "5 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80&fit=crop",
+    tags: ["Alibaba", "AI", "Qwen", "Artificial Intelligence", "AI Chips", "China Tech"],
+    content: `
+      <p>Alibaba is accelerating its artificial intelligence ambitions with plans for a next-generation model that could scale to between 5 trillion and 10 trillion parameters, while the company has also introduced a new AI chip designed to support large-scale model training and deployment.</p>
+
+      <h2>Alibaba Targets a Much Larger AI Model</h2>
+      <p>At Alibaba Cloud's annual Apsara conference in Hangzhou, the company said its Qwen team is working toward models that can handle more complex and longer-horizon tasks. Reuters reported that Alibaba's current flagship Qwen 3.8 Max has 2.4 trillion parameters, while future Qwen generations are planned to scale substantially higher. Parameter count is one measure of model size, although it does not by itself determine overall AI performance. <strong>Source: Reuters, September 22, 2026.</strong></p>
+
+      <h2>New Zhenwu V900 AI Chip</h2>
+      <p>Alibaba also unveiled the Zhenwu V900, a processor developed by its T-Head semiconductor unit. The company says the chip delivers about three times the performance of its predecessor and can be connected in large clusters for training and running advanced AI systems. Reuters reported that commercial production is expected in the first quarter of 2027.</p>
+
+      <h2>Building an End-to-End AI Ecosystem</h2>
+      <p>Alibaba's strategy extends beyond AI models. The company is investing across semiconductors, cloud computing and data centers as Chinese technology companies work to build more domestic AI infrastructure. Alibaba Cloud has also set a target of exceeding 20 gigawatts of global data-center capacity by 2032.</p>
+
+      <h2>Why It Matters</h2>
+      <p>The announcement highlights how the AI competition is increasingly focused on the complete technology stack: models, chips, computing infrastructure and cloud platforms. Larger models can require substantial computing resources, making specialized chips and data-center capacity an important part of the race to deploy advanced AI systems.</p>
+
+      <h2>What Comes Next</h2>
+      <p>Alibaba says its next-generation AI systems are being developed with greater capabilities for complex tasks and model improvement. The actual performance, efficiency and commercial impact of those future models will depend on training results, hardware availability and real-world deployment.</p>
+    `
+  },
+
+  // ── 59. PAKISTAN POLIO SECURITY ──
+  {
+    id: "pakistan-nushki-polio-workers-police-killed-september-2026",
+    title: "Two Police Officers Killed While Guarding Polio Workers in Balochistan",
+    subtitle: "The officers were providing security for a door-to-door vaccination campaign in Nushki district; the polio workers were not injured.",
+    category: "Pakistan",
+    catClass: "pakistan",
+    author: "ClarixNews Pakistan Desk",
+    authorRole: "Pakistan Desk",
+    authorInitials: "CN",
+    date: "September 23, 2026",
+    readTime: "4 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1584467735871-5c17e4b1a0f7?w=1400&q=80&fit=crop",
+    tags: ["Pakistan", "Balochistan", "Polio", "Vaccination", "Nushki", "Public Health"],
+    content: `
+      <p>Two police officers were killed by gunmen while providing security to a door-to-door polio vaccination team in Nushki district, Balochistan, according to the Associated Press. The vaccination workers were not injured in the September 22 attack.</p>
+
+      <h2>What Happened in Nushki</h2>
+      <p>The officers were accompanying polio workers during a government-led vaccination campaign when they came under attack. The Associated Press reported that no group had immediately claimed responsibility. The incident occurred in southwestern Pakistan, where security personnel have previously faced attacks. <strong>Source: Associated Press, September 22, 2026.</strong></p>
+
+      <h2>Polio Campaign Underway</h2>
+      <p>The attack came one day after the start of a nationwide vaccination initiative aimed at reaching more than 31 million children. Pakistan remains one of the two countries where wild poliovirus transmission has not been eradicated, alongside Afghanistan, according to the World Health Organization.</p>
+
+      <h2>Why Security Matters for Vaccination Teams</h2>
+      <p>Polio campaigns depend on health workers reaching children in communities across the country. In areas where security risks are higher, police and other security personnel may accompany vaccination teams. Attacks on security escorts can disrupt access to communities and increase the risks faced by both workers and families.</p>
+
+      <h2>Authorities' Response</h2>
+      <p>Pakistan's Interior Minister Mohsin Naqvi condemned the attack, according to the Associated Press. Investigators are expected to determine who carried out the shooting and whether it was connected to any militant organization.</p>
+
+      <h2>The Broader Public-Health Challenge</h2>
+      <p>Pakistan's continued polio vaccination effort is part of a wider campaign to stop transmission of the virus. Health authorities must combine high vaccination coverage with safe access for field teams, accurate community information and continued disease surveillance.</p>
+    `
+  },
+
+  // ── 60. NASDAQ AI RECORD ──
+  {
+    id: "nasdaq-record-high-ai-stocks-september-2026",
+    title: "Nasdaq Hits Record High as AI Stocks Regain Momentum",
+    subtitle: "Technology shares lifted the Nasdaq to a new intraday record as investors watched AI demand, oil prices and Middle East developments.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Markets Desk",
+    authorRole: "Markets Editor",
+    authorInitials: "CN",
+    date: "September 23, 2026",
+    readTime: "5 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop",
+    tags: ["Nasdaq", "Stock Market", "AI Stocks", "AMD", "Technology", "Markets"],
+    content: `
+      <p>The Nasdaq Composite reached an intraday record on September 22 as technology stocks regained momentum and investors responded to renewed enthusiasm around artificial intelligence. The move came alongside changing expectations about oil supplies and developments surrounding the conflict involving the United States and Iran.</p>
+
+      <h2>Nasdaq Sets a New Intraday Record</h2>
+      <p>Reuters reported that the Nasdaq reached 27,212.68 during Tuesday trading, exceeding its previous intraday high of 27,190.21 from June 1. The index was up around 0.3% at the time of the report. Technology shares were among the key drivers of the move. <strong>Source: Reuters, September 22, 2026.</strong></p>
+
+      <h2>AI Stocks Return to Focus</h2>
+      <p>Investor attention has returned to artificial intelligence companies after a period of concern about the scale of AI spending and how quickly those investments will generate returns. Semiconductor stocks also strengthened, with AMD's market value moving above $1 trillion as chip shares advanced.</p>
+
+      <h2>Oil Prices Remain a Key Market Variable</h2>
+      <p>Oil prices have remained closely linked to developments in the Middle East. Reuters reported that crude prices fell to a two-week low after signals that additional oil supplies could become available and Iran indicated it could potentially reopen the Strait of Hormuz. Oil markets remained volatile, however, as diplomatic and military developments continued to change expectations.</p>
+
+      <h2>What Investors Are Watching</h2>
+      <p>Markets are closely monitoring AI earnings and spending, U.S. Treasury yields, oil prices and upcoming diplomatic meetings. These factors can affect technology valuations because changes in energy costs, interest rates and expected corporate earnings can alter how investors value growth-oriented companies.</p>
+
+      <h2>Market Context</h2>
+      <p>The Nasdaq's latest record comes after a period of significant volatility. Reuters reported that the index had previously fallen more than 10% from its late-July intraday high before recovering. The latest move therefore reflects both renewed AI optimism and a broader reassessment of market risks.</p>
+    `
+  },
+
 ];
 
 function getArticle(id) {
