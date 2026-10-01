@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ClarixNews Analytics Dashboard</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="shared.css"/>
+<style>
+  .dash-wrap{max-width:1200px;margin:0 auto;padding:24px;}
+  .dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .dash-top a{font-size:12px;color:var(--text-3);}
+  .dash-top a:hover{color:var(--red);}
+  .login-box{max-width:380px;margin:90px auto;background:var(--bg-2);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center;}
+  .login-box h1{font-family:var(--font-display);font-size:26px;margin-bottom:16px;}
+  .login-box input{width:100%;padding:12px 14px;background:var(--bg-3);border:1px solid var(--border);border-radius:8px;color:var(--text-1);font-size:14px;margin-bottom:12px;outline:none;}
+  .login-box button{width:100%;padding:12px;background:var(--red);border:none;border-radius:8px;color:#fff;font-weight:700;cursor:pointer;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:24px;}
+  .scard{background:var(--bg-2);border:1px solid var(--border);border-radius:12px;padding:18px;}
+  .scard .l{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px;}
+  .scard .v{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:600;}
+  .scard .s{font-size:11px;color:var(--text-3);margin-top:4px;}
+  .htitle{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin:22px 0 12px;display:flex;align-items:center;gap:10px;}
+  .htitle::after{content:'';flex:1;height:1px;background:var(--border);}
+  .live-dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:blink 2s infinite;display:inline-block;margin-right:6px;}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;}
+  .cbar{background:var(--bg-2);border:1px solid var(--border);border-radius:10px;padding:12px;}
+  .cbar .n{font-weight:600;font-size:13px;margin-bottom:6px;}
+  .cbar .bar{height:6px;background:var(--bg-4);border-radius:3px;overflow:hidden;margin-bottom:4px;}
+  .cbar .fill{height:100%;background:linear-gradient(90deg,var(--red),#ff4d6d);}
+  .cbar .c{font-size:11px;color:var(--text-3);}
+  .tbl-wrap{overflow-x:auto;background:var(--bg-2);border:1px solid var(--border);border-radius:12px;}
+  .tbl{width:100%;border-collapse:collapse;min-width:700px;}
+  .tbl th{background:var(--bg-3);padding:10px 12px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);text-align:left;}
+  .tbl td{padding:10px 12px;font-size:12px;border-top:1px solid var(--border);}
+  .badge{padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700;}
+  .badge.new{background:rgba(34,197,94,.15);color:#22c55e;}
+  .badge.ret{background:rgba(59,130,246,.15);color:#60a5fa;}
+  .empty{padding:30px;text-align:center;color:var(--text-3);font-size:13px;}
+  .lock-btn{background:var(--bg-3);border:1px solid var(--border);color:var(--text-3);font-size:11px;padding:6px 12px;border-radius:8px;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="dash-wrap">
+
+  <div id="login" class="login-box">
+    <h1>🔐 ClarixNews Analytics</h1>
+    <input type="password" id="pw" placeholder="Dashboard password"/>
+    <button onclick="doLogin()">Enter Dashboard</button>
+  </div>
+
+  <div id="dash" style="display:none;">
+    <div class="dash-top">
+      <div class="htitle" style="margin:0;"><span><span class="live-dot"></span>Live Analytics (Last 24h)</span></div>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <span style="font-size:10px;color:var(--text-3);">Updated: <span id="upd">--</span></span>
+        <button class="lock-btn" onclick="sessionStorage.removeItem('dash_ok');location.reload();"> Lock</button>
+        <a href="index.html" style="font-size:12px;color:var(--text-3);">← Back to site</a>
+      </div>
+    </div>
+
+    <div class="stats" style="margin-top:16px;">
+      <div class="scard"><div class="l">Total Visits</div><div class="v" id="sTotal">--</div></div>
+      <div class="scard"><div class="l">Unique Visitors</div><div class="v" id="sUnique">--</div></div>
+      <div class="scard"><div class="l">New Visitors</div><div class="v" id="sNew">--</div><div class="s" id="sNewP"></div></div>
+      <div class="scard"><div class="l">Returning</div><div class="v" id="sRet">--</div><div class="s" id="sRetP"></div></div>
+    </div>
+
+    <div class="htitle">Top Countries</div>
+    <div class="cgrid" id="cGrid"></div>
+
+    <div class="htitle">Recent Visits (Live Feed)</div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Time</th><th>Country</th><th>City</th><th>Page</th><th>Device</th><th>Browser</th><th>Type</th></tr></thead>
+        <tbody id="vBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+<script>
+/* ═══ CONFIG ═══ */
+var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
+var SB_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+var DASH_PASS = 'Clarix2026';   /* ← apna password yahan change kar sakte hain */
+/* ══════════════ */
+
+function doLogin(){
+  if(document.getElementById('pw').value === DASH_PASS){
+    sessionStorage.setItem('dash_ok','1');
+    showDash();
+  } else { alert('Ghalat password!'); }
+}
+function showDash(){
+  document.getElementById('login').style.display='none';
+  document.getElementById('dash').style.display='block';
+  load(); setInterval(load, 15000);
+}
+async function load(){
+  try{
+    var r = await fetch(SB_URL + '/rest/v1/rpc/get_live_stats', {
+      method:'POST',
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'},
+      body: JSON.stringify({hours:24})
+    });
+    var d = await r.json();
+    render(d);
+    document.getElementById('upd').textContent = new Date().toLocaleTimeString();
+  }catch(e){ console.error(e); }
+}
+function render(d){
+  document.getElementById('sTotal').textContent = d.total_visits||0;
+  document.getElementById('sUnique').textContent = d.unique_visitors||0;
+  document.getElementById('sNew').textContent = d.new_visitors||0;
+  document.getElementById('sRet').textContent = d.returning_visitors||0;
+  var t = d.total_visits||1;
+  document.getElementById('sNewP').textContent = Math.round((d.new_visitors||0)/t*100)+'% of total';
+  document.getElementById('sRetP').textContent = Math.round((d.returning_visitors||0)/t*100)+'% of total';
+  var cs = d.countries||[];
+  var mx = cs.length ? cs[0].count : 1;
+  document.getElementById('cGrid').innerHTML = cs.map(function(c){
+    return '<div class="cbar"><div class="n">'+(c.country||'Unknown')+'</div><div class="bar"><div class="fill" style="width:'+((c.count/mx)*100)+'%"></div></div><div class="c">'+c.count+' visits</div></div>';
+  }).join('') || '<div class="empty">Abhi koi data nahi — site browse karein phir refresh karein</div>';
+  var vs = d.recent_visits||[];
+  document.getElementById('vBody').innerHTML = vs.map(function(v){
+    var tm = new Date(v.visited_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    return '<tr><td>'+tm+'</td><td>'+(v.country||'--')+'</td><td>'+(v.city||'--')+'</td><td>'+(v.page||'/')+'</td><td>'+(v.device||'--')+'</td><td>'+(v.browser||'--')+'</td><td><span class="badge '+(v.is_returning?'ret':'new')+'">'+(v.is_returning?'Returning':'New')+'</span></td></tr>';
+  }).join('') || '<tr><td colspan="7" class="empty">Abhi koi visit record nahi hui</td></tr>';
+}
+if(sessionStorage.getItem('dash_ok')==='1') showDash();
+</script>
+</body>
+</html>
