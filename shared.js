@@ -1,55 +1,309 @@
-CREATE TABLE IF NOT EXISTS visits (
-  id BIGSERIAL PRIMARY KEY,
-  visitor_id TEXT NOT NULL,
-  country TEXT,
-  city TEXT,
-  page TEXT,
-  device TEXT,
-  browser TEXT,
-  is_returning BOOLEAN DEFAULT FALSE,
-  visited_at TIMESTAMPTZ DEFAULT NOW()
-);
+/* ============================================================
+   CLARIXNEWS — SHARED JAVASCRIPT (v2.2 — with Visitor Tracker)
+   ============================================================ */
 
-CREATE INDEX IF NOT EXISTS idx_visits_time ON visits(visited_at DESC);
-CREATE INDEX IF NOT EXISTS idx_visits_country ON visits(country);
+// ── THEME TOGGLE ──
+function initTheme() {
+  const saved = localStorage.getItem('cnTheme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeBtn(saved);
+}
 
-CREATE OR REPLACE FUNCTION get_live_stats(hours INT DEFAULT 24)
-RETURNS JSON AS $$
-DECLARE
-  result JSON;
-BEGIN
-  SELECT json_build_object(
-    'total_visits', COUNT(*),
-    'unique_visitors', COUNT(DISTINCT visitor_id),
-    'new_visitors', COUNT(*) FILTER (WHERE NOT is_returning),
-    'returning_visitors', COUNT(*) FILTER (WHERE is_returning),
-    'countries', (
-      SELECT COALESCE(json_agg(row_to_json(t)), '[]'::json)
-      FROM (
-        SELECT country, COUNT(*) as count
-        FROM visits
-        WHERE visited_at > NOW() - (hours || ' hours')::INTERVAL
-        GROUP BY country ORDER BY count DESC LIMIT 10
-      ) t
-    ),
-    'recent_visits', (
-      SELECT COALESCE(json_agg(row_to_json(t)), '[]'::json)
-      FROM (
-        SELECT country, city, page, device, browser, is_returning, visited_at
-        FROM visits
-        WHERE visited_at > NOW() - (hours || ' hours')::INTERVAL
-        ORDER BY visited_at DESC LIMIT 50
-      ) t
-    )
-  ) INTO result
-  FROM visits
-  WHERE visited_at > NOW() - (hours || ' hours')::INTERVAL;
-  RETURN result;
-END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('cnTheme', next);
+  updateThemeBtn(next);
+}
 
-ALTER TABLE visits ENABLE ROW LEVEL SECURITY;
-DROP POLICY IF EXISTS allow_insert ON visits;
-CREATE POLICY allow_insert ON visits FOR INSERT WITH CHECK (true);
-DROP POLICY IF EXISTS allow_select ON visits;
-CREATE POLICY allow_select ON visits FOR SELECT USING (true);
+function updateThemeBtn(theme) {
+  const btn = document.getElementById('themeBtn');
+  if (btn) btn.innerHTML = theme === 'dark' ? '☀ Light' : '🌙 Dark';
+}
+
+// ── DATE ──
+function setDate() {
+  const el = document.getElementById('currentDate');
+  if (!el) return;
+  const opts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  el.textContent = new Date().toLocaleDateString('en-US', opts).toUpperCase();
+}
+
+// ── MOBILE NAV ──
+function initMobileNav() {
+  const btn = document.getElementById('mobileNavBtn');
+  const links = document.getElementById('navLinks');
+  if (!btn || !links) return;
+
+  function toggleMenu() {
+    const isOpen = links.classList.toggle('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    btn.textContent = isOpen ? '✕' : '☰';
+  }
+
+  btn.addEventListener('click', toggleMenu);
+
+  links.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.textContent = '☰';
+    });
+  });
+
+  links.addEventListener('click', (e) => {
+    if (e.target === links) {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.textContent = '☰';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.textContent = '☰';
+    }
+  });
+}
+
+// ── SCROLL TO TOP ──
+function initScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// ── ACTIVE NAV LINK ──
+function setActiveNav() {
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === page || (page === '' && href === 'index.html')) {
+      a.classList.add('active');
+    }
+  });
+}
+
+// ── SEARCH ──
+function initSearch() {
+  const btn = document.getElementById('searchBtn');
+  const overlay = document.getElementById('searchOverlay');
+  const close = document.getElementById('searchClose');
+  const input = document.getElementById('searchInput');
+  const form = document.getElementById('searchForm');
+  if (!btn || !overlay) return;
+
+  btn.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    setTimeout(() => input && input.focus(), 100);
+  });
+  close && close.addEventListener('click', () => overlay.style.display = 'none');
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.style.display = 'none'; });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.style.display = 'none'; });
+
+  form && form.addEventListener('submit', e => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (q) window.location.href = `search.html?q=${encodeURIComponent(q)}`;
+  });
+}
+
+// ── WEATHER WIDGET (sidebar pages ke liye — homepage ka apna engine hai) ──
+async function initWeather() {
+  const el = document.getElementById('weatherWidget');
+  if (!el) return;
+  const path = location.pathname;
+  if (path.endsWith('index.html') || path === '/' || path.endsWith('dashboard.html')) return;
+
+  const cities = [
+    { name: 'Karachi', lat: 24.8607, lon: 67.0011 },
+    { name: 'London', lat: 51.5074, lon: -0.1278 },
+    { name: 'New York', lat: 40.7128, lon: -74.0060 },
+    { name: 'Dubai', lat: 25.2048, lon: 55.2708 }
+  ];
+
+  el.innerHTML = cities.map(c =>
+    `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">⏳</span><span class="weather-temp">--°C</span></div>`
+  ).join('');
+
+  function weatherIcon(code, isDay) {
+    const day = isDay !== 0;
+    if (code === 0 || code === 1) return day ? '☀' : '🌙';
+    if (code === 2) return '⛅';
+    if (code === 3) return '☁';
+    if (code === 45 || code === 48) return '🌫';
+    if (code >= 51 && code <= 67) return '🌧';
+    if (code >= 71 && code <= 86) return '❄';
+    if (code >= 95) return '⛈';
+    return '🌤';
+  }
+
+  try {
+    const results = await Promise.all(cities.map(c =>
+      fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,weather_code,is_day&timezone=auto`)
+        .then(r => r.json())
+        .catch(() => null)
+    ));
+
+    el.innerHTML = cities.map((c, i) => {
+      const data = results[i];
+      if (!data || !data.current) {
+        return `<div class="weather-item"><span class="weather-city">${c.name}</span><span class="weather-icon">--</span><span class="weather-temp">--°C</span></div>`;
+      }
+      const temp = Math.round(data.current.temperature_2m);
+      const icon = weatherIcon(data.current.weather_code, data.current.is_day);
+      return `<a href="weather.html?lat=${c.lat}&lon=${c.lon}&name=${encodeURIComponent(c.name)}" class="weather-item" style="text-decoration:none;color:inherit;">
+        <span class="weather-city">${c.name}</span>
+        <span class="weather-icon">${icon}</span>
+        <span class="weather-temp">${temp}°C</span>
+      </a>`;
+    }).join('');
+  } catch (e) {
+    console.error('Weather widget failed to load:', e);
+  }
+}
+
+// ── COMMENTS (clean — koi fake comments nahi) ──
+function initComments() {
+  const form = document.getElementById('commentForm');
+  const list = document.getElementById('commentList');
+  if (!form || !list) return;
+
+  const stored = JSON.parse(localStorage.getItem('cn_comments') || '[]');
+  renderComments(stored, list);
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('commentName').value.trim();
+    const text = document.getElementById('commentText').value.trim();
+    if (!name || !text) return;
+
+    const comments = JSON.parse(localStorage.getItem('cn_comments') || '[]');
+    const newComment = { name, text, time: new Date().toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }) };
+    comments.unshift(newComment);
+    localStorage.setItem('cn_comments', JSON.stringify(comments.slice(0, 50)));
+    renderComments(comments, list);
+    form.reset();
+  });
+}
+
+function renderComments(comments, list) {
+  if (comments.length === 0) {
+    list.innerHTML = '<div style="padding:20px;text-align:center;color:var(--text-3);font-size:13px;">No comments yet. Be the first to share your thoughts!</div>';
+    return;
+  }
+  list.innerHTML = comments.map(c => `
+    <div class="comment-item">
+      <div class="comment-avatar">${c.name[0].toUpperCase()}</div>
+      <div class="comment-body">
+        <div class="comment-header">
+          <span class="comment-name">${c.name}</span>
+          <span class="comment-time">${c.time}</span>
+        </div>
+        <div class="comment-text">${c.text}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── SOCIAL SHARE ──
+function share(platform) {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  const links = {
+    twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+    whatsapp: `https://wa.me/?text=${title}%20${url}`
+  };
+  if (links[platform]) window.open(links[platform], '_blank', 'width=600,height=400');
+}
+
+// ── COPY LINK ──
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyBtn');
+    if (btn) { btn.textContent = '✓ Copied!'; setTimeout(() => btn.textContent = '🔗 Copy Link', 2000); }
+  });
+}
+
+// ── INIT ALL ──
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  setDate();
+  initMobileNav();
+  initScrollTop();
+  setActiveNav();
+  initSearch();
+  initWeather();
+  initComments();
+});
+
+/* ═══════════════════════════════════════════════════════════
+   CLARIXNEWS VISITOR TRACKER (Supabase — anonymized, no IP stored)
+   ═══════════════════════════════════════════════════════════ */
+(function(){
+  var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
+  var SB_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+
+  function getVisitorId(){
+    var vid = localStorage.getItem('cn_visitor_id');
+    if(!vid){
+      vid = 'v_' + Math.random().toString(36).slice(2,10) + Date.now().toString(36);
+      localStorage.setItem('cn_visitor_id', vid);
+    }
+    return vid;
+  }
+  function isReturning(){ return localStorage.getItem('cn_returning') === 'true'; }
+  function deviceInfo(){
+    var ua = navigator.userAgent;
+    var device = /Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : (/Tablet|iPad/i.test(ua) ? 'Tablet' : 'Desktop');
+    var browser = /Firefox/i.test(ua) ? 'Firefox' : /Edg/i.test(ua) ? 'Edge' : /Chrome/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : 'Unknown';
+    return { device: device, browser: browser };
+  }
+  async function track(){
+    try{
+      var path = location.pathname;
+      if (path.indexOf('dashboard') > -1) return; // dashboard visits count na hon
+      var country = 'Unknown', city = 'Unknown';
+      try{
+        var g = await fetch('https://ipapi.co/json/').then(function(r){ return r.json(); });
+        country = g.country_name || 'Unknown';
+        city = g.city || 'Unknown';
+      }catch(e){}
+      var d = deviceInfo();
+      await fetch(SB_URL + '/rest/v1/visits', {
+        method: 'POST',
+        headers: {
+          'apikey': SB_KEY,
+          'Authorization': 'Bearer ' + SB_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          visitor_id: getVisitorId(),
+          country: country,
+          city: city,
+          page: path,
+          device: d.device,
+          browser: d.browser,
+          is_returning: isReturning()
+        })
+      });
+      if(!isReturning()){
+        setTimeout(function(){ localStorage.setItem('cn_returning','true'); }, 5000);
+      }
+    }catch(e){ /* silent — site kabhi nahi rukegi */ }
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', track);
+  }else{
+    track();
+  }
+})();
