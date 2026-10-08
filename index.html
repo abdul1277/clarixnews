@@ -160,6 +160,31 @@
       .card, .series-card, .trending-card, .video-card { margin: 2px; border-radius: 10px; }
       .newsletter { padding: 22px !important; }
     }
+        /* ── FINAL POLISH: 3 flaws fix ── */
+    /* 1. Skip-link sirf keyboard focus par dikhe, warna hidden */
+    .skip-link, a[class*="skip"] {
+      position: fixed !important; top: -120px !important; left: 16px !important;
+      background: var(--red) !important; color: #fff !important;
+      padding: 9px 18px !important; border-radius: 8px !important;
+      font-size: 12px !important; font-weight: 700 !important;
+      border: none !important; z-index: 9999 !important;
+      transition: top .25s ease !important;
+    }
+    .skip-link:focus, a[class*="skip"]:focus { top: 16px !important; }
+
+    /* 2. Trending numbers: solid red, saaf dikhein */
+    .trending-num {
+      background: none !important;
+      -webkit-text-fill-color: var(--red) !important;
+      color: var(--red) !important;
+      opacity: .3 !important;
+      font-size: 46px !important; line-height: 1 !important;
+      display: block !important; margin-bottom: 10px !important;
+    }
+
+    /* 3. Footer social icons: sab glyphs visible */
+    .footer-social a { color: var(--text-2) !important; font-weight: 700 !important; font-size: 13px !important; }
+    .footer-social a:hover { color: #fff !important; }
   </style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
