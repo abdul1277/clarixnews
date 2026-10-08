@@ -1715,7 +1715,12 @@ const ARTICLES = [
     content: `
       <p>AI infrastructure is moving toward a more flexible model as Nvidia-backed startup Upscale AI launches Token Fabric, a platform designed to help data centers connect artificial intelligence processors from different chip suppliers. The launch comes as demand for AI computing continues to drive major investment in chips, networking and data-center capacity.</p>
 
+      <p><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80&fit=crop" alt="AI semiconductor chip and circuit board used as an illustrative image for multi-chip data center networking" loading="lazy" decoding="async"></p>
+      <p><em>Illustrative photo: AI semiconductor hardware and computing infrastructure.</em></p>
+
       <h2>What Is Token Fabric?</h2>
+
+
       <p>Reuters reported on October 8 that Token Fabric combines hardware and software to connect AI processors across a data center. The goal is to make it easier for customers to build systems using AI chips from multiple suppliers without having to deploy separate networking architectures for each platform. <strong>Source: Reuters, October 8, 2026.</strong></p>
 
       <h2>Why Multi-Vendor AI Infrastructure Matters</h2>
@@ -1727,7 +1732,13 @@ const ARTICLES = [
       <h2>What It Means for AI Data Centers</h2>
       <p>If multi-chip deployments become easier to manage, data-center operators could have more options when balancing performance, availability, cost and power consumption. The technology also reflects a broader shift toward building AI infrastructure that can adapt as new processors enter the market.</p>
 
+      <h2>Related Video</h2>
+      <p><a href="https://www.youtube.com/watch?v=tjGVnjsvi-k" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/tjGVnjsvi-k/hqdefault.jpg" alt="NVIDIA video about networking at the heart of AI factories" loading="lazy" decoding="async"></a></p>
+      <p><em>Related video: NVIDIA's discussion of Spectrum-X networking and AI factories.</em></p>
+
       <h2>What Comes Next</h2>
+
+
       <p>The long-term impact of Token Fabric will depend on real-world deployments, compatibility with different processors and the performance achieved at scale. For the AI industry, however, the launch highlights how competition is expanding beyond individual chips to the networking and infrastructure systems that connect them.</p>
     `
   },
@@ -1750,7 +1761,12 @@ const ARTICLES = [
     content: `
       <p>Pakistan has launched a nationwide fuel subsidy program aimed at more than 9 million low-income citizens as rising energy costs put additional pressure on households and transport workers. The initiative is designed to provide targeted financial relief while fuel prices remain elevated amid the wider Middle East conflict.</p>
 
+      <p><img src="https://images.unsplash.com/photo-1731526440536-8a0ad77b0f6c?w=1400&q=80&fit=crop" alt="Motorcycle parked at a fuel station, illustrating the transport users targeted by Pakistan's fuel relief scheme" loading="lazy" decoding="async"></p>
+      <p><em>Illustrative photo: motorcycle users and fuel-station access.</em></p>
+
       <h2>Who Can Receive the Fuel Subsidy?</h2>
+
+
       <p>According to the Associated Press, the program primarily targets motorcycle riders, rickshaw drivers and owners of small cars who depend on fuel for commuting or daily work. Eligible users receive digital tokens through SMS that can be redeemed for discounts at participating fuel stations. <strong>Source: Associated Press, October 7, 2026.</strong></p>
 
       <h2>How Much Financial Relief Is Available?</h2>
@@ -1762,7 +1778,13 @@ const ARTICLES = [
       <h2>Digital Delivery of the Subsidy</h2>
       <p>The government is using a digital platform and SMS-based system to identify eligible beneficiaries and provide fuel-discount tokens. A digital approach can make targeted support easier to distribute, although its effectiveness will depend on accurate eligibility checks and reliable access to participating fuel stations.</p>
 
+      <h2>Related Video</h2>
+      <p><a href="https://www.youtube.com/watch?v=GY0E4Hq9ofs" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/GY0E4Hq9ofs/hqdefault.jpg" alt="Pakistan government video explaining the fuel relief scheme" loading="lazy" decoding="async"></a></p>
+      <p><em>Related video: Pakistan's Ministry of Information and Broadcasting explains the fuel relief scheme.</em></p>
+
       <h2>The Economic Challenge</h2>
+
+
       <p>Pakistan is also working under economic constraints that make broad fuel subsidies expensive. The targeted program therefore represents an attempt to provide relief to vulnerable households without returning to a universal subsidy model that would place a larger burden on public finances.</p>
     `
   },
@@ -1785,10 +1807,20 @@ const ARTICLES = [
     content: `
       <p>Global stock markets came under pressure on October 8 as oil prices jumped, government bond yields moved higher and major technology companies prepared to raise billions of dollars to finance artificial intelligence infrastructure. The combination has increased concerns about borrowing costs, inflation and the sustainability of the AI investment boom.</p>
 
+      <p><img src="https://images.unsplash.com/photo-1773266110858-acb9b6c43b15?w=1400&q=80&fit=crop" alt="Financial stock market data displayed on trading screens, illustrating global market volatility" loading="lazy" decoding="async"></p>
+      <p><em>Illustrative photo: live financial-market data and trading screens.</em></p>
+
       <h2>Stocks Move Lower</h2>
+
+
       <p>Reuters reported that the S&P 500 was down about 0.3% and the Nasdaq was off nearly 0.5% in early U.S. trading, while European stocks fell toward their lowest levels in almost three months. Asian markets also weakened, with Japan's Nikkei and South Korea's KOSPI recording notable declines. <strong>Source: Reuters, October 8, 2026.</strong></p>
 
+      <p><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop" alt="Global financial market and oil-related investment concept" loading="lazy" decoding="async"></p>
+      <p><em>Illustrative photo: markets, investment and commodity-price pressure.</em></p>
+
       <h2>Oil Prices Jump</h2>
+
+
       <p>Brent crude rose above $104 a barrel while U.S. crude gained more than 4% as attacks on shipping in the Gulf increased concerns about energy supplies. Higher oil prices can feed into inflation by raising transportation and production costs across the economy.</p>
 
       <h2>AI Infrastructure Creates a New Debt Wave</h2>
@@ -1800,7 +1832,12 @@ const ARTICLES = [
       <h2>Investors Watch the Federal Reserve</h2>
       <p>Markets are closely watching U.S. interest-rate policy. Reuters reported that the latest Federal Reserve meeting minutes showed most policymakers considered another rate increase likely by the end of the year, although officials remain open to changing course depending on economic data.</p>
 
+      <h2>Related Audio</h2>
+      <p><a href="https://www.reuters.com/podcasts/reuters-morning-bid/ai-credit-or-ai-borrowed-money-or-ais-big-tab-2026-10-08/" target="_blank" rel="noopener noreferrer">Listen to Reuters Morning Bid: “AI on credit”</a></p>
+
       <h2>The Bigger AI Investment Question</h2>
+
+
       <p>The market reaction shows that investors are increasingly focused not only on the potential of artificial intelligence but also on the cost of building the infrastructure required to power it. Strong earnings from semiconductor companies may support the AI boom, but rising debt costs, energy prices and interest rates remain important risks.</p>
     `
   },
