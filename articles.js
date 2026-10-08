@@ -1697,6 +1697,114 @@ const ARTICLES = [
     `
   },
 
+  // ── 61. NVIDIA-BACKED UPSCALE AI TOKEN FABRIC ──
+  {
+    id: "nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026",
+    title: "Nvidia-Backed Upscale AI Launches Token Fabric for Multi-Chip AI Data Centers",
+    subtitle: "Upscale AI has launched Token Fabric, a platform designed to connect AI processors from different chip suppliers inside the same data center.",
+    category: "Technology",
+    catClass: "tech",
+    author: "ClarixNews Technology Desk",
+    authorRole: "Technology Desk",
+    authorInitials: "CN",
+    date: "October 8, 2026",
+    readTime: "5 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=80&fit=crop",
+    tags: ["AI", "Nvidia", "Upscale AI", "Token Fabric", "Data Centers", "AI Chips", "Technology"],
+    content: `
+      <p>AI infrastructure is moving toward a more flexible model as Nvidia-backed startup Upscale AI launches Token Fabric, a platform designed to help data centers connect artificial intelligence processors from different chip suppliers. The launch comes as demand for AI computing continues to drive major investment in chips, networking and data-center capacity.</p>
+
+      <h2>What Is Token Fabric?</h2>
+      <p>Reuters reported on October 8 that Token Fabric combines hardware and software to connect AI processors across a data center. The goal is to make it easier for customers to build systems using AI chips from multiple suppliers without having to deploy separate networking architectures for each platform. <strong>Source: Reuters, October 8, 2026.</strong></p>
+
+      <h2>Why Multi-Vendor AI Infrastructure Matters</h2>
+      <p>Modern AI data centers can contain thousands of processors working together on demanding workloads. A platform that simplifies communication between different types of accelerators could give operators more flexibility when selecting hardware, potentially reducing dependence on a single chip ecosystem.</p>
+
+      <h2>The Growing AI Infrastructure Market</h2>
+      <p>AI companies and cloud providers are investing heavily in data centers as models become larger and AI applications require more computing power. Networking has become a critical part of that infrastructure because processors must exchange large amounts of data quickly during model training and inference.</p>
+
+      <h2>What It Means for AI Data Centers</h2>
+      <p>If multi-chip deployments become easier to manage, data-center operators could have more options when balancing performance, availability, cost and power consumption. The technology also reflects a broader shift toward building AI infrastructure that can adapt as new processors enter the market.</p>
+
+      <h2>What Comes Next</h2>
+      <p>The long-term impact of Token Fabric will depend on real-world deployments, compatibility with different processors and the performance achieved at scale. For the AI industry, however, the launch highlights how competition is expanding beyond individual chips to the networking and infrastructure systems that connect them.</p>
+    `
+  },
+
+  // ── 62. PAKISTAN FUEL SUBSIDY ──
+  {
+    id: "pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026",
+    title: "Pakistan Launches Fuel Subsidy for 9 Million Low-Income Citizens as Prices Surge",
+    subtitle: "The digital subsidy program targets motorcycle riders, rickshaw drivers and small-car owners as higher fuel prices increase pressure on household budgets.",
+    category: "Pakistan",
+    catClass: "pakistan",
+    author: "ClarixNews Pakistan Desk",
+    authorRole: "Pakistan Desk",
+    authorInitials: "CN",
+    date: "October 8, 2026",
+    readTime: "5 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1525609004556-c46c7cf7cfcd?w=1400&q=80&fit=crop",
+    tags: ["Pakistan", "Fuel Prices", "Fuel Subsidy", "Economy", "Petrol", "Diesel", "Inflation"],
+    content: `
+      <p>Pakistan has launched a nationwide fuel subsidy program aimed at more than 9 million low-income citizens as rising energy costs put additional pressure on households and transport workers. The initiative is designed to provide targeted financial relief while fuel prices remain elevated amid the wider Middle East conflict.</p>
+
+      <h2>Who Can Receive the Fuel Subsidy?</h2>
+      <p>According to the Associated Press, the program primarily targets motorcycle riders, rickshaw drivers and owners of small cars who depend on fuel for commuting or daily work. Eligible users receive digital tokens through SMS that can be redeemed for discounts at participating fuel stations. <strong>Source: Associated Press, October 7, 2026.</strong></p>
+
+      <h2>How Much Financial Relief Is Available?</h2>
+      <p>Motorcycle and three-wheeler users can receive up to 2,000 Pakistani rupees in monthly support, while eligible small-car owners can save up to 3,000 rupees per month on gasoline. The subsidy is intended to reduce part of the immediate impact of higher petrol and diesel costs.</p>
+
+      <h2>Why Fuel Prices Have Become a Major Issue</h2>
+      <p>Pakistan relies heavily on imported energy, making international oil prices an important factor for transport costs and inflation. The recent rise in global energy prices has increased pressure on consumers and businesses that depend on road transportation.</p>
+
+      <h2>Digital Delivery of the Subsidy</h2>
+      <p>The government is using a digital platform and SMS-based system to identify eligible beneficiaries and provide fuel-discount tokens. A digital approach can make targeted support easier to distribute, although its effectiveness will depend on accurate eligibility checks and reliable access to participating fuel stations.</p>
+
+      <h2>The Economic Challenge</h2>
+      <p>Pakistan is also working under economic constraints that make broad fuel subsidies expensive. The targeted program therefore represents an attempt to provide relief to vulnerable households without returning to a universal subsidy model that would place a larger burden on public finances.</p>
+    `
+  },
+
+  // ── 63. GLOBAL MARKETS AI DEBT OIL ──
+  {
+    id: "global-markets-oil-ai-debt-tech-stocks-october-8-2026",
+    title: "Global Markets Slide as Oil Surges and AI Companies Seek Billions in Debt",
+    subtitle: "Rising oil prices, higher bond yields and massive AI infrastructure financing plans are putting pressure on stocks across the U.S., Europe and Asia.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Markets Desk",
+    authorRole: "Markets Editor",
+    authorInitials: "CN",
+    date: "October 8, 2026",
+    readTime: "6 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop",
+    tags: ["Global Markets", "Stock Market", "AI", "Oil Prices", "Nasdaq", "S&P 500", "Bonds", "Investing"],
+    content: `
+      <p>Global stock markets came under pressure on October 8 as oil prices jumped, government bond yields moved higher and major technology companies prepared to raise billions of dollars to finance artificial intelligence infrastructure. The combination has increased concerns about borrowing costs, inflation and the sustainability of the AI investment boom.</p>
+
+      <h2>Stocks Move Lower</h2>
+      <p>Reuters reported that the S&P 500 was down about 0.3% and the Nasdaq was off nearly 0.5% in early U.S. trading, while European stocks fell toward their lowest levels in almost three months. Asian markets also weakened, with Japan's Nikkei and South Korea's KOSPI recording notable declines. <strong>Source: Reuters, October 8, 2026.</strong></p>
+
+      <h2>Oil Prices Jump</h2>
+      <p>Brent crude rose above $104 a barrel while U.S. crude gained more than 4% as attacks on shipping in the Gulf increased concerns about energy supplies. Higher oil prices can feed into inflation by raising transportation and production costs across the economy.</p>
+
+      <h2>AI Infrastructure Creates a New Debt Wave</h2>
+      <p>Large technology companies are seeking significant amounts of financing to purchase high-end AI chips and expand computing capacity. Reuters reported that Broadcom was seeking around $50 billion in financing, while SpaceX was planning a major debt offering and loans connected to its AI infrastructure plans.</p>
+
+      <h2>Why Bond Yields Matter for Technology Stocks</h2>
+      <p>Higher government bond yields can make borrowing more expensive and can also reduce the relative appeal of growth stocks whose valuations depend heavily on future earnings. That creates a challenge for technology companies investing huge amounts of capital in AI data centers and processors.</p>
+
+      <h2>Investors Watch the Federal Reserve</h2>
+      <p>Markets are closely watching U.S. interest-rate policy. Reuters reported that the latest Federal Reserve meeting minutes showed most policymakers considered another rate increase likely by the end of the year, although officials remain open to changing course depending on economic data.</p>
+
+      <h2>The Bigger AI Investment Question</h2>
+      <p>The market reaction shows that investors are increasingly focused not only on the potential of artificial intelligence but also on the cost of building the infrastructure required to power it. Strong earnings from semiconductor companies may support the AI boom, but rising debt costs, energy prices and interest rates remain important risks.</p>
+    `
+  },
+
 ];
 
 function getArticle(id) {
