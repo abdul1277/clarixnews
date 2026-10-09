@@ -1,6 +1,98 @@
 const ARTICLES = [
 
   {
+  id: "digital-attention-economy-how-apps-keep-you-scrolling-2026",
+  title: "The Attention Trap: How Apps Keep You Scrolling — and How to Take Back Your Time",
+  subtitle: "Infinite feeds, autoplay and endless notifications are not random design choices. Here is how the attention economy works, what research really says, and a practical plan to make your phone work for you again.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Technology & Digital Culture Editor",
+  authorInitials: "SC",
+  date: "October 9, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80&fit=crop",
+  tags: ["Attention Economy", "Social Media", "Digital Wellbeing", "Technology", "Algorithms", "Productivity", "Screen Time"],
+  content: `
+    <p>You open your phone to check one message. A few minutes later, you are watching a stranger renovate a kitchen, reading an argument between people you have never met, and wondering why it is suddenly midnight. You did not plan to spend that much time online. Yet the next video starts automatically, another post appears, and the feed never seems to end.</p>
+
+    <p>This experience is so common that it can feel like a personal failure of discipline. But the bigger story is about the business of attention: many digital services compete to keep people looking, clicking, watching and returning. Understanding that system is the first step toward using technology without letting it quietly take over your day.</p>
+
+    <h2>What Is the Attention Economy?</h2>
+    <p>Information is abundant, but human attention is limited. News outlets, social platforms, streaming services, games and advertisers all compete for the same scarce resource: the time and focus of real people. In an attention-based business model, a longer visit can mean more advertising opportunities, more data about user preferences, and more chances to recommend content or products.</p>
+
+    <p>This does not mean every app is malicious or that every recommendation is harmful. A good recommendation can help you discover a useful tutorial, find a community or keep up with people you care about. The problem appears when a service's goal of increasing engagement conflicts with your goal of finishing a task, sleeping, studying or spending time with people offline.</p>
+
+    <h2>The Design Features That Make “Just One More” So Easy</h2>
+    <h3>1. Infinite scroll removes the natural stopping point</h3>
+    <p>A book has chapters. A newspaper has a final page. Many social feeds have no clear ending. With infinite scroll, new material loads as you move down the screen, so you do not reach a natural moment to stop. The U.S. Surgeon General's advisory on screen use identifies features such as infinite scrolling, autoplay and engagement-driven recommendation systems as design choices that can encourage prolonged use, particularly among children and teenagers.</p>
+
+    <h3>2. Autoplay turns one choice into a chain of choices</h3>
+    <p>When a video ends and another begins automatically, you do not have to make a fresh decision to continue. That small reduction in effort can stretch a planned five-minute break into half an hour. Turning autoplay off restores a useful pause: the next video becomes a decision rather than the default.</p>
+
+    <h3>3. Notifications interrupt you at other people's pace</h3>
+    <p>A notification can be genuinely important. But a like, promotional offer, game reminder or “you might have missed this” alert may pull you away from something you chose to do. Even when you ignore the alert, the interruption can tempt you to check the phone. The result is that your attention is repeatedly redirected from your priorities to an app's prompts.</p>
+
+    <h3>4. Personalised feeds learn what holds your interest</h3>
+    <p>Recommendation systems use signals such as what you watch, skip, like, share or revisit to predict what might keep you engaged. The system does not necessarily know what is most valuable for your life; it is estimating what you are likely to respond to. Content that provokes curiosity, anger, amusement or anxiety can be compelling, even when it leaves you feeling worse afterward.</p>
+
+    <h3>5. Streaks and visible likes make engagement feel urgent</h3>
+    <p>Daily streaks, badges and public reaction counts can turn casual use into something that feels like an obligation. You may open an app not because you want to, but because you do not want to lose a streak or miss a social moment. These features are not automatically bad, but it is worth asking whether they serve your goals or simply create another reason to return.</p>
+
+    <h2>Is Social Media Always Bad for You?</h2>
+    <p>No. A balanced view matters. Online communities can provide friendship, creative inspiration, education, professional networking and support for people who feel isolated offline. The American Psychological Association has emphasised that social media experiences differ, and that their effects depend on factors such as the user, the content, the design and the way a platform is used.</p>
+
+    <p>Research also requires careful interpretation. A link between heavy screen use and a negative outcome does not automatically prove that screen time alone caused it. Age, sleep, offline stress, the type of content and the reason someone uses an app can all matter. A video call with a distant relative is not the same experience as scrolling distressing posts for two hours before bed.</p>
+
+    <p>The useful question is not simply, “How many hours was I on my phone?” It is also, “What was I doing, how did I feel afterward, and what did that time replace?” Ten minutes learning a skill may be valuable. Ten minutes repeatedly checking upsetting updates may not be.</p>
+
+    <h2>The Hidden Cost: Time Fragmented Into Tiny Pieces</h2>
+    <p>One of the biggest costs of constant checking is not just the minutes spent inside an app. It is the way those minutes break up other activities. A study session interrupted by a notification can lose momentum; a conversation can become less present; a bedtime routine can drift later than intended. When small interruptions repeat throughout the day, it becomes harder to protect long stretches of attention for reading, creating, learning or simply resting.</p>
+
+    <p>This is especially important for students and people building new skills. Learning often requires sitting with confusion long enough for an idea to make sense. Switching to a feed whenever a task becomes difficult offers instant relief, but it can also delay the deeper concentration that makes progress possible.</p>
+
+    <h2>A Practical 7-Day Plan to Take Back Your Attention</h2>
+    <h3>Day 1: Find out where the time goes</h3>
+    <p>Check your phone's Screen Time or Digital Wellbeing report. Look at the apps you use most and the number of times you pick up your phone. Do not judge yourself; treat this as information. Choose one app or habit you would genuinely like to change.</p>
+
+    <h3>Day 2: Turn off non-essential notifications</h3>
+    <p>Keep alerts for people and services that truly need to reach you. Silence promotional messages, game reminders, social likes and other non-urgent notifications. You can still check these apps when you choose, rather than every time they call for attention.</p>
+
+    <h3>Day 3: Add friction to your biggest time sink</h3>
+    <p>Move the app off your home screen, log out after use, or set a realistic daily limit. If the app is your first action every morning, charge your phone away from your bed and begin the day with water, a short walk or a written plan.</p>
+
+    <h3>Day 4: Create phone-free focus blocks</h3>
+    <p>Try one 25-minute work or study block with your phone on silent and out of reach, followed by a five-minute break. If 25 minutes feels difficult, start with ten. The goal is not a perfect streak; it is to practise choosing where your attention goes.</p>
+
+    <h3>Day 5: Curate your feed</h3>
+    <p>Unfollow or mute accounts that repeatedly leave you angry, anxious or inadequate. Use “not interested” controls when recommendations are unhelpful. Follow accounts that teach you something, make you laugh without cruelty, or connect you with people you value.</p>
+
+    <h3>Day 6: Protect the last hour before sleep</h3>
+    <p>Set a simple wind-down routine. Put the phone on charge away from your pillow, switch to a physical alarm if practical, and choose a low-stimulation alternative such as reading, preparing for tomorrow or talking with family. If a complete phone-free hour is unrealistic, start with fifteen minutes.</p>
+
+    <h3>Day 7: Review what actually helped</h3>
+    <p>Look at your usage report again and, more importantly, notice how you feel. Did you finish more work? Sleep at a more regular time? Feel less rushed? Keep the changes that helped and adjust the ones that did not. A sustainable system is more useful than a dramatic detox that lasts two days.</p>
+
+    <h2>Make Your Phone a Tool, Not a Boss</h2>
+    <p>You do not have to delete every social app, reject technology or feel guilty whenever you watch a funny video. The aim is to make your digital life intentional. Decide what you want your phone to help you do, then change its settings and your routines to support those priorities.</p>
+
+    <p>For some people, that means keeping social media for a specific time of day. For others, it means using a browser instead of an app, removing short-video apps during exam weeks, or keeping the phone outside the bedroom. Small environmental changes can be easier to maintain than relying on willpower every time a bright icon appears.</p>
+
+    <h2>ClarixNews Takeaway</h2>
+    <p>The attention economy works because your attention has value. But your time also has value to you: it is the time you use to learn, earn, rest, create and connect. Platforms may be designed to make continuing easy, yet you can still build boundaries that make stopping easier. Start with one change today — disable one unnecessary notification, switch off autoplay, or put your phone away for one focused block. You do not need to win every moment. You just need to take back more of the moments that matter.</p>
+
+    <h2>Sources and Further Reading</h2>
+    <ul>
+      <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK623294/" target="_blank" rel="noopener noreferrer">U.S. Surgeon General's Advisory and Toolkit on the Harms of Screen Use</a></li>
+      <li><a href="https://www.apa.org/topics/social-media-internet/health-advisory-adolescent-social-media-use" target="_blank" rel="noopener noreferrer">American Psychological Association: Health Advisory on Social Media Use in Adolescence</a></li>
+      <li><a href="https://www.pewresearch.org/internet/2025/11/20/americans-social-media-use-2025/" target="_blank" rel="noopener noreferrer">Pew Research Center: Americans' Social Media Use 2025</a></li>
+    </ul>
+  `
+},
+
+
+  {
   id: "anthropic-researcher-jacob-coxon-resigns-ai-warning-2026",
   title: "Anthropic Researcher Quits With Viral Warning: 'They Are Racing to Self-Improving Superintelligence and Gambling With Our Lives'",
   subtitle: "Jacob Coxon's resignation thread — viewed 115 million times — claims AI engineers privately believe advanced systems 'could kill us all by the end of the decade.' Anthropic's own alignment lead agrees. Here is what the evidence actually shows.",
