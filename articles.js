@@ -1,6 +1,85 @@
 const ARTICLES = [
 
   {
+  id: "havana-syndrome-mystery-new-evidence-october-2026",
+  title: "Havana Syndrome Mystery Returns: What We Know About the Mysterious Illness",
+  subtitle: "A decade after diplomats first reported sudden head pain, dizziness and cognitive problems, new reporting has revived questions about possible causes. Here is what evidence supports — and what remains unproven.",
+  category: "World",
+  catClass: "world",
+  author: "Daniel Morgan",
+  authorRole: "World Affairs Correspondent",
+  authorInitials: "DM",
+  date: "October 10, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1400&q=80&fit=crop",
+  tags: ["Havana Syndrome", "Diplomats", "National Security", "Directed Energy", "Health Mystery", "US Intelligence"],
+  content: `
+    <p>Nearly a decade after US diplomats in Havana began reporting unusual health symptoms, the so-called Havana Syndrome remains one of the most puzzling stories at the intersection of medicine, intelligence and international relations. People who reported incidents described sudden head pain, dizziness, ringing in the ears, balance problems and difficulty concentrating. Some say their symptoms lasted long after the initial episode.</p>
+    <p>Fresh reporting published on October 10, 2026 has renewed attention on the mystery, including questions about how intelligence assessments changed over time and whether officials fully investigated the experiences of people who reported harm. The key point is that the symptoms reported by individuals are real experiences, but the cause of the broader cluster remains contested and has not been conclusively established.</p>
+    <h2>What Is Havana Syndrome?</h2>
+    <p>The term emerged after US and Canadian personnel in Cuba reported unusual symptoms beginning in 2016. Similar reports later came from other locations. The label is informal; it does not describe one confirmed disease with a single proven cause. Medical symptoms varied between individuals, and investigations have considered multiple explanations.</p>
+    <h2>Why Did People Suspect a Hidden Weapon?</h2>
+    <p>Some people described a sudden sensation of pressure, sound or pain, sometimes seemingly associated with a particular place. Those accounts led to speculation about directed-energy devices or other forms of targeted attack. In national-security discussions, the possibility was taken seriously enough to prompt investigations, but a plausible mechanism is not the same as proof that a weapon was used in every reported case.</p>
+    <h2>What Do Intelligence Assessments Say?</h2>
+    <p>US intelligence assessments have not provided a simple, universally accepted answer. A 2023 assessment said it was very unlikely that a foreign adversary was responsible for most reported cases, while debate and additional reporting have continued over how individual cases were evaluated and whether some incidents may differ from others. Intelligence conclusions can change as evidence is reviewed, but changing assessments do not by themselves establish a particular culprit.</p>
+    <p>It is important to separate three questions: whether people experienced symptoms, what medical process caused those symptoms, and whether another actor deliberately caused them. Evidence supporting one question does not automatically settle the other two.</p>
+    <h2>Could It Be a Medical or Environmental Problem?</h2>
+    <p>Researchers have considered several possibilities, including neurological conditions, environmental exposures, stress-related effects and other medical explanations. The variety of symptoms and circumstances makes the problem difficult to investigate. A careful assessment needs medical records, consistent case definitions, reliable measurements and independent replication — not just anecdotes or a theory that seems to fit one incident.</p>
+    <h2>Why the Debate Matters</h2>
+    <p>For people who report lasting symptoms, uncertainty can mean years without a clear explanation or adequate support. For governments, the case raises questions about how to protect personnel, investigate possible attacks and communicate uncertainty honestly. For the public, it is a lesson in how national-security stories can become polarised between claims of a cover-up and claims that every report is imaginary.</p>
+    <h2>How to Read the Latest Claims Carefully</h2>
+    <ul><li><strong>Check the wording:</strong> “Possible,” “plausible” and “confirmed” mean different things.</li><li><strong>Look for independent evidence:</strong> A single anonymous claim should not settle a complex scientific question.</li><li><strong>Separate symptoms from cause:</strong> A person can be genuinely ill even when the cause is unknown.</li><li><strong>Watch for case-by-case differences:</strong> One explanation may not fit every report grouped under the same label.</li></ul>
+    <h2>ClarixNews Analysis</h2>
+    <p>Havana Syndrome remains compelling because it sits where personal suffering, secretive institutions and emerging technology meet. The responsible conclusion is neither to dismiss affected people nor to announce a culprit without sufficient evidence. Continued medical research, transparent investigations and support for those experiencing symptoms are more useful than turning uncertainty into certainty for political effect.</p>
+    <h2>Sources and Further Reading</h2>
+    <ul><li><a href="https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia" target="_blank" rel="noopener noreferrer">The Guardian — Investigation into the continuing Havana Syndrome debate</a></li><li><a href="https://www.nationalacademies.org/" target="_blank" rel="noopener noreferrer">National Academies — Independent scientific reports and research</a></li><li><a href="https://www.dni.gov/" target="_blank" rel="noopener noreferrer">Office of the Director of National Intelligence — Public intelligence assessments</a></li></ul>
+  `
+},
+
+  {
+  id: "record-el-nino-2026-extreme-weather-global-impact",
+  title: "Record El Niño Warning: How a Warmer Pacific Could Reshape Weather Around the World",
+  subtitle: "A new report says Pacific Ocean temperatures have reached an extraordinary level, raising concerns about heat and heavy rainfall in vulnerable regions. Here is how El Niño works and why forecasts need careful interpretation.",
+  category: "Science",
+  catClass: "tech",
+  author: "Maya Brooks",
+  authorRole: "Climate & Science Editor",
+  authorInitials: "MB",
+  date: "October 10, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1400&q=80&fit=crop",
+  tags: ["El Niño 2026", "Extreme Weather", "Climate Science", "Pacific Ocean", "Heat Risk", "Heavy Rainfall"],
+  content: `
+    <p>A powerful El Niño can influence weather thousands of kilometres from the tropical Pacific. New reporting this week says the central equatorial Pacific has reached unusually high temperature anomalies, raising concern that the 2026–27 event could increase the risk of extreme heat in some regions and excessive rainfall in others. The precise effects will vary by location, and a global climate pattern is not a day-by-day forecast for any one city.</p>
+    <h2>What Is El Niño?</h2>
+    <p>El Niño is a recurring climate pattern in which surface waters in the central and eastern tropical Pacific become warmer than average, changing winds, rainfall and the circulation of heat through the atmosphere. Its cooler counterpart is La Niña. Together with neutral periods, they form the El Niño–Southern Oscillation, often shortened to ENSO.</p>
+    <p>Because the tropical Pacific is so large, changes there can shift atmospheric circulation and influence seasonal weather patterns far away. The same event can bring drier conditions to one region while increasing rain chances elsewhere. Local geography, other ocean patterns and the season all affect the outcome.</p>
+    <h2>Why Are Scientists Watching the 2026 Event?</h2>
+    <p>Recent coverage from The Washington Post described a record-strength temperature anomaly in the central Pacific during September and highlighted increased risks of extreme heat and excessive rainfall in several regions through the end of the year. Those numbers are risk estimates across broad areas, not a guarantee that every place will experience a disaster.</p>
+    <p>Scientists watch ocean temperatures, trade winds, atmospheric pressure and cloud patterns together. No single measurement tells the whole story. Forecasts also become less certain further into the future and must be updated as observations change.</p>
+    <h2>How El Niño Can Affect Everyday Life</h2>
+    <h3>Heat and health</h3>
+    <p>Some areas can face a greater chance of unusually hot conditions. Heat can raise the risk of dehydration and heat illness, particularly for outdoor workers, older adults, young children and people without reliable cooling. Communities can reduce risk by providing shade, drinking water, rest breaks and clear local heat alerts.</p>
+    <h3>Rain, floods and landslides</h3>
+    <p>Other regions may see an increased chance of intense rainfall. Heavy rain can overwhelm drains, flood roads and trigger landslides in steep terrain. A seasonal risk signal does not identify the exact day or neighbourhood where flooding will occur, so local forecasts and emergency instructions remain essential.</p>
+    <h3>Food, water and energy</h3>
+    <p>Weather shifts can affect crop yields, reservoirs, electricity demand and food prices. Farmers may need to adjust planting or irrigation plans using local agricultural advice. Utilities and city planners can use seasonal outlooks to prepare for heat-related power demand or periods of water stress.</p>
+    <h2>What Could It Mean for Pakistan?</h2>
+    <p>El Niño can influence South Asian seasonal climate, but its effect on Pakistan is not simple enough to predict from the label alone. Monsoon behaviour is shaped by several interacting systems, including regional ocean temperatures, atmospheric circulation and weather disturbances. People in Pakistan should follow the Pakistan Meteorological Department and local disaster-management guidance rather than assuming the country will automatically become drier, wetter or hotter because an El Niño is strong.</p>
+    <p>Practical preparation is still worthwhile: keep an eye on official forecasts, avoid driving through floodwater, protect drinking water supplies during heat, and check on people who may be vulnerable during extreme temperatures. Farmers and businesses should use region-specific forecasts for decisions rather than global headlines alone.</p>
+    <h2>How to Tell a Forecast from a Prediction</h2>
+    <ul><li><strong>Seasonal outlook:</strong> Describes probabilities over weeks or months across a region.</li><li><strong>Weather forecast:</strong> Estimates conditions for a specific place and shorter time window.</li><li><strong>Climate trend:</strong> Describes long-term changes and does not determine every individual event.</li><li><strong>Risk estimate:</strong> Signals that conditions may be more likely, not that an event is certain.</li></ul>
+    <h2>ClarixNews Analysis</h2>
+    <p>The significance of a powerful El Niño is not that it tells us exactly what weather will happen next, but that it can shift the odds of heat, rainfall and other hazards over a wide area. The best response combines strong monitoring with local preparation. Treating a seasonal outlook as a certainty can create panic; ignoring it can leave communities unprepared. Reliable forecasts, resilient infrastructure and clear public communication are the practical tools that matter most.</p>
+    <h2>Sources and Further Reading</h2>
+    <ul><li><a href="https://www.washingtonpost.com/weather/2026/10/08/why-post-is-tracking-areas-most-risk-record-el-nio-intensifies/" target="_blank" rel="noopener noreferrer">The Washington Post — Tracking regions at risk as El Niño intensifies</a></li><li><a href="https://www.noaa.gov/" target="_blank" rel="noopener noreferrer">NOAA — Climate and El Niño monitoring</a></li><li><a href="https://www.pmd.gov.pk/" target="_blank" rel="noopener noreferrer">Pakistan Meteorological Department — Local forecasts and alerts</a></li></ul>
+  `
+},
+
+
+  {
   id: "anthropic-ai-false-police-tip-agent-safety-october-2026",
   title: "AI Agent Safety Under Scrutiny After Anthropic Reports a False Police Tip",
   subtitle: "A reported false homicide tip linked to automated testing raises a bigger question: how should companies test AI agents that can interact with real-world systems?",
