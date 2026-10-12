@@ -1,5 +1,106 @@
 const ARTICLES = [
 
+
+  {
+    id: "pakistan-afghanistan-cross-border-security-warning-october-2026",
+    title: "Pakistan Urges Afghan Taliban to Stop Cross-Border Militancy as Tensions Rise",
+    subtitle: "Islamabad says militant attacks remain a major security concern and is pressing Kabul for stronger action. Here is what is known, what each side says, and why border security matters.",
+    category: "Pakistan",
+    catClass: "world",
+    author: "ClarixNews Desk",
+    authorRole: "Pakistan Affairs",
+    authorInitials: "CN",
+    date: "October 12, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=1400&q=80&fit=crop",
+    tags: ["Pakistan", "Afghanistan", "Border Security", "Regional Affairs", "Diplomacy"],
+    content: `
+      <p>Pakistan has renewed its call for Afghanistan's Taliban authorities to prevent militant groups from using Afghan territory to launch attacks across the border. The issue remains a central source of tension between the neighbours, despite diplomatic contacts and discussions about trade and regional connectivity.</p>
+      <p>In remarks reported on October 12, Pakistan's Foreign Minister Ishaq Dar said Islamabad had repeatedly raised its security concerns with Afghan leaders. Pakistani officials accuse groups including Tehrik-e-Taliban Pakistan (TTP) of operating from across the border. The Taliban authorities have denied providing safe havens to militants, and the competing claims make independent verification important.</p>
+      <h2>What Is Pakistan Asking For?</h2>
+      <p>Islamabad wants Kabul to take practical action against armed groups it says are planning or supporting attacks inside Pakistan. That can include preventing cross-border movement, disrupting militant networks and cooperating on investigations. Pakistan has also pointed to the long, difficult-to-monitor frontier as a persistent security challenge.</p>
+      <p>Pakistan's position is that stronger security cooperation is necessary for stable trade and normal relations. Afghan authorities, meanwhile, have their own security priorities and dispute allegations that they allow groups to operate from their territory. Public statements from either government should therefore be distinguished from independently confirmed evidence.</p>
+      <h2>Why the Dispute Matters</h2>
+      <p>Border insecurity can affect civilians, transport routes, local markets and cross-border commerce. Repeated violence can also make it harder for both countries to expand trade, infrastructure links and people-to-people contact. Border communities are often among the first to feel the consequences when crossings close or security operations intensify.</p>
+      <p>The wider region has an interest in reducing the risk of escalation. Consistent communication between security officials, credible investigations into specific incidents and measures to protect civilians can help prevent individual attacks from triggering a broader crisis.</p>
+      <h2>What Happens Next?</h2>
+      <p>The key indicators to watch are whether the two sides agree on verifiable steps, whether official channels remain open and whether reported attacks decline. Statements alone will not resolve the dispute; implementation and reliable information will matter more than rhetoric.</p>
+      <h2>ClarixNews Analysis</h2>
+      <p>Pakistan and Afghanistan have practical reasons to avoid a prolonged confrontation, but trust remains difficult when security allegations are contested. A durable path forward requires specific commitments, evidence-based investigations and protection for civilians on both sides of the border. Readers should be cautious with viral claims that name perpetrators before reliable evidence is available.</p>
+      <h2>Sources and Further Reading</h2>
+      <ul><li><a href="https://apnews.com/article/26f3ca516464048d883401acbec8d8e2" target="_blank" rel="noopener noreferrer">Associated Press — Pakistan urges Afghan Taliban to stop cross-border attacks, October 12, 2026</a></li><li><a href="https://www.reuters.com/world/asia-pacific/" target="_blank" rel="noopener noreferrer">Reuters — Asia-Pacific reporting</a></li></ul>
+    `
+  },
+
+  {
+    id: "pakistan-turkiye-condemn-houthi-saudi-attacks-october-2026",
+    title: "Pakistan and Türkiye Condemn Houthi Attacks on Saudi Arabia Amid Regional Escalation",
+    subtitle: "A joint diplomatic response follows deadly attacks in Saudi Arabia. The episode highlights growing regional security concerns and the risks to aviation, energy markets and civilian safety.",
+    category: "World",
+    catClass: "world",
+    author: "Daniel Morgan",
+    authorRole: "World Affairs Correspondent",
+    authorInitials: "DM",
+    date: "October 12, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fit=crop",
+    tags: ["Saudi Arabia", "Pakistan", "Türkiye", "Yemen", "Middle East", "Regional Security"],
+    content: `
+      <p>Pakistan and Türkiye have joined Egypt and Saudi Arabia in condemning recent Houthi attacks affecting Saudi Arabia, according to reporting published on October 12. The statements came as the incidents raised concerns about civilian casualties, airport security and the risk that the wider regional conflict could spread further.</p>
+      <p>Reports describe deadly strikes and injuries in Saudi Arabia, with authorities responding to attacks attributed to the Iran-backed Houthi movement in Yemen. Details may change as investigations continue, so casualty figures and operational claims should be checked against the latest statements from reliable news organisations and official authorities.</p>
+      <h2>Why the Diplomatic Response Matters</h2>
+      <p>Public condemnation signals that regional governments see attacks on populated areas and critical infrastructure as a serious security concern. Pakistan has longstanding ties with Saudi Arabia, while Türkiye has also increased security cooperation with Gulf partners. Diplomatic statements, however, do not automatically mean a country will enter offensive military operations.</p>
+      <p>Officials have stressed different forms of support and restraint. The exact scope of any cooperation should be judged from formal announcements rather than social-media speculation about troop deployments or a wider war.</p>
+      <h2>Potential Effects on Travel and Trade</h2>
+      <p>Attacks near airports can disrupt flight schedules, create uncertainty for travellers and force airlines to review routes. Shipping and energy markets can also react quickly when investors fear that conflict could threaten key transport corridors. Those market moves are not proof of a lasting shortage, but they can affect costs for businesses and consumers if disruption continues.</p>
+      <p>For Pakistani travellers and overseas workers, the practical step is to follow airline notices, airport advisories and official travel guidance. People should avoid relying on unverified videos or forwarded messages when checking whether a flight or route is operating normally.</p>
+      <h2>What to Watch Next</h2>
+      <ul><li><strong>Official updates:</strong> Check statements from Saudi authorities and relevant foreign ministries.</li><li><strong>Air travel:</strong> Look for notices from airlines and airports before travelling.</li><li><strong>Regional diplomacy:</strong> Watch for further meetings or calls aimed at limiting escalation.</li><li><strong>Energy markets:</strong> Distinguish short-term price swings from sustained supply disruptions.</li></ul>
+      <h2>ClarixNews Analysis</h2>
+      <p>The immediate priority is protecting civilians and preventing attacks on critical infrastructure. Diplomatic coordination can help communicate red lines, but reducing the danger will require credible de-escalation and reliable channels between the parties. Claims about the next stage of the conflict should be treated carefully until supported by confirmed reporting.</p>
+      <h2>Sources and Further Reading</h2>
+      <ul><li><a href="https://www.reuters.com/world/asia-pacific/turkey-pakistan-egypt-saudi-arabia-condemn-houthi-attacks-riyadh-airport-2026-10-12/" target="_blank" rel="noopener noreferrer">Reuters — Regional governments condemn Houthi attacks, October 12, 2026</a></li><li><a href="https://apnews.com/article/1d422095dcfb4e8d1b51319066bcf445" target="_blank" rel="noopener noreferrer">Associated Press — Middle East developments, October 12, 2026</a></li></ul>
+    `
+  },
+
+  {
+    id: "meta-muse-ai-models-agent-memory-privacy-october-2026",
+    title: "Meta Unveils New Muse AI Models as the Race for Smarter Digital Agents Intensifies",
+    subtitle: "Meta says its new AI models are designed for advanced coding, memory and agent tasks. The launch also renews questions about privacy, safety and how independent performance claims are verified.",
+    category: "Technology",
+    catClass: "tech",
+    author: "Sarah Chen",
+    authorRole: "Technology Correspondent",
+    authorInitials: "SC",
+    date: "October 12, 2026",
+    readTime: "8 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80&fit=crop",
+    tags: ["Meta", "Artificial Intelligence", "AI Agents", "Coding", "Privacy", "Technology"],
+    content: `
+      <p>Meta has announced a new family of advanced AI models called Muse Wonder and Muse Wonder Full, positioning them as competitors to systems from leading AI developers. Reporting on October 12 says the models are intended for demanding tasks including coding, memory and digital-agent workflows. As with any new model launch, the company's performance claims should be assessed alongside independent testing and real-world results.</p>
+      <p>The announcement is part of a broader industry shift: AI companies are increasingly trying to build systems that can remember user preferences, work through multi-step tasks and interact with digital tools, rather than only generating answers to individual prompts.</p>
+      <h2>What Is Different About Agent-Focused AI?</h2>
+      <p>A conventional chatbot mainly responds with text. An AI agent may plan several steps, call tools, retrieve information and act on a user's behalf. Memory features can make such systems more useful by preserving relevant context across tasks, while focus or planning features may help them stay aligned with a goal.</p>
+      <p>Those capabilities can improve productivity, but they also raise the cost of mistakes. An agent with access to email, files, calendars or business software needs clear permissions and should ask for confirmation before consequential actions.</p>
+      <h2>Why Memory and Privacy Are Linked</h2>
+      <p>Personalised AI works best when it can retain useful context, but memory can also store information users did not intend to preserve. Companies need transparent controls that let people inspect, correct and delete stored information. Users should understand what data is saved, how long it is retained and whether it is used to improve services.</p>
+      <p>For businesses, deployment decisions should include access controls, data-retention policies, audit logs and a way to disable or reverse risky actions. A model's benchmark score does not replace a security review.</p>
+      <h2>How to Evaluate the Claims</h2>
+      <ul><li><strong>Independent benchmarks:</strong> Look for transparent test conditions and third-party comparisons.</li><li><strong>Real tasks:</strong> Check performance on coding, research and workflow tasks that matter to users.</li><li><strong>Reliability:</strong> Measure whether the system follows instructions consistently and admits uncertainty.</li><li><strong>Security:</strong> Test prompt injection, data leakage and unauthorised tool use.</li><li><strong>Access and pricing:</strong> Confirm availability, limits and terms from official product documentation.</li></ul>
+      <h2>What It Means for Workers and Developers</h2>
+      <p>More capable agents could automate routine research, coding assistance and administrative workflows. That does not mean every job will disappear at once. Outcomes depend on reliability, cost, regulation and whether organisations redesign their processes responsibly. Workers can prepare by learning how to verify AI output, protect sensitive information and combine AI tools with domain knowledge.</p>
+      <h2>ClarixNews Analysis</h2>
+      <p>The competition to build more capable AI is moving from impressive demos toward systems people may trust with real tasks. The most meaningful test will not be a launch-day claim; it will be whether the models perform reliably, protect user data and remain under human control when something goes wrong.</p>
+      <h2>Sources and Further Reading</h2>
+      <ul><li><a href="https://www.axios.com/2026/10/12/meta-new-ai-models-anthropic-openai" target="_blank" rel="noopener noreferrer">Axios — Meta unveils new AI models, October 12, 2026</a></li><li><a href="https://www.ft.com/content/fca23e77-be57-4d7e-ae61-74ff299e25cb" target="_blank" rel="noopener noreferrer">Financial Times — Meta's AI strategy and new models</a></li></ul>
+    `
+  },
+
+
+
   {
   id: "havana-syndrome-mystery-new-evidence-october-2026",
   title: "Havana Syndrome Mystery Returns: What We Know About the Mysterious Illness",
