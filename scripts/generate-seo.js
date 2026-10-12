@@ -89,5 +89,5 @@ const rss = '<?xml version="1.0" encoding="UTF-8"?>\n' +
 
 fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap);
 fs.writeFileSync(path.join(root, 'rss.xml'), rss);
-fs.writeFileSync(path.join(root, 'articles.json'), JSON.stringify(articles, null, 2) + '\\n');
+fs.writeFileSync(path.join(root, 'articles.json'), JSON.stringify(articles, null, 2) + '\n');
 console.log('Generated sitemap.xml (' + (staticPages.length + articleXml.length) + ' URLs), rss.xml (' + latest.length + ' articles), and articles.json (' + articles.length + ' articles).');
