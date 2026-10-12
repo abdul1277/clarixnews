@@ -22,3 +22,6 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://clarixnews.vercel.app/sitemap.xml
+
+# Public feed for readers and automated agents.
+# RSS: https://clarixnews.vercel.app/rss.xml
