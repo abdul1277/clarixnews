@@ -27,12 +27,12 @@ jobs:
         run: node scripts/generate-seo.js
       - name: Commit generated SEO files
         run: |
-          if git diff --quiet -- sitemap.xml rss.xml; then
+          if git diff --quiet -- sitemap.xml rss.xml articles.json; then
             echo "SEO files are already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml rss.xml
+          git add sitemap.xml rss.xml articles.json
           git commit -m "chore: refresh sitemap and RSS feed"
           git push
