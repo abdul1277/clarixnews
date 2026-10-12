@@ -1,26 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>ClarixNews — Latest Articles</title>
-    <link>https://clarixnews.vercel.app/</link>
-    <description>Latest news, explainers and practical guides from ClarixNews.</description>
-    <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2026 00:00:00 +0500</lastBuildDate>
+<rss version="2.0"><channel>
+  <title>ClarixNews — Latest Articles</title>
+  <link>https://clarixnews.vercel.app/</link>
+  <description>Latest news, explainers and practical guides from ClarixNews.</description>
+  <language>en</language>
+  <lastBuildDate>Mon, 12 Oct 2026 17:05:42 GMT</lastBuildDate>
+    <item>
+      <title>Fusion Energy Breakthrough? What the Latest Research Could Mean for Clean Power</title>
+      <link>https://clarixnews.vercel.app/article.html?id=fusion-energy-breakthrough-2026-what-scientists-found</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=fusion-energy-breakthrough-2026-what-scientists-found</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Science</category>
+      <description>New research is renewing interest in more efficient fusion experiments. But what separates a promising laboratory result from electricity that can power homes?</description>
+    </item>
+    <item>
+      <title>Pakistan’s $1.21 Billion IMF Deal: What It Could Mean for Inflation, Debt and Jobs</title>
+      <link>https://clarixnews.vercel.app/article.html?id=imf-pakistan-1-21-billion-deal-october-2026-explained</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=imf-pakistan-1-21-billion-deal-october-2026-explained</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Pakistan</category>
+      <description>A staff-level agreement could unlock fresh financing after board approval. Here is what the deal means—and what it does not guarantee—for ordinary Pakistanis.</description>
+    </item>
+    <item>
+      <title>AI-Generated Images and Deepfakes: How to Spot Fake Content Online in 2026</title>
+      <link>https://clarixnews.vercel.app/article.html?id=ai-generated-images-deepfakes-detection-2026-guide</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=ai-generated-images-deepfakes-detection-2026-guide</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>As synthetic images, videos and voices become more convincing, readers need a better way to verify viral posts. Here are practical checks—and why no single detector can guarantee the truth.</description>
+    </item>
     <item>
       <title>Online Shopping Scams in Pakistan: 9 Red Flags to Check Before Sending Money</title>
       <link>https://clarixnews.vercel.app/article.html?id=pakistan-online-shopping-scams-tiktok-marketplace-2026</link>
       <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-online-shopping-scams-tiktok-marketplace-2026</guid>
-      <pubDate>Sun, 11 Oct 2026 12:00:00 +0500</pubDate>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
       <category>Pakistan</category>
-      <description>A practical guide to spotting fake online shops, avoiding advance-payment fraud, protecting OTPs and reporting online shopping scams in Pakistan.</description>
+      <description>Fake social media shops and bargain listings can turn a good deal into a costly mistake. Learn how to check sellers, protect payments and report suspected fraud.</description>
     </item>
     <item>
       <title>Will AI Take Your Job in 2026? Skills That Can Help You Stay Employable</title>
       <link>https://clarixnews.vercel.app/article.html?id=ai-skills-jobs-2026-how-to-stay-employable</link>
       <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=ai-skills-jobs-2026-how-to-stay-employable</guid>
-      <pubDate>Sun, 11 Oct 2026 11:00:00 +0500</pubDate>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
       <category>Technology</category>
-      <description>An accessible guide to AI and employment, useful career skills, portfolio projects and a practical 30-day learning plan.</description>
+      <description>AI is changing how people write, research, code and handle routine tasks. Instead of guessing which jobs will disappear, learn how to combine practical AI skills with human judgement.</description>
     </item>
-  </channel>
-</rss>
+    <item>
+      <title>Havana Syndrome Mystery Returns: What We Know About the Mysterious Illness</title>
+      <link>https://clarixnews.vercel.app/article.html?id=havana-syndrome-mystery-new-evidence-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=havana-syndrome-mystery-new-evidence-october-2026</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>A decade after diplomats first reported sudden head pain, dizziness and cognitive problems, new reporting has revived questions about possible causes. Here is what evidence supports — and what remains unproven.</description>
+    </item>
+    <item>
+      <title>Record El Niño Warning: How a Warmer Pacific Could Reshape Weather Around the World</title>
+      <link>https://clarixnews.vercel.app/article.html?id=record-el-nino-2026-extreme-weather-global-impact</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=record-el-nino-2026-extreme-weather-global-impact</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Science</category>
+      <description>A new report says Pacific Ocean temperatures have reached an extraordinary level, raising concerns about heat and heavy rainfall in vulnerable regions. Here is how El Niño works and why forecasts need careful interpretation.</description>
+    </item>
+    <item>
+      <title>AI Agent Safety Under Scrutiny After Anthropic Reports a False Police Tip</title>
+      <link>https://clarixnews.vercel.app/article.html?id=anthropic-ai-false-police-tip-agent-safety-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=anthropic-ai-false-police-tip-agent-safety-october-2026</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>A reported false homicide tip linked to automated testing raises a bigger question: how should companies test AI agents that can interact with real-world systems?</description>
+    </item>
+    <item>
+      <title>Who Should Control Artificial Intelligence? The Global Fight Over AI Safety Rules</title>
+      <link>https://clarixnews.vercel.app/article.html?id=ai-regulation-self-regulation-eu-ai-act-global-debate-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=ai-regulation-self-regulation-eu-ai-act-global-debate-october-2026</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>As the US leans toward voluntary industry safeguards and Europe defends risk-based regulation, the debate over AI governance is becoming a defining technology policy issue.</description>
+    </item>
+    <item>
+      <title>Pakistan Remittances Rise 14% to $10.9 Billion: What It Means for Families and the Economy</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-remittances-10-9-billion-first-quarter-fy2027-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-remittances-10-9-billion-first-quarter-fy2027-october-2026</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Pakistan</category>
+      <description>Overseas Pakistanis sent $10.9 billion in July–September, according to reported figures. Here is how remittances support households, foreign exchange and the wider economy — and what the headline number cannot tell us.</description>
+    </item>
+    <item>
+      <title>The Attention Trap: How Apps Keep You Scrolling — and How to Take Back Your Time</title>
+      <link>https://clarixnews.vercel.app/article.html?id=digital-attention-economy-how-apps-keep-you-scrolling-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=digital-attention-economy-how-apps-keep-you-scrolling-2026</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Infinite feeds, autoplay and endless notifications are not random design choices. Here is how the attention economy works, what research really says, and a practical plan to make your phone work for you again.</description>
+    </item>
+    <item>
+      <title>The New Career Ladder: Why AI Literacy Is Becoming a Core Professional Skill</title>
+      <link>https://clarixnews.vercel.app/article.html?id=ai-literacy-new-career-ladder-professional-skills-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=ai-literacy-new-career-ladder-professional-skills-2026</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Career</category>
+      <description>AI fluency is moving beyond technical roles. Here is how workers can combine practical expertise, critical thinking and AI tools to stay valuable in a changing labour market.</description>
+    </item>
+    <item>
+      <title>AI Agents Are Moving Beyond Chatbots — And the Next Phase of AI Is About Taking Action</title>
+      <link>https://clarixnews.vercel.app/article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>AI agents promise to plan and execute multi-step workflows, but reliable deployment depends on permissions, verification, security and human oversight—not just a powerful model.</description>
+    </item>
+    <item>
+      <title>Nvidia-Backed Upscale AI Launches Token Fabric for Multi-Chip AI Data Centers</title>
+      <link>https://clarixnews.vercel.app/article.html?id=nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Upscale AI has launched Token Fabric, a platform designed to connect AI processors from different chip suppliers inside the same data center.</description>
+    </item>
+    <item>
+      <title>Pakistan Launches Fuel Subsidy for 9 Million Low-Income Citizens as Prices Surge</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Pakistan</category>
+      <description>The digital subsidy program targets motorcycle riders, rickshaw drivers and small-car owners as higher fuel prices increase pressure on household budgets.</description>
+    </item>
+    <item>
+      <title>Global Markets Slide as Oil Surges and AI Companies Seek Billions in Debt</title>
+      <link>https://clarixnews.vercel.app/article.html?id=global-markets-oil-ai-debt-tech-stocks-october-8-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=global-markets-oil-ai-debt-tech-stocks-october-8-2026</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>Rising oil prices, higher bond yields and massive AI infrastructure financing plans are putting pressure on stocks across the U.S., Europe and Asia.</description>
+    </item>
+    <item>
+      <title>Alibaba Plans 5–10 Trillion-Parameter AI Model, Unveils New Chip</title>
+      <link>https://clarixnews.vercel.app/article.html?id=alibaba-5-trillion-10-trillion-ai-model-chip-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=alibaba-5-trillion-10-trillion-ai-model-chip-2026</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Alibaba is expanding its full-stack AI strategy with a much larger Qwen model, a new AI processor and plans to scale its global data-center capacity.</description>
+    </item>
+    <item>
+      <title>Two Police Officers Killed While Guarding Polio Workers in Balochistan</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-nushki-polio-workers-police-killed-september-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-nushki-polio-workers-police-killed-september-2026</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Pakistan</category>
+      <description>The officers were providing security for a door-to-door vaccination campaign in Nushki district; the polio workers were not injured.</description>
+    </item>
+    <item>
+      <title>Nasdaq Hits Record High as AI Stocks Regain Momentum</title>
+      <link>https://clarixnews.vercel.app/article.html?id=nasdaq-record-high-ai-stocks-september-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=nasdaq-record-high-ai-stocks-september-2026</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>Technology shares lifted the Nasdaq to a new intraday record as investors watched AI demand, oil prices and Middle East developments.</description>
+    </item>
+    <item>
+      <title>Anthropic Researcher Quits With Viral Warning: &apos;They Are Racing to Self-Improving Superintelligence and Gambling With Our Lives&apos;</title>
+      <link>https://clarixnews.vercel.app/article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Jacob Coxon&apos;s resignation thread — viewed 115 million times — claims AI engineers privately believe advanced systems &apos;could kill us all by the end of the decade.&apos; Anthropic&apos;s own alignment lead agrees. Here is what the evidence actually shows.</description>
+    </item>
+    <item>
+      <title>GTA VI Shatters All Entertainment Records, Becomes Fastest-Selling Media Property in History</title>
+      <link>https://clarixnews.vercel.app/article.html?id=gta-6-shatters-all-entertainment-records-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=gta-6-shatters-all-entertainment-records-2026</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Entertainment</category>
+      <description>Rockstar Games&apos; highly anticipated masterpiece sells over 35 million copies in its first 24 hours, redefining the boundaries of the gaming and entertainment industries.</description>
+    </item>
+    <item>
+      <title>Climate Breakthrough: UN Summit Finalizes Historic Global Carbon Tax Framework</title>
+      <link>https://clarixnews.vercel.app/article.html?id=un-climate-summit-carbon-tax-breakthrough-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=un-climate-summit-carbon-tax-breakthrough-2026</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>In a monumental shift, 140 countries agree to a unified carbon pricing mechanism, aiming to slash global emissions by 50% by 2035 and fund green transitions in developing nations.</description>
+    </item>
+    <item>
+      <title>Economic Turnaround: KSE-100 Smashes All-Time Record as Foreign Investment Pours In</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-economy-ks100-record-high-fdi-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-economy-ks100-record-high-fdi-2026</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>Fueled by successful IMF program completion and massive Gulf investments, Pakistan&apos;s benchmark index crosses the 85,000 mark, signaling a new era of economic stability.</description>
+    </item>
+    <item>
+      <title>Asia Cup 2026: Pakistan Stuns India in Thrilling Final to Lift the Trophy</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-beats-india-asia-cup-final-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-beats-india-asia-cup-final-2026</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>A masterful century from Babar Azam and a fiery spell by Shaheen Afridi secure a memorable 5-wicket victory in Dubai, sparking massive celebrations across the nation.</description>
+    </item>
+    <item>
+      <title>Historic Milestone: 50 Nations Sign First-Ever Global AI Safety and Regulation Treaty</title>
+      <link>https://clarixnews.vercel.app/article.html?id=global-ai-safety-treaty-signed-un-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=global-ai-safety-treaty-signed-un-2026</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>At the UN Summit in Geneva, world leaders agree on binding frameworks for artificial intelligence development, marking the end of the &apos;wild west&apos; era of tech innovation.</description>
+    </item>
+    <item>
+      <title>New Axis of Security: Pakistan, Saudi Arabia and Türkiye Set to Sign Historic Trilateral Defense Pact</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Pakistan</category>
+      <description>PM Shehbaz Sharif lands in Jeddah as President Erdogan prepares to join a landmark three-way summit — a defense framework that could redraw the security map from the Gulf to South Asia, and trigger quiet anxiety in New Delhi, Tehran and Washington alike.</description>
+    </item>
+    <item>
+      <title>BTS Is Back: Reunion World Tour Shatters Global Ticket Records in Under an Hour</title>
+      <link>https://clarixnews.vercel.app/article.html?id=bts-comeback-world-tour-ticket-records-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=bts-comeback-world-tour-ticket-records-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Entertainment</category>
+      <description>Following the completion of military service, all seven members announce the &apos;ARIRANG: Forever&apos; world tour — 45 stadium dates across 20 countries — as 12 million fans crash ticketing sites in the biggest presale in history.</description>
+    </item>
+    <item>
+      <title>India Makes History: Gaganyaan Carries the Nation&apos;s First Astronauts Into Space</title>
+      <link>https://clarixnews.vercel.app/article.html?id=india-gaganyaan-first-crewed-space-mission-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=india-gaganyaan-first-crewed-space-mission-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Asia</category>
+      <description>ISRO&apos;s crewed mission lifts off from Sriharikota, making India the fourth country to independently send humans to orbit — a moment of national pride watched live by over a billion people.</description>
+    </item>
+    <item>
+      <title>Historic Day for Pakistan: KSE-100 Crosses the 80,000 Mark for the First Time</title>
+      <link>https://clarixnews.vercel.app/article.html?id=kse-100-crosses-80000-record-psx-rally-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=kse-100-crosses-80000-record-psx-rally-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>Fueled by record IT exports, Gulf investment pledges, and IMF-backed stability, the Pakistan Stock Exchange rallies past the psychological milestone, adding Rs 2.1 trillion in investor wealth in a single week.</description>
+    </item>
+    <item>
+      <title>Tesla&apos;s Optimus Humanoid Robots Begin First Paid Factory Shifts, Ushering in a New Labor Era</title>
+      <link>https://clarixnews.vercel.app/article.html?id=tesla-optimus-humanoid-robots-paid-work-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=tesla-optimus-humanoid-robots-paid-work-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>One hundred Optimus Gen-3 units are now working alongside human employees at Gigafactory Texas, performing repetitive tasks at a fraction of labor cost — sparking excitement over productivity and heated debate over the future of work.</description>
+    </item>
+    <item>
+      <title>The End of an Era: Lionel Messi Retires From International Football After World Cup Glory</title>
+      <link>https://clarixnews.vercel.app/article.html?id=lionel-messi-retires-international-football-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=lionel-messi-retires-international-football-2026</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>Fresh off leading Argentina to a second consecutive World Cup title, the 39-year-old legend confirms the 2026 final was his last match in an Argentina shirt, closing the greatest international career in football history.</description>
+    </item>
+    <item>
+      <title>FDA Approves First-Ever Gene Therapy That Reverses Alzheimer&apos;s Progression</title>
+      <link>https://clarixnews.vercel.app/article.html?id=fda-approves-gene-therapy-alzheimers-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=fda-approves-gene-therapy-alzheimers-2026</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.</description>
+    </item>
+    <item>
+      <title>SEC Finally Approves Spot Bitcoin ETF After 12-Year Wait</title>
+      <link>https://clarixnews.vercel.app/article.html?id=sec-approves-bitcoin-etf-wall-street-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=sec-approves-bitcoin-etf-wall-street-2026</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>In a historic decision, the U.S. Securities and Exchange Commission approves the first spot Bitcoin ETF, triggering an immediate $20 billion surge in the cryptocurrency market and mainstream adoption.</description>
+    </item>
+    <item>
+      <title>European Union Declares Climate Emergency as Heatwave Shatters All-Time Records</title>
+      <link>https://clarixnews.vercel.app/article.html?id=europe-heatwave-climate-emergency-declaration-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=europe-heatwave-climate-emergency-declaration-2026</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>With temperatures soaring to 51°C in parts of Spain and Italy, the EU has activated its highest-level climate emergency protocols, triggering coordinated action across all 27 member states.</description>
+    </item>
+    <item>
+      <title>EU AI Act Lands Landmark Ruling Against OpenAI and Microsoft</title>
+      <link>https://clarixnews.vercel.app/article.html?id=eu-ai-act-landmark-ruling-tech-giants-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=eu-ai-act-landmark-ruling-tech-giants-2026</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>In a precedent-setting case, European courts order both companies to modify their AI models to comply with strict transparency and bias prevention rules, setting a global benchmark for AI regulation.</description>
+    </item>
+    <item>
+      <title>Lionel Messi Scores His 1,000th Career Goal in Historic World Cup Semi-Final</title>
+      <link>https://clarixnews.vercel.app/article.html?id=messi-1000th-goal-world-cup-2026-semi-final</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=messi-1000th-goal-world-cup-2026-semi-final</guid>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>In a match that will be replayed for generations, the 38-year-old legend nets his milestone goal as Argentina defeats France 3-2 in a breathtaking semi-final thriller at MetLife Stadium.</description>
+    </item>
+    <item>
+      <title>The Future of Live Music: Global Superstar Shatters Attendance Records with 50 Million Viewer VR Concert</title>
+      <link>https://clarixnews.vercel.app/article.html?id=record-breaking-virtual-reality-concert-metaverse-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=record-breaking-virtual-reality-concert-metaverse-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Entertainment</category>
+      <description>Blending cutting-edge haptic feedback suits with photorealistic avatars, the groundbreaking &apos;MetaLive&apos; event redefines the boundaries of digital entertainment and fan engagement.</description>
+    </item>
+    <item>
+      <title>Cosmic Milestone: James Webb Telescope Detects Definitive Biosignatures on Exoplanet K2-18b</title>
+      <link>https://clarixnews.vercel.app/article.html?id=jwst-discovers-definitive-biosignatures-exoplanet-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=jwst-discovers-definitive-biosignatures-exoplanet-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>NASA and ESA scientists confirm the presence of dimethyl sulfide (DMS) in the atmosphere of a distant habitable-zone exoplanet, marking the strongest evidence yet for extraterrestrial life.</description>
+    </item>
+    <item>
+      <title>GCC Nations Pledge $10 Billion for Pakistan&apos;s Green Energy Transition</title>
+      <link>https://clarixnews.vercel.app/article.html?id=gcc-pakistan-10bn-green-energy-deal-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=gcc-pakistan-10bn-green-energy-deal-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>In a landmark economic agreement, Saudi Arabia and the UAE commit to massive investments in solar and wind infrastructure, aiming to add 5,000 MW to Pakistan&apos;s national grid by 2028.</description>
+    </item>
+    <item>
+      <title>History at Lord&apos;s: Pakistan Secures First Test Series Victory in England Since 2016</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-historic-test-series-win-england-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-historic-test-series-win-england-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>Led by a majestic century from Babar Azam and a devastating five-wicket haul by Shaheen Afridi, the Green Shirts clinch a memorable 2-1 series victory, revitalizing their World Test Championship hopes.</description>
+    </item>
+    <item>
+      <title>EU AI Act Takes Full Effect: Tech Giants Face Unprecedented Compliance Overhaul</title>
+      <link>https://clarixnews.vercel.app/article.html?id=eu-ai-act-full-enforcement-tech-giants-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=eu-ai-act-full-enforcement-tech-giants-2026</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>As the world&apos;s first comprehensive artificial intelligence law becomes fully enforceable, companies like Google, Meta, and OpenAI must radically alter their algorithms or face fines up to 7% of global revenue.</description>
+    </item>
+    <item>
+      <title>FDA Approves Groundbreaking Gene Therapy That Reverses Early-Stage Alzheimer&apos;s</title>
+      <link>https://clarixnews.vercel.app/article.html?id=fda-approves-groundbreaking-alzheimers-gene-therapy-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=fda-approves-groundbreaking-alzheimers-gene-therapy-2026</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.</description>
+    </item>
+    <item>
+      <title>GTA VI Official Release Date Confirmed: Breaks All-Time Pre-Order Records</title>
+      <link>https://clarixnews.vercel.app/article.html?id=gta-6-release-date-preorder-records-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=gta-6-release-date-preorder-records-2026</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Entertainment</category>
+      <description>Rockstar Games announces November 2026 launch for Grand Theft Auto VI, with pre-orders surpassing 15 million copies in the first 24 hours, shattering industry benchmarks.</description>
+    </item>
+    <item>
+      <title>Historic Global Plastic Treaty Signed by 170 Nations in Geneva</title>
+      <link>https://clarixnews.vercel.app/article.html?id=un-global-plastic-treaty-signed-geneva-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=un-global-plastic-treaty-signed-geneva-2026</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>In a landmark environmental agreement, countries commit to legally binding targets to cut virgin plastic production by 60% by 2035, marking the most significant climate action since the Paris Agreement.</description>
+    </item>
+    <item>
+      <title>T20 World Cup 2026: Pakistan Stuns India in Last-Ball Thriller at Melbourne</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-beats-india-t20-world-cup-2026-thriller</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-beats-india-t20-world-cup-2026-thriller</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>Shaheen Afridi defends 8 runs in the final over as Pakistan secures a historic 4-run victory against arch-rivals India, keeping their semi-final hopes alive in front of a record 90,000 crowd.</description>
+    </item>
+    <item>
+      <title>Nvidia Unveils &apos;Blackwell Ultra&apos; AI Chip, Sending Tech Stocks to Record Highs</title>
+      <link>https://clarixnews.vercel.app/article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Nvidia&apos;s Blackwell Ultra platform is built for large-scale AI reasoning, with major gains in compute, memory and GPU-to-GPU connectivity.</description>
+    </item>
+    <item>
+      <title>World Cup 2026 Day 7: England Face Croatia Revenge Match, Ronaldo Returns, Germany Smash Curaçao 7-1</title>
+      <link>https://clarixnews.vercel.app/article.html?id=world-cup-2026-day7-england-croatia</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=world-cup-2026-day7-england-croatia</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>Day 7 of the 2026 FIFA World Cup brings the tournament&apos;s most anticipated group stage clash as England meet Croatia in Dallas — the team that broke their hearts at Russia 2018. Plus Cristiano Ronaldo makes his World Cup bow at 41, and Germany destroy Curaçao 7-1.</description>
+    </item>
+    <item>
+      <title>FIFA World Cup 2026: Brazil Held by Morocco, Scotland&apos;s Historic Win — Complete Day 3 Recap</title>
+      <link>https://clarixnews.vercel.app/article.html?id=fifa-world-cup-2026-opening</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=fifa-world-cup-2026-opening</guid>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Sports</category>
+      <description>In a stunning opening weekend, Morocco held Brazil to a 1-1 draw, Scotland beat Haiti 1-0 for their first World Cup win since 1990, the USA crushed Paraguay 4-1, and Germany face Curaçao today.</description>
+    </item>
+    <item>
+      <title>China Arrests US Think Tank Director Min Zin on Espionage Charges</title>
+      <link>https://clarixnews.vercel.app/article.html?id=china-detains-us-citizen-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=china-detains-us-citizen-2026</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>Beijing confirmed the detention of Min Zin, founder of a Myanmar-focused policy institute, who was arrested at Kunming airport on June 3. The case comes just weeks after Trump&apos;s Beijing summit with Xi Jinping.</description>
+    </item>
+    <item>
+      <title>Trump Threatens to Hit Iran &apos;Very Hard&apos; as US-Iran War Escalates Into Third Week</title>
+      <link>https://clarixnews.vercel.app/article.html?id=us-iran-airstrikes-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=us-iran-airstrikes-2026</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Middle East</category>
+      <description>The US launched a second wave of airstrikes on Iran as Trump threatened to &apos;assume total control&apos; of Iran&apos;s oil and gas industries including Kharg Island. The Middle East stands on the edge of full-scale war.</description>
+    </item>
+</channel></rss>
