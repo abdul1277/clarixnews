@@ -4,7 +4,31 @@
   <link>https://clarixnews.vercel.app/</link>
   <description>Latest news, explainers and practical guides from ClarixNews.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 12 Oct 2026 17:13:36 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 14 Oct 2026 06:00:49 GMT</lastBuildDate>
+    <item>
+      <title>Anthropic Warns AI Could Power Self-Replicating Cyber Threats</title>
+      <link>https://clarixnews.vercel.app/article.html?id=anthropic-ai-self-replicating-worm-cybersecurity-warning-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=anthropic-ai-self-replicating-worm-cybersecurity-warning-october-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Anthropic has outlined a scenario in which advanced AI systems could help malicious software spread between connected devices. The warning puts AI agent security, cyber defence and human oversight back in focus.</description>
+    </item>
+    <item>
+      <title>ASML Says AI Chip Demand Could Outpace Supply Through 2028</title>
+      <link>https://clarixnews.vercel.app/article.html?id=asml-ai-chip-demand-capacity-2027-2028-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=asml-ai-chip-demand-capacity-2027-2028-october-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>The chipmaking-equipment supplier says it expects to struggle to meet customer demand in 2027 and 2028 as AI infrastructure investment expands. The outlook highlights both the strength and pressure points of the global semiconductor supply chain.</description>
+    </item>
+    <item>
+      <title>Strait of Hormuz Shipping Risks Rise as Iran Tensions Put Energy Routes in Focus</title>
+      <link>https://clarixnews.vercel.app/article.html?id=iran-strait-hormuz-shipping-oil-security-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=iran-strait-hormuz-shipping-oil-security-october-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>Reports of threats to commercial shipping around the Strait of Hormuz have renewed concern over one of the world&apos;s most important energy corridors. Here is why the route matters and what could happen if disruption widens.</description>
+    </item>
     <item>
       <title>Pakistan Urges Afghan Taliban to Stop Cross-Border Militancy as Tensions Rise</title>
       <link>https://clarixnews.vercel.app/article.html?id=pakistan-afghanistan-cross-border-security-warning-october-2026</link>
@@ -380,29 +404,5 @@
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
       <category>World</category>
       <description>In a landmark environmental agreement, countries commit to legally binding targets to cut virgin plastic production by 60% by 2035, marking the most significant climate action since the Paris Agreement.</description>
-    </item>
-    <item>
-      <title>T20 World Cup 2026: Pakistan Stuns India in Last-Ball Thriller at Melbourne</title>
-      <link>https://clarixnews.vercel.app/article.html?id=pakistan-beats-india-t20-world-cup-2026-thriller</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-beats-india-t20-world-cup-2026-thriller</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-      <category>Sports</category>
-      <description>Shaheen Afridi defends 8 runs in the final over as Pakistan secures a historic 4-run victory against arch-rivals India, keeping their semi-final hopes alive in front of a record 90,000 crowd.</description>
-    </item>
-    <item>
-      <title>Nvidia Unveils &apos;Blackwell Ultra&apos; AI Chip, Sending Tech Stocks to Record Highs</title>
-      <link>https://clarixnews.vercel.app/article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-      <category>Technology</category>
-      <description>Nvidia&apos;s Blackwell Ultra platform is built for large-scale AI reasoning, with major gains in compute, memory and GPU-to-GPU connectivity.</description>
-    </item>
-    <item>
-      <title>World Cup 2026 Day 7: England Face Croatia Revenge Match, Ronaldo Returns, Germany Smash Curaçao 7-1</title>
-      <link>https://clarixnews.vercel.app/article.html?id=world-cup-2026-day7-england-croatia</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=world-cup-2026-day7-england-croatia</guid>
-      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
-      <category>Sports</category>
-      <description>Day 7 of the 2026 FIFA World Cup brings the tournament&apos;s most anticipated group stage clash as England meet Croatia in Dallas — the team that broke their hearts at Russia 2018. Plus Cristiano Ronaldo makes his World Cup bow at 41, and Germany destroy Curaçao 7-1.</description>
     </item>
 </channel></rss>

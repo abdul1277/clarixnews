@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://clarixnews.vercel.app</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://clarixnews.vercel.app/markets.html</loc><lastmod>2026-10-12</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://clarixnews.vercel.app/weather.html</loc><lastmod>2026-10-12</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://clarixnews.vercel.app/about.html</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://clarixnews.vercel.app/contact.html</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://clarixnews.vercel.app/privacy.html</loc><lastmod>2026-10-12</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://clarixnews.vercel.app/terms.html</loc><lastmod>2026-10-12</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=world</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=pakistan</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=usa</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=europe</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=middleeast</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=asia</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=business</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=tech</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=career</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarixnews.vercel.app/category.html?cat=opinion</loc><lastmod>2026-10-12</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://clarixnews.vercel.app/markets.html</loc><lastmod>2026-10-14</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://clarixnews.vercel.app/weather.html</loc><lastmod>2026-10-14</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://clarixnews.vercel.app/about.html</loc><lastmod>2026-10-14</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://clarixnews.vercel.app/contact.html</loc><lastmod>2026-10-14</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://clarixnews.vercel.app/privacy.html</loc><lastmod>2026-10-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://clarixnews.vercel.app/terms.html</loc><lastmod>2026-10-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=world</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=pakistan</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=usa</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=europe</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=middleeast</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=asia</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=business</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=tech</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=career</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://clarixnews.vercel.app/category.html?cat=opinion</loc><lastmod>2026-10-14</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://clarixnews.vercel.app/article.html?id=pakistan-afghanistan-cross-border-security-warning-october-2026</loc><lastmod>2026-10-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://clarixnews.vercel.app/article.html?id=pakistan-turkiye-condemn-houthi-saudi-attacks-october-2026</loc><lastmod>2026-10-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://clarixnews.vercel.app/article.html?id=meta-muse-ai-models-agent-memory-privacy-october-2026</loc><lastmod>2026-10-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -77,4 +77,7 @@
   <url><loc>https://clarixnews.vercel.app/article.html?id=ai-generated-images-deepfakes-detection-2026-guide</loc><lastmod>2026-10-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://clarixnews.vercel.app/article.html?id=pakistan-online-shopping-scams-tiktok-marketplace-2026</loc><lastmod>2026-10-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://clarixnews.vercel.app/article.html?id=ai-skills-jobs-2026-how-to-stay-employable</loc><lastmod>2026-10-11</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://clarixnews.vercel.app/article.html?id=anthropic-ai-self-replicating-worm-cybersecurity-warning-october-2026</loc><lastmod>2026-10-14</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://clarixnews.vercel.app/article.html?id=asml-ai-chip-demand-capacity-2027-2028-october-2026</loc><lastmod>2026-10-14</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://clarixnews.vercel.app/article.html?id=iran-strait-hormuz-shipping-oil-security-october-2026</loc><lastmod>2026-10-14</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
