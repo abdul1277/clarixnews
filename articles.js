@@ -1,5 +1,232 @@
 const ARTICLES = [
 
+  {
+  id: "nobel-peace-prize-2026-navi-pillay",
+  title: "2026 Nobel Peace Prize Awarded to South African Jurist Navi Pillay for Human Rights Leadership",
+  subtitle: "Former UN High Commissioner for Human Rights recognized for 'tireless advocacy' and 'courageous defense' of international justice. First South African woman to receive the prize.",
+  category: "World",
+  catClass: "world",
+  author: "Sarah Chen",
+  authorRole: "Senior Correspondent",
+  authorInitials: "SC",
+  date: "October 14, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&q=80&fit=crop",
+  tags: ["Nobel Peace Prize", "Navi Pillay", "Human Rights", "South Africa", "2026 Nobel", "UN"],
+  content: `
+    <p>OSLO — The 2026 Nobel Peace Prize has been awarded to South African jurist Navanethem "Navi" Pillay for her "tireless advocacy for human rights and courageous defense of international justice," the Norwegian Nobel Committee announced on October 9.</p>
+
+    <p>Pillay, 85, served as UN High Commissioner for Human Rights from 2008 to 2014 and has spent decades fighting against apartheid, advocating for women's rights, and pushing for accountability for war crimes and crimes against humanity.</p>
+
+    <h2>A Lifetime of Human Rights Work</h2>
+    <p>Born in 1941 in Durban, South Africa, Pillay grew up under apartheid and became one of the first women to practice law in the country. She famously defended anti-apartheid activists, including Nelson Mandela, and exposed torture and abuse of political prisoners.</p>
+    <p>After apartheid ended, she became a judge on the International Criminal Court and later served as president of the International Criminal Tribunal for Rwanda, where she oversaw landmark cases related to the 1994 genocide.</p>
+
+    <h2>Why She Won</h2>
+    <p>The Nobel Committee cited Pillay's "unwavering commitment to holding the powerful accountable" and her work to establish that "no one is above international law." The committee noted her role in advancing women's rights, LGBTQ+ rights, and the rights of marginalized communities worldwide.</p>
+    <p>"Navi Pillay has shown extraordinary courage in speaking truth to power, even when it was politically inconvenient," said committee chair Berit Reiss-Andersen. "Her work has made the world more just."</p>
+
+    <h2>Reactions</h2>
+    <p>The award was widely praised by human rights organizations and world leaders. UN Secretary-General António Guterres called Pillay "a giant of international justice," while South African President Cyril Ramaphosa said the award "recognizes South Africa's contribution to global human rights."</p>
+    <p>Pillay herself, in a brief statement, said she was "deeply humbled" and that the award "belongs to all those who have fought for justice, often at great personal cost."</p>
+
+    <h2>Controversy and Criticism</h2>
+    <p>While most reactions were positive, some critics questioned the choice, noting that Pillay's tenure as UN High Commissioner was sometimes criticized for being insufficiently critical of certain governments. Others argued the prize should have gone to activists working on current crises.</p>
+    <p>However, supporters argued that Pillay's lifetime of work and her role in establishing international legal precedents made her a worthy recipient.</p>
+
+    <h2>The 2026 Nobel Season</h2>
+    <p>Pillay's Peace Prize was part of the 2026 Nobel announcements, which took place October 5-12. Other winners included Karl Deisseroth, Peter Hegemann, and Georg Nagel for Physiology or Medicine (for optogenetics discoveries), and Henri Kagan and Kenso Soai for Chemistry.</p>
+    <p>The prize comes with a monetary award of 11 million Swedish kronor (approximately $1.1 million) and will be formally presented in Oslo on December 10, the anniversary of Alfred Nobel's death.</p>
+
+    <h2>Legacy and Impact</h2>
+    <p>Pillay becomes the first South African woman to receive the Nobel Peace Prize and only the second African woman after Wangari Maathai (2004). Her win is seen as recognition of the Global South's contributions to international human rights law.</p>
+
+    <h2>Related Coverage</h2>
+    <p>For more on global justice, see our coverage of <a href="article.html?id=global-ai-safety-treaty-signed-un-2026">the Global AI Safety Treaty</a> and our analysis of <a href="article.html?id=pope-leo-xiv-lung-surgery-cancer-recovery-october-2026">Pope Leo XIV's recent surgery</a>.</p>
+  `
+},
+
+  {
+  id: "pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026",
+  title: "Pakistan Declares Emergency Rule in Khyber Pakhtunkhwa — Protests Erupt Over Governor's Rule",
+  subtitle: "President Zardari invokes Articles 232 and 234, placing northwestern province under federal control. Massive protests clash with police as opposition condemns 'undemocratic' move.",
+  category: "Pakistan",
+  catClass: "pakistan",
+  author: "Raza Khan",
+  authorRole: "Senior Geopolitics Correspondent",
+  authorInitials: "RK",
+  date: "October 14, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?w=1400&q=80&fit=crop",
+  tags: ["Pakistan", "Khyber Pakhtunkhwa", "Emergency Rule", "Imran Khan", "Governor Rule", "Protests"],
+  content: `
+    <p>ISLAMABAD — Pakistan has imposed emergency rule in the northwestern province of Khyber Pakhtunkhwa, sparking widespread protests and condemnation from opposition parties who called the move an attack on democracy.</p>
+
+    <p>President Asif Ali Zardari approved the measure on October 11, invoking Articles 232 and 234 of Pakistan's Constitution to place the province under federal control. The decision grants the federal government sweeping administrative powers and effectively suspends the provincial assembly.</p>
+
+    <h2>Why Emergency Was Declared</h2>
+    <p>The federal government cited deteriorating security conditions and "internal disturbance" as justification for the emergency. Officials pointed to increased militant activity in the province, particularly in districts bordering Afghanistan, and accused the provincial government of failing to maintain law and order.</p>
+    <p>The move comes amid escalating tensions between the federal government and Khyber Pakhtunkhwa's provincial administration, which is led by Pakistan Tehreek-e-Insaf (PTI), the party of former Prime Minister Imran Khan.</p>
+
+    <h2>Massive Protests Erupt</h2>
+    <p>The declaration triggered immediate backlash. Thousands of protesters took to the streets across Khyber Pakhtunkhwa, with the largest demonstrations in Peshawar, Mardan, and Swat. Police used tear gas and baton charges to disperse crowds, with reports of dozens of injuries.</p>
+    <p>In Lahore, lawyers scuffled with police during a protest condemning the emergency rule, while opposition leaders across the country held press conferences denouncing what they called an "undemocratic power grab."</p>
+
+    <h2>Political Reactions</h2>
+    <p>PTI leadership called the emergency rule "unconstitutional" and vowed to challenge it in court. Imran Khan, currently imprisoned on corruption charges, issued a statement through his lawyers calling the move "a desperate attempt to crush political opposition."</p>
+    <p>Other opposition parties, including the Pakistan Peoples Party and Jamaat-e-Islami, also condemned the decision, with some calling for nationwide protests. However, the ruling Pakistan Muslim League-Nawaz defended the move as necessary for national security.</p>
+
+    <h2>Constitutional Questions</h2>
+    <p>Legal experts are divided on the constitutionality of the emergency. Article 232 allows the president to declare an emergency when security is threatened by "war, external aggression, or internal disturbance," while Article 234 allows for governor's rule when a province's constitutional machinery breaks down.</p>
+    <p>Critics argue that neither condition was met and that the move was politically motivated. The Supreme Court is expected to hear challenges to the emergency within days.</p>
+
+    <h2>Regional and International Response</h2>
+    <p>The emergency has drawn international attention, with human rights organizations expressing concern about civil liberties. The European Union issued a statement calling for "respect for democratic processes and constitutional norms."</p>
+    <p>India's foreign ministry declined to comment directly but noted it was "monitoring developments" in the region.</p>
+
+    <h2>What This Means</h2>
+    <p>The emergency rule is set to last for up to six months unless extended by parliament. During this period, the governor will exercise executive authority, and the provincial assembly will remain suspended.</p>
+    <p>The move represents a significant escalation in Pakistan's ongoing political crisis and could have major implications for the country's democratic trajectory.</p>
+
+    <h2>Related Coverage</h2>
+    <p>For more on Pakistan's political landscape, see our coverage of <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026">Pakistan's economic turnaround</a> and our analysis of <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026">Pakistan's strategic partnerships</a>.</p>
+  `
+},
+
+  {
+  id: "trump-energy-ceasefire-russia-ukraine-october-2026",
+  title: "Trump Claims Russia-Ukraine 'Energy Ceasefire' Agreement — Ukraine Disputes, Reports New Strikes",
+  subtitle: "US President announces halt to attacks on energy infrastructure, but Kyiv says Russian strikes continue. Markets react to conflicting signals as winter approaches.",
+  category: "World",
+  catClass: "world",
+  author: "Viktor Kowalski",
+  authorRole: "Eastern Europe Correspondent",
+  authorInitials: "VK",
+  date: "October 13, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=1400&q=80&fit=crop",
+  tags: ["Russia", "Ukraine", "Trump", "Energy Ceasefire", "War", "Zelensky"],
+  content: `
+    <p>WASHINGTON — President Trump claimed Sunday that Russia and Ukraine have agreed to an "energy ceasefire," halting attacks on each other's energy infrastructure — but Ukraine immediately disputed the claim, reporting new Russian strikes on power facilities within hours of the announcement.</p>
+
+    <p>The conflicting statements have created confusion about the actual status of the conflict, with Trump insisting the agreement is "effective immediately" while Ukrainian officials say no such deal exists and attacks continue.</p>
+
+    <h2>Trump's Announcement</h2>
+    <p>In a social media post Sunday morning, Trump declared that both Russian President Vladimir Putin and Ukrainian President Volodymyr Zelensky had agreed to stop targeting energy infrastructure, calling it a "first step" toward ending what he termed a "ridiculous war."</p>
+    <p>"Both sides have agreed to an energy ceasefire, effective immediately," Trump wrote. "No more attacks on power plants, no more attacks on energy facilities. This is a good start and we will build on it."</p>
+
+    <h2>Ukraine's Response</h2>
+    <p>Kyiv quickly pushed back on Trump's characterization. Ukrainian Foreign Ministry spokesman Oleh Nikolenko said Ukraine had not agreed to any ceasefire and that Russian forces had continued targeting energy infrastructure after Trump's announcement.</p>
+    <p>"Ukraine has not signed any agreement on an energy ceasefire," Nikolenko said in a statement. "Russian attacks on our energy system continued today, including strikes in Kharkiv and Odesa regions."</p>
+    <p>Ukrainian energy operator Ukrenergo reported damage to three substations and one thermal power plant in attacks that occurred after Trump's social media post, leaving tens of thousands without power in eastern regions.</p>
+
+    <h2>Russian Position</h2>
+    <p>Moscow has not officially commented on Trump's announcement. Kremlin spokesman Dmitry Peskov, when asked about the alleged ceasefire, said Russia "remains open to dialogue" but did not confirm any agreement.</p>
+    <p>Russian military sources, speaking on condition of anonymity, suggested Moscow was willing to consider limiting attacks on civilian energy infrastructure if Ukraine reciprocated, but emphasized that military energy targets remained legitimate.</p>
+
+    <h2>Market and Strategic Implications</h2>
+    <p>The confusion over the ceasefire status has created uncertainty in energy markets, with European natural gas futures initially dropping on Trump's announcement before rebounding as Ukraine disputed the claims.</p>
+    <p>The timing is critical: with winter approaching, attacks on energy infrastructure could have devastating humanitarian consequences for Ukraine's civilian population. Last winter, Russian strikes on power facilities left millions without heat or electricity for extended periods.</p>
+
+    <h2>Diplomatic Context</h2>
+    <p>Trump has been pushing for a negotiated end to the conflict since taking office, arguing that the war is draining resources and destabilizing global markets. However, Ukraine has insisted it will not accept any agreement that requires territorial concessions to Russia.</p>
+    <p>European allies have expressed skepticism about Trump's diplomatic approach, with several officials privately questioning whether Moscow is genuinely interested in de-escalation or simply using negotiations to regroup militarily.</p>
+
+    <h2>What's Next</h2>
+    <p>US officials are expected to engage with both Kyiv and Moscow in coming days to clarify the status of any potential agreement. The conflicting statements suggest significant diplomatic work remains before any actual ceasefire can be implemented.</p>
+
+    <h2>Related Coverage</h2>
+    <p>For more on global conflicts, see our coverage of <a href="article.html?id=yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026">the Yemen-Saudi escalation</a> and our analysis of <a href="article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026">Pakistan's emergency rule</a>.</p>
+  `
+},
+
+  {
+  id: "yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026",
+  title: "Yemen Conflict Escalates: Houthis Strike Saudi Aramco Facilities After Coalition Hits Sanaa Oil Site",
+  subtitle: "Tensions reach new heights as Houthi rebels warn Aramco sites are 'legitimate targets' following Saudi-led airstrikes on Yemeni capital. Regional oil markets react to escalation.",
+  category: "Middle East",
+  catClass: "middleeast",
+  author: "Ahmed Al-Rashid",
+  authorRole: "Middle East Bureau Chief",
+  authorInitials: "AA",
+  date: "October 14, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1580752300992-559f8e0734e0?w=1400&q=80&fit=crop",
+  tags: ["Yemen", "Saudi Arabia", "Houthis", "Aramco", "Middle East Conflict", "Oil Facilities"],
+  content: `
+    <p>DUBAI — The conflict between Yemen's Houthi rebels and the Saudi-led coalition escalated sharply on Monday, with the Houthis striking Saudi Aramco facilities just hours after coalition airstrikes hit an oil installation in the Yemeni capital Sanaa.</p>
+
+    <p>The tit-for-tat strikes mark the most serious escalation in months and have raised concerns about the stability of global oil supplies. The Houthis warned that Aramco sites are now "legitimate targets," signaling potential for further attacks on Saudi energy infrastructure.</p>
+
+    <h2>Timeline of Escalation</h2>
+    <p>The latest round of fighting began Sunday when the Saudi-led coalition conducted airstrikes on an oil facility in Sanaa, Yemen's Houthi-controlled capital. The strikes were described as targeting military infrastructure, though reports indicated civilian casualties.</p>
+    <p>Within hours, Houthi forces launched retaliatory strikes against Saudi Arabia, with the group's military spokesman warning that all Aramco facilities are now considered valid military targets. Previous Houthi attacks on Saudi oil infrastructure in 2019 temporarily knocked out half of Saudi Arabia's oil production, sending shockwaves through global markets.</p>
+
+    <h2>Regional Impact</h2>
+    <p>The escalation comes at a particularly sensitive time for regional diplomacy. Saudi Arabia has been pursuing improved relations with Iran, the Houthis' main backer, as part of broader efforts to stabilize the region. Monday's strikes threaten to derail those diplomatic efforts.</p>
+    <p>Oil prices reacted immediately to the news, with Brent crude rising 3.2% in early trading as markets priced in the risk of supply disruptions. Analysts warn that sustained attacks on Saudi energy infrastructure could push prices above $90 per barrel.</p>
+
+    <h2>International Response</h2>
+    <p>The United Nations called for immediate de-escalation, with Secretary-General's spokesman expressing "grave concern" about the impact on civilians. The United States, which provides military support to the Saudi coalition, urged restraint while reaffirming support for Saudi Arabia's right to defend itself.</p>
+    <p>Iran denied direct involvement in the Houthi attacks but criticized the Saudi airstrikes on Sanaa as "aggression against the Yemeni people."</p>
+
+    <h2>Humanitarian Concerns</h2>
+    <p>Aid organizations warn that the escalation will worsen what is already the world's worst humanitarian crisis. Yemen's 8-year conflict has left more than 21 million people — two-thirds of the population — in need of assistance.</p>
+    <p>The World Food Programme reported that recent fighting has disrupted supply routes to several major population centers, potentially affecting food distribution to millions.</p>
+
+    <h2>What's Next</h2>
+    <p>Diplomatic efforts to de-escalate are underway, with Oman reportedly mediating between the parties. However, with both sides claiming the right to respond to attacks, the risk of further escalation remains high.</p>
+    <p>Energy analysts are closely monitoring Aramco facilities for signs of damage or production shutdowns, which would have immediate global economic consequences.</p>
+
+    <h2>Related Coverage</h2>
+    <p>For context on regional tensions, see our analysis of <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026">the Pakistan-Saudi-Turkey defense pact</a> and our coverage of <a href="article.html?id=trump-energy-ceasefire-russia-ukraine-october-2026">Trump's energy ceasefire claims</a>.</p>
+  `
+},
+
+  {
+  id: "pope-leo-xiv-lung-surgery-cancer-recovery-october-2026",
+  title: "Pope Leo XIV Undergoes Lung Cancer Surgery — Currently Recovering at Rome Hospital",
+  subtitle: "Vatican confirms pontiff had lower lobe of right lung removed after early-stage nodule detected. Post-operative recovery described as 'progressing well' after peaceful night in hospital.",
+  category: "World",
+  catClass: "world",
+  author: "Maria Santos",
+  authorRole: "Vatican Correspondent",
+  authorInitials: "MS",
+  date: "October 14, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1555952531-23b4e88e9cb6?w=1400&q=80&fit=crop",
+  tags: ["Pope Leo XIV", "Vatican", "Catholic Church", "Lung Cancer", "Pope Surgery", "Rome"],
+  content: `
+    <p>VATICAN CITY — Pope Leo XIV underwent surgery on Wednesday to remove a cancerous nodule from his lung, the Vatican confirmed, in the first major health procedure for the pontiff since his election earlier this year.</p>
+
+    <p>The 78-year-old pope was admitted to Rome's Gemelli Hospital on Tuesday morning, where surgeons successfully removed the lower lobe of his right lung after detecting what Vatican officials described as a "localized nodule" at "a very early stage."</p>
+
+    <h2>Surgery and Recovery</h2>
+    <p>According to a Vatican statement released Wednesday afternoon, the pope had a "peaceful night" following the procedure and his post-operative recovery is "progressing well." Blood tests and chest X-rays conducted Thursday morning confirmed positive signs, the Vatican said.</p>
+    <p>The surgery was performed after Pope Leo himself revealed the diagnosis last week, noting that the nodule had been caught early and expressing confidence in the medical team at Gemelli — the same hospital where Pope John Paul II underwent multiple procedures during his papacy.</p>
+
+    <h2>Health Concerns and Continuity</h2>
+    <p>The surgery has raised questions about the pope's ability to maintain his demanding schedule, which has included extensive international travel and a push for Church reform since his election. Vatican sources indicate the pontiff is expected to remain hospitalized for several days before returning to the Vatican for continued recovery.</p>
+    <p>Cardinal Pietro Parolin, the Vatican Secretary of State, will handle day-to-day administrative matters during the pope's recovery, though no major decisions or public audiences are expected until Pope Leo is cleared by his medical team.</p>
+
+    <h2>Global Reaction</h2>
+    <p>World leaders and religious figures have sent messages of support. President Trump tweeted prayers for the pope's "full and speedy recovery," while European leaders including French President Macron and German Chancellor issued formal statements wishing him well.</p>
+    <p>Catholic communities worldwide have held special prayers, with vigils reported at major cathedrals from Manila to Mexico City.</p>
+
+    <h2>What Comes Next</h2>
+    <p>The Vatican has not provided a timeline for the pope's return to full duties, though medical experts suggest a recovery period of 4-6 weeks for this type of surgery. The pope is expected to make his first public appearance once he can comfortably resume his schedule.</p>
+    <p>Church officials have emphasized that there is no cause for alarm, noting the early detection and successful nature of the procedure.</p>
+
+    <h2>Related Coverage</h2>
+    <p>For more on global religious leadership, see our coverage of <a href="article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026">political developments in Pakistan</a> and our analysis of <a href="article.html?id=nobel-peace-prize-2026-navi-pillay">the 2026 Nobel Peace Prize</a>.</p>
+  `
+},
+
 
   {
     id: "pakistan-afghanistan-cross-border-security-warning-october-2026",
