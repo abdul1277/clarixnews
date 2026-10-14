@@ -4,7 +4,7 @@
   <link>https://clarixnews.vercel.app/</link>
   <description>Latest news, explainers and practical guides from ClarixNews.</description>
   <language>en</language>
-  <lastBuildDate>Wed, 14 Oct 2026 06:00:49 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 14 Oct 2026 06:01:26 GMT</lastBuildDate>
     <item>
       <title>Anthropic Warns AI Could Power Self-Replicating Cyber Threats</title>
       <link>https://clarixnews.vercel.app/article.html?id=anthropic-ai-self-replicating-worm-cybersecurity-warning-october-2026</link>
@@ -28,6 +28,30 @@
       <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
       <category>World</category>
       <description>Reports of threats to commercial shipping around the Strait of Hormuz have renewed concern over one of the world&apos;s most important energy corridors. Here is why the route matters and what could happen if disruption widens.</description>
+    </item>
+    <item>
+      <title>Anthropic Warns AI Could Power Self-Replicating Cyber Threats</title>
+      <link>https://clarixnews.vercel.app/article.html?id=anthropic-ai-self-replicating-cyber-threats-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=anthropic-ai-self-replicating-cyber-threats-october-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Anthropic outlines a possible future in which advanced AI could help malicious software spread between connected devices, raising fresh questions about cybersecurity and AI agent safeguards.</description>
+    </item>
+    <item>
+      <title>ASML Says AI Chip Demand Could Outpace Supply Through 2028</title>
+      <link>https://clarixnews.vercel.app/article.html?id=asml-ai-chip-demand-supply-through-2028-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=asml-ai-chip-demand-supply-through-2028-october-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>The chipmaking-equipment supplier expects AI-driven customer demand to exceed its capacity in 2027 and 2028, highlighting pressure across the semiconductor supply chain.</description>
+    </item>
+    <item>
+      <title>Strait of Hormuz Shipping Risks Rise as Iran Tensions Put Oil Routes in Focus</title>
+      <link>https://clarixnews.vercel.app/article.html?id=strait-of-hormuz-shipping-oil-risks-october-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=strait-of-hormuz-shipping-oil-risks-october-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>Reports of threats to commercial shipping around the Strait of Hormuz renew concerns over a key global energy corridor and possible effects on oil prices, freight and Asian fuel costs.</description>
     </item>
     <item>
       <title>Pakistan Urges Afghan Taliban to Stop Cross-Border Militancy as Tensions Rise</title>
@@ -380,29 +404,5 @@
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
       <category>Technology</category>
       <description>As the world&apos;s first comprehensive artificial intelligence law becomes fully enforceable, companies like Google, Meta, and OpenAI must radically alter their algorithms or face fines up to 7% of global revenue.</description>
-    </item>
-    <item>
-      <title>FDA Approves Groundbreaking Gene Therapy That Reverses Early-Stage Alzheimer&apos;s</title>
-      <link>https://clarixnews.vercel.app/article.html?id=fda-approves-groundbreaking-alzheimers-gene-therapy-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=fda-approves-groundbreaking-alzheimers-gene-therapy-2026</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-      <category>World</category>
-      <description>A revolutionary single-dose treatment has shown a 75% improvement in cognitive function in Phase 3 trials, offering new hope to millions of families worldwide.</description>
-    </item>
-    <item>
-      <title>GTA VI Official Release Date Confirmed: Breaks All-Time Pre-Order Records</title>
-      <link>https://clarixnews.vercel.app/article.html?id=gta-6-release-date-preorder-records-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=gta-6-release-date-preorder-records-2026</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-      <category>Entertainment</category>
-      <description>Rockstar Games announces November 2026 launch for Grand Theft Auto VI, with pre-orders surpassing 15 million copies in the first 24 hours, shattering industry benchmarks.</description>
-    </item>
-    <item>
-      <title>Historic Global Plastic Treaty Signed by 170 Nations in Geneva</title>
-      <link>https://clarixnews.vercel.app/article.html?id=un-global-plastic-treaty-signed-geneva-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=un-global-plastic-treaty-signed-geneva-2026</guid>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-      <category>World</category>
-      <description>In a landmark environmental agreement, countries commit to legally binding targets to cut virgin plastic production by 60% by 2035, marking the most significant climate action since the Paris Agreement.</description>
     </item>
 </channel></rss>
