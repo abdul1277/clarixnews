@@ -40,6 +40,12 @@
   .badge.ret{background:rgba(59,130,246,.15);color:#60a5fa;}
   .empty{padding:30px;text-align:center;color:var(--text-3);font-size:13px;}
   .lock-btn{background:var(--bg-3);border:1px solid var(--border);color:var(--text-3);font-size:11px;padding:6px 12px;border-radius:8px;cursor:pointer;}
+  .login-note{font-size:12px;color:var(--text-3);line-height:1.6;margin-top:14px;}
+  .status-line{font-size:12px;color:var(--text-3);margin:10px 0 16px;min-height:18px;}
+  .status-line.error{color:#fb7185}.status-line.ok{color:#22c55e}
+  .refresh-btn{background:var(--bg-3);border:1px solid var(--border);color:var(--text-1);font-size:11px;padding:6px 12px;border-radius:8px;cursor:pointer}
+  .refresh-btn:disabled{opacity:.5;cursor:wait}
+  @media(max-width:640px){.dash-wrap{padding:14px}.login-box{margin:48px auto;padding:24px}.dash-top{align-items:flex-start;gap:12px;flex-wrap:wrap}.scard .v{font-size:24px}.cgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -47,8 +53,12 @@
 
   <div id="login" class="login-box">
     <h1>🔐 ClarixNews Analytics</h1>
-    <input type="password" id="pw" placeholder="Dashboard password"/>
-    <button onclick="doLogin()">Enter Dashboard</button>
+    <form id="loginForm">
+      <input type="password" id="pw" placeholder="Dashboard password" autocomplete="current-password" aria-label="Dashboard password" required/>
+      <button type="submit">Enter Dashboard</button>
+    </form>
+    <div id="loginStatus" class="status-line" role="status" aria-live="polite"></div>
+    <p class="login-note">Private analytics area. Use a unique password and do not share this page.</p>
   </div>
 
   <div id="dash" style="display:none;">
@@ -56,7 +66,8 @@
       <div class="htitle" style="margin:0;"><span><span class="live-dot"></span>Live Analytics (Last 24h)</span></div>
       <div style="display:flex;gap:14px;align-items:center;">
         <span style="font-size:10px;color:var(--text-3);">Updated: <span id="upd">--</span></span>
-        <button class="lock-btn" onclick="sessionStorage.removeItem('dash_ok');location.reload();"> Lock</button>
+        <button class="refresh-btn" id="refreshBtn" onclick="load()">↻ Refresh</button>
+        <button class="lock-btn" onclick="lockDashboard()">Lock</button>
         <a href="index.html" style="font-size:12px;color:var(--text-3);">← Back to site</a>
       </div>
     </div>
@@ -85,50 +96,119 @@
 /* ═══ CONFIG ═══ */
 var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
 var SB_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
-var DASH_PASS = 'Clarix2026';   /* ← apna password yahan change kar sakte hain */
+var DASH_PASS = 'Clarix2026'; // Temporary client-side gate only; this is NOT real authentication.
 /* ══════════════ */
 
+document.getElementById('loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  doLogin();
+});
 function doLogin(){
+  var status = document.getElementById('loginStatus');
   if(document.getElementById('pw').value === DASH_PASS){
     sessionStorage.setItem('dash_ok','1');
+    status.textContent = '';
     showDash();
-  } else { alert('Ghalat password!'); }
+  } else {
+    status.textContent = 'Password ghalat hai. Dobara try karein.';
+    status.className = 'status-line error';
+    document.getElementById('pw').select();
+  }
 }
+function lockDashboard(){
+  sessionStorage.removeItem('dash_ok');
+  location.reload();
+}
+var refreshTimer = null;
 function showDash(){
   document.getElementById('login').style.display='none';
   document.getElementById('dash').style.display='block';
-  load(); setInterval(load, 15000);
+  load();
+  if(refreshTimer) clearInterval(refreshTimer);
+  refreshTimer = setInterval(load, 15000);
+}
+function setStatus(message, isError){
+  var el = document.getElementById('upd');
+  el.textContent = message;
+  el.style.color = isError ? '#fb7185' : '';
 }
 async function load(){
+  var btn = document.getElementById('refreshBtn');
+  if(btn) btn.disabled = true;
   try{
     var r = await fetch(SB_URL + '/rest/v1/rpc/get_live_stats', {
       method:'POST',
       headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'},
       body: JSON.stringify({hours:24})
     });
+    if(!r.ok) throw new Error('Analytics request failed ('+r.status+'). Check Supabase RPC permissions.');
     var d = await r.json();
     render(d);
-    document.getElementById('upd').textContent = new Date().toLocaleTimeString();
-  }catch(e){ console.error(e); }
+    setStatus(new Date().toLocaleTimeString(), false);
+  }catch(e){
+    console.error('ClarixNews analytics error:', e);
+    setStatus('Data unavailable — check connection / Supabase permissions', true);
+  }finally{
+    if(btn) btn.disabled = false;
+  }
+}
+function makeCell(value){
+  var td = document.createElement('td');
+  td.textContent = value == null || value === '' ? '--' : String(value);
+  return td;
 }
 function render(d){
-  document.getElementById('sTotal').textContent = d.total_visits||0;
-  document.getElementById('sUnique').textContent = d.unique_visitors||0;
-  document.getElementById('sNew').textContent = d.new_visitors||0;
-  document.getElementById('sRet').textContent = d.returning_visitors||0;
-  var t = d.total_visits||1;
-  document.getElementById('sNewP').textContent = Math.round((d.new_visitors||0)/t*100)+'% of total';
-  document.getElementById('sRetP').textContent = Math.round((d.returning_visitors||0)/t*100)+'% of total';
-  var cs = d.countries||[];
-  var mx = cs.length ? cs[0].count : 1;
-  document.getElementById('cGrid').innerHTML = cs.map(function(c){
-    return '<div class="cbar"><div class="n">'+(c.country||'Unknown')+'</div><div class="bar"><div class="fill" style="width:'+((c.count/mx)*100)+'%"></div></div><div class="c">'+c.count+' visits</div></div>';
-  }).join('') || '<div class="empty">Abhi koi data nahi — site browse karein phir refresh karein</div>';
-  var vs = d.recent_visits||[];
-  document.getElementById('vBody').innerHTML = vs.map(function(v){
-    var tm = new Date(v.visited_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
-    return '<tr><td>'+tm+'</td><td>'+(v.country||'--')+'</td><td>'+(v.city||'--')+'</td><td>'+(v.page||'/')+'</td><td>'+(v.device||'--')+'</td><td>'+(v.browser||'--')+'</td><td><span class="badge '+(v.is_returning?'ret':'new')+'">'+(v.is_returning?'Returning':'New')+'</span></td></tr>';
-  }).join('') || '<tr><td colspan="7" class="empty">Abhi koi visit record nahi hui</td></tr>';
+  document.getElementById('sTotal').textContent = Number(d.total_visits)||0;
+  document.getElementById('sUnique').textContent = Number(d.unique_visitors)||0;
+  document.getElementById('sNew').textContent = Number(d.new_visitors)||0;
+  document.getElementById('sRet').textContent = Number(d.returning_visitors)||0;
+  var total = Number(d.total_visits)||0;
+  document.getElementById('sNewP').textContent = (total ? Math.round((Number(d.new_visitors)||0)/total*100) : 0)+'% of visits';
+  document.getElementById('sRetP').textContent = (total ? Math.round((Number(d.returning_visitors)||0)/total*100) : 0)+'% of visits';
+
+  var countries = Array.isArray(d.countries) ? d.countries : [];
+  var maxCount = countries.reduce(function(max,c){return Math.max(max, Number(c.count)||0);}, 1);
+  var grid = document.getElementById('cGrid');
+  grid.replaceChildren();
+  if(!countries.length){
+    var empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.textContent = 'Abhi country data available nahi hai.';
+    grid.appendChild(empty);
+  } else {
+    countries.slice(0,12).forEach(function(country){
+      var count = Math.max(0, Number(country.count)||0);
+      var card = document.createElement('div'); card.className='cbar';
+      var name = document.createElement('div'); name.className='n'; name.textContent=country.country || 'Unknown';
+      var bar = document.createElement('div'); bar.className='bar';
+      var fill = document.createElement('div'); fill.className='fill';
+      fill.style.width = Math.min(100, (count/maxCount)*100)+'%';
+      bar.appendChild(fill);
+      var label = document.createElement('div'); label.className='c'; label.textContent=count+' visits';
+      card.append(name,bar,label); grid.appendChild(card);
+    });
+  }
+
+  var visits = Array.isArray(d.recent_visits) ? d.recent_visits : [];
+  var body = document.getElementById('vBody');
+  body.replaceChildren();
+  if(!visits.length){
+    var tr = document.createElement('tr');
+    var td = document.createElement('td'); td.colSpan=7; td.className='empty'; td.textContent='Abhi koi visit record nahi hui';
+    tr.appendChild(td); body.appendChild(tr);
+    return;
+  }
+  visits.slice(0,100).forEach(function(v){
+    var tr = document.createElement('tr');
+    var date = new Date(v.visited_at);
+    var time = Number.isNaN(date.getTime()) ? '--' : date.toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    tr.append(makeCell(time),makeCell(v.country),makeCell(v.city),makeCell(v.page || '/'),makeCell(v.device),makeCell(v.browser));
+    var type = document.createElement('td');
+    var badge = document.createElement('span');
+    badge.className = 'badge '+(v.is_returning ? 'ret' : 'new');
+    badge.textContent = v.is_returning ? 'Returning' : 'New';
+    type.appendChild(badge); tr.appendChild(type); body.appendChild(tr);
+  });
 }
 if(sessionStorage.getItem('dash_ok')==='1') showDash();
 </script>
