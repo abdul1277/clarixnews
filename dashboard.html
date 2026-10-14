@@ -45,6 +45,10 @@
   .status-line.error{color:#fb7185}.status-line.ok{color:#22c55e}
   .refresh-btn{background:var(--bg-3);border:1px solid var(--border);color:var(--text-1);font-size:11px;padding:6px 12px;border-radius:8px;cursor:pointer}
   .refresh-btn:disabled{opacity:.5;cursor:wait}
+  .periods{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+  .period-btn{background:var(--bg-2);border:1px solid var(--border);color:var(--text-3);padding:8px 12px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer}
+  .period-btn[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff}
+  .range-note{font-size:11px;color:var(--text-3);margin:0 0 14px}
   @media(max-width:640px){.dash-wrap{padding:14px}.login-box{margin:48px auto;padding:24px}.dash-top{align-items:flex-start;gap:12px;flex-wrap:wrap}.scard .v{font-size:24px}.cgrid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -63,7 +67,7 @@
 
   <div id="dash" style="display:none;">
     <div class="dash-top">
-      <div class="htitle" style="margin:0;"><span><span class="live-dot"></span>Live Analytics (Last 24h)</span></div>
+      <div class="htitle" style="margin:0;"><span><span class="live-dot"></span>Live Analytics</span></div>
       <div style="display:flex;gap:14px;align-items:center;">
         <span style="font-size:10px;color:var(--text-3);">Updated: <span id="upd">--</span></span>
         <button class="refresh-btn" id="refreshBtn" onclick="load()">↻ Refresh</button>
@@ -72,6 +76,15 @@
       </div>
     </div>
 
+    <div class="periods" id="periods" role="group" aria-label="Analytics date range">
+      <button class="period-btn" data-period="today" aria-pressed="false">Today</button>
+      <button class="period-btn" data-period="24h" aria-pressed="true">Last 24 Hours</button>
+      <button class="period-btn" data-period="7d" aria-pressed="false">Last 7 Days</button>
+      <button class="period-btn" data-period="30d" aria-pressed="false">Last 30 Days</button>
+      <button class="period-btn" data-period="6m" aria-pressed="false">Last 6 Months</button>
+      <button class="period-btn" data-period="1y" aria-pressed="false">Last 12 Months</button>
+    </div>
+    <p class="range-note" id="rangeNote">Showing activity from the last 24 hours. Auto-refreshes every 15 seconds.</p>
     <div class="stats" style="margin-top:16px;">
       <div class="scard"><div class="l">Total Visits</div><div class="v" id="sTotal">--</div></div>
       <div class="scard"><div class="l">Unique Visitors</div><div class="v" id="sUnique">--</div></div>
@@ -120,6 +133,27 @@ function lockDashboard(){
   location.reload();
 }
 var refreshTimer = null;
+var selectedPeriod = '24h';
+var periodHours = {'24h':24,'7d':168,'30d':720,'6m':4320,'1y':8760};
+var periodLabels = {'today':'Today','24h':'Last 24 Hours','7d':'Last 7 Days','30d':'Last 30 Days','6m':'Last 6 Months','1y':'Last 12 Months'};
+document.getElementById('periods').addEventListener('click', function(e){
+  var button = e.target.closest('button[data-period]');
+  if(!button) return;
+  selectedPeriod = button.dataset.period;
+  document.querySelectorAll('.period-btn').forEach(function(b){
+    b.setAttribute('aria-pressed', b.dataset.period === selectedPeriod ? 'true' : 'false');
+  });
+  document.getElementById('rangeNote').textContent = 'Showing activity for '+periodLabels[selectedPeriod]+'.';
+  load();
+});
+function getSelectedHours(){
+  if(selectedPeriod === 'today'){
+    var now = new Date();
+    var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.max(1, Math.ceil((now.getTime()-midnight.getTime())/3600000));
+  }
+  return periodHours[selectedPeriod] || 24;
+}
 function showDash(){
   document.getElementById('login').style.display='none';
   document.getElementById('dash').style.display='block';
@@ -139,11 +173,12 @@ async function load(){
     var r = await fetch(SB_URL + '/rest/v1/rpc/get_live_stats', {
       method:'POST',
       headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'},
-      body: JSON.stringify({hours:24})
+      body: JSON.stringify({hours:getSelectedHours()})
     });
     if(!r.ok) throw new Error('Analytics request failed ('+r.status+'). Check Supabase RPC permissions.');
     var d = await r.json();
     render(d);
+    document.getElementById('rangeNote').textContent = 'Range: '+periodLabels[selectedPeriod]+' · Updated every 15 seconds. Recent visits depend on the records returned by Supabase.';
     setStatus(new Date().toLocaleTimeString(), false);
   }catch(e){
     console.error('ClarixNews analytics error:', e);
