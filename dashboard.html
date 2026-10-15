@@ -193,7 +193,7 @@ function makeCell(value){
   return td;
 }
 function render(d){
-  document.getElementById('sTotal').textContent = Number(d.total_visits)||0;
+  document.getElementById('sTotal').textContent = Number(d.total_visits ?? d.page_views)||0;
   document.getElementById('sUnique').textContent = Number(d.unique_visitors)||0;
   document.getElementById('sNew').textContent = Number(d.new_visitors)||0;
   document.getElementById('sRet').textContent = Number(d.returning_visitors)||0;
