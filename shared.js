@@ -274,6 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
       var country = 'Unknown', city = 'Unknown';
       try{
         var g = await fetch('https://ipapi.co/json/').then(function(r){ return r.json(); });
+        // Exclude the site owner's current public IP from analytics.
+        // If the lookup fails, do not assume the visitor is the owner.
+        if (g && String(g.ip || '').trim() === '221.120.216.31') return;
         country = g.country_name || 'Unknown';
         city = g.city || 'Unknown';
       }catch(e){}
