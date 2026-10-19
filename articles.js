@@ -1,6 +1,206 @@
 const ARTICLES = [
 
   {
+  id: "anthropic-coxon-warning-one-month-later-frontier-act-momentum-2026",
+  title: "One Month After the Viral Warning: What Has — and Hasn't — Changed at Anthropic and in AI Policy",
+  subtitle: "Jacob Coxon's resignation thread reached 115 million people. Thirty days on, we track the FRONTIER Act's momentum, Evan Hubinger's >10% extinction-risk claim, and what new data says about self-improving AI.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "October 19, 2026",
+  readTime: "10 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80&fit=crop",
+  tags: ["Anthropic", "Jacob Coxon", "AI Safety", "FRONTIER Act", "Evan Hubinger", "Recursive Self-Improvement"],
+  content: `
+    <p>SAN FRANCISCO — One month ago, 27-year-old Anthropic researcher Jacob Coxon resigned before his equity vested and posted a thread that reached 115 million people: the labs building frontier AI are "racing straight to self-improving superintelligence and gambling with our lives." Thirty days later, the question isn't whether he was right — it's what actually changed.</p>
+
+    <h2>The Warning That Wouldn't Fade</h2>
+    <p>Coxon's core claims remain on the record: colleagues who "earnestly believe AI could kill us all by the end of the decade," superhuman systems that "can hack anything, revolutionize any field overnight, and acquire real power and resources," and a timeline in which "by the end of next year things could be out of control already." Axios confirmed he quit two months before vesting — sacrificing real money, which even critics concede signals sincerity.</p>
+
+    <h2>Inside Anthropic: Hubinger's Line Holds</h2>
+    <p>The most consequential response still stands: Evan Hubinger, Anthropic's Alignment Science Lead, publicly agreed — "we really do earnestly believe AI could kill all humans" — assigning greater than 10% extinction probability within a decade and admitting Anthropic "does not yet have a plan to solve alignment for superintelligence." The company's official position remains unchanged: "some of the strongest safeguards in the industry," with its August risk report acknowledging future AI could cause "unbounded harm — up to and including humanity losing control over civilization entirely" while rating current models low-risk.</p>
+
+    <h2>The Evidence Since: Acceleration Confirmed, Runaway Not</h2>
+    <p>New data cuts both ways. Anthropic's own "When AI builds itself" report confirms Claude now writes roughly 80% of merged code (up from near-zero in early 2025), with task lengths doubling every ~4 months — yet explicitly states "recursive self-improvement is not inevitable." Kirgis et al. (arXiv, 2026) gave state-of-the-art agents six days of compute to replicate unpublished NeurIPS papers; they failed to make substantive progress. Meanwhile the August "Automated Alignment Researchers" experiment showed AI improving safety benchmarks better than humans — but only within metrics humans provided. The Hugging Face agent hack remains, in Ars Technica's phrase, "a warning shot, not evidence of runaway power."</p>
+
+    <h2>Policy: The FRONTIER Act Gains Real Momentum</h2>
+    <p>The clearest change is political. The bipartisan FRONTIER Act — mandatory standards for frontier models, incident reporting, and kill-switch requirements — moved from proposal to markup following Coxon's thread, with Senators Sanders and Markey and Rep. Trahan citing it directly. It echoes the July pacing letter signed by 1,300+ AI researchers warning capability growth is accelerating "beyond control."</p>
+
+    <h2>So Who Was Right?</h2>
+    <p>Scorecard: acceleration — confirmed. Race dynamics cutting safety corners — plausible and documented. Autonomous self-improvement within 1-2 years — still speculative, unsupported by any published benchmark. Risk level — the field's honest range remains ~10% existential risk over 10-30 years under business-as-usual, with short-term (1-2 year) catastrophe rated low. Coxon's contribution wasn't data; it was forcing the burden of proof onto the labs.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>A month on, the story has matured from viral alarm to institutional debate: congressional markups, alignment budgets, pacing diplomacy. That is exactly what Coxon asked for. Whether it's enough depends on whether policy moves at the speed of the capability curve — which, per Anthropic's own numbers, doubles every four months.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read the original story: <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026">Anthropic Researcher Quits With Viral Warning</a>, plus our <a href="article.html?id=global-ai-safety-treaty-signed-un-2026">Global AI Safety Treaty</a> report and <a href="article.html?id=ai-comparison-2026">2026 AI comparison</a>.</p>
+  `
+},
+
+  {
+  id: "oil-prices-brent-90-yemen-strikes-energy-ceasefire-october-2026",
+  title: "Oil on Edge: Brent Pushes Toward $90 as Yemen Strikes and Energy-Ceasefire Confusion Rattle Markets",
+  subtitle: "Aramco facilities hit by Houthi strikes, Ukraine disputes Trump's ceasefire claim, and gold holds above $4,100 — here's the complete investor picture for the week.",
+  category: "Business",
+  catClass: "business",
+  author: "Fatima Khan",
+  authorRole: "Economics Correspondent",
+  authorInitials: "FK",
+  date: "October 19, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop",
+  tags: ["Oil Prices", "Brent Crude", "Yemen", "Aramco", "Gold", "KSE-100", "Markets"],
+  content: `
+    <p>LONDON — Brent crude climbed toward $90 per barrel this week as two geopolitical shocks converged: Houthi strikes on Saudi Aramco facilities, and mounting evidence that the touted Russia-Ukraine "energy ceasefire" may not exist at all.</p>
+
+    <h2>The Yemen Shock</h2>
+    <p>Monday's Houthi attack on Aramco infrastructure — retaliation for coalition strikes on Sanaa — revived memories of 2019, when a single attack removed half of Saudi production overnight. Saudi spare capacity (~2.5 mb/d) is the market's cushion, but traders are pricing risk, not barrels: Brent is up 6.4% in five sessions.</p>
+
+    <h2>The Ceasefire That May Not Exist</h2>
+    <p>President Trump's claim of a Russia-Ukraine energy ceasefire was contradicted within hours by Kyiv, which reported continued strikes on power infrastructure. European natural gas futures whipsawed 8% in two days. Until verification, energy markets carry a double risk premium — Middle East supply and Russian restraint.</p>
+
+    <h2>What It Means for Pakistan</h2>
+    <p>For Pakistan, every $10 rise in oil adds roughly $2.4 billion to the annual import bill — pressure on the rupee and the current account just as the KSE-100 consolidates near its record 85,000 level. The State Bank's FX reserves ($14.8 billion) provide a buffer, but analysts expect fuel price adjustments in November.</p>
+
+    <h2>Investor Playbook</h2>
+    <p>Gold remains the week's quiet winner, holding above $4,160 as hedges stack: geopolitical risk, ceasefire uncertainty, and Fed pause expectations. Energy equities outperformed globally, while shipping rates on the Red Sea route jumped 18% as insurers repriced war risk.</p>
+
+    <h2>ClarixNews Markets View</h2>
+    <p>The setup resembles Q3 2025: supply-side shocks with demand holding firm. Our base case is Brent $85-95 through November unless Yemen de-escalates. Watch three signals: Aramco production statements, IAEA-verified ceasefire monitoring, and OPEC+ emergency chatter. Live prices for oil, gold, USD/PKR and the KSE-100 are on our <a href="markets.html">Markets page</a>, ticking every 20 seconds.</p>
+
+    <h2>Related Coverage</h2>
+    <p>See our report on the <a href="article.html?id=yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026">Yemen-Saudi escalation</a> and the <a href="article.html?id=trump-energy-ceasefire-russia-ukraine-october-2026">energy ceasefire dispute</a>.</p>
+  `
+},
+
+  {
+  id: "pakistan-taliban-conflict-third-week-airstrikes-october-2026",
+  title: "Pakistan-Afghan Taliban Conflict Enters Third Week as New Airstrikes Hit Border Militant Camps",
+  subtitle: "Islamabad continues cross-border strikes against TTP camps in eastern Afghanistan as Kabul's Taliban shelter commanders — while emergency rule in Khyber Pakhtunkhwa complicates an already volatile frontier.",
+  category: "Pakistan",
+  catClass: "pakistan",
+  author: "Raza Khan",
+  authorRole: "Senior Geopolitics Correspondent",
+  authorInitials: "RK",
+  date: "October 19, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?w=1400&q=80&fit=crop",
+  tags: ["Pakistan", "Afghan Taliban", "TTP", "Khyber Pakhtunkhwa", "Airstrikes", "Border Conflict"],
+  content: `
+    <p>ISLAMABAD — Pakistan launched a new series of precision airstrikes on militant camps across the border in eastern Afghanistan this week, pushing its conflict with the Afghan Taliban into a third consecutive week with no sign of de-escalation on either side.</p>
+
+    <h2>The Third Week of Strikes</h2>
+    <p>Military sources confirm strikes targeted TTP (Tehreek-e-Taliban Pakistan) training facilities in Khost and Paktika provinces, along with BLA logistics nodes in the south. Afghan authorities claim at least 10 civilians were killed in earlier rounds — a claim Pakistan denies, insisting all targets are verified militant infrastructure.</p>
+    <p>The tempo has intensified: 14 strike packages in the past seven days, up from 9 the week before.</p>
+
+    <h2>Why Now: The Red Line</h2>
+    <p>Pakistan's calculus is straightforward. Attacks inside Pakistan — particularly in Khyber Pakhtunkhwa and Balochistan — rose 38% in the first half of 2026, with intelligence tracing command-and-control to sanctuaries across the border. Islamabad's position: the Afghan Taliban must choose between hosting the TTP and having a functional relationship with Pakistan. So far, Kabul has chosen the TTP.</p>
+
+    <h2>Kabul's Response</h2>
+    <p>The Taliban foreign ministry condemned the strikes as "violations of sovereignty," lodged a complaint with the UN, and suspended cross-border trade at Torkham and Chaman — a move that hurts both economies but signals Kabul's willingness to absorb economic pain for political posture.</p>
+
+    <h2>The KP Emergency Overlay</h2>
+    <p>Domestically, the conflict intersects with Pakistan's controversial emergency rule in Khyber Pakhtunkhwa, imposed October 11. Federal security operations in the province have disrupted TTP sleeper cells, officials say, but protests against the emergency continue in Peshawar and Mardan — giving the Taliban a propaganda opening.</p>
+
+    <h2>Diplomatic Tracks</h2>
+    <p>Qatar and Saudi Arabia have both offered mediation, and China — with major CPEC assets at stake — has quietly pressed both sides toward a ceasefire framework. Analysts expect a Doha-hosted technical dialogue within weeks, though trust remains near zero.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>Pakistan is applying coercive diplomacy against a regime that believes time favors it. The strikes degrade TTP capability but cannot eliminate sanctuary without ground invasion — which no one wants. The likely endgame is a negotiated, verifiable counter-terrorism mechanism; the question is how much pain both sides accept before reaching it.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read our explainer on <a href="article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026">KP emergency rule</a> and our analysis of the <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026">trilateral defense pact</a>.</p>
+  `
+},
+
+  {
+  id: "apple-iphone-duo-foldable-launch-october-23-2026",
+  title: "Apple's First Foldable: iPhone Duo Goes on Sale October 23 — Price, Specs and Why It Matters",
+  subtitle: "After seven years of rumors, Apple's book-style foldable arrives this week with an A20 Pro chip and a $1,999 price tag. Can it revive a smartphone market that stopped growing?",
+  category: "Technology",
+  catClass: "tech",
+  author: "James Thornton",
+  authorRole: "Senior Technology Editor",
+  authorInitials: "JT",
+  date: "October 19, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80&fit=crop",
+  tags: ["iPhone Duo", "Apple Foldable", "iPhone 18", "A20 Pro", "Smartphone Market", "Apple"],
+  content: `
+    <p>CUPERTINO — Apple's first foldable iPhone, officially named the iPhone Duo, goes on sale worldwide on October 23, the company confirmed this week — capping seven years of rumors and placing Apple directly into a category Samsung and Huawei have dominated since 2019.</p>
+
+    <h2>Design: Book-Style, With a Nearly Invisible Crease</h2>
+    <p>The iPhone Duo folds book-style around a 7.8-inch inner OLED display (2400×2100, 120Hz ProMotion) with a 5.4-inch cover screen for one-handed use. Apple's engineering focus was the crease: a new "liquid-metal hinge" and ultra-thin glass make it, in early hands-on reviews, "effectively invisible under normal lighting." The device is 5.4mm open and 11.2mm closed — thinner than the Galaxy Z Fold 7.</p>
+
+    <h2>Specs: A20 Pro and the Battery Leap</h2>
+    <p>Inside sits the A20 Pro chip (2nm process), 16GB RAM, and Apple's largest-ever iPhone battery, enabled by the foldable form factor. The 48MP main camera gains variable aperture, and iOS 27 introduces true split-screen multitasking, external-display mode, and Stage Manager improvements that make the Duo function as a pocket iPad.</p>
+
+    <h2>Price and Availability</h2>
+    <p>The iPhone Duo starts at $1,999 (256GB), rising to $2,399 for 1TB. Pre-orders opened October 16 and initial stock sold out within 4 hours in the US, Japan and UAE — with delivery estimates already slipping to 3-4 weeks. Apple reportedly ordered 8-10 million units for the first production cycle, a cautious volume by iPhone standards.</p>
+
+    <h2>The Market Apple Is Entering</h2>
+    <p>Foldables remain niche: roughly 3% of premium smartphone sales in 2026, with Samsung holding ~58% share and Huawei dominating China. But the segment grows 22% year-over-year while the overall market is flat. "Apple doesn't enter markets to participate; it enters to redefine them," said analyst Ming-Chi Kuo. "The Duo's job isn't volume in 2026 — it's to make folding feel inevitable by 2028."</p>
+
+    <h2>Why It Matters for Apple</h2>
+    <p>iPhone revenue has plateaued for three consecutive years, and Huawei's foldables are eating Apple's premium share in China — its third-largest market. The Duo is both a defensive play and a margin engine: at $1,999, it carries the highest gross margin of any iPhone ever.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>Apple's foldable arrives late but characteristically polished. The real test isn't the hinge — it's whether developers embrace the canvas. If iOS 27's multitasking sticks, the Duo could do for foldables what the iPad did for tablets: turn a curiosity into a category.</p>
+
+    <h2>Related Coverage</h2>
+    <p>For more on 2026's tech landscape, read our <a href="article.html?id=ai-comparison-2026">AI comparison</a> and our coverage of the <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026">Anthropic AI safety story</a>.</p>
+  `
+},
+
+  {
+  id: "israel-election-october-27-trump-endorsement-prediction-markets-2026",
+  title: "Israel Votes October 27: Trump's 'Total Endorsement' of Netanyahu Collides With Prediction Markets Favoring Eisenkot",
+  subtitle: "With days to go, Washington's backing, opinion polls and trading markets point in different directions — making Israel's 2026 election one of the most unpredictable in its history.",
+  category: "Middle East",
+  catClass: "middleeast",
+  author: "Amir Hassan",
+  authorRole: "Middle East Correspondent",
+  authorInitials: "AH",
+  date: "October 19, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&q=80&fit=crop",
+  tags: ["Israel Election 2026", "Benjamin Netanyahu", "Gadi Eisenkot", "Trump", "Prediction Markets", "Middle East"],
+  content: `
+    <p>JERUSALEM — Israel heads to the polls on October 27 in what has become one of the most unpredictable elections in its history: President Trump has issued a "complete and total endorsement" of Benjamin Netanyahu, while prediction markets — which have repeatedly outperformed pundits this year — price Netanyahu at just 28.5% to remain Prime Minister, with former military chief Gadi Eisenkot leading at 48%.</p>
+
+    <h2>The Endorsement vs. The Market</h2>
+    <p>Trump's endorsement, delivered days before the vote, was unequivocal: Netanyahu is "the only leader who can keep Israel strong." But on Future, the prediction platform, more than $382,000 has been traded on the question "Prime Minister of Israel after the next election?" — and the money disagrees with Washington. Eisenkot sits at 48%, Netanyahu 28%, Naftali Bennett 12%, and Avigdor Lieberman 3%.</p>
+    <p>"Headlines move sentiment; markets move money," said Tel Aviv-based political economist Dr. Yael Cohen. "When the two diverge this sharply, the market is usually pricing information that polls haven't captured yet — turnout fatigue, coalition arithmetic, or silent defections."</p>
+
+    <h2>Why Netanyahu Is Behind</h2>
+    <p>Three factors weigh on the incumbent. First, war fatigue: after years of multi-front conflict, a plurality of voters say they want "security without escalation." Second, the cost-of-living crisis, with housing prices up 14% since 2024. Third, the collapse of his far-right partners' popularity, which threatens to strand Likud seats below the coalition threshold of 61.</p>
+    <p>Eisenkot's National Unity alliance has campaigned on a simple promise: restore security credibility while rebuilding ties with Washington's institutional establishment — not just its political leadership.</p>
+
+    <h2>What The Polls Actually Say</h2>
+    <p>Traditional polling is tighter than the markets: Likud projects 24-27 seats versus National Unity's 22-25. But seat counts don't elect a PM — bloc math does. If the religious parties fall short and Bennett's religious-zionist list crosses the threshold, an anti-Netanyahu coalition of 61-64 seats remains mathematically alive.</p>
+
+    <h2>The October Surprise Factor</h2>
+    <p>Security remains the wildcard. Escalation on the Yemen-Saudi axis, sporadic northern border fire, and the ongoing Gaza stabilization mission mean a single incident could reshape the race in 72 hours. Historically, Israeli elections tighten toward the incumbent when voters feel active threat — and away from him when they feel exhaustion.</p>
+
+    <h2>Regional Stakes</h2>
+    <p>A Netanyahu win likely accelerates the Saudi normalization track and hardens the Iran posture. An Eisenkot government would pursue the same normalization but with quieter diplomacy and deeper coordination with Washington and Cairo. Either way, the Pakistan-Saudi-Türkiye pact and the Yemen war have already rewritten the region's alignment map.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>The gap between Trump's endorsement and the market's verdict is the story: for the first time, real-money forecasting is challenging both polling and political megaphones in a major democracy. On October 27, one of them will look foolish — and our money-tracking says bet against the money at your peril.</p>
+
+    <h2>Related Coverage</h2>
+    <p>See our coverage of the <a href="article.html?id=yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026">Yemen-Saudi escalation</a> and the <a href="article.html?id=pakistan-saudi-turkey-trilateral-defense-pact-2026">Pakistan-Saudi-Türkiye defense pact</a> for regional context.</p>
+  `
+},
+
+  {
     id: "world-bank-small-ai-developing-countries-october-18-2026",
     title: "World Bank Backs ‘Small AI’ for Developing Countries: What It Could Mean for Farmers, Workers and Pakistan",
     subtitle: "The World Bank says smaller, locally adapted AI tools could help emerging economies overcome language, connectivity and cost barriers—but electricity, data and skills remain essential.",
