@@ -1,6 +1,171 @@
 const ARTICLES = [
 
   {
+    id: "ai-career-roadmap-skills-portfolio-2026",
+    title: "How to Build an AI Career in 2026: Skills, Projects, Portfolio and a Realistic 90-Day Roadmap",
+    subtitle: "A practical guide for students and career changers to move beyond AI hype, learn job-ready fundamentals, build credible projects and apply for entry-level opportunities.",
+    category: "Career",
+    catClass: "career",
+    author: "ClarixNews Career Desk",
+    authorRole: "Careers & Technology",
+    authorInitials: "CC",
+    date: "October 20, 2026",
+    readTime: "11 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80&fit=crop",
+    tags: ["AI career 2026", "AI engineer roadmap", "Python for AI", "machine learning projects", "AI portfolio", "entry-level tech jobs", "career change"],
+    content: `
+      <p>Artificial intelligence has created new opportunities across software, business, education, healthcare and media. But the phrase “learn AI” is too broad to be a career plan. Employers and clients need people who can solve concrete problems, explain their decisions, build reliable systems and keep learning as tools change. A strong entry-level candidate does not need to know everything; they need to demonstrate a useful set of skills and prove they can apply them.</p>
+      <p>This guide lays out a realistic 90-day starting plan for students, graduates and career changers. It is not a promise of a job in three months. Results depend on your starting level, available time, communication skills, local market and the quality of your work. The goal is to finish with stronger foundations, two or three demonstrable projects and a consistent application routine.</p>
+
+      <h2>First, choose a clear starting role</h2>
+      <p>AI is an umbrella term, not a single job. Choose one primary direction for the first three months, while exploring related roles later.</p>
+      <h3>AI application developer</h3>
+      <p>Build applications that use existing AI models: document question-answering, customer-support assistants, research tools and workflow automation. Useful skills include Python or JavaScript, APIs, data handling, testing, security basics and user-friendly interfaces. This can be a practical entry point for someone who enjoys building software.</p>
+      <h3>Data analyst with AI skills</h3>
+      <p>Clean and analyse data, create dashboards, explain trends and use AI tools to speed up routine work. Focus on spreadsheets, SQL, Python, statistics and data visualisation. The important skill is not producing a chart; it is explaining what the data supports, what it does not support and what a decision-maker should do next.</p>
+      <h3>Machine-learning engineer</h3>
+      <p>Train, evaluate and deploy models. This path needs stronger Python, mathematics, statistics, data preparation, model evaluation and software engineering. It usually takes longer than simply connecting an application to an existing model. Do not skip the fundamentals because a tutorial makes training look easy.</p>
+      <h3>AI evaluation and data quality</h3>
+      <p>Some projects involve rating model answers, checking factual accuracy, writing test cases or labelling data. These tasks can provide useful experience, but availability and pay vary, and work may be temporary. Treat them as one possible source of experience rather than a guaranteed career ladder.</p>
+
+      <h2>The foundations worth learning</h2>
+      <ul>
+        <li><strong>Python:</strong> variables, strings, lists, dictionaries, conditions, loops, functions, files, exceptions and modules. Practise writing small programs without copying every line from a tutorial.</li>
+        <li><strong>Git and GitHub:</strong> use commits, meaningful README files, branches when appropriate and clear project histories. A repository should help another person understand and run your work.</li>
+        <li><strong>Data skills:</strong> learn how to inspect missing values, duplicates, data types and outliers. Use Pandas and visualisation libraries when they fit the problem.</li>
+        <li><strong>Statistics and evaluation:</strong> understand averages, distributions, correlation, train/test splits, overfitting and why accuracy alone can mislead.</li>
+        <li><strong>APIs and software basics:</strong> understand requests and responses, JSON, environment variables, error handling, input validation and how to avoid exposing secret keys.</li>
+        <li><strong>Communication:</strong> explain a project in plain language, write concise documentation and state limitations honestly. Technical work still needs clear communication.</li>
+      </ul>
+      <p>You do not need to master every item before building anything. Learn a concept, use it in a small task, then return to it when a project exposes a gap. Practical repetition helps knowledge stick.</p>
+
+      <h2>A realistic 90-day plan</h2>
+      <h3>Days 1–30: build the base</h3>
+      <p>Spend most sessions on Python and basic data work. Write small programs such as a budget tracker, CSV cleaner, quiz app or file organiser. Practise functions and loops until you can explain what each part does. Learn Git by committing small, understandable changes. If you already know some coding, use this period to identify weak areas instead of repeating an entire beginner course.</p>
+      <h3>Days 31–60: build two useful projects</h3>
+      <p>Choose problems that have a clear user and a testable result. One project could analyse a public dataset and produce a short report with charts. Another could be a document assistant that answers questions from a small collection of files and shows the supporting passages. Include input validation, sensible error messages, setup instructions and a section explaining what the tool cannot reliably do.</p>
+      <h3>Days 61–90: polish, publish and apply</h3>
+      <p>Improve the projects based on feedback. Add screenshots or a short demo, a clear README, sample inputs, known limitations and a simple test checklist. Publish a working demo only if you can do so safely and within your budget. Then tailor applications to suitable internships, junior roles, freelance tasks and trainee programmes. Keep a record of applications and follow-ups so you can improve your approach rather than sending the same generic message everywhere.</p>
+
+      <h2>What makes a portfolio project credible?</h2>
+      <p>A project is stronger when it solves a specific problem, not when it contains the largest number of technologies. A useful portfolio page should answer five questions: Who is it for? What problem does it solve? What data or inputs does it use? How did you test it? What are its limitations?</p>
+      <ol>
+        <li><strong>Show the result:</strong> include a short demo, screenshots or example output.</li>
+        <li><strong>Explain the design:</strong> describe the main components and why you chose them.</li>
+        <li><strong>Test failure cases:</strong> demonstrate what happens when a file is empty, input is invalid or an API is unavailable.</li>
+        <li><strong>Be transparent:</strong> state which parts you built, which tools or models you used and what remains incomplete.</li>
+        <li><strong>Make it reproducible:</strong> provide setup steps and a safe example configuration. Never publish passwords, private datasets or API keys.</li>
+      </ol>
+      <p>Three small, complete projects can be more persuasive than ten unfinished repositories. A reviewer should be able to understand the purpose quickly and see evidence that you made deliberate engineering decisions.</p>
+
+      <h2>Using AI tools without becoming dependent on them</h2>
+      <p>AI coding assistants can explain errors, suggest tests and help you explore unfamiliar libraries. They can also produce incorrect code, invent functions or hide important assumptions. Ask for explanations, verify suggestions against documentation, run the code and test edge cases. For every important section, make sure you can explain what it does and why it is needed.</p>
+      <p>A practical rule is to attempt a problem first, ask for help on the specific obstacle, then rewrite or explain the solution in your own words. This approach is slower than blindly copying a full application, but it builds skills you can use when an interview, production bug or client request does not match a tutorial.</p>
+
+      <h2>How to apply when you have little experience</h2>
+      <p>Do not wait until you feel perfectly ready. Create a one-page CV that highlights relevant skills, projects, education and measurable outcomes. For each application, match the strongest evidence to the job description. “Built a Python tool that cleans CSV files and reports missing values” is clearer than “passionate about AI.” Never claim professional experience, model performance or qualifications you cannot verify.</p>
+      <p>Search across several channels: company career pages, reputable job boards, university and training networks, open-source communities and legitimate internship programmes. Read eligibility, location, payment and deadline details carefully. Be cautious of recruiters who demand fees for a guaranteed job, ask for passwords or request sensitive documents before you can verify who they are.</p>
+      <p>For interviews, practise explaining one project from beginning to end: the problem, your approach, a difficult bug, how you tested the result and what you would improve next. Honest reasoning is more useful than memorised jargon.</p>
+
+      <h2>A weekly routine that can actually last</h2>
+      <ul>
+        <li>Four focused sessions for learning and coding.</li>
+        <li>One session for project testing, documentation and GitHub updates.</li>
+        <li>One session for applications, networking or asking for project feedback.</li>
+        <li>One review session to note what you learned, what still confuses you and the next small target.</li>
+      </ul>
+      <p>Even two focused hours a day can compound when you use them consistently. Protect time for sleep and breaks; long hours spent switching between tutorials and tools are not the same as deliberate practice.</p>
+
+      <h2>Common mistakes to avoid</h2>
+      <ul>
+        <li>Collecting course certificates without building anything you can demonstrate.</li>
+        <li>Trying to learn AI, web development, cybersecurity and every new framework at once.</li>
+        <li>Using impressive project descriptions that do not match what the code actually does.</li>
+        <li>Ignoring basic programming, data quality, testing and security.</li>
+        <li>Assuming a certificate, viral post or online influencer can guarantee a job or salary.</li>
+        <li>Paying for expensive courses before using credible free documentation and learning resources.</li>
+      </ul>
+
+      <h2>ClarixNews career takeaway</h2>
+      <p>The most reliable starting strategy is simple: choose one role, strengthen the foundations, build useful projects, explain your work clearly and apply consistently. The AI job market will continue to change, so focus on skills that survive tool changes: problem-solving, programming, data judgement, testing, communication and the ability to learn. A 90-day plan can create momentum, but a career is built through continued practice and feedback—not a shortcut.</p>
+      <p><em>This article is for general educational and career-planning purposes. Hiring requirements and opportunities vary by employer, location and time; verify details directly with each organisation.</em></p>
+      <h2>Further reading</h2>
+      <p><a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener noreferrer">Python.org — Getting Started</a></p>
+      <p><a href="https://docs.github.com/en/get-started" target="_blank" rel="noopener noreferrer">GitHub Docs — Getting Started</a></p>
+      <p><a href="https://scikit-learn.org/stable/getting_started.html" target="_blank" rel="noopener noreferrer">scikit-learn — Getting Started with Machine Learning</a></p>
+    `
+  },
+
+  {
+    id: "opinion-ai-tools-human-judgement-work-2026",
+    title: "Opinion: AI Should Make People More Capable, Not More Dependent",
+    subtitle: "The real test of artificial intelligence is not how much work it can generate, but whether people can use it to think more clearly, make better decisions and retain control.",
+    category: "Opinion",
+    catClass: "opinion",
+    author: "ClarixNews Opinion Desk",
+    authorRole: "Editorial Opinion",
+    authorInitials: "CO",
+    date: "October 20, 2026",
+    readTime: "9 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1400&q=80&fit=crop",
+    tags: ["AI opinion", "artificial intelligence and work", "human judgement", "AI literacy", "education and AI", "responsible AI", "future of work"],
+    content: `
+      <p><em>Opinion — The views expressed in this article are those of the ClarixNews Opinion Desk and are intended to encourage discussion.</em></p>
+      <p>Artificial intelligence can draft an email in seconds, summarise a long report, write code, translate languages and help people explore unfamiliar subjects. These capabilities are genuinely useful. Yet a quiet question sits behind the excitement: are we becoming better at the work, or simply becoming faster at asking a machine to do it for us?</p>
+      <p>The answer should not be a blanket rejection of AI. Tools have always changed how people work. Calculators did not make mathematics useless, and search engines did not make knowledge irrelevant. But every powerful tool changes what users need to understand. With AI, the essential skill is not merely prompting. It is knowing what to ask, how to check the answer and when not to trust it.</p>
+
+      <h2>The danger is not that AI helps us—it is that we stop checking</h2>
+      <p>AI systems can produce fluent, confident responses that contain mistakes, missing context or invented details. The writing may look polished enough to discourage scrutiny. In education, that can turn an assignment into a copy-and-submit exercise. At work, it can allow an inaccurate summary or a flawed line of code to move through a process without anyone taking responsibility for it.</p>
+      <p>The solution is not to ban every tool. It is to make verification part of the workflow. A student should be able to explain the central idea in their own words. A developer should run tests and inspect the generated code. A journalist should confirm names, dates and claims with reliable sources. A manager should question whether an AI recommendation fits the actual people and circumstances involved.</p>
+      <p>In other words, the better AI becomes at producing a first draft, the more important human judgement becomes in deciding whether that draft deserves to be used.</p>
+
+      <h2>Efficiency is valuable—but it is not the same as quality</h2>
+      <p>Organisations often measure new technology by speed: how many emails were written, how many tickets were closed or how many lines of code were produced. Those numbers may be useful, but they can create a false sense of progress. If a faster process generates more errors, confuses customers or forces employees to repair bad output, the apparent productivity gain may disappear.</p>
+      <p>A better evaluation asks whether the tool improves the final result. Does it reduce avoidable mistakes? Does it help a small team serve people who were previously overlooked? Does it free a professional to spend more time on difficult decisions? Can the organisation explain where the system fails and who is accountable when it does?</p>
+      <p>These questions are less glamorous than a demonstration that produces a perfect-looking answer in ten seconds. They are also closer to the reality of using technology responsibly.</p>
+
+      <h2>Education should reward understanding, not just finished documents</h2>
+      <p>Students have a legitimate reason to use AI as a tutor. It can offer alternative explanations, create practice questions, help with language and provide feedback on a draft. For learners who lack access to private tutoring, these uses may be particularly valuable.</p>
+      <p>But if a student submits work they cannot explain, the finished document hides the very gap education is supposed to reveal. Schools and colleges should respond by designing assessments that include process and reasoning: short oral explanations, in-class problem solving, drafts, source checking and practical demonstrations. Clear rules should distinguish permitted assistance from dishonest representation.</p>
+      <p>Students should also be taught to disclose meaningful AI assistance when required and to verify facts rather than treating a chatbot as an authority. The objective is not to make every learner work without tools. It is to ensure that the learner—not the tool—has gained the skill.</p>
+
+      <h2>Workers need training, not just new software</h2>
+      <p>When companies introduce AI, the conversation can focus too narrowly on licences and automation. Employees also need time to learn the system, understand privacy rules, recognise unreliable outputs and redesign tasks. A tool that works well for one department may be unsuitable for another, especially where confidential information, safety or complex human needs are involved.</p>
+      <p>Responsible employers should explain which tasks AI may assist with, which decisions require human review, what information must never be entered into unapproved services and how workers can report failures. They should measure outcomes and provide training instead of assuming that access to a chatbot automatically creates competence.</p>
+      <p>Automation may change some jobs and create new tasks, but the effects will differ across industries and countries. Predictions of universal job loss or guaranteed prosperity are both too simple. What matters now is whether workers receive opportunities to adapt and whether the gains from new technology are shared fairly.</p>
+
+      <h2>Pakistan should focus on practical access and local value</h2>
+      <p>For Pakistan, AI offers opportunities in education, agriculture, small-business services, software development, public information and language technology. A small shop might use it to draft product descriptions; a student might use it for practice; a developer might automate repetitive tasks. These are modest examples, but useful adoption often begins with a specific problem rather than a national slogan.</p>
+      <p>There are also barriers: uneven internet access, the cost of devices and subscriptions, limited digital skills, data privacy concerns and weak support for local-language needs. Urdu and regional-language users should not be expected to accept lower-quality services or to expose sensitive information just to access new tools. Public institutions, educators and businesses can help by offering practical training, clear safeguards and services designed for local contexts.</p>
+      <p>Most importantly, local organisations should not measure progress only by how many AI tools they have adopted. They should ask whether the tools improve learning, service quality, accessibility or productivity in ways that can be demonstrated.</p>
+
+      <h2>Human accountability cannot be outsourced</h2>
+      <p>If an AI-generated message misleads a customer, a hiring system unfairly filters an applicant or a model produces a harmful recommendation, “the AI said it” is not a sufficient explanation. The organisation that chooses to use the system remains responsible for how it is deployed, monitored and corrected.</p>
+      <p>This does not mean every AI error is preventable. It means organisations should be honest about risk, keep appropriate human oversight, protect personal information and provide ways to challenge important decisions. The more serious the consequence, the stronger the evidence and review process should be.</p>
+
+      <h2>A better way to use AI every day</h2>
+      <ul>
+        <li><strong>Use it to start thinking:</strong> ask for possible approaches, counterarguments or an explanation of a difficult concept.</li>
+        <li><strong>Verify important claims:</strong> check primary sources, calculations, dates and quotations before relying on them.</li>
+        <li><strong>Protect sensitive information:</strong> do not paste confidential work, private records or passwords into tools without explicit authorisation.</li>
+        <li><strong>Keep your own skills active:</strong> practise writing, coding, analysis and decision-making without assistance often enough to recognise errors.</li>
+        <li><strong>Take responsibility:</strong> review the final output and be prepared to explain why you used it.</li>
+      </ul>
+
+      <h2>Our view</h2>
+      <p>The strongest future is neither a world where AI is rejected nor one where every decision is handed to a model. It is a world where people use AI to extend their abilities while preserving curiosity, responsibility and the freedom to question a result. Technology should reduce unnecessary effort so that human attention can move toward work that requires context, empathy, judgement and accountability.</p>
+      <p>We should judge AI by the people it helps, the problems it solves and the risks it manages—not by the volume of content it can produce. If the tools make us more informed, more capable and more thoughtful, they are serving us well. If they make us passive, careless and unwilling to verify, speed alone is not progress.</p>
+      <h2>Further reading</h2>
+      <p><a href="https://www.unesco.org/en/artificial-intelligence" target="_blank" rel="noopener noreferrer">UNESCO — Artificial Intelligence and its work on responsible use</a></p>
+      <p><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST — AI Risk Management Framework</a></p>
+    `
+  },
+
+
+
+  {
     id: "global-ai-stock-selloff-investment-bubble-october-20-2026",
     title: "AI Stock Market Boom Faces a Reality Check: Why Investors Are Questioning Big Tech's Trillion-Dollar Spending",
     subtitle: "A sharp Nasdaq pullback, rising scrutiny of data-centre spending and uncertain returns are forcing investors to ask whether AI profits can catch up with AI investment.",
