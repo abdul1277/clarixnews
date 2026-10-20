@@ -261,6 +261,19 @@ document.addEventListener('DOMContentLoaded', () => {
     return vid;
   }
   function isReturning(){ return localStorage.getItem('cn_returning') === 'true'; }
+  // One analytics visit per browsing session, even across article/category page loads.
+  // A new visit starts after 30 minutes of inactivity.
+  function getSessionId(){
+    var now = Date.now();
+    var sessionId = localStorage.getItem('cn_session_id');
+    var lastActivity = Number(localStorage.getItem('cn_session_last_activity') || 0);
+    if(!sessionId || !lastActivity || now - lastActivity > 30 * 60 * 1000){
+      sessionId = 's_' + Math.random().toString(36).slice(2,10) + now.toString(36);
+      localStorage.setItem('cn_session_id', sessionId);
+    }
+    localStorage.setItem('cn_session_last_activity', String(now));
+    return sessionId;
+  }
   function deviceInfo(){
     var ua = navigator.userAgent;
     var device = /Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : (/Tablet|iPad/i.test(ua) ? 'Tablet' : 'Desktop');
@@ -291,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         body: JSON.stringify({
           visitor_id: getVisitorId(),
+          session_id: getSessionId(),
           country: country,
           city: city,
           page: path,
