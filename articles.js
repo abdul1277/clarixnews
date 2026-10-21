@@ -1,6 +1,187 @@
 const ARTICLES = [
 
   {
+  id: "frontier-act-senate-markup-ai-regulation-coxon-effect-2026",
+  title: "The 'Coxon Effect': How One Resignation Thread Pushed the FRONTIER Act From Proposal to Senate Markup",
+  subtitle: "Six weeks after Jacob Coxon's viral warning — and with Evan Hubinger's >10% extinction-risk claim on the record — lawmakers cite the thread in hearings as the bipartisan AI bill gains real momentum.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "October 21, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80&fit=crop",
+  tags: ["FRONTIER Act", "AI Regulation", "Jacob Coxon", "Anthropic", "Senate", "AI Kill Switch"],
+  content: `
+    <p>WASHINGTON — When Jacob Coxon resigned from Anthropic on September 8 with a thread viewed 115 million times — warning that labs are "racing straight to self-improving superintelligence and gambling with our lives" — few expected legislative consequences within weeks. Yet on Tuesday, the bipartisan FRONTIER Act moved to Senate markup, with three sponsors citing Coxon's testimony-by-thread directly in opening statements.</p>
+
+    <h2>What the Bill Actually Does</h2>
+    <p>The FRONTIER Act would impose mandatory capability standards on frontier AI developers, require incident reporting for dangerous autonomous behavior, mandate independent red-teaming before deployment above a compute threshold, and establish verified "kill-switch" protocols for the most advanced systems. A companion proposal in the House adds whistleblower protections — a direct nod to Coxon's equity-sacrificing exit.</p>
+
+    <h2>The Evidence Cited in Hearings</h2>
+    <p>Lawmakers' briefing books read like this year's AI safety literature: Anthropic's August report showing Claude now writes roughly 80% of merged code with task lengths doubling every ~4 months; the same report's caution that "recursive self-improvement is not inevitable"; Kirgis et al.'s finding that agents given six days of compute failed at open-ended research; and the Hugging Face agent hack, described in Ars Technica's words as "a warning shot, not evidence of runaway power."</p>
+
+    <h2>Industry: Split, Not United</h2>
+    <p>Anthropic's Dario Amodei has repeatedly argued labs "should willingly slow down until alignment is solved," and OpenAI's Sam Altman insists "getting AI safety right is more than any company's momentum." Yet trade groups warn compliance costs will entrench big labs — echoing startup founders who call the compute threshold "a moat, not a safeguard."</p>
+
+    <h2>The Global Frame</h2>
+    <p>The markup lands weeks after 50 nations signed the Geneva Accord on AI Safety and as the EU finalizes enforcement guidance for its AI Act. The July pacing letter — signed by more than 1,300 researchers warning capability growth is accelerating "beyond control" — is now attached to the congressional record.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>The Coxon episode did not create the FRONTIER Act, but it changed its velocity: a viral insider warning plus an alignment lead's on-record >10% extinction estimate gave legislators political cover to regulate an industry previously considered untouchable. Whether the bill survives election-year politics is open — but the Overton window on AI regulation has visibly moved.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read the original exclusive: <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026">Anthropic Researcher Quits With Viral Warning</a>, our one-month follow-up <a href="article.html?id=anthropic-coxon-warning-one-month-later-frontier-act-momentum-2026">What Changed After the Warning</a>, and the <a href="article.html?id=global-ai-safety-treaty-signed-un-2026">Geneva Accord</a> report.</p>
+  `
+},
+
+  {
+  id: "pakistan-supreme-court-kp-emergency-rule-hearing-october-2026",
+  title: "Pakistan Supreme Court Hears Challenges to Khyber Pakhtunkhwa Emergency Rule — Verdict Expected This Week",
+  subtitle: "As protests continue and the conflict with the Afghan Taliban persists, a full bench weighs whether Articles 232 and 234 were constitutionally invoked — a decision that could redefine federal-provincial relations.",
+  category: "Pakistan",
+  catClass: "pakistan",
+  author: "Raza Khan",
+  authorRole: "Senior Geopolitics Correspondent",
+  authorInitials: "RK",
+  date: "October 21, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&q=80&fit=crop",
+  tags: ["Pakistan Supreme Court", "Khyber Pakhtunkhwa", "Emergency Rule", "Constitution", "Article 232"],
+  content: `
+    <p>ISLAMABAD — Pakistan's Supreme Court heard consolidated petitions on Monday challenging the emergency rule imposed in Khyber Pakhtunkhwa on October 11, with a five-member full bench reserving judgment and signaling a verdict within days — a ruling that constitutional experts say will shape center-province relations for a generation.</p>
+
+    <h2>The Core Constitutional Question</h2>
+    <p>Petitioners argue that Article 232 requires "war, external aggression or internal disturbance" beyond provincial control, and that the provincial government was neither given a hearing nor shown to have failed. The federation counters that militancy data — a 38% rise in attacks in H1 2026 — satisfies the threshold and that Article 234 governor's rule operates independently.</p>
+
+    <h2>The Court's Notable Observations</h2>
+    <p>During hearings, bench members questioned why parliament was not summoned within the constitutionally mandated period and asked the federation to produce the security assessment underlying the proclamation. Legal analysts read the questions as signaling at least partial judicial scrutiny of the procedure, if not the substance.</p>
+
+    <h2>Political Stakes</h2>
+    <p>For PTI, a verdict striking down the emergency would be a moral and legal vindication ahead of any future elections. For the coalition government, upholding it preserves operational freedom for security operations coinciding with the ongoing conflict against TTP sanctuaries across the Afghan border.</p>
+
+    <h2>The Security Backdrop</h2>
+    <p>The hearing unfolded as Pakistani airstrikes on militant camps in eastern Afghanistan continue into a third week, and as border trade with Afghanistan remains suspended. Analysts note the court's decision will also be read in Kabul, Washington and Riyadh — all of which track Pakistan's internal stability closely.</p>
+
+    <h2>Market and Investor Angle</h2>
+    <p>The KSE-100, hovering near record highs, has shown resilience, but foreign investors cite constitutional stability as a key watch-item. A narrowly reasoned verdict either way is seen as manageable; a fractured bench or deferred ruling would prolong uncertainty.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read our explainer on <a href="article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026">what emergency and governor's rule mean</a>, our report on the <a href="article.html?id=pakistan-taliban-conflict-third-week-airstrikes-october-2026">Pakistan-Taliban conflict</a>, and our analysis of the <a href="article.html?id=pakistan-economy-ks100-record-high-fdi-2026">KSE-100 record rally</a>.</p>
+  `
+},
+
+  {
+  id: "hurricane-isaias-landfall-fema-response-insurance-losses-2026",
+  title: "Hurricane Isaias Aftermath: FEMA Mobilizes as the Southeast Counts the Cost of 2026's Strongest Storm",
+  subtitle: "Category 3 landfall left millions without power and early insured losses estimated at $8–12 billion. Federal response speed is under scrutiny after last season's delays.",
+  category: "World",
+  catClass: "world",
+  author: "Angela Rivera",
+  authorRole: "US Correspondent",
+  authorInitials: "AR",
+  date: "October 21, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1400&q=80&fit=crop",
+  tags: ["Hurricane Isaias", "FEMA", "Florida", "Storm Damage", "Climate", "US News"],
+  content: `
+    <p>MIAMI — Recovery operations expanded across the US Southeast on Monday as Hurricane Isaias — 2026's strongest Atlantic storm — moved inland, leaving at least four confirmed deaths, more than 2.3 million customers without power at peak, and a damage bill that early insurance estimates place between $8 billion and $12 billion.</p>
+
+    <h2>The Storm's Path</h2>
+    <p>Isaias made landfall as a Category 3 hurricane with sustained winds of 120 mph, driving a storm surge of up to 9 feet in coastal communities. Rapid intensification — fueled by record-warm Atlantic waters — gave residents less than 36 hours of warning, compressing evacuation windows and straining shelters.</p>
+
+    <h2>FEMA's Response Under the Microscope</h2>
+    <p>FEMA has deployed 4,000 personnel and opened 60 disaster recovery centers, with administrators promising "days, not weeks" for initial assistance. Congressional oversight committees, however, have already scheduled hearings, citing last season's backlog of 60,000 unresolved claims as a warning sign.</p>
+
+    <h2>Insurance and Market Impact</h2>
+    <p>Reinsurance stocks fell 4-7% this week as loss estimates firmed. Florida's state-backed insurer of last resort faces renewed solvency questions, while mortgage analysts flag elevated default risk in twice-hit zip codes. Utility companies estimate full power restoration within 10-14 days.</p>
+
+    <h2>The Climate Context</h2>
+    <p>Isaias is the eighth named storm of an above-average season. Scientists repeatedly note that warmer sea-surface temperatures increase both rapid intensification events and rainfall totals — Isaias dropped up to 18 inches in some locations. The UN's ongoing climate finance negotiations in Nairobi have cited the storm as a case study in loss-and-damage funding.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read our coverage of the <a href="article.html?id=un-climate-summit-carbon-tax-breakthrough-2026">UN Global Carbon Tax Framework</a> and Europe's own climate emergency declared in <a href="article.html?id=europe-record-heatwave-climate-crisis-2026">this summer's record heatwave</a>.</p>
+  `
+},
+
+  {
+  id: "us-midterm-elections-2026-congress-balance-power-preview",
+  title: "US Midterms 2026: Control of Congress Goes to the Voters as the Trump Era Faces Its First Referendum",
+  subtitle: "With Election Day on November 3, narrow House margins, a razor-thin Senate, and an economy-and-AI ballot make 2026 one of the most consequential midterms in a generation.",
+  category: "World",
+  catClass: "world",
+  author: "Daniel Foster",
+  authorRole: "US Political Correspondent",
+  authorInitials: "DF",
+  date: "October 21, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&q=80&fit=crop",
+  tags: ["US Midterms 2026", "Congress", "Senate", "Trump", "Election 2026", "American Politics"],
+  content: `
+    <p>WASHINGTON — Thirteen days before Americans vote on November 3, the 2026 midterm elections have tightened into one of the most unpredictable congressional races in decades — with control of both chambers genuinely in play and the presidency's first true popular referendum on the ballot.</p>
+
+    <h2>What's At Stake</h2>
+    <p>All 435 House seats and 35 Senate seats are contested. History is blunt about midterms: the president's party has lost House seats in all but three midterms since 1934, averaging a loss of 26 seats. With margins this narrow, that historical gravity alone makes a flip plausible — though turnout dynamics in a high-polarization era could defy the pattern.</p>
+
+    <h2>The Issues Driving Voters</h2>
+    <p>Polling aggregates show four dominant concerns: cost of living and housing, immigration enforcement, the pace of AI-driven job disruption, and foreign entanglements from Ukraine to the Middle East. Notably, AI has emerged as a top-five midterm issue for the first time in American history — fueled in part by September's Anthropic resignation controversy and the FRONTIER Act debate.</p>
+
+    <h2>Races To Watch</h2>
+    <p>Analysts flag a cluster of seats where national waves become local tsunamis: suburban districts in Pennsylvania, Virginia and California; the Texas Senate race with its record $300 million in advertising; and Michigan's eighth, where a viral AI-jobs town hall reshaped the contest overnight.</p>
+
+    <h2>Why The World Is Watching</h2>
+    <p>Congressional control shapes everything from Ukraine funding and the Saudi defense relationship to AI regulation and tariff policy. A divided government would slow the FRONTIER Act and trade deals; a unified swing would accelerate them. Markets are already pricing scenarios: prediction platforms show a 55-60% chance of at least one chamber flipping.</p>
+
+    <h2>ClarixNews Analysis</h2>
+    <p>Midterms are usually a referendum on the economy; 2026 adds a referendum on technology itself. The party that successfully frames AI — as opportunity or as risk — may win more than Congress: it may set the terms of the 2028 presidential race.</p>
+
+    <h2>Related Coverage</h2>
+    <p>See our report on <a href="article.html?id=trump-energy-ceasefire-russia-ukraine-october-2026">Trump's energy ceasefire claim</a> and our analysis of the <a href="article.html?id=frontier-act-senate-markup-ai-regulation-coxon-effect-2026">FRONTIER Act's momentum</a>.</p>
+  `
+},
+
+  {
+  id: "pope-leo-xiv-first-public-appearance-vatican-return-october-2026",
+  title: "One Week After Lung Surgery, Pope Leo XIV Appears at Gemelli Hospital Window to Bless Crowds",
+  subtitle: "The pontiff's brief appearance — pale but smiling — ends days of global concern. Vatican confirms recovery is 'on track' and a return to the Vatican is expected within weeks.",
+  category: "World",
+  catClass: "world",
+  author: "Maria Santos",
+  authorRole: "Vatican Correspondent",
+  authorInitials: "MS",
+  date: "October 21, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1555952531-23b4e88e9cb6?w=1400&q=80&fit=crop",
+  tags: ["Pope Leo XIV", "Vatican", "Catholic Church", "Gemelli Hospital", "Pope Recovery"],
+  content: `
+    <p>ROME — Pope Leo XIV appeared publicly for the first time since his lung cancer surgery on Tuesday, stepping to a window of Rome's Gemelli Hospital to bless several hundred faithful who had gathered below — a brief but emotionally charged moment that Vatican officials hope will calm weeks of global concern about the pontiff's health.</p>
+
+    <p>The pope, 78, raised his hand in blessing and spoke a few words — "Thank you for your prayers; I am well" — before retiring after approximately three minutes. It was his first unscheduled public visibility since undergoing removal of the lower lobe of his right lung on October 14.</p>
+
+    <h2>Medical Update: 'On Track'</h2>
+    <p>Vatican spokesperson Matteo Bruni told reporters that the pope's recovery is "proceeding on schedule," with post-operative scans clear and no requirement for adjuvant chemotherapy at this stage, pending final pathology review. Medical experts note that early-stage lobectomy patients typically resume normal activity within four to six weeks.</p>
+
+    <h2>Governing the Church From a Hospital Bed</h2>
+    <p>During the pope's convalescence, Cardinal Pietro Parolin (Secretary of State) has managed day-to-day administration, with major appointments deferred. Canon lawyers emphasize that no formal transfer of power occurred — the pope retained full authority throughout, approving decisions from his hospital suite.</p>
+
+    <h2>A Global Audience Watched</h2>
+    <p>The window appearance was livestreamed by Vatican Media and drew millions of views within hours. Catholic leaders from Manila to Bogotá posted messages of gratitude, while interfaith figures — including the Grand Imam of Al-Azhar — sent well-wishes, underscoring the pope's outsized symbolic role.</p>
+
+    <h2>What Comes Next</h2>
+    <p>The Vatican expects the pope to return to the Domus Sanctae Marthae residence within two to three weeks, with the Sunday Angelus blessing resuming in November. His first international trip post-surgery — a planned visit to Southeast Asia in January — remains on the calendar, sources say.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read our original report on the <a href="article.html?id=pope-leo-xiv-lung-surgery-cancer-recovery-october-2026">pope's surgery and diagnosis</a>, and our coverage of the <a href="article.html?id=nobel-peace-prize-2026-navi-pillay">2026 Nobel Peace Prize</a> for more on global moral leadership this month.</p>
+  `
+},
+
+  {
     id: "ai-career-roadmap-skills-portfolio-2026",
     title: "How to Build an AI Career in 2026: Skills, Projects, Portfolio and a Realistic 90-Day Roadmap",
     subtitle: "A practical guide for students and career changers to move beyond AI hype, learn job-ready fundamentals, build credible projects and apply for entry-level opportunities.",
