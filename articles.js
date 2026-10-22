@@ -1,6 +1,191 @@
 const ARTICLES = [
 
   {
+  id: "optogenetics-nobel-2026-first-human-trials-blindness",
+  title: "From Nobel Stage to Operating Theatre: Optogenetics Begins Its First Human Trials for Inherited Blindness",
+  subtitle: "Weeks after Deisseroth, Hegemann and Nagel won the 2026 Medicine prize, two hospitals have enrolled the first patients in light-switch gene therapy trials — the fastest Nobel-to-bedside translation in a decade.",
+  category: "Science",
+  catClass: "science",
+  author: "Dr. Elena Rostova",
+  authorRole: "Environment & Science Editor",
+  authorInitials: "ER",
+  date: "October 22, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1400&q=80&fit=crop",
+  tags: ["Optogenetics", "Nobel Prize 2026", "Gene Therapy", "Blindness Treatment", "Medical Breakthrough"],
+  content: `
+    <p>BOSTON — Three weeks after the Nobel Assembly honored the discovery of optogenetics, the technique has entered the phase every laureate dreams of and few reach quickly: first human trials. Two Phase 1/2 studies — one at Mass Eye and Ear, one at Stanford — have enrolled their initial patients for a light-activated gene therapy targeting retinitis pigmentosa, the inherited condition that slowly switches off the retina's light-sensing cells.</p>
+
+    <h2>The Idea, In One Paragraph</h2>
+    <p>Optogenetics borrows a protein from algae — channelrhodopsin — that opens a channel in a cell membrane when light hits it. Deliver the gene for that protein into neurons, and those neurons become light-addressable: flash a pattern, and they fire on command. It transformed neuroscience research two decades ago. The question since has been whether it can transform medicine.</p>
+
+    <h2>What the Trials Will Do</h2>
+    <p>Each study will treat 12 patients whose photoreceptors are largely lost but whose downstream retinal cells survive. A viral vector delivers channelrhodopsin to those surviving cells; patients then wear goggles that translate camera images into precisely timed light pulses. The goal in Phase 1 is safety and dose. The goal everyone whispers about is a patient navigating a doorway unaided.</p>
+
+    <h2>Why Now, After Twenty Years</h2>
+    <p>Three things converged: vector manufacturing matured in the CRISPR era; the goggles' light-engineering finally matches the protein's kinetics; and, candidly, the Nobel spotlight accelerated philanthropic and venture funding that had been trickling. "The prize did not make the science true," one trial investigator told us. "It made the money arrive."</p>
+
+    <h2>The Cautions Are Real</h2>
+    <p>Twelve patients per site is a safety study, not a cure announcement. Immune responses to the vector, overexpression toxicity, and the simple physics of low-resolution vision all stand between today and usefulness. Patient advocacy groups have been careful to celebrate without promising: "We have waited decades," one organizer said. "We can wait for good data."</p>
+
+    <h2>Beyond the Eye</h2>
+    <p>If the retinal trials clear safety, the pipeline is long: optogenetic pacing for cardiac arrhythmia, light-controlled dopamine circuits for Parkinson's, and peripheral nerve targets for chronic pain. The algae protein that rewired neuroscience may yet rewrite clinical medicine — one careful trial at a time.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Gene therapy is having a year: read our report on the <a href="article.html?id=fda-approves-gene-therapy-alzheimers-2026">FDA's first Alzheimer's gene therapy approval</a> and the <a href="article.html?id=nobel-peace-prize-2026-navi-pillay">2026 Nobel season roundup</a>.</p>
+  `
+},
+
+  {
+  id: "pakistan-afghan-taliban-doha-ceasefire-talks-october-2026",
+  title: "Pakistan and the Afghan Taliban Sit Down in Doha — First Face-to-Face Talks Since the Airstrikes Began",
+  subtitle: "Qatari mediators host a technical-level dialogue as strikes continue into a third week. Islamabad wants verifiable action on the TTP; Kabul wants the bombs to stop. Both want the border trade open.",
+  category: "Pakistan",
+  catClass: "pakistan",
+  author: "Raza Khan",
+  authorRole: "Senior Geopolitics Correspondent",
+  authorInitials: "RK",
+  date: "October 22, 2026",
+  readTime: "8 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&q=80&fit=crop",
+  tags: ["Pakistan", "Afghan Taliban", "Doha Talks", "TTP", "Ceasefire", "Pakistan Afghanistan"],
+  content: `
+    <p>DOHA — Delegations from Pakistan and Afghanistan's Taliban government met in a Qatari ministry conference room on Wednesday evening, the first direct contact since Pakistani airstrikes began three weeks ago — a session one participant described to ClarixNews as "technical, tense, and better than nothing."</p>
+
+    <h2>The Four-Item Agenda</h2>
+    <p>The format is deliberately narrow: ceasefire mechanics, a verification channel for counter-terrorism commitments, reopening of the Torkham and Chaman border crossings, and consular access issues. Nobody is discussing recognition, the Durand Line, or the broader political relationship — at least not yet.</p>
+
+    <h2>What Each Side Actually Wants</h2>
+    <p>Pakistan's position has been consistent since the first strike: the Taliban must produce verifiable action against TTP leadership on Afghan soil, with a monitoring mechanism Pakistan can trust. Kabul's position is equally consistent: sovereignty first, strikes stopped, trade restored. Between those two sentences sits the entire negotiation.</p>
+
+    <h2>The Battlefield Did Not Pause</h2>
+    <p>Talks opened even as Pakistani aircraft hit camps in Khost and Paktika for a third consecutive week, and as security officials reported foiled TTP attacks in Khyber Pakhtunkhwa — a province still under emergency rule, with the Supreme Court's verdict on that emergency expected any day. Negotiating while fighting is not a contradiction here; it is the strategy.</p>
+
+    <h2>Why Doha, and Why Now</h2>
+    <p>Qatar carries the institutional memory of the 2020-21 US-Taliban process and maintains the only channel both sides trust. Saudi Arabia and China have quietly endorsed the format — Riyadh for regional stability, Beijing for CPEC's security math. Economic pain is doing its part too: three weeks of closed borders have cost Afghan traders an estimated $40 million a week, and Pakistani fruit and flour exporters are lobbying loudly in Islamabad.</p>
+
+    <h2>How to Judge Whether It's Working</h2>
+    <p>Two measurable tests over the next 30 days: do the crossings reopen, and does the attack count inside Pakistan fall? Everything else — joint statements, future rounds, diplomatic language — is theater until those two numbers move.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Background: <a href="article.html?id=pakistan-taliban-conflict-third-week-airstrikes-october-2026">the conflict's third week</a>, <a href="article.html?id=pakistan-supreme-court-kp-emergency-rule-hearing-october-2026">the Supreme Court's emergency-rule hearing</a>, and <a href="article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026">what emergency rule means</a>.</p>
+  `
+},
+
+  {
+  id: "brent-crude-crosses-90-opec-emergency-meeting-october-2026",
+  title: "Brent Crosses $90 for the First Time Since 2024 as OPEC+ Weighs an Emergency Meeting",
+  subtitle: "Aramco strikes, a ceasefire that may not exist, and thin spare capacity have pushed crude into a pure risk-premium zone. Gold holds near records; Pakistan's import bill quietly grows by billions.",
+  category: "Business",
+  catClass: "business",
+  author: "Fatima Khan",
+  authorRole: "Economics Correspondent",
+  authorInitials: "FK",
+  date: "October 22, 2026",
+  readTime: "6 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop",
+  tags: ["Brent Crude", "Oil Prices", "OPEC", "Gold Price", "Energy Markets", "Pakistan Economy"],
+  content: `
+    <p>LONDON — Brent crude traded above $90 a barrel on Thursday morning for the first time in two years, capping a five-session run in which the market repriced not one but three separate risks: physical supply out of the Gulf, the credibility of a ceasefire nobody can verify, and the uncomfortable fact that global spare capacity is thinner than the calm of 2025 suggested.</p>
+
+    <h2>Three Shocks, One Price</h2>
+    <p>The first shock was physical. Monday's Houthi strikes on Aramco facilities — retaliation for coalition airstrikes on Sanaa — reminded traders what 2019 felt like, when a single attack removed half of Saudi output overnight. The second was informational: Kyiv's flat denial of President Trump's claimed Russia-Ukraine "energy ceasefire" left European gas and oil markets pricing a truce that may not exist. The third was structural: with OPEC+ spare capacity concentrated in exactly the country being attacked, the market's cushion and the market's risk are now the same place.</p>
+
+    <h2>OPEC+ Consultations, Informally Confirmed</h2>
+    <p>Two delegates confirmed to wire services that an informal consultation is expected Friday, ahead of the scheduled ministerial meeting. No output decision is anticipated — producers are broadly content with $90 — but the mere scheduling of an emergency-style call tends to add a dollar or two of premium, traders say.</p>
+
+    <h2>Winners, Losers, and the Pakistani Math</h2>
+    <p>The winners are familiar: Gulf producers, US shale, and energy equities, which led global markets this week. Gold, the other fear trade, holds above $4,160. The losers are importers — and for Pakistan the arithmetic is blunt: every $10 added to the barrel costs roughly $2.4 billion a year in imports, pressure that shows up first in the rupee, then in fuel prices, then in the inflation print the State Bank watches. The KSE-100, near record highs, has so far shrugged; energy-sector stocks are among its few green columns this week.</p>
+
+    <h2>The Next 72 Hours</h2>
+    <p>Four catalysts will set the range: Aramco's production statement, any verification mechanism for the energy ceasefire, the OPEC+ call, and whispers of a US strategic-reserve release. Our base case remains $85-95 through November, with the tail risk skewed upward while Yemen escalates.</p>
+
+    <p>Live prices for Brent, gold, USD/PKR and the KSE-100 are on our <a href="markets.html">Markets page</a>, updating every 20 seconds.</p>
+
+    <h2>Related Coverage</h2>
+    <p>How we got here: <a href="article.html?id=oil-prices-brent-90-yemen-strikes-energy-ceasefire-october-2026">Oil on Edge</a> and <a href="article.html?id=yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026">Yemen-Saudi escalation</a>.</p>
+  `
+},
+
+  {
+  id: "recursive-self-improvement-explained-ai-risk-anthropic-2026",
+  title: "Recursive Self-Improvement, Explained: The AI Idea Behind the Anthropic Resignation Storm",
+  subtitle: "When Jacob Coxon warned that labs are 'racing straight to self-improving superintelligence,' what exactly did he mean? A plain-English guide to RSI — and why serious experts still disagree about it.",
+  category: "Technology",
+  catClass: "tech",
+  author: "Sarah Chen",
+  authorRole: "Senior Tech Correspondent",
+  authorInitials: "SC",
+  date: "October 22, 2026",
+  readTime: "9 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80&fit=crop",
+  tags: ["Recursive Self-Improvement", "AI Explainer", "Anthropic", "AI Safety", "Superintelligence", "Jacob Coxon"],
+  content: `
+    <p>One phrase sits at the center of the biggest AI controversy of 2026: recursive self-improvement. It is what Jacob Coxon meant when he resigned from Anthropic last month warning that labs are "racing straight to self-improving superintelligence and gambling with our lives." It is also, depending on whom you ask, either the most important risk of our century or a thought experiment that keeps getting mistaken for a schedule.</p>
+
+    <h2>What the Term Actually Means</h2>
+    <p>Strip away the vocabulary and RSI is a loop. An AI model writes part of the code used to train its successor. The successor, being better, writes more of the code for the one after it. At some point the human review step — the alignment evaluation, the red-team, the sign-off meeting — becomes the slowest part of the cycle, and then, in the scenario people worry about, it becomes optional. Everything in today's debate is an argument about how many turns of that loop are real.</p>
+
+    <h2>Why 2026 Made It Feel Close</h2>
+    <p>Because the first turn of the loop is measurable. Anthropic's own August report, "When AI builds itself," found that Claude now writes roughly 80 percent of the company's merged code, up from near zero in early 2025, and that the length of tasks AI can complete has been doubling about every four months. Extrapolated, that curve reaches "human-week" tasks in 2027. The same report, notably, states that recursive self-improvement "is not inevitable" — while conceding it may arrive "sooner than most institutions expect."</p>
+
+    <h2>What the Skeptics Point To</h2>
+    <p>Then there is the evidence that the loop does not close on its own. In a study published this summer, Kirgis and colleagues gave state-of-the-art agents six days of compute and a clear goal: replicate unpublished NeurIPS papers. The agents failed to produce substantive progress and were rejected by the papers' human authors. Anthropic's own "Automated Alignment Researchers" experiment succeeded — but only on fixed safety benchmarks whose metrics humans supplied. Creative judgment, the part of research that cannot be scored, remains stubbornly human.</p>
+
+    <h2>The Risk Math People Actually Cite</h2>
+    <p>So where does that leave the danger? Somewhere honest and uncomfortable. Evan Hubinger, Anthropic's alignment science lead, puts greater than 10 percent probability on human extinction within a decade under current trajectories, and has said the company "does not yet have a plan to solve alignment for superintelligence." Anthropic's formal risk assessment acknowledges a future in which AI causes "unbounded harm — up to and including humanity losing control over civilization entirely," while rating today's models low-risk. Mainstream expert surveys, meanwhile, still place human-level AGI decades out. Coxon's one-to-two-year crunch timeline sits at the far edge of that distribution — a minority view held by credible people.</p>
+
+    <h2>Why You Should Care Even If the Timeline Is Wrong</h2>
+    <p>Because policy moves slower than code. The FRONTIER Act's capability thresholds, the Geneva Accord's training-run registry, the July pacing letter signed by more than 1,300 researchers, the kill-switch proposals — all of these are attempts to install the human checkpoint in the loop before the loop stops needing it. That is the practical question of 2026: not whether superintelligence arrives next year, but whether our oversight institutions can keep pace with a curve that doubles every four months.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Start with the story that started it: <a href="article.html?id=anthropic-researcher-jacob-coxon-resigns-ai-warning-2026">Anthropic Researcher Quits With Viral Warning</a>. Then our policy follow-up: <a href="article.html?id=frontier-act-senate-markup-ai-regulation-coxon-effect-2026">The 'Coxon Effect' and the FRONTIER Act</a>.</p>
+  `
+},
+
+  {
+  id: "iphone-duo-first-reviews-crease-price-verdict-october-2026",
+  title: "iPhone Duo First Reviews Are In: 'The Crease Is Gone' — But Is $1,999 Too Much?",
+  subtitle: "Review embargoes lifted 24 hours before the foldable goes on sale. Critics agree on the hinge, the battery and the display. They disagree, sharply, on everything the price implies.",
+  category: "Technology",
+  catClass: "tech",
+  author: "James Thornton",
+  authorRole: "Senior Technology Editor",
+  authorInitials: "JT",
+  date: "October 22, 2026",
+  readTime: "7 min read",
+  views: "0",
+  image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80&fit=crop",
+  tags: ["iPhone Duo", "Apple Foldable", "iPhone Duo Review", "iPhone 18", "Foldable Phone 2026"],
+  content: `
+    <p>CUPERTINO — The reviews landed Wednesday morning, a day before the iPhone Duo goes on sale, and the verdict curve is unusually narrow for a first-generation product: the hardware is excellent, the price is a conversation.</p>
+
+    <p>Apple's first foldable opens to a 7.8-inch display with what multiple reviewers independently describe as an effectively invisible crease. "I stopped looking for it after an hour," wrote one prominent US reviewer. "That has never been true of any foldable I've tested." The liquid-metal hinge is rated for 400,000 folds, and the device is 5.4mm open — thinner than any book-style foldable yet shipped.</p>
+
+    <h2>What Everyone Agrees On</h2>
+    <p>Battery life is the quiet headline. The Duo's larger chassis holds Apple's biggest-ever iPhone cell, and nearly every review reports comfortable two-day use with the inner display active. iOS 27's split-screen multitasking, external display mode, and hover-drag between apps drew consistent praise — several reviewers called it "the first foldable software that feels designed, not ported."</p>
+
+    <h2>Where They Split</h2>
+    <p>Then there is the number: $1,999. Roughly half of major reviews call it defensible for a device that replaces a phone and a small tablet; the other half call it a tax on early adopters. Weight comes up more than Apple would like — at 268 grams, the Duo is noticeably heavier than an iPhone 18 Pro Max. And app readiness is real: fewer than 500 apps ship with true dual-pane layouts at launch.</p>
+
+    <h2>The Demand Signal</h2>
+    <p>Whatever the critiques, wallets are voting. Pre-orders sold out in four hours on October 16; delivery estimates now sit at three to four weeks in the US, Japan and UAE. Secondary-market listings are carrying $300-500 premiums — a pattern Apple has not seen since the iPhone X.</p>
+
+    <h2>Why This Launch Matters Beyond Apple</h2>
+    <p>iPhone revenue has been flat for three straight years, and Huawei's foldables have been taking Apple's premium customers in China. The Duo is Apple's answer to both problems at once: a margin-rich halo product that re-energizes the upgrade cycle. If developers follow the hardware — and history says they follow the installed base — folding could stop being a category and start being a default.</p>
+
+    <p>The Duo goes on sale Friday, October 23, in 28 markets. We'll publish our own full review after a week of daily use.</p>
+
+    <h2>Related Coverage</h2>
+    <p>Read our launch-week breakdown: <a href="article.html?id=apple-iphone-duo-foldable-launch-october-23-2026">Apple's First Foldable — price, specs and why it matters</a>, and our <a href="article.html?id=ai-comparison-2026">2026 AI assistant comparison</a> for how iOS 27's on-device AI compares.</p>
+  `
+},
+
+  {
   id: "frontier-act-senate-markup-ai-regulation-coxon-effect-2026",
   title: "The 'Coxon Effect': How One Resignation Thread Pushed the FRONTIER Act From Proposal to Senate Markup",
   subtitle: "Six weeks after Jacob Coxon's viral warning — and with Evan Hubinger's >10% extinction-risk claim on the record — lawmakers cite the thread in hearings as the bipartisan AI bill gains real momentum.",
