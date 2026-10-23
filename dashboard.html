@@ -223,13 +223,13 @@ function makeCell(value){
   return td;
 }
 function render(d){
-  document.getElementById('sTotal').textContent = Number(d.total_visits ?? d.page_views)||0;
+  document.getElementById('sTotal').textContent = Number(d.page_views)||0;
   document.getElementById('sUnique').textContent = Number(d.unique_visitors)||0;
   document.getElementById('sNew').textContent = Number(d.new_visitors)||0;
   document.getElementById('sRet').textContent = Number(d.returning_visitors)||0;
-  var total = Number(d.total_visits)||0;
+  var total = Number(d.unique_visitors)||0;
   document.getElementById('sNewP').textContent = (total ? Math.round((Number(d.new_visitors)||0)/total*100) : 0)+'% of tracked browsers';
-  document.getElementById('sRetP').textContent = (total ? Math.round((Number(d.returning_visitors)||0)/total*100) : 0)+'% of visits';
+  document.getElementById('sRetP').textContent = (total ? Math.round((Number(d.returning_visitors)||0)/total*100) : 0)+'% of tracked browsers';
 
   var countries = Array.isArray(d.countries) ? d.countries : [];
   var maxCount = countries.reduce(function(max,c){return Math.max(max, Number(c.count)||0);}, 1);
