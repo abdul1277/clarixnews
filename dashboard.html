@@ -70,6 +70,7 @@
       <div class="htitle" style="margin:0;"><span><span class="live-dot"></span>Live Analytics</span></div>
       <div style="display:flex;gap:14px;align-items:center;">
         <span style="font-size:10px;color:var(--text-3);">Updated: <span id="upd">--</span></span>
+        <button class="refresh-btn" id="exportBtn" onclick="exportCsv()">⇩ Export CSV</button>
         <button class="refresh-btn" id="refreshBtn" onclick="load()">↻ Refresh</button>
         <button class="lock-btn" onclick="lockDashboard()">Lock</button>
         <a href="index.html" style="font-size:12px;color:var(--text-3);">← Back to site</a>
@@ -86,8 +87,8 @@
     </div>
     <p class="range-note" id="rangeNote">Showing activity from the last 24 hours. Auto-refreshes every 15 seconds.</p>
     <div class="stats" style="margin-top:16px;">
-      <div class="scard"><div class="l">Total Visits</div><div class="v" id="sTotal">--</div></div>
-      <div class="scard"><div class="l">Unique Visitors</div><div class="v" id="sUnique">--</div></div>
+      <div class="scard"><div class="l">Unique Browsers (estimate)</div><div class="v" id="sTotal">--</div></div>
+      <div class="scard"><div class="l">Tracked Visitors</div><div class="v" id="sUnique">--</div></div>
       <div class="scard"><div class="l">New Visitors</div><div class="v" id="sNew">--</div><div class="s" id="sNewP"></div></div>
       <div class="scard"><div class="l">Returning</div><div class="v" id="sRet">--</div><div class="s" id="sRetP"></div></div>
     </div>
@@ -132,7 +133,7 @@ function lockDashboard(){
   sessionStorage.removeItem('dash_ok');
   location.reload();
 }
-var refreshTimer = null;
+var refreshTimer = null;\nvar lastDashboardData = null;
 var selectedPeriod = '24h';
 var periodHours = {'24h':24,'7d':168,'30d':720,'6m':4320,'1y':8760};
 var periodLabels = {'today':'Today','24h':'Last 24 Hours','7d':'Last 7 Days','30d':'Last 30 Days','6m':'Last 6 Months','1y':'Last 12 Months'};
@@ -187,6 +188,35 @@ async function load(){
     if(btn) btn.disabled = false;
   }
 }
+function csvEscape(value){
+  var text = value == null ? '' : String(value);
+  return '"' + text.replace(/"/g, '""') + '"';
+}
+function exportCsv(){
+  if(!lastDashboardData){
+    setStatus('Pehle analytics data load hone dein.', true);
+    return;
+  }
+  var rows = [['Time','Country','City','Page','Device','Browser','Visitor type']];
+  (Array.isArray(lastDashboardData.recent_visits) ? lastDashboardData.recent_visits : []).forEach(function(v){
+    var date = new Date(v.visited_at);
+    rows.push([
+      Number.isNaN(date.getTime()) ? '' : date.toISOString(),
+      v.country, v.city, v.page, v.device, v.browser,
+      v.is_returning ? 'Returning' : 'New'
+    ]);
+  });
+  var csv = '\\uFEFF' + rows.map(function(row){return row.map(csvEscape).join(',');}).join('\\r\\n');
+  var blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('a');
+  link.href = url;
+  link.download = 'clarixnews-recent-visits-' + new Date().toISOString().slice(0,10) + '.csv';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
 function makeCell(value){
   var td = document.createElement('td');
   td.textContent = value == null || value === '' ? '--' : String(value);
@@ -198,7 +228,7 @@ function render(d){
   document.getElementById('sNew').textContent = Number(d.new_visitors)||0;
   document.getElementById('sRet').textContent = Number(d.returning_visitors)||0;
   var total = Number(d.total_visits)||0;
-  document.getElementById('sNewP').textContent = (total ? Math.round((Number(d.new_visitors)||0)/total*100) : 0)+'% of visits';
+  document.getElementById('sNewP').textContent = (total ? Math.round((Number(d.new_visitors)||0)/total*100) : 0)+'% of tracked browsers';
   document.getElementById('sRetP').textContent = (total ? Math.round((Number(d.returning_visitors)||0)/total*100) : 0)+'% of visits';
 
   var countries = Array.isArray(d.countries) ? d.countries : [];
