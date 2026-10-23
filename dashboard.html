@@ -58,11 +58,11 @@
   <div id="login" class="login-box">
     <h1>🔐 ClarixNews Analytics</h1>
     <form id="loginForm">
-      <input type="password" id="pw" placeholder="Dashboard password" autocomplete="current-password" aria-label="Dashboard password" required/>
+      <input type="email" id="email" value="abdulark528@gmail.com" autocomplete="username" aria-label="Admin email" required/><input type="password" id="pw" placeholder="Supabase account password" autocomplete="current-password" aria-label="Supabase account password" required/>
       <button type="submit">Enter Dashboard</button>
     </form>
     <div id="loginStatus" class="status-line" role="status" aria-live="polite"></div>
-    <p class="login-note">Private analytics area. Use a unique password and do not share this page.</p>
+    <p class="login-note">Sign in with your authorized Supabase Auth account. Access is restricted to the configured admin email.</p>
   </div>
 
   <div id="dash" style="display:none;">
@@ -106,6 +106,7 @@
   </div>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* ═══ CONFIG ═══ */
 var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
