@@ -246,11 +246,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ═══════════════════════════════════════════════════════════
-   CLARIXNEWS VISITOR TRACKER (Supabase — anonymized, no IP stored)
+   CLARIXNEWS VISITOR TRACKER (server-side validated endpoint)
    ═══════════════════════════════════════════════════════════ */
 (function(){
-  var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
-  var SB_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+  var TRACK_URL = 'https://lovhjdghpchoikwbumid.supabase.co/functions/v1/track-visit';
 
   function getVisitorId(){
     var vid = localStorage.getItem('cn_visitor_id');
@@ -261,8 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return vid;
   }
   function isReturning(){ return localStorage.getItem('cn_returning') === 'true'; }
-  // One analytics visit per browsing session, even across article/category page loads.
-  // A new visit starts after 30 minutes of inactivity.
+  // One session lasts until 30 minutes without a page load.
   function getSessionId(){
     var now = Date.now();
     var sessionId = localStorage.getItem('cn_session_id');
@@ -276,32 +274,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function deviceInfo(){
     var ua = navigator.userAgent;
-    var device = /Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : (/Tablet|iPad/i.test(ua) ? 'Tablet' : 'Desktop');
+    var device = /Tablet|iPad/i.test(ua) ? 'Tablet' : (/Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : 'Desktop');
     var browser = /Firefox/i.test(ua) ? 'Firefox' : /Edg/i.test(ua) ? 'Edge' : /Chrome/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : 'Unknown';
     return { device: device, browser: browser };
   }
   async function track(){
     try{
       var path = location.pathname;
-      if (path.indexOf('dashboard') > -1) return; // dashboard visits count na hon
+      if (path.indexOf('dashboard') > -1) return;
       var country = 'Unknown', city = 'Unknown';
       try{
-        var g = await fetch('https://ipapi.co/json/').then(function(r){ return r.json(); });
-        // Exclude the site owner's current public IP from analytics.
-        // If the lookup fails, do not assume the visitor is the owner.
-        if (g && String(g.ip || '').trim() === '221.120.216.31') return;
-        country = g.country_name || 'Unknown';
-        city = g.city || 'Unknown';
+        var response = await fetch('https://ipapi.co/json/');
+        if(response.ok){
+          var g = await response.json();
+          // Keep the existing owner-IP exclusion, but never block tracking on lookup errors.
+          if(g && String(g.ip || '').trim() === '221.120.216.31') return;
+          country = g.country_name || 'Unknown';
+          city = g.city || 'Unknown';
+        }
       }catch(e){}
       var d = deviceInfo();
-      await fetch(SB_URL + '/rest/v1/visits', {
+      var response = await fetch(TRACK_URL, {
         method: 'POST',
-        headers: {
-          'apikey': SB_KEY,
-          'Authorization': 'Bearer ' + SB_KEY,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           visitor_id: getVisitorId(),
           session_id: getSessionId(),
@@ -311,12 +306,13 @@ document.addEventListener('DOMContentLoaded', () => {
           device: d.device,
           browser: d.browser,
           is_returning: isReturning()
-        })
+        }),
+        keepalive: true
       });
-      if(!isReturning()){
-        setTimeout(function(){ localStorage.setItem('cn_returning','true'); }, 5000);
+      if(response.ok && !isReturning()){
+        localStorage.setItem('cn_returning','true');
       }
-    }catch(e){ /* silent — site kabhi nahi rukegi */ }
+    }catch(e){ /* analytics failure must never break the website */ }
   }
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', track);
