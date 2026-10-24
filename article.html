@@ -261,5 +261,23 @@
   window.addEventListener('load',updateProgress,{once:true});
 })();
 </script>
+<script>
+/* ═══ REAL READ COUNTER ═══ */
+(async function(){
+  var SB_URL='https://lovhjdghpchoikwbumid.supabase.co';
+  var SB_KEY='sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+  var m=location.search.match(/[?&]id=([^&]+)/); if(!m)return;
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/article_views?article_id=eq.'+encodeURIComponent(m[1])+'&select=id',
+      {headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'count=exact','Range':'0-0','Range-Unit':'count'}});
+    var range=r.headers.get('content-range')||'';
+    var total=parseInt(range.split('/')[1]||'0',10);
+    if(total>0){
+      var t=document.querySelector('.hero-meta, .article-meta, .card-meta, .meta');
+      if(t) t.innerHTML += '<span> · </span><span>👁 '+total.toLocaleString()+' reads</span>';
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
