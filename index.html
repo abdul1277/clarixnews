@@ -444,6 +444,36 @@
   </div>
 </main>
 
+  <!-- ═══ MOST READ THIS WEEK (live database se) ═══ -->
+  <div class="trending-bg" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-label"><h2>Most Read This Week</h2></div>
+      <div class="top-grid" id="mostReadGrid"></div>
+    </div>
+  </div>
+  <script>
+  (async function(){
+    var SB_URL='https://lovhjdghpchoikwbumid.supabase.co';
+    var SB_KEY='sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+    try{
+      var r=await fetch(SB_URL+'/rest/v1/rpc/get_most_read',{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({hours:168,lim:6})});
+      var rows=await r.json();
+      if(!rows||!rows.length)return;
+      var grid=document.getElementById('mostReadGrid');
+      if(!grid)return;
+      grid.innerHTML=rows.map(function(row){
+        var a=null;
+        for(var j=0;j<ARTICLES.length;j++){ if(ARTICLES[j].id===row.article_id){a=ARTICLES[j];break;} }
+        if(!a)return '';
+        return '<a href="article.html?id='+a.id+'" class="card">'+
+          '<div class="card-img" style="height:150px;"><img src="'+a.image+'" alt="'+a.title+'" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/></div>'+
+          '<div class="card-body"><div class="card-cat"><span class="cat-pill '+a.catClass+'">'+a.category+'</span> <span style="font-size:10px;color:var(--text-3);margin-left:6px;">👁 '+row.views.toLocaleString()+' reads</span></div>'+
+          '<div class="card-title" style="font-size:16px;">'+a.title+'</div></div></a>';
+      }).join('');
+    }catch(e){}
+  })();
+  </script>
+  
 <footer>
   <div class="container">
     <div class="footer-grid">
