@@ -245,11 +245,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initComments();
 });
 
-/* ═══════════════════════════════════════════════════════════
-   CLARIXNEWS VISITOR TRACKER (server-side validated endpoint)
-   ═══════════════════════════════════════════════════════════ */
+/* ═══ CLARIXNEWS VISITOR TRACKER v4 (geo + sessions + article views) ═══ */
 (function(){
-  var TRACK_URL = 'https://lovhjdghpchoikwbumid.supabase.co/functions/v1/track-visit';
+  var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
+  var SB_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
 
   function getVisitorId(){
     var vid = localStorage.getItem('cn_visitor_id');
@@ -259,61 +258,88 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return vid;
   }
-  function isReturning(){ return localStorage.getItem('cn_returning') === 'true'; }
-  // One session lasts until 30 minutes without a page load.
   function getSessionId(){
     var now = Date.now();
-    var sessionId = localStorage.getItem('cn_session_id');
-    var lastActivity = Number(localStorage.getItem('cn_session_last_activity') || 0);
-    if(!sessionId || !lastActivity || now - lastActivity > 30 * 60 * 1000){
-      sessionId = 's_' + Math.random().toString(36).slice(2,10) + now.toString(36);
-      localStorage.setItem('cn_session_id', sessionId);
-    }
-    localStorage.setItem('cn_session_last_activity', String(now));
-    return sessionId;
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem('cn_sess') || 'null'); } catch(e){}
+    if(!s || !s.id || (now - s.t) > 30*60*1000){
+      s = { id: 's_' + now.toString(36) + Math.random().toString(36).slice(2,8), t: now };
+    } else { s.t = now; }
+    try { localStorage.setItem('cn_sess', JSON.stringify(s)); } catch(e){}
+    return s.id;
+  }
+  function isFirstTouch(){
+    if(localStorage.getItem('cn_seen')) return false;
+    localStorage.setItem('cn_seen', String(Date.now()));
+    return true;
   }
   function deviceInfo(){
     var ua = navigator.userAgent;
-    var device = /Tablet|iPad/i.test(ua) ? 'Tablet' : (/Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : 'Desktop');
+    var device = /Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : (/Tablet|iPad/i.test(ua) ? 'Tablet' : 'Desktop');
     var browser = /Firefox/i.test(ua) ? 'Firefox' : /Edg/i.test(ua) ? 'Edge' : /Chrome/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : 'Unknown';
     return { device: device, browser: browser };
   }
+  function getArticleId(){
+    if (location.pathname.indexOf('article') === -1) return null;
+    var m = location.search.match(/[?&]id=([^&]+)/);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  async function getGeo(){
+    try {
+      var cached = JSON.parse(sessionStorage.getItem('cn_geo') || 'null');
+      if (cached && cached.country && cached.country !== 'Unknown') return cached;
+    } catch(e){}
+    var providers = [
+      function(){ return fetch('https://ipapi.co/json/').then(function(r){return r.json();}).then(function(d){ return { country: d.country_name, city: d.city }; }); },
+      function(){ return fetch('https://get.geojs.io/v1/ip/geo.json').then(function(r){return r.json();}).then(function(d){ return { country: d.country, city: d.city }; }); },
+      function(){ return fetch('https://ipwho.is/').then(function(r){return r.json();}).then(function(d){ return { country: d.country, city: d.city }; }); },
+      function(){ return fetch('https://freeipapi.com/api/json/').then(function(r){return r.json();}).then(function(d){ return { country: d.countryName, city: d.cityName }; }); }
+    ];
+    for (var i = 0; i < providers.length; i++){
+      try {
+        var g = await providers[i]();
+        if (g && g.country && g.country !== 'Unknown' && g.country !== '') {
+          try { sessionStorage.setItem('cn_geo', JSON.stringify(g)); } catch(e){}
+          return g;
+        }
+      } catch(e){}
+    }
+    return { country: 'Unknown', city: 'Unknown' };
+  }
+
   async function track(){
     try{
       var path = location.pathname;
       if (path.indexOf('dashboard') > -1) return;
-      var country = 'Unknown', city = 'Unknown';
-      try{
-        var response = await fetch('https://ipapi.co/json/');
-        if(response.ok){
-          var g = await response.json();
-          // Keep the existing owner-IP exclusion, but never block tracking on lookup errors.
-          if(g && String(g.ip || '').trim() === '221.120.216.31') return;
-          country = g.country_name || 'Unknown';
-          city = g.city || 'Unknown';
-        }
-      }catch(e){}
+      var first = isFirstTouch();
+      var vid = getVisitorId();
+      var sid = getSessionId();
+      var geo = await getGeo();
       var d = deviceInfo();
-      var response = await fetch(TRACK_URL, {
+
+      /* 1) General visit */
+      await fetch(SB_URL + '/rest/v1/visits', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
         body: JSON.stringify({
-          visitor_id: getVisitorId(),
-          session_id: getSessionId(),
-          country: country,
-          city: city,
-          page: path,
-          device: d.device,
-          browser: d.browser,
-          is_returning: isReturning()
-        }),
-        keepalive: true
+          visitor_id: vid, session_id: sid,
+          country: geo.country || 'Unknown', city: geo.city || 'Unknown',
+          page: path, device: d.device, browser: d.browser, is_returning: !first
+        })
       });
-      if(response.ok && !isReturning()){
-        localStorage.setItem('cn_returning','true');
+
+      /* 2) Article view (sirf article pages par) */
+      var aid = getArticleId();
+      if (aid) {
+        await fetch(SB_URL + '/rest/v1/article_views', {
+          method: 'POST',
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+          body: JSON.stringify({ article_id: aid, visitor_id: vid, country: geo.country || 'Unknown' })
+        });
       }
-    }catch(e){ /* analytics failure must never break the website */ }
+    }catch(e){ /* silent */ }
   }
+
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', track);
   }else{
