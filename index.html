@@ -426,6 +426,55 @@
       <p id="newsletterMessage" role="status" aria-live="polite" style="margin:10px 0 0;font-size:12px;color:var(--text-3);"></p>
     </div>
   </div>
+  <script>
+/* ═══ NEWSLETTER → FORMSPREE (existing form ko wire karta hai) ═══ */
+(function(){
+  var FORM_ID = 'xgaaveqw';   /* ← yahan apna Formspree ID lagayein */
+  var form  = document.getElementById('newsletterForm');
+  var input = document.getElementById('newsletterEmail');
+  var msg   = document.getElementById('newsletterMessage');
+  if(!form || !input || !msg) return;
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email = (input.value || '').trim();
+    msg.style.color = 'var(--text-3)';
+
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.style.color = '#ef4444';
+      msg.textContent = 'Please enter a valid email address.';
+      input.focus();
+      return;
+    }
+
+    var btn = form.querySelector('button');
+    var old = btn.textContent;
+    btn.textContent = 'Subscribing…';
+    btn.disabled = true;
+
+    try{
+      var r = await fetch('https://formspree.io/f/' + FORM_ID, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'clarixnews-homepage', page: location.pathname })
+      });
+      if(r.ok){
+        msg.style.color = '#22c55e';
+        msg.textContent = "✅ You're in! Your first Morning Brief lands tomorrow at 8 AM.";
+        form.reset();
+      }else{
+        throw new Error('Subscription failed');
+      }
+    }catch(err){
+      msg.style.color = '#ef4444';
+      msg.textContent = 'Something went wrong — please try again.';
+    }
+
+    btn.textContent = old;
+    btn.disabled = false;
+  });
+})();
+</script>
 
   <div class="trending-bg">
     <div class="container">
