@@ -3524,18 +3524,20 @@ window.ARTICLES = [
 ];
 
 function getArticle(id) {
-  return ARTICLES.find(a => a.id === id) || null;
+  const articles = Array.isArray(window.ARTICLES) ? window.ARTICLES : [];
+  return articles.find(a => a.id === id) || null;
 }
 
 function getRelatedArticles(currentId, count = 3) {
   const current = getArticle(currentId);
+  const articles = Array.isArray(window.ARTICLES) ? window.ARTICLES : [];
   if (!current) return [];
 
-  const sameCategory = ARTICLES.filter(
+  const sameCategory = articles.filter(
     article => article.id !== currentId && article.catClass === current.catClass
   );
 
-  const fallback = ARTICLES.filter(
+  const fallback = articles.filter(
     article => article.id !== currentId && article.catClass !== current.catClass
   );
 
@@ -3546,9 +3548,10 @@ function getArticlesByCategory(cat, count = 10) {
   const limit = Math.max(0, Number.parseInt(count, 10) || 0);
   const normalizedCat = String(cat || 'all').trim().toLowerCase();
 
-  if (normalizedCat === 'all') return ARTICLES.slice(0, limit);
+  const articles = Array.isArray(window.ARTICLES) ? window.ARTICLES : [];
+  if (normalizedCat === 'all') return articles.slice(0, limit);
 
-  return ARTICLES
+  return articles
     .filter(article => {
       const articleCat = String(article.catClass || '').toLowerCase();
       const articleCategory = String(article.category || '').toLowerCase();
