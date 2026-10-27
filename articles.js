@@ -3383,7 +3383,7 @@ const ARTICLES = [
     date: "October 25, 2026",
     readTime: "14 min read",
     views: "0",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1400&q=85&fit=crop",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/National_Faisal_Mosque_Islamabad.jpg?width=1400",
     tags: ["Pakistan Economy", "Pakistan GDP", "Pakistan Inflation", "Pakistan Poverty", "Pakistan Trade Deficit", "Pakistan Exports", "Pakistan Imports", "Economic History 2000-2026"],
     content: `
       <p><strong>Pakistan's economic story between 2000 and 2026 is not simply a story of a larger GDP.</strong> It is a story of periods of rapid expansion followed by external-account pressure, recurring stabilisation programmes, persistent dependence on a narrow export base, and repeated shocks to household purchasing power. The central question is not only how much the economy grew, but whether growth created productive jobs, raised real incomes and generated enough foreign exchange to finance imports without repeated crises.</p>
