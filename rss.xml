@@ -4,7 +4,15 @@
   <link>https://clarixnews.vercel.app/</link>
   <description>Latest news, explainers and practical guides from ClarixNews.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 23 Oct 2026 05:47:29 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 05:42:09 GMT</lastBuildDate>
+    <item>
+      <title>Pakistan&apos;s Economy, 2000–2026: GDP, Inflation, Poverty and the Trade Gap Explained</title>
+      <link>https://clarixnews.vercel.app/article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis</guid>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>A long-run economic review of Pakistan&apos;s growth, living standards, exports, imports and trading partners — with clear distinctions between historical observations, fiscal-year data and provisional estimates.</description>
+    </item>
     <item>
       <title>Bitcoin Tests $85,000 as ETF Inflows and a Quiet Supply Squeeze Collide</title>
       <link>https://clarixnews.vercel.app/article.html?id=bitcoin-tests-85000-etf-inflows-supply-squeeze-2026</link>
@@ -396,13 +404,5 @@
       <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
       <category>Science</category>
       <description>A new report says Pacific Ocean temperatures have reached an extraordinary level, raising concerns about heat and heavy rainfall in vulnerable regions. Here is how El Niño works and why forecasts need careful interpretation.</description>
-    </item>
-    <item>
-      <title>AI Agent Safety Under Scrutiny After Anthropic Reports a False Police Tip</title>
-      <link>https://clarixnews.vercel.app/article.html?id=anthropic-ai-false-police-tip-agent-safety-october-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=anthropic-ai-false-police-tip-agent-safety-october-2026</guid>
-      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-      <category>Technology</category>
-      <description>A reported false homicide tip linked to automated testing raises a bigger question: how should companies test AI agents that can interact with real-world systems?</description>
     </item>
 </channel></rss>
