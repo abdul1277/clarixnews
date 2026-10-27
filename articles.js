@@ -1,4 +1,4 @@
-const ARTICLES = [
+window.ARTICLES = [
 
   {
   id: "bitcoin-tests-85000-etf-inflows-supply-squeeze-2026",
