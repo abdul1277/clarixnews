@@ -1,4 +1,4 @@
-window.ARTICLES = [
+const ARTICLES = [
 
   {
   id: "bitcoin-tests-85000-etf-inflows-supply-squeeze-2026",
@@ -3369,7 +3369,7 @@ window.ARTICLES = [
       "Energy Markets"
     ],
     "content": "<p>Security concerns around commercial shipping near the Strait of Hormuz have intensified amid wider Middle East tensions. An Associated Press report published on October 13 described Iranian threats involving vessels connected to ship-to-ship oil transfers, while maritime authorities have reported projectile incidents affecting ships in the region. Details and responsibility for individual incidents should be checked against official maritime updates and independent reporting.</p><p>The Strait of Hormuz is a narrow waterway between Iran and Oman linking the Persian Gulf with the Gulf of Oman and the Arabian Sea. It is one of the world's most important routes for oil and liquefied natural gas shipments. Even limited disruption can affect energy traders, shipping companies, insurers and governments because many exporters rely on the corridor.</p><h2>Why the Strait of Hormuz Matters</h2><p>Large volumes of energy supplies pass through the strait, connecting Gulf producers with buyers in Asia and elsewhere. Tankers navigate a relatively narrow route, making safe passage and predictable maritime rules essential. The corridor also carries wider commercial traffic, so security risks can affect more than oil alone.</p><h2>Could Shipping Tensions Push Oil Prices Higher?</h2><p>When traders fear shipments may be delayed, oil prices can become more volatile. Shipping companies may review routes and security procedures, while insurers may raise premiums for vessels operating in higher-risk areas. Costs can rise even without a large, confirmed interruption to physical oil flows.</p><p>Energy prices depend on supply expectations, demand, inventories, production decisions and currency movements. A threat to a major route can add a risk premium, but the size and duration of any move depend on whether cargoes are actually delayed or lost.</p><h2>What Shipping Companies Monitor</h2><ul><li><strong>Maritime advisories:</strong> Notices from official security centres and coastal authorities.</li><li><strong>Vessel movements:</strong> Confirmed delays, rerouting or interrupted commercial traffic.</li><li><strong>Insurance and freight:</strong> Changes in risk premiums and transport costs.</li><li><strong>Diplomacy:</strong> Efforts to reduce escalation and protect civilian vessels.</li></ul><h2>What It Could Mean for Pakistan and Asia</h2><p>Asian economies are closely connected to Gulf energy supplies. For Pakistan, international oil prices and the rupee-dollar exchange rate can influence the cost of imported fuel. A global price move does not automatically translate into an immediate domestic price change; policy decisions, inventories and purchase timing also matter.</p><h2>What Happens Next?</h2><p>The key signals are verified reports of shipping disruption, official maritime warnings, changes in oil flows and credible diplomatic steps. A temporary incident and a sustained interruption to energy exports would have very different consequences. Readers should avoid treating unverified social-media posts as confirmation that a route has closed.</p><h2>ClarixNews Analysis</h2><p>The Strait of Hormuz shows how a narrow passage can have global economic consequences. The immediate priority is protecting crews and commercial vessels while preventing wider escalation. For markets, confirmed disruption matters more than speculation; for governments, safe maritime passage remains essential.</p><h2>Sources and Further Reading</h2><ul><li><a href=\"https://apnews.com/article/3e6e5f152048c035081eac369f62ed4f\" target=\"_blank\" rel=\"noopener noreferrer\">Associated Press — Iran increases threat to Strait of Hormuz shipping, October 13, 2026</a></li><li><a href=\"https://www.ukmto.org/\" target=\"_blank\" rel=\"noopener noreferrer\">UK Maritime Trade Operations — Official maritime security advisories</a></li></ul>"
-  }
+  },
 
   {
     id: "pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis",
@@ -3522,6 +3522,9 @@ window.ARTICLES = [
     `
   }
 ];
+
+// Expose the dataset to browser pages while preserving Node-based SEO generation.
+if (typeof window !== 'undefined') window.ARTICLES = ARTICLES;
 
 function getArticle(id) {
   const articles = Array.isArray(window.ARTICLES) ? window.ARTICLES : [];
