@@ -208,8 +208,8 @@
 
     // "Most Read" should be based on article view data, not the related-article algorithm.
     const mostReadEl=document.getElementById('mostRead');
-    if(mostReadEl&&Array.isArray(ARTICLES)){
-      const most=ARTICLES
+    if(mostReadEl&&Array.isArray(window.ARTICLES)){
+      const most=window.ARTICLES
         .filter(a=>a&&String(a.id)!==String(id))
         .slice()
         .sort((a,b)=>{
@@ -249,7 +249,7 @@
   }
 
   try{
-    if(typeof ARTICLES==='undefined'||typeof getArticle!=='function')throw new Error('articles.js did not load correctly.');
+    if(!Array.isArray(window.ARTICLES)||typeof getArticle!=='function')throw new Error('Article data did not load. Check articles.js deployment and browser console.');
     const params=new URLSearchParams(location.search);const rawId=params.get('id');const id=rawId?rawId.trim():'ai-comparison-2026';
     if(!id||id.length>200){window.location.replace('404.html');return;}
     const article=getArticle(id);if(!article){window.location.replace('404.html');return;}
