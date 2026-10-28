@@ -3,165 +3,380 @@ const ARTICLES = [
     {
     id: "usa-economy-2000-2026-gdp-inflation-trade-deficit-analysis",
     title: "The $38 Trillion Question: America's Economy 2000–2026 — GDP Tripled, But Who Got Richer?",
-    subtitle: "امریکہ کی معیشت 2000–2026: ایک ماہر معاشیات کا 26 سالہ تفصیلی تجزیہ — GDP، مہنگائی، قرض، ٹریڈ ڈیفیسٹ اور K-Shaped Economy کی مکمل کہانی۔",
+    subtitle: "A 26-year economic autopsy of the United States — GDP, inflation, poverty, trade deficits, the national debt, and why America can run imbalances that would bankrupt any other nation. An economist's verdict on four reference years: 2000, 2010, 2020, and 2026.",
     category: "Business",
     catClass: "business",
     author: "ClarixNews Economy Desk",
     authorRole: "Senior Economic Analyst",
     authorInitials: "CN",
     date: "October 28, 2026",
-    readTime: "20 min read",
+    readTime: "18 min read",
     views: "0",
     image: "https://images.unsplash.com/photo-1526304640581-d3db84709c48?w=1400&q=85&fit=crop",
-    tags: ["US Economy", "US GDP 2026", "America Economy History", "US Trade Deficit", "US National Debt", "Federal Reserve", "K-Shaped Economy", "US Inflation", "US China Trade War", "Dollar Reserve Currency", "امریکہ کی معیشت"],
+    tags: ["US Economy", "US GDP 2026", "US Trade Deficit", "US National Debt", "Federal Reserve Policy", "K-Shaped Economy", "US Inflation", "US-China Trade War", "Dollar Reserve Currency", "America Economy History"],
     content: `
       <div class="verdict-box">
         <div class="verdict-title">Executive Summary</div>
-        <div class="verdict-item"><span class="verdict-badge">Growth</span><span>2000 سے 2026 تک امریکی معیشت نے اپنا سائز 10.2 ٹریلین ڈالر سے بڑھ کر تقریباً 32 ٹریلین ڈالر کیا — یعنی تقریباً تین گنا۔ لیکن ایک ماہر معاشیات کے لیے کہانی سائز میں نہیں، مکینزم میں ہے۔</span></div>
-        <div class="verdict-item"><span class="verdict-badge">Privilege</span><span>امریکہ کی کہانی ایک ایسے ملک کی ہے جس نے دنیا کی وہ واحد معیشت بن کر کامیابی حاصل کی جو اپنے ہی چھپائے ہوئے سکے میں قرض لے سکتی ہے، دنیا بھر سے بچت درآمد کر سکتی ہے، اور مسلسل تجارتی خسارے کے باوجود عالمی مالیاتی نظام کا مرکز برقرار رہ سکتی ہے۔</span></div>
-        <div class="verdict-item"><span class="verdict-badge">Warning</span><span>2026 کی امریکہ ایک "K-Shaped Economy" ہے — اوپر والی شاخ (asset owners, AI, tech) تیزی سے اوپر، نیچے والی شاخ (milk, rent, insurance, housing) دباؤ میں۔</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Scale</span><span>Between 2000 and 2026, the US economy grew from $10.2 trillion to roughly $32 trillion in nominal terms — a near-tripling. But for an economist, the story isn't in the size. It's in the mechanism.</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Privilege</span><span>America is the only country in modern history that can borrow in its own hidden coin, import the world's savings, and run persistent trade deficits while remaining the anchor of the global financial system.</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Distribution</span><span>The 2026 American economy is K-shaped: the upper branch (asset owners, AI, tech) is climbing fast, while the lower branch (milk, rent, insurance, housing) is under grinding pressure.</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Warning</span><span>Three structural regime shifts defined the 26 years: dot-com leverage (2000–2008), central-bank rescue (2008–2020), and fiscal-monetary fusion with AI capex (2020–2026) — all against a national debt that marched toward $38 trillion.</span></div>
       </div>
 
-      <h2 id="framework">1. تجزیاتی فریم ورک: امریکہ کو عام ممالک کی طرح کیوں نہیں ناپا جا سکتا؟</h2>
-      <p>پاکستان، ترکی یا ارجنٹائن کی معیشت کا تجزیہ کرتے وقت ہم سب سے پہلے Foreign Exchange Reserves اور Current Account Deficit دیکھتے ہیں۔ امریکہ کا تجزیہ اسی پیمانے پر کرنا analytical error ہے۔ تین ساختی حقیقتیں یاد رکھیں:</p>
-      <h3>(الف) Exorbitant Privilege — ڈالر کا انوکھا امتیاز</h3>
-      <p>دنیا کے زرمبادلہ ذخائر کا تقریباً 57–58% ڈالر میں ہے، عالمی تجارت کا بڑا حصہ ڈالر میں invoice ہوتا ہے، اور امریکی خزانیے (Treasury bills) دنیا کا سب سے بڑا safe asset market ہیں۔ نتیجہ: امریکہ کو ڈیفالٹ کا وہ خطرہ نہیں جو دوسرے ملکوں کو درپیش ہے، کیونکہ وہ اپنی ہی کرنسی میں قرض لیتا ہے۔</p>
-      <h3>(ب) Savings–Investment Gap — خسارہ مرض نہیں، ڈھانچہ ہے</h3>
-      <p>امریکہ میں خانہ جنگی نہیں، بلکہ کم قومی بچت اور زیادہ سرمایہ کاری/کھپت ہے۔ جب ملک میں بچت کم ہو تو باقی دنیا کی بچت درآمد کرنی پڑتی ہے — اور وہ بچت trade deficit کی شکل میں سامنے آتی ہے۔ اس لیے صرف "امپورٹ بند کرو" کہنا معاشی تجزیہ نہیں، نعرہ ہے۔</p>
-      <h3>(ج) Services اور Capital کا غلبہ</h3>
-      <p>امریکی GDP کا تقریباً 77–80% خدمات (services) ہیں۔ وہ دنیا کا سب سے بڑا خدمات برآمد کنندہ ہے — financial services، software، cloud، pharmaceuticals، education، اور intellectual property۔ مال کا خسارہ دیکھ کر خدمات کا فاضل (surplus) نظر انداز کرنا غلطی ہے۔</p>
+      <h2 id="framework">1. Analytical Framework: Why America Cannot Be Measured Like Other Countries</h2>
+      <p>When analysts examine Pakistan, Türkiye, or Argentina, they begin with foreign-exchange reserves and the current account. Applying the same lens to the United States is an analytical error. Three structural realities have to be held in mind before any number in this piece is interpreted.</p>
 
-      <h2 id="y2000">2. سال 2000: ڈاٹ کام بم کے بعد کا آخری خوشگوار سال</h2>
-      <p>1990s کی productivity boom، انٹرنیٹ کی تجاری توسیع، اور Clinton دور کے budget surpluses۔ لیکن دسمبر 2000 میں NASDAQ کا چوٹی سے گِرنا شروع ہو چکا تھا۔ New Economy کا نعرہ بلند تھا — مگر یہ دراصل leverage + equity wealth effect کا کھیل تھا۔</p>
-      <table class="compare-table"><thead><tr><th>اشاریہ</th><th>سال 2000</th></tr></thead><tbody>
-      <tr><td>Nominal GDP</td><td>$10.25 ٹریلین</td></tr>
+      <h3>(a) Exorbitant Privilege — The Dollar's Unique Status</h3>
+      <p>Roughly 57–58% of global foreign-exchange reserves are held in dollars, a large share of world trade is invoiced in dollars, and US Treasuries constitute the world's deepest safe-asset market. The practical consequence: the US does not face the default risk that other countries face, because it borrows in its own currency.</p>
+
+      <h3>(b) The Savings–Investment Gap — The Deficit Is Structure, Not Disease</h3>
+      <p>An identity from macroeconomic accounting explains most of what politicians argue about: Current Account Deficit = (Investment − National Savings) + (Government Fiscal Deficit). America's trade gap is not a war it is losing; it reflects low national savings relative to investment and consumption. When a country saves less than it invests, it must import the world's savings — and those savings arrive as a trade deficit. "Just stop importing" is a slogan, not an economic argument.</p>
+
+      <h3>(c) Services and Capital Dominate</h3>
+      <p>Services account for roughly 77–80% of US GDP. America is the world's largest exporter of services — financial services, software, cloud infrastructure, pharmaceuticals, higher education, and intellectual property. Judging the US by its goods deficit alone while ignoring its services surplus is a common analytical mistake.</p>
+
+      <p>So the question is not "Is America winning or losing?" but rather: "Is the cost of this model — fiscal trajectory, inequality, political risk — still bearable?"</p>
+
+      <h2 id="y2000">2. Year 2000: The Last Good Year Before the Dot-Com Crash</h2>
+      <p>Context: The 1990s productivity boom, the commercialization of the internet, and the Clinton-era budget surpluses. By December 2000, the NASDAQ had already begun its slide from peak (it would eventually fall roughly 78%). The "New Economy" slogan was loud — but the reality underneath was leverage plus an equity wealth effect.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2000</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>$10.25 trillion</td></tr>
       <tr><td>GDP Per Capita</td><td>~$36,300</td></tr>
       <tr><td>Real GDP Growth</td><td>4.1%</td></tr>
       <tr><td>CPI Inflation (avg)</td><td>3.4%</td></tr>
       <tr><td>Unemployment</td><td>4.0%</td></tr>
-      <tr><td>Federal Fiscal Balance</td><td>+2.4% of GDP (سرپلس)</td></tr>
+      <tr><td>Official Poverty Rate</td><td>11.3% (~31.6 million)</td></tr>
+      <tr><td>Federal Fiscal Balance</td><td>+2.4% of GDP (surplus)</td></tr>
       <tr><td>Gross Federal Debt / GDP</td><td>~55%</td></tr>
-      <tr><td>Trade Deficit</td><td>~$370 ارب</td></tr>
-      <tr><td>Fed Funds Rate</td><td>6.5%</td></tr>
+      <tr><td>Federal Tax Revenue / GDP</td><td>~20.5%</td></tr>
+      <tr><td>Trade Deficit (Goods + Services)</td><td>~$370 billion</td></tr>
+      <tr><td>Current Account Deficit</td><td>~4.1% of GDP</td></tr>
+      <tr><td>Fed Funds Rate (year-end)</td><td>6.5%</td></tr>
+      <tr><td>Fed Balance Sheet</td><td>~$0.7 trillion</td></tr>
       </tbody></table>
-      <p><strong>اہم سبق:</strong> ایک معیشت جس کے پاس سرپلس ہو، وہ بھی چند سال میں جنگ اور ٹیکس کمیوں کے ذریعے مستقل خسارے میں جا سکتی ہے۔</p>
 
-      <h2 id="y2010">3. سال 2010: Great Recession کی زخمی معیشت</h2>
-      <p>2007–08 کی Subprime Mortgage Crisis، Lehman Brothers کا زوال، اور تاریخی credit crunch۔ جواب میں TARP ($700B)، ARRA stimulus (~$831B)، اور Federal Reserve کا QE1/QE2۔ 2010 میں GDP مثبت تھی، مگر logistics of recovery ناکام تھی — روزگار واپس نہیں آ رہا تھا۔</p>
-      <table class="compare-table"><thead><tr><th>اشاریہ</th><th>سال 2010</th></tr></thead><tbody>
-      <tr><td>Nominal GDP</td><td>$15.05 ٹریلین</td></tr>
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>The year 2000 was a rarity: America stood near twin surpluses — a federal budget surplus and a relatively modest external imbalance. 4% growth paired with 4% unemployment is, in the economics literature, close to full employment with non-inflationary expansion.</p>
+      <p>But the real story was hiding in asset prices. Households consumed by borrowing against home equity. When the bubble burst in 2001, the recession was mild — but September 11 and the subsequent Iraq and Afghanistan wars permanently broke the fiscal balance.</p>
+      <p><strong>The lesson:</strong> An economy that starts with a surplus can be put into permanent deficit within a few years of war and tax cuts.</p>
+
+      <h2 id="y2010">3. Year 2010: The Wounded Economy After the Great Recession</h2>
+      <p>Context: The 2007–08 subprime mortgage crisis, the collapse of Lehman Brothers, and the historic credit crunch. The response was TARP ($700 billion), the ARRA stimulus (~$831 billion), and the Federal Reserve's QE1 and QE2. By 2010, GDP was positive again — but the logistics of recovery had failed. Jobs were not coming back.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2010</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>$15.05 trillion</td></tr>
       <tr><td>GDP Per Capita</td><td>~$48,500</td></tr>
       <tr><td>Real GDP Growth</td><td>2.5%</td></tr>
-      <tr><td>Unemployment</td><td>9.6%</td></tr>
+      <tr><td>CPI Inflation (avg)</td><td>1.6% (fear of deflation)</td></tr>
+      <tr><td>Unemployment</td><td>9.6% (peaked at 10% in Oct 2009)</td></tr>
+      <tr><td>Official Poverty Rate</td><td>15.1% (~46.2 million)</td></tr>
       <tr><td>Federal Fiscal Deficit</td><td>~8.7% of GDP</td></tr>
       <tr><td>Gross Federal Debt / GDP</td><td>~90%</td></tr>
-      <tr><td>Fed Balance Sheet</td><td>~$2.4 ٹریلین</td></tr>
+      <tr><td>Federal Tax Revenue / GDP</td><td>~15.1% (historic low)</td></tr>
+      <tr><td>Trade Deficit (Goods + Services)</td><td>~$499 billion</td></tr>
+      <tr><td>Current Account Deficit</td><td>~2.9% of GDP</td></tr>
+      <tr><td>Fed Funds Rate</td><td>0.00–0.25%</td></tr>
+      <tr><td>Fed Balance Sheet</td><td>~$2.4 trillion</td></tr>
       </tbody></table>
-      <p><strong>اہم سبق:</strong> مالیاتی بحران کے بعد GDP recovery اور گھریلو معاشی بحالی ایک ہی چیز نہیں۔ 2010 کی اوسط امریکی خاندان کے لیے یہ "بحالی" نہیں تھی۔</p>
 
-      <h2 id="y2020">4. سال 2020: وباء، پرنٹنگ پریس اور ہیلی کاپٹر پیسے</h2>
-      <p>COVID-19 نے معیشت کو وقفہ کر دیا — یہ عام recession نہیں تھی، بلکہ supply اور demand دونوں کا اچانک توقف تھا۔ مارچ–اپریل 2020 میں تقریباً 22 ملین ملازمتیں گئیں، اور unemployment 14.8% تک پہنچا۔ جواب تاریخی تھا: CARES Act ($2.2 ٹریلین)، براہِ راست چیکس، PPP قرضے، اور Fed نے نامحدود QE کا وعدہ کیا۔</p>
-      <table class="compare-table"><thead><tr><th>اشاریہ</th><th>سال 2020</th></tr></thead><tbody>
-      <tr><td>Nominal GDP</td><td>$21.06 ٹریلین</td></tr>
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>This year teaches jobless recovery. GDP grew 2.5%, but unemployment stayed glued at 9.6%. The reasons: businesses restored profitability by raising labor productivity (fewer people, more output); housing wealth had been destroyed, so consumer balance sheets were weak; and state and local governments were cutting jobs that federal stimulus could not fully replace.</p>
+      <p>Here the Phillips Curve appeared inverted: low growth plus low inflation — a textbook demand shortage, not a supply shock. That is why the Fed went to zero interest rates and quantitative easing.</p>
+      <p><strong>The lesson:</strong> After a financial crisis, GDP recovery and household recovery are not the same thing. For the average American family, 2010 was not a recovery.</p>
+
+      <h2 id="y2020">4. Year 2020: The Pandemic, the Printing Press, and Helicopter Money</h2>
+      <p>Context: COVID-19 paused the economy — not a conventional recession but a sudden, simultaneous halt of both supply and demand. Between March and April 2020, roughly 22 million jobs vanished, and unemployment hit 14.8% (the highest monthly reading on record).</p>
+      <p>The response was historic: the CARES Act ($2.2 trillion), direct checks, PPP loans, and the Federal Reserve's pledge of unlimited quantitative easing.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2020</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>$21.06 trillion</td></tr>
+      <tr><td>GDP Per Capita</td><td>~$63,500</td></tr>
       <tr><td>Real GDP Growth</td><td>−2.2%</td></tr>
-      <tr><td>Unemployment (avg)</td><td>8.1% (peak 14.8%)</td></tr>
-      <tr><td>Supplemental Poverty Measure</td><td>9.1%</td></tr>
+      <tr><td>CPI Inflation (avg)</td><td>1.2% (accelerating by year-end)</td></tr>
+      <tr><td>Unemployment (avg)</td><td>8.1% (peaked at 14.8%)</td></tr>
+      <tr><td>Official Poverty Rate</td><td>11.4%</td></tr>
+      <tr><td>Supplemental Poverty Measure (SPM)</td><td>9.1% (a headline of its own)</td></tr>
       <tr><td>Federal Fiscal Deficit</td><td>~15% of GDP</td></tr>
       <tr><td>Gross Federal Debt / GDP</td><td>~128%</td></tr>
-      <tr><td>Fed Balance Sheet</td><td>~$7.3 ٹریلین</td></tr>
+      <tr><td>Federal Tax Revenue / GDP</td><td>~16.3%</td></tr>
+      <tr><td>Trade Deficit (Goods + Services)</td><td>~$679 billion</td></tr>
+      <tr><td>Goods-Only Deficit</td><td>~$887 billion</td></tr>
+      <tr><td>Fed Funds Rate</td><td>0.00–0.25%</td></tr>
+      <tr><td>Fed Balance Sheet</td><td>~$7.3 trillion</td></tr>
       </tbody></table>
-      <p><strong>اہم سبق:</strong> بحران میں مدد کرنا درست تھا؛ لیکن demand کو supply کی بحالی سے پہلے بھونا مہنگائی کا بنیادی سبب بنا — 2022 میں CPI 9.1% تک پہنچ گئی۔</p>
 
-      <h2 id="y2026">5. سال 2026: AI بوم، ٹیرف اور قرض کا بوجھ</h2>
-      <p>2026 کی امریکہ تین طاقتوں کے درمیان کھنچی چلی آ رہی ہے: AI/semiconductor capital expenditure، Tariff regime، اور Fiscal inertia۔ اعداد اکتوبر 2026 تک کے تخمینے ہیں۔</p>
-      <table class="compare-table"><thead><tr><th>اشاریہ</th><th>سال 2026 (تخمینی)</th></tr></thead><tbody>
-      <tr><td>Nominal GDP</td><td>~$31.5–32 ٹریلین</td></tr>
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>Two critical observations.</p>
+      <p><strong>First:</strong> GDP fell, but household income did not — because the government substituted direct transfers for wages. That is why the SPM poverty rate fell to 9.1% even as the official measure stayed at 11.4%. This was a successful policy experiment, and it proved that poverty is partly a political choice, not a natural disaster.</p>
+      <p><strong>Second:</strong> The flood of money and aid restored demand immediately, but supply chains were still shut. Result: the 2021–22 demand–supply mismatch. The low inflation of 2020 lulled policymakers into calling the shock "transitory." That became the most expensive policy error of the decade — by 2022, CPI hit 9.1%.</p>
+      <p><strong>The lesson:</strong> Aid during a crisis was right. Boosting demand before supply had recovered was the primary driver of the inflation that followed (though not the only one — Europe's energy shock was a shared cause).</p>
+
+      <h2 id="y2026">5. Year 2026: The AI Boom, Tariffs, and the Debt Overhang</h2>
+      <p>Context: 2026's America is being pulled by three forces: AI and semiconductor capital expenditure (data centers, chips, the power grid — the largest growth engine); a tariff regime (higher taxes on imports, supply-chain reshoring, and upward pressure on prices); and fiscal inertia (defense, Social Security, Medicare, and interest payments now at historic highs).</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2026 (provisional)</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$31.5–32 trillion</td></tr>
       <tr><td>GDP Per Capita</td><td>~$92,000–94,000</td></tr>
       <tr><td>Real GDP Growth</td><td>~2.0–2.3%</td></tr>
-      <tr><td>CPI Inflation</td><td>~2.8–3.2%</td></tr>
-      <tr><td>Gross Federal Debt</td><td>~$38 ٹریلین (~122–125% of GDP)</td></tr>
-      <tr><td>Net Interest Payments</td><td>~$1 ٹریلین سالانہ</td></tr>
-      <tr><td>Trade Deficit</td><td>~$900 ارب – 1 ٹریلین</td></tr>
-      <tr><td>Fed Funds Rate</td><td>~3.5–4.0%</td></tr>
-      </tbody></table>
-      <p><strong>منفی تین:</strong> (1) Fiscal Dominance — جب سود کی ادائیگی دفاعی بجٹ کے برابر ہو جائے، (2) Tariff کا دو رخا اثر — input costs بڑھتا ہے، (3) K-Shaped Recovery — S&P 500 اور AI stocks کیے چٹیلیاں، مگر median household کے لیے رہائش اور انشورنس تاریخی طور پر مہنگی ہے۔</p>
-
-      <h2 id="comparison">6. چاروں ادوار کا تقابلی خاکہ</h2>
-      <table class="compare-table"><thead><tr><th>اشاریہ</th><th>2000</th><th>2010</th><th>2020</th><th>2026</th></tr></thead><tbody>
-      <tr><td>GDP (ٹریلین ڈالر)</td><td>10.25</td><td>15.05</td><td>21.06</td><td>~32</td></tr>
-      <tr><td>Per Capita (ڈالر)</td><td>36,300</td><td>48,500</td><td>63,500</td><td>~93,000</td></tr>
-      <tr><td>Real Growth</td><td>4.1%</td><td>2.5%</td><td>−2.2%</td><td>~2.2%</td></tr>
-      <tr><td>CPI Inflation</td><td>3.4%</td><td>1.6%</td><td>1.2%</td><td>~3%</td></tr>
-      <tr><td>Fiscal Balance (% GDP)</td><td>+2.4%</td><td>−8.7%</td><td>−15%</td><td>−6%</td></tr>
-      <tr><td>Gross Debt / GDP</td><td>~55%</td><td>~90%</td><td>~128%</td><td>~123%</td></tr>
+      <tr><td>CPI Inflation</td><td>~2.8–3.2% (above the 2% target)</td></tr>
+      <tr><td>Unemployment</td><td>~4.2–4.4%</td></tr>
+      <tr><td>Official Poverty Rate</td><td>~12.5–13%</td></tr>
+      <tr><td>Federal Fiscal Deficit</td><td>~6% of GDP (~$1.9–2 trillion)</td></tr>
+      <tr><td>Gross Federal Debt</td><td>~$38 trillion (~122–125% of GDP)</td></tr>
+      <tr><td>Net Interest Payments</td><td>~$1 trillion per year</td></tr>
+      <tr><td>Federal Tax Revenue / GDP</td><td>~17%</td></tr>
+      <tr><td>Trade Deficit (Goods + Services)</td><td>~$900 billion – 1 trillion</td></tr>
+      <tr><td>Goods-Only Deficit</td><td>~$1.2–1.3 trillion</td></tr>
+      <tr><td>Services Surplus</td><td>~$300–330 billion</td></tr>
+      <tr><td>Current Account Deficit</td><td>~3.5–4% of GDP</td></tr>
+      <tr><td>Fed Funds Rate</td><td>~3.5–4.0% (easing cycle)</td></tr>
       </tbody></table>
 
-      <h2 id="trade">7. بیرونی تجارت: برآمدات، درآمدات اور "Twin Deficits"</h2>
-      <h3>امریکہ کیا برآمد کرتا ہے؟</h3>
-      <p>ایئر کرافٹ، سیمی کنڈکٹرز/AI چپس (2026 میں سب سے تیز)، دوائیں، مشینری، LNG و کچا تیل، سویا بين، گاڑیاں، طبی آلات — اور خدمات میں فنانس، سافٹ ویئر، کلاؤڈ، تعلیم جو $1 ٹریلین سے زائد سالانہ ہیں۔</p>
-      <h3>امریکہ کیا درآمد کرتا ہے؟</h3>
-      <p>کمپیوٹر/الیکٹرانکس، سیمی کنڈکٹرز (Taiwan انحصار)، گاڑیاں، دوائیں، کپڑے، کچا تیل، بیٹریاں/EV اجزاء — ٹیرف کے بعد چین سے ویتنام/بنگلہ دیش کی منتقلی واضح ہے۔</p>
+      <p><em>Note: 2026 is an incomplete calendar year at the time of writing. The figures above reflect monthly data through October 2026 and projections from the BEA, CBO, CEA, and IMF. Final annual numbers will be released after December.</em></p>
 
-      <h2 id="partners">8. ٹاپ 10 ٹریڈنگ پارٹنرز — 2026 (تخمینی)</h2>
-      <table class="compare-table"><thead><tr><th>درجہ</th><th>ملک</th><th>حجم</th><th>اہم تبدیلی</th></tr></thead><tbody>
-      <tr><td>1</td><td>🇲🇽 میکسیکو</td><td>~$850B</td><td>nearshoring کا فاتح</td></tr>
-      <tr><td>2</td><td>🇨🇦 کینیڈا</td><td>~$760B</td><td>توانائی + USMCA</td></tr>
-      <tr><td>3</td><td>🇨🇳 چین</td><td>~$450–550B</td><td>ٹیرف کی وجہ سے نمایاں کمی</td></tr>
-      <tr><td>4</td><td>🇯🇵 جاپان</td><td>~$270B</td><td>گاڑیاں، مشینری</td></tr>
-      <tr><td>5</td><td>🇩🇪 جرمنی</td><td>~$260B</td><td>مشینری، کیمیائی</td></tr>
-      <tr><td>6</td><td>🇰🇷 کوریا</td><td>~$210B</td><td>چپس، بیٹریاں</td></tr>
-      <tr><td>7</td><td>🇻🇳 ویتنام</td><td>~$170B</td><td>چین سے supply chain منتقلی</td></tr>
-      <tr><td>8</td><td>🇮🇳 بھارت</td><td>~$160–190B</td><td>pharma، electronics</td></tr>
-      <tr><td>9</td><td>🇹🇼 تائیوان</td><td>~$150B</td><td>AI چپس کی demand</td></tr>
-      <tr><td>10</td><td>🇬🇧 برطانیہ</td><td>~$150B</td><td>خدمات، دوائیں</td></tr>
-      </tbody></table>
-
-      <h2 id="comparepk">9. امریکہ بمقابلہ پاکستان: اصل فرق کہاں ہے؟</h2>
-      <table class="compare-table"><thead><tr><th>پیمانہ</th><th>🇺🇸 امریکہ (2026)</th><th>🇵🇰 پاکستان (2026)</th></tr></thead><tbody>
-      <tr><td>Nominal GDP</td><td>~$32 ٹریلین</td><td>~$390 ارب</td></tr>
-      <tr><td>Per Capita</td><td>~$93,000</td><td>~$1,450</td></tr>
-      <tr><td>قرض کی کرنسی</td><td>اپنے ڈالر میں</td><td>بڑا حصہ غیر ملکی میں</td></tr>
-      <tr><td>قرض / GDP</td><td>~123%</td><td>~75%</td></tr>
-      <tr><td>برآمدات کی بنیاد</td><td>tech, pharma, services</td><td>textiles (~52%)</td></tr>
-      </tbody></table>
-      <p><strong>کلیدی نکتہ:</strong> امریکہ کا 123% debt-to-GDP پاکستان کے 75% سے زیادہ خطرناک ضروری نہیں — کیونکہ امریکہ اپنی کرنسی میں قرض لیتا ہے۔ لیکن یہ لامحدود معافی نہیں۔</p>
-      <p>→ پاکستان کی معاشی کہانی کے لیے پڑھیں: <a href="article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis">پاکستان کی معیشت 2000–2026</a></p>
-
-      <h2 id="myths">10. تین عام غلط فہمیاں جو ایک معاشیات دور کرتا ہے</h2>
-      <p><strong>❌ غلطی 1:</strong> "ٹریڈ ڈیفیسٹ کا مطلب ہے امریکہ چین سے ہار رہا ہے" — <em>درست:</em> خسارہ کا مطلب ہے امریکی صارف کو سستا مال اور چین کو ڈالر/ٹریژریز ملے۔ اصل سوال strategic dependence ہے، accounting نہیں۔</p>
-      <p><strong>❌ غلطی 2:</strong> "38 ٹریلین ڈالر قرض سے امریکہ دیوالیہ ہو جائے گا" — <em>درست:</em> اپنی کرنسی میں قرض کرنے والا ملک technical default سے بچ سکتا ہے۔ اصل خطرہ soft default ہے — مہنگائی اور کمزور ڈالر کے ذریعے۔</p>
-      <p><strong>❌ غلطی 3:</strong> "GDP بڑھ رہی ہے تو عام امریکی کی زندگی بہتر ہو رہی ہے" — <em>درست:</em> GDP پیداوار ناپتی ہے، فلاح نہیں۔ جب نمو کا بڑا حصہ AI companies کو ملے، تو GDP اچھی اور grocery bill بری لگ سکتی ہے۔</p>
-
-      <h2 id="verdict">11. ماہر معاشیات کا فیصلہ اور پالیسی ایجنڈا</h2>
-      <h3>پانچ پالیسی سفارشات:</h3>
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>The positives are real: productivity and AI capex are measurable, the US has the world's best capital markets, research universities, and talent inflow, the labor market is strong, and inflation has come down sharply from 9.1% in 2022.</p>
+      <p>The three negatives:</p>
       <ol>
-        <li><strong>Fiscal Consolidation</strong> — entitlement reform، tax base وسع کرنا</li>
-        <li><strong>Supply-Side، محض Tariff نہیں</strong> — power، permit reform، AI grid capacity</li>
-        <li><strong>Housing Supply</strong> — zoning reform، 15 سالہ backlog ختم کرنا</li>
-        <li><strong>Human Capital</strong> — AI کے فوائد کو صرف Silicon Valley تک محدود نہ رکھنا</li>
-        <li><strong>Monetary Independence</strong> — Fed پر political pressure معاشی اعتماد تباہ کرتی ہے</li>
+        <li><strong>Fiscal dominance risk:</strong> When interest payments approach the defense budget, every new tax cut or spending decision worsens the debt trajectory. The CBO's long-run outlook is unsustainable.</li>
+        <li><strong>Tariffs cut both ways:</strong> They protect domestic industry but raise input costs. The result is not an immediate jump in manufacturing employment — it is pressure on prices and profit margins.</li>
+        <li><strong>The K-shaped recovery:</strong> The S&P 500 and AI stocks have surged, but for the median household, housing, insurance, and childcare are historically expensive. GDP is an average; it is not an experience.</li>
       </ol>
 
-      <h3>🔴 اگلے 24 ماہ کے خطرات:</h3>
+      <h2 id="comparison">6. Four Eras Compared: A Dashboard</h2>
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>2000</th><th>2010</th><th>2020</th><th>2026</th></tr></thead><tbody>
+      <tr><td>GDP (trillion USD)</td><td>10.25</td><td>15.05</td><td>21.06</td><td>~32</td></tr>
+      <tr><td>Per Capita (USD)</td><td>36,300</td><td>48,500</td><td>63,500</td><td>~93,000</td></tr>
+      <tr><td>Real Growth</td><td>4.1%</td><td>2.5%</td><td>−2.2%</td><td>~2.2%</td></tr>
+      <tr><td>CPI Inflation</td><td>3.4%</td><td>1.6%</td><td>1.2%</td><td>~3%</td></tr>
+      <tr><td>Unemployment</td><td>4.0%</td><td>9.6%</td><td>8.1%</td><td>~4.3%</td></tr>
+      <tr><td>Official Poverty</td><td>11.3%</td><td>15.1%</td><td>11.4%</td><td>~12.8%</td></tr>
+      <tr><td>Fiscal Balance (% GDP)</td><td>+2.4%</td><td>−8.7%</td><td>−15%</td><td>−6%</td></tr>
+      <tr><td>Gross Debt / GDP</td><td>~55%</td><td>~90%</td><td>~128%</td><td>~123%</td></tr>
+      <tr><td>Trade Deficit ($B)</td><td>370</td><td>499</td><td>679</td><td>~950</td></tr>
+      <tr><td>Fed Rate</td><td>6.5%</td><td>0.25%</td><td>0.25%</td><td>~3.75%</td></tr>
+      <tr><td>Fed Balance Sheet ($T)</td><td>0.7</td><td>2.4</td><td>7.3</td><td>~6.4</td></tr>
+      </tbody></table>
+
+      <h3>Three Key Takeaways</h3>
+      <ol>
+        <li>GDP per capita roughly 2.5x'd, but median household wealth did not travel as smoothly. The 2000 and 2010 asset bubbles artificially lifted the average; 2008 destroyed it.</li>
+        <li>The fiscal trend is one-directional: from surplus to a persistent 6% deficit. The 15% of 2020 was an emergency; the 6% of 2026 is being treated as normal — that is the real danger.</li>
+        <li>Inflation is a cycle; debt is structure. CPI went up and down; debt-to-GDP never returned to 55%.</li>
+      </ol>
+
+      <h2 id="trade">7. Foreign Trade: Exports, Imports, and the "Twin Deficits"</h2>
+      <h3>(a) What Does America Export?</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Major Export</th><th>Change 2000 → 2026</th></tr></thead><tbody>
+      <tr><td>1</td><td>Aircraft and aerospace equipment</td><td>Consistently top-ranked — Boeing, engines, parts</td></tr>
+      <tr><td>2</td><td>Semiconductors / AI chips</td><td>Fastest-growing category of 2026 (Nvidia, AMD)</td></tr>
+      <tr><td>3</td><td>Pharmaceuticals</td><td>More than tripled since 2000</td></tr>
+      <tr><td>4</td><td>Machinery and industrial equipment</td><td>Stable, slow growth</td></tr>
+      <tr><td>5</td><td>Crude oil, LNG, petroleum products</td><td>Biggest structural shift: large importer in 2000, near-net-exporter after 2019</td></tr>
+      <tr><td>6</td><td>Soybeans, corn, wheat, meat</td><td>Agriculture consistently strong</td></tr>
+      <tr><td>7</td><td>Vehicles and auto parts</td><td>GM, Ford, Tesla</td></tr>
+      <tr><td>8</td><td>Medical and scientific instruments</td><td>High-margin niche</td></tr>
+      <tr><td>9</td><td>Financial, software, cloud, education services</td><td>The quiet win — over $1 trillion annually</td></tr>
+      <tr><td>10</td><td>Arms and defense equipment</td><td>The world's largest defense exporter</td></tr>
+      </tbody></table>
+
+      <h3>(b) What Does America Import?</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Major Import</th><th>Trend</th></tr></thead><tbody>
+      <tr><td>1</td><td>Computers, smartphones, electronics</td><td>East Asian dependence, diversifying to Vietnam and India</td></tr>
+      <tr><td>2</td><td>Semiconductors and electronic components</td><td>Heavy Taiwan dependence — the largest strategic risk</td></tr>
+      <tr><td>3</td><td>Passenger vehicles and parts</td><td>Mexico, Japan, Korea</td></tr>
+      <tr><td>4</td><td>Pharmaceuticals and active ingredients</td><td>India/China dependence</td></tr>
+      <tr><td>5</td><td>Apparel, footwear, toys, household goods</td><td>Shift from China to Vietnam and Bangladesh</td></tr>
+      <tr><td>6</td><td>Crude oil and petrochemicals</td><td>Reduced by domestic shale</td></tr>
+      <tr><td>7</td><td>Batteries, EV components, critical minerals</td><td>The fastest-growing import category of 2026</td></tr>
+      <tr><td>8</td><td>Machinery and industrial equipment</td><td>Germany, Japan, Korea</td></tr>
+      <tr><td>9</td><td>Steel, aluminum, chemicals</td><td>Post-tariff attempts at domestic production</td></tr>
+      <tr><td>10</td><td>Food (bananas, coffee, seafood)</td><td>Persistent demand</td></tr>
+      </tbody></table>
+
+      <h3>(c) The Trade Deficit: What the Story Actually Is</h3>
+      <p>The visual trajectory of the goods-plus-services deficit:</p>
+      <pre style="font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--bg-3);padding:14px;border-radius:8px;overflow-x:auto;">2000:  $370B   ██████████
+2010:  $499B   ██████████████
+2020:  $679B   ████████████████████
+2026:  ~$950B  ██████████████████████████████</pre>
+      <p>The figure above is goods plus services (BEA). On a goods-only basis (Census), the 2026 deficit exceeds $1.2 trillion, because a services surplus of roughly $300 billion offsets it.</p>
+      <p><strong>The twin-deficit link:</strong> Federal budget deficit ↑ → National savings ↓ → Pressure on interest rates ↑ → Stronger dollar ↑ → Cheaper imports / costlier exports → Current-account deficit ↑. This is why tariffs alone cannot close the trade deficit — not until the fiscal deficit and national savings change.</p>
+
+      <h2 id="partners">8. Top 10 Trading Partners — By Decade</h2>
+      <p>(Volume = goods exports plus imports, in approximate billions of dollars. Sources: U.S. Census Bureau and BEA.)</p>
+
+      <h3>Year 2000</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Country</th><th>Volume</th><th>Nature</th></tr></thead><tbody>
+      <tr><td>1</td><td>🇨🇦 Canada</td><td>$268B</td><td>Energy, autos, integrated supply chains</td></tr>
+      <tr><td>2</td><td>🇲🇽 Mexico</td><td>$197B</td><td>NAFTA, manufacturing</td></tr>
+      <tr><td>3</td><td>🇯🇵 Japan</td><td>$164B</td><td>Autos, electronics</td></tr>
+      <tr><td>4</td><td>🇨🇳 China</td><td>$74B</td><td>Rapidly growing import hub</td></tr>
+      <tr><td>5</td><td>🇬🇧 United Kingdom</td><td>$64B</td><td>Services, pharma, machinery</td></tr>
+      <tr><td>6</td><td>🇩🇪 Germany</td><td>$63B</td><td>Machinery, autos</td></tr>
+      <tr><td>7</td><td>🇰🇷 South Korea</td><td>$54B</td><td>Chips, ships, autos</td></tr>
+      <tr><td>8</td><td>🇸🇬 Singapore</td><td>$39B</td><td>Electronics, re-exports</td></tr>
+      <tr><td>9</td><td>🇫🇷 France</td><td>$36B</td><td>Aerospace, luxury, machinery</td></tr>
+      <tr><td>10</td><td>🇳🇱 Netherlands</td><td>$32B</td><td>European access, semiconductors</td></tr>
+      </tbody></table>
+
+      <h3>Year 2010</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Country</th><th>Volume</th><th>Nature</th></tr></thead><tbody>
+      <tr><td>1</td><td>🇨🇦 Canada</td><td>$468B</td><td>Energy + auto</td></tr>
+      <tr><td>2</td><td>🇨🇳 China</td><td>$459B</td><td>The world's factory</td></tr>
+      <tr><td>3</td><td>🇲🇽 Mexico</td><td>$373B</td><td>The beginning of nearshoring</td></tr>
+      <tr><td>4</td><td>🇯🇵 Japan</td><td>$191B</td><td>Autos, machinery</td></tr>
+      <tr><td>5</td><td>🇩🇪 Germany</td><td>$154B</td><td>Industrial equipment</td></tr>
+      <tr><td>6</td><td>🇰🇷 South Korea</td><td>$91B</td><td>Chips, screens</td></tr>
+      <tr><td>7</td><td>🇬🇧 United Kingdom</td><td>$90B</td><td>Services, pharma</td></tr>
+      <tr><td>8</td><td>🇧🇷 Brazil</td><td>$64B</td><td>Agriculture, oil, aerospace</td></tr>
+      <tr><td>9</td><td>🇫🇷 France</td><td>$62B</td><td>Luxury, machinery</td></tr>
+      <tr><td>10</td><td>🇳🇱 Netherlands</td><td>$57B</td><td>European hub</td></tr>
+      </tbody></table>
+
+      <h3>Year 2020</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Country</th><th>Volume</th><th>Nature</th></tr></thead><tbody>
+      <tr><td>1</td><td>🇲🇽 Mexico</td><td>$578B</td><td>Overtook Canada</td></tr>
+      <tr><td>2</td><td>🇨🇦 Canada</td><td>$572B</td><td>Energy, auto</td></tr>
+      <tr><td>3</td><td>🇨🇳 China</td><td>$559B</td><td>Strong despite the pandemic</td></tr>
+      <tr><td>4</td><td>🇩🇪 Germany</td><td>$184B</td><td>Machinery, chemicals</td></tr>
+      <tr><td>5</td><td>🇯🇵 Japan</td><td>$183B</td><td>Autos, machinery</td></tr>
+      <tr><td>6</td><td>🇰🇷 South Korea</td><td>$119B</td><td>Chips, batteries</td></tr>
+      <tr><td>7</td><td>🇬🇧 United Kingdom</td><td>$110B</td><td>Services, pharma</td></tr>
+      <tr><td>8</td><td>🇮🇳 India</td><td>$94B</td><td>Pharma, IT, rising fast</td></tr>
+      <tr><td>9</td><td>🇹🇼 Taiwan</td><td>$94B</td><td>Semiconductor dependence</td></tr>
+      <tr><td>10</td><td>🇫🇷 France</td><td>$77B</td><td>Aerospace, luxury</td></tr>
+      </tbody></table>
+
+      <h3>Year 2026 (estimated, after tariffs and friend-shoring)</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Country</th><th>Volume</th><th>Key Shift</th></tr></thead><tbody>
+      <tr><td>1</td><td>🇲🇽 Mexico</td><td>~$850B</td><td>Biggest beneficiary of nearshoring</td></tr>
+      <tr><td>2</td><td>🇨🇦 Canada</td><td>~$760B</td><td>Energy + USMCA</td></tr>
+      <tr><td>3</td><td>🇨🇳 China</td><td>~$450–550B</td><td>Share fell significantly under tariffs</td></tr>
+      <tr><td>4</td><td>🇯🇵 Japan</td><td>~$270B</td><td>Autos, machinery</td></tr>
+      <tr><td>5</td><td>🇩🇪 Germany</td><td>~$260B</td><td>Machinery, chemicals</td></tr>
+      <tr><td>6</td><td>🇰🇷 South Korea</td><td>~$210B</td><td>Chips, batteries, ships</td></tr>
+      <tr><td>7</td><td>🇻🇳 Vietnam</td><td>~$170B</td><td>Biggest winner of supply-chain shift from China</td></tr>
+      <tr><td>8</td><td>🇮🇳 India</td><td>~$160–190B</td><td>Pharma, electronics assembly</td></tr>
+      <tr><td>9</td><td>🇹🇼 Taiwan</td><td>~$150B</td><td>AI chip demand</td></tr>
+      <tr><td>10</td><td>🇬🇧 United Kingdom</td><td>~$150B</td><td>Services, pharma, investment</td></tr>
+      </tbody></table>
+
+      <p><strong>Expert observation:</strong> In 2000, trade was Atlantic-centered. In 2010–2020, China became the fulcrum. In 2026, the strategy is friend-shoring plus nearshoring — Mexico, Vietnam, India, and Taiwan are gaining weight. This is geoeconomic decoupling, not merely a trade-statistics story.</p>
+
+      <h2 id="trends">9. What Grew, What Shrank, and What Stayed Unresolved</h2>
+
+      <h3>📈 What Grew</h3>
+      <table class="compare-table"><thead><tr><th>Domain</th><th>2000</th><th>2026</th><th>Economist's Read</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>$10.25T</td><td>~$32T</td><td>~3x — includes price effects</td></tr>
+      <tr><td>Per Capita GDP</td><td>$36K</td><td>~$93K</td><td>Median income did not keep pace</td></tr>
+      <tr><td>National Debt</td><td>~$5.6T</td><td>~$38T</td><td>The most dangerous trend — faster than growth</td></tr>
+      <tr><td>Trade Deficit</td><td>$370B</td><td>~$950B</td><td>Low savings + strong dollar</td></tr>
+      <tr><td>AI / Semiconductor Exports</td><td>Modest</td><td>Trillions-scale sector</td><td>The single largest new growth engine</td></tr>
+      <tr><td>Healthcare Spending</td><td>~13% of GDP</td><td>~17–18% of GDP</td><td>Most expensive in the developed world, without matching outcomes</td></tr>
+      <tr><td>Stock Market Capitalization</td><td>~$15T</td><td>~$60T+</td><td>Wealth effect, but concentration risk in a few tech giants</td></tr>
+      <tr><td>Inequality (Gini)</td><td>Relatively lower</td><td>Historically high</td><td>Growth benefits unevenly distributed</td></tr>
+      </tbody></table>
+
+      <h3>📉 What Shrank or Weakened</h3>
+      <table class="compare-table"><thead><tr><th>Domain</th><th>2000</th><th>2026</th><th>Economist's Read</th></tr></thead><tbody>
+      <tr><td>Manufacturing share of GDP</td><td>~15%</td><td>~11%</td><td>Financialization / services shift</td></tr>
+      <tr><td>Manufacturing employment (share of total)</td><td>~13%</td><td>~8%</td><td>China shock + automation; politically consequential in the Rust Belt</td></tr>
+      <tr><td>Federal Tax Revenue / GDP</td><td>20.5%</td><td>~17%</td><td>Repeated tax cuts eroded fiscal space</td></tr>
+      <tr><td>China's trade share</td><td>Rising (peaked around 2010)</td><td>Falling</td><td>Tariffs + supply-chain diversification</td></tr>
+      <tr><td>Oil import dependence</td><td>Very high</td><td>Significantly lower</td><td>The Shale Revolution — least discussed, largest geostrategic win</td></tr>
+      <tr><td>Real housing affordability</td><td>Relatively accessible</td><td>Historically weak</td><td>Supply constraints + elevated rates</td></tr>
+      <tr><td>Median vs mean wealth gap</td><td>Moderate</td><td>Extreme</td><td>The numerical shape of the K-shaped recovery</td></tr>
+      </tbody></table>
+
+      <h2 id="comparepk">10. America vs Pakistan: Where the Real Difference Lies</h2>
+      <table class="compare-table"><thead><tr><th>Metric</th><th>🇺🇸 USA (2026)</th><th>🇵🇰 Pakistan (2026)</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$32 trillion</td><td>~$390 billion</td></tr>
+      <tr><td>Per Capita</td><td>~$93,000</td><td>~$1,450</td></tr>
+      <tr><td>Currency status</td><td>Global reserve currency</td><td>Limited, variable</td></tr>
+      <tr><td>Debt denomination</td><td>Mostly own dollars</td><td>Large share in foreign currency</td></tr>
+      <tr><td>Debt / GDP</td><td>~123%</td><td>~75%</td></tr>
+      <tr><td>Sudden FX-crisis risk</td><td>Low</td><td>High</td></tr>
+      <tr><td>Tax / GDP (federal)</td><td>~17%</td><td>~10–11%</td></tr>
+      <tr><td>Export base</td><td>Tech, pharma, services, agri</td><td>Textiles (~52%)</td></tr>
+      <tr><td>Biggest problem</td><td>Fiscal sustainability + inequality</td><td>Exports + energy + fiscal base</td></tr>
+      </tbody></table>
+      <p><strong>The key point:</strong> America's 123% debt-to-GDP is not necessarily more dangerous than Pakistan's 75%, because the US borrows in its own currency, has deep capital markets, and most of its debt is domestic or dollar-denominated. But this is not a permanent pardon: if confidence breaks, markets punish through inflation and bond yields.</p>
+      <p>→ For the full companion analysis, read: <a href="article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis">Pakistan's Economy 2000–2026</a>.</p>
+
+      <h2 id="myths">11. Three Common Misunderstandings an Economist Clears Up</h2>
+
+      <p><strong>❌ Misunderstanding 1: "A trade deficit means America is losing to China."</strong></p>
+      <p><em>Correction:</em> Trade benefits both sides. A deficit means American consumers get cheaper goods and China gets dollars and Treasuries. The real question is whether strategic dependence (on chips, pharmaceuticals, critical minerals) is safe — which is a security question, not an accounting one.</p>
+
+      <p><strong>❌ Misunderstanding 2: "$38 trillion in debt will bankrupt America."</strong></p>
+      <p><em>Correction:</em> A country that borrows in its own currency can avoid technical default. The real risk is soft default — shifting the burden onto society through inflation, a weaker dollar, and rising interest rates. The question is who bears the sacrifice, not whether payment can be made.</p>
+
+      <p><strong>❌ Misunderstanding 3: "GDP is growing, so the average American's life is improving."</strong></p>
+      <p><em>Correction:</em> GDP measures output, not welfare. When most of the growth accrues to a handful of AI companies and asset owners, GDP can look fine while grocery bills, rent, and insurance feel punishing. This is why economists read median household income, real wages, and the SPM poverty measure alongside GDP.</p>
+
+      <h2 id="verdict">12. The Economist's Verdict and Policy Agenda</h2>
+      <p>If five policy recommendations had to go to Washington in 2026:</p>
+
+      <ol>
+        <li><strong>Fiscal consolidation — first, not last.</strong> Publish a long-run path to stabilize debt-to-GDP. Broaden the tax base, re-prioritize spending. Entitlement reform (Social Security, Medicare) is politically difficult but mathematically unavoidable.</li>
+        <li><strong>Supply-side, not just tariffs.</strong> Tariffs can offer temporary protection; competitiveness needs power, permitting reform, skills, and transport. Grid capacity for AI data centers is the single largest bottleneck of 2026.</li>
+        <li><strong>Housing supply — the domestic answer to inflation.</strong> Zoning reform and easier local permitting. Supply-side fixes, not demand subsidies. A 15-year backlog does not vanish with a check.</li>
+        <li><strong>Human capital and inclusive growth.</strong> Invest in childcare, community colleges, and apprenticeships. The goal: do not let AI's gains concentrate in Silicon Valley.</li>
+        <li><strong>Monetary independence and financial stability.</strong> Political pressure on the Fed destroys economic credibility. Watch commercial real estate, private credit, and leveraged loans — the next hidden risk.</li>
+      </ol>
+
+      <h3>🔴 Downside Risks for the Next 24 Months</h3>
       <ul>
-        <li>Fiscal shock — bond vigilantes کا دوبارہ ظہور</li>
-        <li>AI capex correction</li>
-        <li>Tariff-induced stagflation</li>
+        <li>Fiscal shock — the return of bond-market vigilantes</li>
+        <li>AI capex correction — if returns disappoint, investment-led growth could stall suddenly</li>
+        <li>Tariff-induced stagflation — slower growth, higher prices</li>
         <li>Geopolitical / Taiwan semiconductor shock</li>
+        <li>Political / institutional risk — the erosion of policy predictability</li>
       </ul>
 
-      <blockquote>امریکہ کی معیشت 2026 میں دنیا کی سب سے طاقتور ہے — مگر سب سے کم پرسکون نہیں۔ امتیاز (privilege) ابدی نہیں ہوتا۔ وہ امریکہ جو 2000 میں بجٹ سرپلس کے ساتھ کھڑا تھا، آج 38 ٹریلین ڈالر قرض اور دو دھڑوں والی ترقی کے ساتھ کھڑا ہے۔ مسئلہ وسائل کا نہیں، ترجیحات کا ہے۔</blockquote>
+      <h3>✅ Upsides</h3>
+      <ul>
+        <li>A genuine rise in total-factor productivity from AI</li>
+        <li>Lower energy costs from shale and renewables</li>
+        <li>Higher-quality jobs from nearshoring</li>
+        <li>Recovery in housing and investment as rates ease</li>
+      </ul>
+
+      <blockquote>The American economy of 2026 is the most powerful in the world — and also one of the least at peace. It possesses three things no other country has: the dollar's reserve-currency status, the world's deepest capital markets, and the most advanced innovation ecosystem. These are what allow it to carry fiscal and external imbalances that would send any other country to the IMF.<br/><br/>But the lesson of 2000–2026 is clear: privilege is not permanent. The America that stood in 2000 with a budget surplus and 4% unemployment now stands with $38 trillion in debt and a two-speed recovery. The problem is not resources. It is priorities. If America restores fiscal discipline, institutional credibility, and human capital, the next decade can be AI's. If it does not, the next crisis will not be a banking crisis — it will be a sovereign-risk-premium crisis.</blockquote>
+
+      <h2>FAQ</h2>
+
+      <h3>What is the US GDP in 2026?</h3>
+      <p>Approximately $31.5 to $32 trillion in nominal terms, making it the world's largest economy. GDP per capita is roughly $92,000–94,000. Final annual figures will be released by the BEA after December 2026.</p>
+
+      <h3>What are US growth and inflation in 2026?</h3>
+      <p>Real GDP growth is approximately 2.0–2.3%, while CPI inflation is running at 2.8–3.2% — above the Fed's 2% target, driven largely by tariffs, housing, and insurance costs.</p>
+
+      <h3>Who are America's largest trading partners?</h3>
+      <p>As of 2026, Mexico, Canada, and China are at the top, followed by Japan, Germany, South Korea, Vietnam, India, Taiwan, and the UK. China's share has fallen since tariff escalation, while Vietnam and Mexico have gained.</p>
+
+      <h3>What are America's largest exports?</h3>
+      <p>Aircraft, semiconductors and AI chips, pharmaceuticals, machinery, LNG and crude oil, soybeans, vehicles — and in services, finance, software, and cloud, which together exceed $1 trillion annually.</p>
+
+      <h3>Is $38 trillion of debt a danger to the United States?</h3>
+      <p>Direct default risk is low because most of the debt is denominated in dollars. But interest payments (~$1 trillion annually) are crowding out other spending, which is a serious long-run fiscal-sustainability concern.</p>
+
+      <h3>What is the US poverty rate?</h3>
+      <p>Under the official poverty measure, approximately 12.5–13%. The Supplemental Poverty Measure, which accounts for government benefits and housing and medical costs, often paints a different and more accurate picture. The figure is not directly comparable to poverty rates in developing countries such as Pakistan.</p>
 
       <h2>Sources and Further Reading</h2>
       <ul>
-        <li><a href="https://www.bea.gov/" target="_blank" rel="noopener">U.S. Bureau of Economic Analysis (BEA)</a> — NIPA, GDP, Trade</li>
-        <li><a href="https://www.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau</a> — Foreign Trade, Poverty Reports</li>
-        <li><a href="https://www.bls.gov/" target="_blank" rel="noopener">Bureau of Labor Statistics (BLS)</a> — CPI, Employment</li>
-        <li><a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve (FRED)</a> — Monetary Policy Data</li>
-        <li><a href="https://www.cbo.gov/" target="_blank" rel="noopener">Congressional Budget Office (CBO)</a> — Debt Projections</li>
-        <li><a href="https://www.imf.org/en/Countries/USA" target="_blank" rel="noopener">IMF World Economic Outlook</a> — US Country Report</li>
+        <li><a href="https://www.bea.gov/" target="_blank" rel="noopener">U.S. Bureau of Economic Analysis (BEA)</a> — NIPA, GDP, Trade in Goods &amp; Services</li>
+        <li><a href="https://www.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau</a> — Foreign Trade, Current Population Survey, Poverty Reports</li>
+        <li><a href="https://www.bls.gov/" target="_blank" rel="noopener">Bureau of Labor Statistics (BLS)</a> — CPI, Employment Situation</li>
+        <li><a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve (FRED)</a> — Fed Funds Rate, Balance Sheet, Real Disposable Income</li>
+        <li><a href="https://www.cbo.gov/" target="_blank" rel="noopener">Congressional Budget Office (CBO)</a> — Budget &amp; Economic Outlook, Long-Term Debt Projections</li>
+        <li><a href="https://www.imf.org/en/Countries/USA" target="_blank" rel="noopener">IMF World Economic Outlook</a> — United States Country Report</li>
+        <li><a href="https://home.treasury.gov/" target="_blank" rel="noopener">U.S. Department of the Treasury</a> — CHIPS &amp; Science Act, USMCA Review</li>
       </ul>
-      <p><em>نوٹ: 2026 کے اعداد و شمار تخمینی ہیں۔ حتمی سالانہ اعداد دسمبر 2026 کے بعد BEA جاری کرے گا۔</em></p>
+      <p><em>Editorial note: 2026 is an incomplete calendar year at publication. Any full-year 2026 figure is a projection or provisional estimate. Different agencies (BEA vs Census; nominal vs real; fiscal year vs calendar year) report different numbers; readers should cite source, unit, and release date.</em></p>
     `
   },
 
