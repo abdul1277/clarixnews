@@ -5,1065 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClarixNews – World News, Unfiltered</title>
   <meta name="description" content="ClarixNews delivers breaking international news from Pakistan, America, Europe and beyond. Fast. Clear. Unfiltered." />
-  <meta name="keywords" content="world news, international news, Pakistan news, breaking news, politics, business, technology, career, AI, KSE-100, Asia Cup 2026, Global AI Treaty" />
+  <meta name="keywords" content="world news, international news, Pakistan news, breaking news, politics, business, technology, career, AI, KSE-100, US economy 2026" />
   <meta name="author" content="ClarixNews Editorial Team" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <meta name="bingbot" content="index, follow" />
   <link rel="canonical" href="https://clarixnews.vercel.app/" />
-  
   <link rel="alternate" type="application/rss+xml" title="ClarixNews Latest Articles" href="https://clarixnews.vercel.app/rss.xml" />
   <meta name="theme-color" content="#0a0a0a" />
-  <meta name="application-name" content="ClarixNews" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="shared.css" />
   <style>
-    /* Skip Link */
-    .skip-link { 
-      position: fixed; 
-      top: 10px; 
-      left: 10px; 
-      z-index: 2000; 
-      transform: translateY(-160%); 
-      padding: 10px 14px; 
-      border-radius: 8px; 
-      background: var(--bg-2); 
-      color: var(--text-1); 
-      border: 2px solid var(--red); 
-      font: 600 13px/1 var(--font-sans); 
-      text-decoration: none; 
-      transition: transform .2s ease; 
-    }
-    .skip-link:focus { 
-      transform: translateY(0); 
-      outline: 3px solid rgba(200,16,46,.35); 
-      outline-offset: 2px; 
-    }
-
-    body {
-      background:
-        radial-gradient(1100px 480px at 85% -10%, rgba(59,130,246,.07), transparent 60%),
-        radial-gradient(900px 420px at 8% -5%, rgba(200,16,46,.06), transparent 60%),
-        radial-gradient(700px 380px at 50% 110%, rgba(139,92,246,.05), transparent 60%),
-        var(--bg-1);
-    }
-
-    /* Hero Section */
-    .hero-border { 
-      border-top: 3px solid var(--red); 
-      padding-top: 28px; 
-    }
-    
-    .hero-grid { 
-      display: grid; 
-      grid-template-columns: 1fr 340px; 
-      gap: 12px; 
-      background: transparent; 
-      margin: 10px 0; 
-    }
-
-    .hero-main { 
-      position: relative; 
-      min-height: 500px; 
-      overflow: hidden; 
-      cursor: pointer; 
-      border-radius: 16px; 
-      transition: transform .3s ease;
-      display: block;
-      text-decoration: none;
-      color: #fff;
-    }
-    
-    .hero-main:hover { 
-      transform: scale(1.01); 
-    }
-    
-    .hero-main:hover .hm-img { 
-      transform: scale(1.06); 
-    }
-    
-    .hm-img { 
-      position: absolute; 
-      inset: 0; 
-      transition: transform .6s; 
-    }
-    
-    .hm-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-overlay { 
-      position: absolute; 
-      inset: 0; 
-      background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,.95) 100%); 
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 16px;
-    }
-
-    .hero-content { 
-      position: absolute; 
-      bottom: 0; 
-      left: 0; 
-      right: 0; 
-      padding: 28px; 
-    }
-
-    .hero-title { 
-      font-family: var(--font-display); 
-      font-size: clamp(24px,3vw,40px); 
-      font-weight: 700; 
-      line-height: 1.15; 
-      color: #fff; 
-      margin: 0; 
-    }
-
-    .hero-subtitle {
-      font-size: clamp(14px, 2vw, 18px);
-      line-height: 1.5;
-      color: #ddd;
-      margin: 0;
-    }
-
-    .hero-meta { 
-      font-size: 12px; 
-      color: #ccc; 
-      display: flex; 
-      gap: 10px; 
-      align-items: center;
-      margin-top: 8px;
-    }
-
-    .hero-side { 
-      background: transparent; 
-      display: flex; 
-      flex-direction: column; 
-      gap: 12px; 
-    }
-
-    .side-story { 
-      flex: 1; 
-      padding: 18px; 
-      border-radius: 12px; 
-      border: 1px solid var(--border); 
-      background: var(--bg-3); 
-      cursor: pointer; 
-      transition: all .25s ease; 
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .side-story:hover { 
-      background: var(--bg-4); 
-      transform: translateY(-3px); 
-      box-shadow: 0 14px 30px rgba(0,0,0,.3); 
-      border-color: rgba(59,130,246,.5); 
-    }
-
-    .side-img { 
-      height: 100px; 
-      overflow: hidden; 
-      margin-bottom: 10px; 
-      border-radius: 8px; 
-    }
-
-    .side-img img { 
-      transition: transform .4s;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .side-story:hover .side-img img { 
-      transform: scale(1.05); 
-    }
-
-    .side-title { 
-      font-family: var(--font-display); 
-      font-size: 16px; 
-      font-weight: 700; 
-      line-height: 1.3; 
-      color: var(--text-1); 
-      margin: 6px 0 4px; 
-    }
-
-    .side-meta { 
-      font-size: 11px; 
-      color: var(--text-3); 
-    }
-
-    /* Latest Strip */
-    .latest-strip { 
-      background: var(--bg-2); 
-      border-radius: 12px; 
-      border: 1px solid var(--border); 
-      padding: 14px 0; 
-      margin: 16px 0; 
-    }
-
-    .latest-inner { 
-      max-width: 1280px; 
-      margin: 0 auto; 
-      padding: 0 24px; 
-      display: flex; 
-      overflow-x: auto; 
-      scrollbar-width: none; 
-      gap: 0; 
-    }
-
-    .latest-inner::-webkit-scrollbar { 
-      display: none; 
-    }
-
-    .latest-item { 
-      flex-shrink: 0; 
-      padding: 0 24px; 
-      border-right: 1px solid var(--border); 
-      max-width: 210px; 
-      cursor: pointer; 
-      transition: opacity .2s;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .latest-item:hover { 
-      opacity: .8; 
-    }
-
-    .latest-item:last-child { 
-      border-right: none; 
-    }
-
-    .latest-time { 
-      font-size: 10px; 
-      color: var(--red); 
-      font-weight: 700; 
-      letter-spacing: .08em; 
-      margin-bottom: 3px; 
-    }
-
-    .latest-headline { 
-      font-family: var(--font-serif); 
-      font-size: 13px; 
-      line-height: 1.4; 
-      color: var(--text-1); 
-    }
-
-    .latest-item:hover .latest-headline { 
-      color: var(--red); 
-    }
-
-    /* Grids */
-    .top-grid { 
-      display: grid; 
-      grid-template-columns: repeat(3,1fr); 
-      gap: 12px; 
-      background: transparent; 
-      padding: 8px 0; 
-    }
-
-    .world-section { 
-      display: grid; 
-      grid-template-columns: 1fr 300px; 
-      gap: 12px; 
-      background: transparent; 
-      margin-top: 12px; 
-    }
-
-    .world-list { 
-      background: var(--bg-3); 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      overflow: hidden; 
-    }
-
-    .world-item { 
-      display: flex; 
-      gap: 14px; 
-      padding: 16px 20px; 
-      border-bottom: 1px solid var(--border); 
-      cursor: pointer; 
-      transition: all .2s; 
-      align-items: flex-start;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .world-item:hover { 
-      background: var(--bg-4); 
-      transform: translateX(4px); 
-    }
-
-    .world-item:last-child { 
-      border-bottom: none; 
-    }
-
-    .world-num { 
-      font-family: var(--font-display); 
-      font-size: 30px; 
-      font-weight: 900; 
-      color: var(--border); 
-      line-height: 1; 
-      flex-shrink: 0; 
-      width: 32px; 
-    }
-
-    .world-body { 
-      flex: 1; 
-    }
-
-    .world-cat { 
-      font-size: 10px; 
-      color: var(--red); 
-      font-weight: 700; 
-      letter-spacing: .1em; 
-      text-transform: uppercase; 
-      margin-bottom: 4px; 
-    }
-
-    .world-title { 
-      font-family: var(--font-display); 
-      font-size: 16px; 
-      font-weight: 700; 
-      line-height: 1.3; 
-      color: var(--text-1); 
-      margin-bottom: 3px; 
-    }
-
-    .world-meta { 
-      font-size: 11px; 
-      color: var(--text-3); 
-    }
-
-    .world-img { 
-      width: 88px; 
-      height: 66px; 
-      flex-shrink: 0; 
-      overflow: hidden; 
-      border-radius: 8px; 
-    }
-
-    .world-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .sidebar { 
-      background: var(--bg-2); 
-      padding: 22px 18px; 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      margin-left: 0; 
-    }
-
-    .sidebar-title { 
-      font-size: 10px; 
-      font-weight: 700; 
-      letter-spacing: .15em; 
-      text-transform: uppercase; 
-      color: var(--gold); 
-      border-bottom: 1px solid var(--border); 
-      padding-bottom: 10px; 
-      margin-bottom: 16px; 
-    }
-
-    .opinion-item { 
-      display: flex; 
-      gap: 10px; 
-      margin-bottom: 16px; 
-      padding-bottom: 16px; 
-      border-bottom: 1px solid var(--border); 
-      cursor: pointer; 
-      transition: all .2s;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .opinion-item:last-child { 
-      border-bottom: none; 
-      margin-bottom: 0; 
-      padding-bottom: 0; 
-    }
-
-    .opinion-item:hover { 
-      transform: translateX(3px); 
-    }
-
-    .opinion-av { 
-      width: 40px; 
-      height: 40px; 
-      border-radius: 50%; 
-      background: linear-gradient(135deg, var(--red), #ff4d6d); 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      font-family: var(--font-display); 
-      font-size: 16px; 
-      font-weight: 700; 
-      color: #fff; 
-      flex-shrink: 0; 
-      box-shadow: 0 6px 14px rgba(200,16,46,.3); 
-    }
-
-    .opinion-author { 
-      font-size: 11px; 
-      font-weight: 600; 
-      color: var(--text-1); 
-      margin-bottom: 3px; 
-    }
-
-    .opinion-headline { 
-      font-family: var(--font-serif); 
-      font-size: 12px; 
-      line-height: 1.4; 
-      color: var(--text-2); 
-    }
-
-    .opinion-item:hover .opinion-headline { 
-      color: var(--text-1); 
-    }
-
-    /* Trending */
-    .trending-bg { 
-      background: transparent; 
-      padding: 32px 0; 
-      border-top: 1px solid var(--border); 
-    }
-
-    .trending-grid { 
-      display: grid; 
-      grid-template-columns: repeat(3,1fr); 
-      gap: 12px; 
-      background: transparent; 
-      margin-top: 20px; 
-      padding: 8px 0; 
-    }
-
-    .trending-card { 
-      background: var(--bg-3); 
-      padding: 20px; 
-      cursor: pointer; 
-      transition: all .25s ease; 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      position: relative; 
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .trending-card:hover { 
-      background: var(--bg-4); 
-      transform: translateY(-5px); 
-      box-shadow: 0 18px 40px rgba(0,0,0,.35); 
-      border-color: rgba(200,16,46,.5); 
-    }
-
-    .trending-num { 
-      font-family: var(--font-display); 
-      font-size: 52px; 
-      font-weight: 900; 
-      opacity: .15; 
-      line-height: 1; 
-      margin-bottom: 8px; 
-      background: linear-gradient(180deg, var(--red), transparent); 
-      -webkit-background-clip: text; 
-      background-clip: text; 
-      -webkit-text-fill-color: transparent; 
-    }
-
-    .trending-title { 
-      font-family: var(--font-display); 
-      font-size: 15px; 
-      font-weight: 700; 
-      line-height: 1.3; 
-      color: var(--text-1); 
-      margin-bottom: 6px; 
-    }
-
-    .trending-meta { 
-      font-size: 11px; 
-      color: var(--text-3); 
-    }
-
-    /* Series */
-    .series-grid { 
-      display: grid; 
-      grid-template-columns: repeat(2,1fr); 
-      gap: 12px; 
-      background: transparent; 
-      padding: 8px 0; 
-    }
-
-    .series-card { 
-      background: var(--bg-3); 
-      padding: 24px; 
-      cursor: pointer; 
-      transition: all .25s ease; 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      border-left: 4px solid transparent;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .series-card:hover { 
-      background: var(--bg-4); 
-      border-left-color: var(--red); 
-      transform: translateY(-3px); 
-      box-shadow: 0 14px 30px rgba(0,0,0,.3); 
-    }
-
-    .series-tag { 
-      font-size: 9px; 
-      font-weight: 700; 
-      letter-spacing: .12em; 
-      text-transform: uppercase; 
-      color: var(--red); 
-      margin-bottom: 8px; 
-    }
-
-    .series-title { 
-      font-family: var(--font-display); 
-      font-size: 20px; 
-      font-weight: 700; 
-      line-height: 1.25; 
-      color: var(--text-1); 
-      margin-bottom: 8px; 
-    }
-
-    .series-desc { 
-      font-size: 13px; 
-      color: var(--text-2); 
-      line-height: 1.6; 
-    }
-
-    /* Weather */
-    .weather-bar { 
-      background: var(--bg-2); 
-      border-bottom: 1px solid var(--border); 
-      padding: 8px 0; 
-    }
-
-    .weather-inner { 
-      max-width: 1280px; 
-      margin: 0 auto; 
-      padding: 0 24px; 
-      display: flex; 
-      align-items: center; 
-      gap: 4px; 
-    }
-
-    .weather-label { 
-      font-size: 10px; 
-      font-weight: 700; 
-      letter-spacing: .12em; 
-      text-transform: uppercase; 
-      color: var(--text-3); 
-      margin-right: 12px; 
-      flex-shrink: 0; 
-    }
-
-    .weather-item { 
-      display: flex; 
-      align-items: center; 
-      gap: 6px; 
-      padding: 0 16px; 
-      border-right: 1px solid var(--border); 
-      font-size: 12px; 
-      transition: opacity .2s;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .weather-item:hover { 
-      opacity: .8; 
-    }
-
-    .weather-item:last-child { 
-      border-right: none; 
-    }
-
-    .weather-city { 
-      color: var(--text-3); 
-      font-size: 11px; 
-    }
-
-    .weather-icon { 
-      font-size: 14px; 
-    }
-
-    .weather-temp { 
-      font-weight: 600; 
-      color: var(--text-1); 
-    }
-
-    /* Video */
-    .video-grid { 
-      display: grid; 
-      grid-template-columns: 1fr 1fr 1fr; 
-      gap: 12px; 
-      background: transparent; 
-      padding: 8px 0; 
-    }
-
-    .video-card { 
-      background: var(--bg-3); 
-      cursor: pointer; 
-      overflow: hidden; 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      transition: all .25s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .video-card:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 18px 40px rgba(0,0,0,.35); 
-      border-color: rgba(200,16,46,.5); 
-    }
-
-    .video-thumb { 
-      position: relative; 
-      height: 160px; 
-      overflow: hidden; 
-    }
-
-    .video-thumb img { 
-      transition: transform .4s;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .video-card:hover .video-thumb img { 
-      transform: scale(1.08); 
-    }
-
-    .video-play { 
-      position: absolute; 
-      top: 50%; 
-      left: 50%; 
-      transform: translate(-50%,-50%); 
-      width: 44px; 
-      height: 44px; 
-      background: rgba(200,16,46,.9); 
-      border-radius: 50%; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      font-size: 16px; 
-      color: #fff; 
-      transition: transform .2s; 
-      box-shadow: 0 8px 20px rgba(200,16,46,.4); 
-    }
-
-    .video-card:hover .video-play { 
-      transform: translate(-50%,-50%) scale(1.1); 
-    }
-
-    .video-duration { 
-      position: absolute; 
-      bottom: 8px; 
-      right: 8px; 
-      background: rgba(0,0,0,.8); 
-      color: #fff; 
-      font-size: 10px; 
-      padding: 2px 6px; 
-      font-weight: 600; 
-      border-radius: 3px; 
-    }
-
-    .video-body { 
-      padding: 14px; 
-    }
-
-    .video-title { 
-      font-family: var(--font-display); 
-      font-size: 15px; 
-      font-weight: 700; 
-      line-height: 1.3; 
-      color: var(--text-1); 
-      margin-bottom: 6px; 
-    }
-
-    .video-meta { 
-      font-size: 11px; 
-      color: var(--text-3); 
-    }
-
-    /* Search */
-    .search-overlay { 
-      display: none; 
-      position: fixed; 
-      inset: 0; 
-      background: rgba(0,0,0,.85); 
-      z-index: 1000; 
-      align-items: flex-start; 
-      justify-content: center; 
-      padding-top: 80px; 
-    }
-
-    .search-box { 
-      background: var(--bg-2); 
-      width: 100%; 
-      max-width: 640px; 
-      border-top: 3px solid var(--red); 
-      border-radius: 12px; 
-      overflow: hidden; 
-    }
-
-    .search-header { 
-      display: flex; 
-      align-items: center; 
-      padding: 0 20px; 
-      border-bottom: 1px solid var(--border); 
-    }
-
-    .search-header input { 
-      flex: 1; 
-      background: none; 
-      border: none; 
-      color: var(--text-1); 
-      font-size: 20px; 
-      padding: 20px 0; 
-      outline: none; 
-      font-family: var(--font-sans); 
-    }
-
-    .search-header input::placeholder { 
-      color: var(--text-3); 
-    }
-
-    .search-close { 
-      background: none; 
-      border: none; 
-      color: var(--text-3); 
-      font-size: 24px; 
-      padding: 8px; 
-      transition: color .2s; 
-      cursor: pointer; 
-    }
-
-    .search-close:hover { 
-      color: var(--text-1); 
-    }
-
-    .search-hints { 
-      padding: 16px 20px; 
-      font-size: 12px; 
-      color: var(--text-3); 
-    }
-
-    .search-hints strong { 
-      color: var(--text-2); 
-      display: block; 
-      margin-bottom: 8px; 
-    }
-
-    .search-hints span { 
-      display: inline-block; 
-      background: var(--bg-4); 
-      padding: 6px 14px; 
-      margin: 3px; 
-      border-radius: 20px; 
-      cursor: pointer; 
-      transition: all .2s; 
-      font-size: 11px; 
-      font-weight: 600; 
-    }
-
-    .search-hints span:hover { 
-      background: var(--red); 
-      color: #fff; 
-      transform: translateY(-2px); 
-    }
-
-    /* Cards */
-    .card { 
-      border-radius: 14px; 
-      border: 1px solid var(--border); 
-      margin: 4px; 
-      transition: all .25s ease; 
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .card:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 18px 40px rgba(0,0,0,.35); 
-      border-color: rgba(200,16,46,.5); 
-    }
-
-    .card:hover .card-img img { 
-      transform: scale(1.06); 
-    }
-
-    .card-img { 
-      overflow: hidden; 
-    }
-
-    .card-img img { 
-      transition: transform .4s;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 16px;
-    }
-
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.3;
-      color: var(--text-1);
-      margin: 8px 0;
-    }
-
-    .card-excerpt {
-      font-size: 13px;
-      color: var(--text-2);
-      line-height: 1.5;
-      margin-bottom: 8px;
-    }
-
-    .card-meta {
-      font-size: 11px;
-      color: var(--text-3);
-    }
-
-    .cat-pill { 
-      border-radius: 20px !important; 
-      padding: 4px 11px !important; 
-      letter-spacing: .1em !important; 
-      font-size: 9px !important; 
-      box-shadow: 0 4px 12px rgba(0,0,0,.25); 
-    }
-
-    .section-label::after { 
-      background: linear-gradient(90deg, var(--red), transparent) !important; 
-    }
-
-    /* Newsletter */
-    .newsletter { 
-      border-radius: 16px !important; 
-      border: 1px solid rgba(200,16,46,.3) !important; 
-      background: linear-gradient(135deg, var(--bg-3), var(--bg-2)) !important; 
-      padding: 32px !important; 
-      position: relative; 
-      overflow: hidden; 
-      box-shadow: 0 20px 50px rgba(0,0,0,.3); 
-      margin: 32px 0; 
-    }
-
-    .newsletter::before { 
-      content: ''; 
-      position: absolute; 
-      inset: 0; 
-      background: radial-gradient(400px 200px at 100% 0%, rgba(200,16,46,.15), transparent 60%); 
-      pointer-events: none; 
-    }
-
-    .newsletter-form input { 
-      border-radius: 8px !important; 
-      padding: 12px 18px !important; 
-    }
-
-    .newsletter-form button { 
-      border-radius: 8px !important; 
-      background: linear-gradient(135deg, #c8102e, #ff4d6d) !important; 
-      padding: 12px 24px !important; 
-      transition: all .2s; 
-    }
-
-    .newsletter-form button:hover { 
-      transform: translateY(-2px); 
-      box-shadow: 0 12px 28px rgba(200,16,46,.4); 
-    }
-
-    /* Misc */
-    .logo span { 
-      background: linear-gradient(90deg, #c8102e, #ff4d6d); 
-      -webkit-background-clip: text; 
-      background-clip: text; 
-      -webkit-text-fill-color: transparent; 
-    }
-
-    .search-btn { 
-      border-radius: 20px !important; 
-      padding: 8px 18px !important; 
-      transition: all .2s; 
-    }
-
-    .search-btn:hover { 
-      background: var(--red) !important; 
-      border-color: var(--red) !important; 
-      color: #fff !important; 
-    }
-
-    .ticker-bar { 
-      background: linear-gradient(90deg, #c8102e, #9e0c23, #c8102e); 
-      background-size: 200% 100%; 
-      animation: tickerPulse 8s ease-in-out infinite; 
-    }
-
-    @keyframes tickerPulse { 
-      0%, 100% { background-position: 0% 50%; } 
-      50% { background-position: 100% 50%; } 
-    }
-
-    footer { 
-      border-radius: 0; 
-      background: linear-gradient(180deg, var(--bg-2), var(--bg-1)); 
-    }
-
-    .footer-social a { 
-      border-radius: 50% !important; 
-      transition: all .2s; 
-    }
-
-    .footer-social a:hover { 
-      transform: translateY(-3px); 
-      background: var(--red); 
-      border-color: var(--red); 
-      color: #fff; 
-    }
-
-    .reveal { 
-      opacity: 0; 
-      transform: translateY(20px); 
-      transition: opacity .7s ease, transform .7s ease; 
-    }
-
-    .reveal.in { 
-      opacity: 1; 
-      transform: none; 
-    }
-
-    /* Loading skeleton */
-    .skeleton {
-      background: linear-gradient(90deg, var(--bg-3) 25%, var(--bg-4) 50%, var(--bg-3) 75%);
-      background-size: 200% 100%;
-      animation: skeleton-loading 1.5s ease-in-out infinite;
-      border-radius: 8px;
-    }
-
-    @keyframes skeleton-loading {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-
-    /* Responsive */
-    @media(max-width:900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-side { flex-direction: row; }
-      .side-story { flex: 1; }
-      .top-grid { grid-template-columns: 1fr; }
-      .world-section { grid-template-columns: 1fr; }
-      .trending-grid { grid-template-columns: 1fr 1fr; }
-      .video-grid { grid-template-columns: 1fr 1fr; }
-      .series-grid { grid-template-columns: 1fr; }
-    }
-
-    @media(max-width:768px) {
-      .hero-main {
-        min-height: 400px;
-      }
-      .hero-overlay {
-        padding: 24px;
-        gap: 12px;
-      }
-    }
-
-    @media(max-width:600px) {
-      .hero-side { flex-direction: column; }
-      .trending-grid { grid-template-columns: 1fr; }
-      .video-grid { grid-template-columns: 1fr; }
-      .card, .series-card, .trending-card, .video-card { margin: 2px; border-radius: 10px; }
-      .newsletter { padding: 22px !important; }
-    }
+    .skip-link{position:fixed;top:-120px;left:16px;z-index:9999;background:var(--red);color:#fff;padding:9px 18px;border-radius:8px;font:700 12px/1 var(--font-sans);text-decoration:none;transition:top .25s ease;}
+    .skip-link:focus{top:16px;outline:3px solid rgba(200,16,46,.35);}
+    body{background:radial-gradient(1100px 480px at 85% -10%,rgba(59,130,246,.07),transparent 60%),radial-gradient(900px 420px at 8% -5%,rgba(200,16,46,.06),transparent 60%),radial-gradient(700px 380px at 50% 110%,rgba(139,92,246,.05),transparent 60%),var(--bg-1);}
+    .hero-border{border-top:3px solid var(--red);padding-top:28px;}
+    .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:12px;margin:10px 0;}
+    .hero-main{position:relative;min-height:500px;overflow:hidden;border-radius:16px;display:block;text-decoration:none;color:#fff;transition:transform .3s ease;}
+    .hero-main:hover{transform:scale(1.01);}
+    .hero-main:hover .hm-img img{transform:scale(1.06);}
+    .hm-img{position:absolute;inset:0;overflow:hidden;}
+    .hm-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.95) 100%);padding:32px;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;}
+    .hero-title{font-family:var(--font-display);font-size:clamp(24px,3vw,40px);font-weight:700;line-height:1.15;color:#fff;margin:0;}
+    .hero-subtitle{font-size:clamp(14px,2vw,17px);line-height:1.5;color:#ddd;margin:0;}
+    .hero-meta{font-size:12px;color:#ccc;display:flex;gap:10px;align-items:center;}
+    .hero-side{display:flex;flex-direction:column;gap:12px;}
+    .side-story{flex:1;padding:18px;border-radius:12px;border:1px solid var(--border);background:var(--bg-3);transition:all .25s ease;overflow:hidden;text-decoration:none;color:inherit;display:block;}
+    .side-story:hover{background:var(--bg-4);transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.3);border-color:rgba(59,130,246,.5);}
+    .side-img{height:100px;overflow:hidden;margin-bottom:10px;border-radius:8px;}
+    .side-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .side-story:hover .side-img img{transform:scale(1.05);}
+    .side-title{font-family:var(--font-display);font-size:16px;font-weight:700;line-height:1.3;color:var(--text-1);margin:6px 0 4px;}
+    .side-meta{font-size:11px;color:var(--text-3);}
+    .latest-strip{background:var(--bg-2);border-radius:12px;border:1px solid var(--border);padding:14px 0;margin:16px 0;}
+    .latest-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none;}
+    .latest-inner::-webkit-scrollbar{display:none;}
+    .latest-item{flex-shrink:0;padding:0 24px;border-right:1px solid var(--border);max-width:220px;text-decoration:none;color:inherit;transition:opacity .2s;}
+    .latest-item:hover{opacity:.8;}
+    .latest-item:last-child{border-right:none;}
+    .latest-time{font-size:10px;color:var(--red);font-weight:700;letter-spacing:.08em;margin-bottom:3px;}
+    .latest-headline{font-family:var(--font-serif);font-size:13px;line-height:1.4;color:var(--text-1);}
+    .latest-item:hover .latest-headline{color:var(--red);}
+    .top-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:8px 0;}
+    .world-section{display:grid;grid-template-columns:1fr 300px;gap:12px;margin-top:12px;}
+    .world-list{background:var(--bg-3);border-radius:14px;border:1px solid var(--border);overflow:hidden;}
+    .world-item{display:flex;gap:14px;padding:16px 20px;border-bottom:1px solid var(--border);transition:all .2s;align-items:flex-start;text-decoration:none;color:inherit;}
+    .world-item:hover{background:var(--bg-4);transform:translateX(4px);}
+    .world-item:last-child{border-bottom:none;}
+    .world-num{font-family:var(--font-display);font-size:30px;font-weight:900;color:var(--border);line-height:1;flex-shrink:0;width:32px;}
+    .world-body{flex:1;}
+    .world-cat{font-size:10px;color:var(--red);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+    .world-title{font-family:var(--font-display);font-size:16px;font-weight:700;line-height:1.3;color:var(--text-1);margin-bottom:3px;}
+    .world-meta{font-size:11px;color:var(--text-3);}
+    .world-img{width:88px;height:66px;flex-shrink:0;overflow:hidden;border-radius:8px;}
+    .world-img img{width:100%;height:100%;object-fit:cover;}
+    .sidebar{background:var(--bg-2);padding:22px 18px;border-radius:14px;border:1px solid var(--border);}
+    .sidebar-title{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:16px;}
+    .opinion-item{display:flex;gap:10px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border);transition:all .2s;text-decoration:none;color:inherit;}
+    .opinion-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+    .opinion-item:hover{transform:translateX(3px);}
+    .opinion-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--red),#ff4d6d);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:700;color:#fff;flex-shrink:0;}
+    .opinion-author{font-size:11px;font-weight:600;color:var(--text-1);margin-bottom:3px;}
+    .opinion-headline{font-family:var(--font-serif);font-size:12px;line-height:1.4;color:var(--text-2);}
+    .trending-bg{padding:32px 0;border-top:1px solid var(--border);}
+    .trending-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px;padding:8px 0;}
+    .trending-card{background:var(--bg-3);padding:20px;border-radius:14px;border:1px solid var(--border);transition:all .25s ease;text-decoration:none;color:inherit;display:block;}
+    .trending-card:hover{background:var(--bg-4);transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.35);border-color:rgba(200,16,46,.5);}
+    .trending-num{font-family:var(--font-display);font-size:46px;font-weight:900;color:var(--red);opacity:.3;line-height:1;margin-bottom:10px;}
+    .trending-title{font-family:var(--font-display);font-size:15px;font-weight:700;line-height:1.3;color:var(--text-1);margin-bottom:6px;}
+    .trending-meta{font-size:11px;color:var(--text-3);}
+    .series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:8px 0;}
+    .series-card{background:var(--bg-3);padding:24px;border-radius:14px;border:1px solid var(--border);border-left:4px solid transparent;transition:all .25s ease;text-decoration:none;color:inherit;display:block;}
+    .series-card:hover{background:var(--bg-4);border-left-color:var(--red);transform:translateY(-3px);}
+    .series-tag{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+    .series-title{font-family:var(--font-display);font-size:20px;font-weight:700;line-height:1.25;color:var(--text-1);margin-bottom:8px;}
+    .series-desc{font-size:13px;color:var(--text-2);line-height:1.6;}
+    .weather-bar{background:var(--bg-2);border-bottom:1px solid var(--border);padding:8px 0;}
+    .weather-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;}
+    .weather-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-right:12px;flex-shrink:0;}
+    .weather-item{display:flex;align-items:center;gap:6px;padding:0 16px;border-right:1px solid var(--border);font-size:12px;text-decoration:none;color:inherit;}
+    .weather-item:last-child{border-right:none;}
+    .weather-city{color:var(--text-3);font-size:11px;}
+    .weather-temp{font-weight:600;color:var(--text-1);}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:8px 0;}
+    .video-card{background:var(--bg-3);overflow:hidden;border-radius:14px;border:1px solid var(--border);transition:all .25s ease;text-decoration:none;color:inherit;display:block;}
+    .video-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.35);}
+    .video-thumb{position:relative;height:160px;overflow:hidden;}
+    .video-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .video-card:hover .video-thumb img{transform:scale(1.08);}
+    .video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;background:rgba(200,16,46,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;}
+    .video-duration{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.8);color:#fff;font-size:10px;padding:2px 6px;font-weight:600;border-radius:3px;}
+    .video-body{padding:14px;}
+    .video-title{font-family:var(--font-display);font-size:15px;font-weight:700;line-height:1.3;color:var(--text-1);margin-bottom:6px;}
+    .video-meta{font-size:11px;color:var(--text-3);}
+    .search-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;align-items:flex-start;justify-content:center;padding-top:80px;}
+    .search-box{background:var(--bg-2);width:100%;max-width:640px;border-top:3px solid var(--red);border-radius:12px;overflow:hidden;}
+    .search-header{display:flex;align-items:center;padding:0 20px;border-bottom:1px solid var(--border);}
+    .search-header input{flex:1;background:none;border:none;color:var(--text-1);font-size:20px;padding:20px 0;outline:none;font-family:var(--font-sans);}
+    .search-close{background:none;border:none;color:var(--text-3);font-size:24px;padding:8px;cursor:pointer;}
+    .search-hints{padding:16px 20px;font-size:12px;color:var(--text-3);}
+    .search-hints strong{color:var(--text-2);display:block;margin-bottom:8px;}
+    .search-hints button{background:var(--bg-4);border:none;color:var(--text-2);padding:6px 14px;margin:3px;border-radius:20px;cursor:pointer;font-size:11px;font-weight:600;}
+    .search-hints button:hover{background:var(--red);color:#fff;}
+    .card{border-radius:14px;border:1px solid var(--border);transition:all .25s ease;overflow:hidden;text-decoration:none;color:inherit;display:block;background:var(--bg-3);}
+    .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.35);border-color:rgba(200,16,46,.5);}
+    .card:hover .card-img img{transform:scale(1.06);}
+    .card-img{overflow:hidden;}
+    .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .card-body{padding:16px;}
+    .card-title{font-family:var(--font-display);font-size:18px;font-weight:700;line-height:1.3;color:var(--text-1);margin:8px 0;}
+    .card-excerpt{font-size:13px;color:var(--text-2);line-height:1.5;margin-bottom:8px;}
+    .card-meta{font-size:11px;color:var(--text-3);}
+    .cat-pill{border-radius:20px!important;padding:4px 11px!important;letter-spacing:.1em!important;font-size:9px!important;}
+    .newsletter{border-radius:16px;border:1px solid rgba(200,16,46,.3);background:linear-gradient(135deg,var(--bg-3),var(--bg-2));padding:32px;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3);margin:32px 0;}
+    .newsletter-form input{border-radius:8px;padding:12px 18px;}
+    .newsletter-form button{border-radius:8px;background:linear-gradient(135deg,#c8102e,#ff4d6d);padding:12px 24px;transition:all .2s;}
+    .newsletter-form button:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(200,16,46,.4);}
+    .logo span{background:linear-gradient(90deg,#c8102e,#ff4d6d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+    .ticker-bar{background:linear-gradient(90deg,#c8102e,#9e0c23,#c8102e);background-size:200% 100%;animation:tickerPulse 8s ease-in-out infinite;}
+    @keyframes tickerPulse{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+    .footer-social a{border-radius:50%!important;transition:all .2s;}
+    .footer-social a:hover{transform:translateY(-3px);background:var(--red);color:#fff;}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.in{opacity:1;transform:none;}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;}.hero-side{flex-direction:row;}.top-grid,.trending-grid,.video-grid{grid-template-columns:1fr 1fr;}.world-section,.series-grid{grid-template-columns:1fr;}}
+    @media(max-width:600px){.hero-side,.trending-grid,.video-grid{grid-template-columns:1fr;flex-direction:column;}.hero-main{min-height:400px;}.hero-overlay{padding:24px;}.newsletter{padding:22px;}}
   </style>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7B4BGRJFC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T7B4BGRJFC');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T7B4BGRJFC');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603226403653034" crossorigin="anonymous"></script>
-
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://clarixnews.vercel.app/" />
   <meta property="og:title" content="ClarixNews – World News, Unfiltered" />
   <meta property="og:description" content="Breaking international news from Pakistan, America, Europe and beyond. Fast, clear, unfiltered." />
   <meta property="og:image" content="https://clarixnews.vercel.app/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="ClarixNews - World News, Unfiltered" />
   <meta property="og:site_name" content="ClarixNews" />
-  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@ClarixNews" />
-  <meta name="twitter:creator" content="@ClarixNews" />
   <meta name="twitter:title" content="ClarixNews – World News, Unfiltered" />
-  <meta name="twitter:description" content="Breaking international news from Pakistan, America, Europe and beyond. Fast. Clear. Unfiltered." />
   <meta name="twitter:image" content="https://clarixnews.vercel.app/og-image.png" />
-  <meta name="twitter:image:alt" content="ClarixNews logo" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
-    "name": "ClarixNews",
-    "alternateName": "Clarix News",
-    "url": "https://clarixnews.vercel.app",
-    "logo": {"@type": "ImageObject", "url": "https://clarixnews.vercel.app/icon-512.png", "width": 512, "height": 512},
-    "image": "https://clarixnews.vercel.app/og-image.png",
-    "description": "Independent international news coverage from South Asia, America, Europe and beyond.",
-    "foundingDate": "2026",
-    "sameAs": ["https://x.com/ClarixNews", "https://www.youtube.com/@ClarixNews"],
-    "publishingPrinciples": "https://clarixnews.vercel.app/about.html",
-    "ethicsPolicy": "https://clarixnews.vercel.app/about.html",
-    "correctionsPolicy": "https://clarixnews.vercel.app/about.html"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "ClarixNews",
-    "url": "https://clarixnews.vercel.app",
-    "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://clarixnews.vercel.app/search.html?q={search_term_string}"}, "query-input": "required name=search_term_string"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://clarixnews.vercel.app/"
-    }]
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"ClarixNews","url":"https://clarixnews.vercel.app","logo":{"@type":"ImageObject","url":"https://clarixnews.vercel.app/icon-512.png"},"sameAs":["https://x.com/ClarixNews","https://www.youtube.com/@ClarixNews"],"publishingPrinciples":"https://clarixnews.vercel.app/about.html"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ClarixNews","url":"https://clarixnews.vercel.app","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://clarixnews.vercel.app/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -1073,139 +156,224 @@
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- Search Overlay -->
-<div class="search-overlay" id="searchOverlay" aria-hidden="true">
-  <div class="search-box" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box" role="dialog" aria-modal="true">
     <form class="search-header" id="searchForm">
-      <span id="searchTitle" class="sr-only">Search ClarixNews</span>
       <input type="search" id="searchInput" placeholder="Search ClarixNews..." autocomplete="off" aria-label="Search ClarixNews" />
       <button type="button" class="search-close" id="searchClose" aria-label="Close search">✕</button>
     </form>
-    <div class="search-hints">
-      <strong>Trending searches</strong>
+    <div class="search-hints"><strong>Trending searches</strong>
       <button type="button" data-search="Pakistan">Pakistan</button>
       <button type="button" data-search="AI">Artificial Intelligence</button>
-      <button type="button" data-search="Europe">Europe</button>
       <button type="button" data-search="Economy">Economy</button>
       <button type="button" data-search="Career">Career Guide</button>
     </div>
   </div>
 </div>
 
-<!-- Ticker Bar -->
-<div class="ticker-bar">
-  <div class="ticker-label">Breaking</div>
-  <div class="ticker-track">
-    <div class="ticker-inner">
-      <span>AI agents move beyond chatbots toward real-world workflows</span>
-      <span>AI literacy is becoming a core professional skill</span>
-      <span>Global markets slide as oil surges and AI financing expands</span>
-      <span>Pakistan launches targeted fuel subsidy for low-income citizens</span>
-      <span>NVIDIA Blackwell Ultra highlights the race for AI compute</span>
-      <span>NVIDIA-backed startup launches multi-vendor AI networking platform</span>
-      <span>AI agents move beyond chatbots toward real-world workflows</span>
-      <span>AI literacy is becoming a core professional skill</span>
-      <span>Global markets slide as oil surges and AI financing expands</span>
-      <span>Pakistan launches targeted fuel subsidy for low-income citizens</span>
-      <span>NVIDIA Blackwell Ultra highlights the race for AI compute</span>
-      <span>NVIDIA-backed startup launches multi-vendor AI networking platform</span>
-    </div>
-  </div>
-</div>
+<div class="ticker-bar"><div class="ticker-label">Breaking</div><div class="ticker-track"><div class="ticker-inner"><span>AI agents move beyond chatbots toward real-world workflows</span><span>AI literacy is becoming a core professional skill</span><span>Global markets slide as oil surges and AI financing expands</span><span>Pakistan launches targeted fuel subsidy for low-income citizens</span><span>NVIDIA Blackwell Ultra highlights the race for AI compute</span><span>AI agents move beyond chatbots toward real-world workflows</span><span>AI literacy is becoming a core professional skill</span><span>Global markets slide as oil surges and AI financing expands</span><span>Pakistan launches targeted fuel subsidy for low-income citizens</span><span>NVIDIA Blackwell Ultra highlights the race for AI compute</span></div></div></div>
 
-<!-- Stocks Bar -->
-<div class="stocks-bar" id="homeStocksBar" style="cursor:pointer;" title="Open markets">
-  <div class="stocks-inner" id="homeTickerInner">
-    <div class="stock-item"><span class="stock-name">Loading live prices</span><span class="stock-val" style="color:var(--text-3)">⟳</span></div>
-  </div>
-</div>
+<div class="stocks-bar" id="homeStocksBar" style="cursor:pointer;" title="Open markets"><div class="stocks-inner" id="homeTickerInner"><div class="stock-item"><span class="stock-name">Loading live prices</span><span class="stock-val" style="color:var(--text-3)">⟳</span></div></div></div>
 
-<!-- Top Bar -->
-<div class="top-bar">
-  <div class="top-bar-inner">
-    <div class="top-bar-left"><span id="currentDate"></span></div>
-    <div style="display:flex;align-items:center;gap:14px;">
-      <div class="top-bar-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="#newsletter">Newsletter</a>
-      </div>
-      <button class="theme-toggle" id="themeBtn" type="button" onclick="toggleTheme()">☀ Light</button>
-    </div>
-  </div>
-</div>
+<div class="top-bar"><div class="top-bar-inner"><div class="top-bar-left"><span id="currentDate"></span></div><div style="display:flex;align-items:center;gap:14px;"><div class="top-bar-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#newsletter">Newsletter</a></div><button class="theme-toggle" id="themeBtn" type="button" onclick="toggleTheme()">☀ Light</button></div></div></div>
 
-<!-- Header -->
-<header>
-  <div class="logo"><a href="index.html">Clarix<span>News</span></a></div>
-  <div class="tagline">World News · Unfiltered · Independent</div>
-</header>
+<header><div class="logo"><a href="index.html">Clarix<span>News</span></a></div><div class="tagline">World News · Unfiltered · Independent</div></header>
 
-<!-- Navigation -->
-<nav class="main-nav" aria-label="Main navigation">
-  <div class="nav-inner">
-    <button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="category.html?cat=world">World</a></li>
-      <li><a href="category.html?cat=pakistan">Pakistan</a></li>
-      <li><a href="category.html?cat=europe">Europe</a></li>
-      <li><a href="category.html?cat=middleeast">Middle East</a></li>
-      <li><a href="category.html?cat=asia">Asia</a></li>
-      <li><a href="category.html?cat=business">Business</a></li>
-      <li><a href="category.html?cat=tech">Technology</a></li>
-      <li><a href="category.html?cat=career">Career & AI</a></li>
-      <li><a href="category.html?cat=opinion">Opinion</a></li>
-      <li><a href="markets.html">📈 Markets</a></li>
-      <li><a href="weather.html">🌤 Weather</a></li>
-    </ul>
-    <div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div>
-  </div>
-</nav>
+<nav class="main-nav" aria-label="Main navigation"><div class="nav-inner"><button class="mobile-nav-btn" id="mobileNavBtn" type="button" aria-label="Open navigation" aria-expanded="false">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=middleeast">Middle East</a></li><li><a href="category.html?cat=asia">Asia</a></li><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="markets.html">📈 Markets</a></li><li><a href="weather.html">🌤 Weather</a></li></ul><div class="nav-right"><button class="search-btn" id="searchBtn" type="button">🔍 Search</button></div></div></nav>
 
-<!-- Weather Bar -->
-<div class="weather-bar">
-  <div class="weather-inner">
-    <span class="weather-label">Weather</span>
-    <div id="weatherWidget" style="display:flex;gap:0;"></div>
-  </div>
-</div>
+<div class="weather-bar"><div class="weather-inner"><span class="weather-label">Weather</span><div id="weatherWidget" style="display:flex;gap:0;"></div></div></div>
 
-<!-- Main Content -->
 <main id="main-content">
   <div class="container">
     <div class="hero-border">
       <div class="hero-grid reveal">
-        <!-- Hero Main Article -->
         <a href="article.html?id=usa-economy-2000-2026-gdp-inflation-trade-deficit-analysis" class="hero-main">
-          <div class="hm-img">
-            <img src="https://images.unsplash.com/photo-1526304640581-d3db84709c48?w=1400&q=85&fit=crop" alt="US Economy 2000-2026" fetchpriority="high" loading="eager" />
-          </div>
+          <div class="hm-img"><img src="https://images.unsplash.com/photo-1526304640581-d3db84709c48?w=1400&q=85&fit=crop" alt="US Economy 2000-2026 analysis" fetchpriority="high" loading="eager" /></div>
           <div class="hero-overlay">
             <span class="cat-pill business">Business</span>
             <h1 class="hero-title">The $38 Trillion Question</h1>
             <p class="hero-subtitle">America's Economy 2000–2026: GDP Tripled, But Who Got Richer?</p>
-            <div class="hero-meta">
-              <span>ClarixNews Economy Desk</span>
-              <span>·</span>
-              <span>18 min read</span>
-            </div>
+            <div class="hero-meta"><span>ClarixNews Economy Desk</span><span>·</span><span>18 min read</span></div>
           </div>
         </a>
-
-        <!-- Hero Side Stories -->
         <div class="hero-side">
-          <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026" class="side-story">
-            <div class="side-img"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=85&fit=crop" alt="Professionals collaborating at work" loading="lazy" decoding="async" /></div>
-            <span class="cat-pill career">Career</span>
-            <div class="side-title">The New Career Ladder: Why AI Literacy Is Becoming a Core Professional Skill</div>
-            <div class="side-meta">October 9, 2026</div>
-          </a>
-          <a href="article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026" class="side-story">
-            <div class="side-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=85&fit=crop" alt="Semiconductor circuit board" loading="lazy" decoding="async" /></div>
-            <span class="cat-pill tech">Technology</span>
-            <div class="side-title">NVIDIA Blackwell Ultra: The AI Chip Powering the Next Wave of Reasoning</div>
-            <div class="side-meta">October 8, 2026</div>
-          </a>
-          <a href="article.html?id=pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026" class="side-story">
-            <div class="side-img"><img src="https://images.unsplash.com/photo-1525609004556-c46
+          <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=85&fit=crop" alt="Professionals collaborating" loading="lazy" decoding="async" /></div><span class="cat-pill career">Career</span><div class="side-title">The New Career Ladder: Why AI Literacy Is Becoming a Core Professional Skill</div><div class="side-meta">October 9, 2026</div></a>
+          <a href="article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=85&fit=crop" alt="Semiconductor circuit board" loading="lazy" decoding="async" /></div><span class="cat-pill tech">Technology</span><div class="side-title">NVIDIA Blackwell Ultra: The AI Chip Powering the Next Wave of Reasoning</div><div class="side-meta">October 8, 2026</div></a>
+          <a href="article.html?id=pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026" class="side-story"><div class="side-img"><img src="https://images.unsplash.com/photo-1525609004556-c46c7cf7cfcd?w=600&q=85&fit=crop" alt="Car at fuel station" loading="lazy" decoding="async" /></div><span class="cat-pill pakistan">Pakistan</span><div class="side-title">Pakistan Launches Fuel Subsidy for 9 Million Low-Income Citizens</div><div class="side-meta">October 8, 2026</div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="latest-strip reveal"><div class="latest-inner">
+      <a href="article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026" class="latest-item"><div class="latest-time">NEW FEATURE</div><div class="latest-headline">AI agents are moving beyond chatbots and into real-world workflows</div></a>
+      <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026" class="latest-item"><div class="latest-time">NEW FEATURE</div><div class="latest-headline">Why AI literacy is becoming a core professional skill</div></a>
+      <a href="article.html?id=global-markets-oil-ai-debt-tech-stocks-october-8-2026" class="latest-item"><div class="latest-time">OCT 8</div><div class="latest-headline">Global markets slide as oil surges and AI companies seek billions in debt</div></a>
+      <a href="article.html?id=pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026" class="latest-item"><div class="latest-time">OCT 8</div><div class="latest-headline">Pakistan launches fuel subsidy for millions of low-income citizens</div></a>
+      <a href="article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026" class="latest-item"><div class="latest-time">OCT 8</div><div class="latest-headline">NVIDIA Blackwell Ultra targets the age of AI reasoning</div></a>
+      <a href="article.html?id=nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026" class="latest-item"><div class="latest-time">OCT 8</div><div class="latest-headline">NVIDIA-backed startup launches platform to connect rival AI chips</div></a>
+    </div></div>
+  </div>
+
+  <div class="container">
+    <div class="section-label reveal"><h2>Top Stories</h2></div>
+    <div class="top-grid reveal">
+      <a href="article.html?id=world-bank-small-ai-developing-countries-october-18-2026" class="card"><div class="card-img" style="height:185px;"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=85&fit=crop" alt="AI for developing economies" loading="lazy" decoding="async" /></div><div class="card-body"><div class="card-cat"><span class="cat-pill tech">Technology</span></div><div class="card-title">World Bank Backs 'Small AI' for Developing Countries</div><div class="card-excerpt">How local-language, lower-cost AI tools could support farmers, small businesses and public services.</div><div class="card-meta">ClarixNews Technology Desk · October 18, 2026 · 8 min read</div></div></a>
+      <a href="article.html?id=us-ai-data-center-project-delays-october-18-2026" class="card"><div class="card-img" style="height:185px;"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=85&fit=crop" alt="Data centre servers" loading="lazy" decoding="async" /></div><div class="card-body"><div class="card-cat"><span class="cat-pill business">Business</span></div><div class="card-title">AI Data Center Boom Faces a Reality Check</div><div class="card-excerpt">Project delays, financing pressure and power constraints challenge the US AI infrastructure build-out.</div><div class="card-meta">ClarixNews Business Desk · October 18, 2026 · 8 min read</div></div></a>
+      <a href="article.html?id=ukraine-drone-attacks-russian-oil-sites-october-18-2026" class="card"><div class="card-img" style="height:185px;"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=85&fit=crop" alt="Oil infrastructure" loading="lazy" decoding="async" /></div><div class="card-body"><div class="card-cat"><span class="cat-pill world">World</span></div><div class="card-title">Ukraine Drone Offensive Hits Russian Oil Sites</div><div class="card-excerpt">Reported fires near St Petersburg raise questions about energy logistics and wider market effects.</div><div class="card-meta">ClarixNews World Desk · October 18, 2026 · 9 min read</div></div></a>
+    </div>
+
+    <div class="section-label reveal"><h2>Featured Series</h2></div>
+    <div class="series-grid reveal">
+      <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026" class="series-card"><div class="series-tag">Career & Skills</div><div class="series-title">The New Career Ladder: AI Literacy as a Core Professional Skill</div><div class="series-desc">What job seekers can learn, build and demonstrate to stay adaptable as AI changes everyday work.</div></a>
+      <a href="article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026" class="series-card"><div class="series-tag">AI Deep Dive</div><div class="series-title">AI Agents: From Chatbot Answers to Real-World Actions</div><div class="series-desc">Understand agent workflows, business opportunities, security risks and why human oversight still matters.</div></a>
+      <a href="article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026" class="series-card"><div class="series-tag">AI Infrastructure</div><div class="series-title">NVIDIA Blackwell Ultra and the New AI Data-Centre Race</div><div class="series-desc">A closer look at reasoning workloads, memory, GPU interconnects and the infrastructure behind modern AI.</div></a>
+      <a href="article.html?id=nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026" class="series-card"><div class="series-tag">Industry Watch</div><div class="series-title">Why Multi-Vendor AI Data Centres Matter</div><div class="series-desc">How new networking platforms aim to connect processors from different suppliers.</div></a>
+    </div>
+
+    <div class="section-label reveal"><h2>Around the World</h2></div>
+    <div class="world-section reveal">
+      <div class="world-list">
+        <a href="article.html?id=pakistan-fuel-subsidy-9-million-low-income-citizens-october-2026" class="world-item"><div class="world-num">01</div><div class="world-body"><div class="world-cat">Pakistan — Economy</div><div class="world-title">Pakistan Launches Fuel Subsidy for 9 Million Low-Income Citizens</div><div class="world-meta">October 8, 2026</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1525609004556-c46c7cf7cfcd?w=400&q=85&fit=crop" alt="Vehicle at fuel station" loading="lazy" decoding="async" /></div></a>
+        <a href="article.html?id=global-markets-oil-ai-debt-tech-stocks-october-8-2026" class="world-item"><div class="world-num">02</div><div class="world-body"><div class="world-cat">Business — Markets</div><div class="world-title">Global Markets Slide as Oil Surges and AI Companies Seek Billions in Debt</div><div class="world-meta">October 8, 2026</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=85&fit=crop" alt="Trading screens" loading="lazy" decoding="async" /></div></a>
+        <a href="article.html?id=nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026" class="world-item"><div class="world-num">03</div><div class="world-body"><div class="world-cat">Technology — AI Infrastructure</div><div class="world-title">NVIDIA-Backed Upscale AI Launches Token Fabric for Multi-Chip Data Centres</div><div class="world-meta">October 8, 2026</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=85&fit=crop" alt="Circuit board" loading="lazy" decoding="async" /></div></a>
+        <a href="article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026" class="world-item"><div class="world-num">04</div><div class="world-body"><div class="world-cat">Technology — Chips</div><div class="world-title">NVIDIA Blackwell Ultra Targets the Age of AI Reasoning</div><div class="world-meta">October 8, 2026</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=85&fit=crop" alt="AI hardware" loading="lazy" decoding="async" /></div></a>
+        <a href="article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026" class="world-item"><div class="world-num">05</div><div class="world-body"><div class="world-cat">Technology — Analysis</div><div class="world-title">AI Agents Are Moving Beyond Chatbots</div><div class="world-meta">October 9, 2026</div></div><div class="world-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=85&fit=crop" alt="AI visualization" loading="lazy" decoding="async" /></div></a>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-title">Opinion & Analysis</div>
+        <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026" class="opinion-item"><div class="opinion-av">CN</div><div><div class="opinion-author">ClarixNews Career Desk</div><div class="opinion-headline">Why AI literacy is becoming a core professional skill</div></div></a>
+        <a href="article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026" class="opinion-item"><div class="opinion-av">CN</div><div><div class="opinion-author">ClarixNews AI Desk</div><div class="opinion-headline">The real challenge is building safe, accountable AI agents</div></div></a>
+        <a href="article.html?id=global-markets-oil-ai-debt-tech-stocks-october-8-2026" class="opinion-item"><div class="opinion-av">CN</div><div><div class="opinion-author">ClarixNews Markets Desk</div><div class="opinion-headline">AI's investment boom faces a growing financing test</div></div></a>
+        <a href="article.html?id=nvidia-backed-upscale-ai-token-fabric-multi-chip-data-centers-october-2026" class="opinion-item"><div class="opinion-av">CN</div><div><div class="opinion-author">ClarixNews Technology Desk</div><div class="opinion-headline">Why multi-vendor AI infrastructure matters</div></div></a>
+      </div>
+    </div>
+
+    <div class="section-label reveal"><h2>Video Reports</h2></div>
+    <div class="video-grid reveal">
+      <a href="article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026" class="video-card"><div class="video-thumb"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=85&fit=crop" alt="AI networks" loading="lazy" decoding="async" /><div class="video-play">▶</div><div class="video-duration">Feature</div></div><div class="video-body"><div class="video-title">AI Agents Explained: From Answers to Actions</div><div class="video-meta">AI · October 9, 2026</div></div></a>
+      <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026" class="video-card"><div class="video-thumb"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=85&fit=crop" alt="Professionals at work" loading="lazy" decoding="async" /><div class="video-play">▶</div><div class="video-duration">Feature</div></div><div class="video-body"><div class="video-title">How AI Literacy Can Strengthen Your Career</div><div class="video-meta">Career · October 9, 2026</div></div></a>
+      <a href="article.html?id=nvidia-blackwell-ultra-ai-chip-stock-surge-2026" class="video-card"><div class="video-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=85&fit=crop" alt="Chip infrastructure" loading="lazy" decoding="async" /><div class="video-play">▶</div><div class="video-duration">Feature</div></div><div class="video-body"><div class="video-title">Inside the AI Chip Infrastructure Race</div><div class="video-meta">Technology · October 8, 2026</div></div></a>
+    </div>
+
+    <div class="newsletter reveal" id="newsletter">
+      <div class="newsletter-text"><h3>Stay Ahead of the News</h3><p>Get ClarixNews Morning Brief delivered to your inbox — free, every weekday.</p></div>
+      <form class="newsletter-form" id="newsletterForm" novalidate>
+        <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" autocomplete="email" required maxlength="254" aria-label="Email address" />
+        <button type="submit">Subscribe Free</button>
+      </form>
+      <p id="newsletterMessage" role="status" aria-live="polite" style="margin:10px 0 0;font-size:12px;color:var(--text-3);"></p>
+    </div>
+  </div>
+
+  <div class="trending-bg">
+    <div class="container">
+      <div class="section-label reveal"><h2>Trending Now</h2></div>
+      <div class="trending-grid reveal">
+        <a href="article.html?id=ai-career-roadmap-skills-portfolio-2026" class="trending-card"><div class="trending-num">01</div><div class="trending-title">How to Build an AI Career in 2026: A Realistic 90-Day Roadmap</div><div class="trending-meta">Career · October 20, 2026</div></a>
+        <a href="article.html?id=opinion-ai-tools-human-judgement-work-2026" class="trending-card"><div class="trending-num">02</div><div class="trending-title">Opinion: AI Should Make People More Capable, Not More Dependent</div><div class="trending-meta">Opinion · October 20, 2026</div></a>
+        <a href="article.html?id=global-ai-stock-selloff-investment-bubble-october-20-2026" class="trending-card"><div class="trending-num">03</div><div class="trending-title">AI Stock Market Boom Faces a Reality Check</div><div class="trending-meta">Business · October 20, 2026</div></a>
+        <a href="article.html?id=asian-markets-oil-prices-ai-earnings-october-20-2026" class="trending-card"><div class="trending-num">04</div><div class="trending-title">Asian Stock Markets Slide as Oil Prices Rise</div><div class="trending-meta">Business · October 20, 2026</div></a>
+        <a href="article.html?id=nvidia-jensen-huang-germany-industrial-ai-october-20-2026" class="trending-card"><div class="trending-num">05</div><div class="trending-title">Nvidia CEO Urges German Industry to Embrace AI</div><div class="trending-meta">Technology · October 20, 2026</div></a>
+        <a href="article.html?id=world-bank-small-ai-developing-countries-october-18-2026" class="trending-card"><div class="trending-num">06</div><div class="trending-title">World Bank Backs 'Small AI' for Developing Countries</div><div class="trending-meta">Technology · October 18, 2026</div></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="trending-bg" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-label"><h2>Most Read This Week</h2></div>
+      <div class="top-grid" id="mostReadGrid"></div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="container"><div class="footer-grid"><div><div class="footer-logo">Clarix<span>News</span></div><div class="footer-desc">Independent international news coverage from South Asia, America, Europe and beyond. Fast, clear, and unfiltered journalism for a connected world.</div><div class="footer-social"><a href="https://x.com/ClarixNews" target="_blank" rel="noopener noreferrer" aria-label="ClarixNews on X">𝕏</a><a href="https://www.youtube.com/@ClarixNews" target="_blank" rel="noopener noreferrer" aria-label="ClarixNews on YouTube">▶</a></div></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="category.html?cat=world">World</a></li><li><a href="category.html?cat=pakistan">Pakistan</a></li><li><a href="category.html?cat=europe">Europe</a></li><li><a href="category.html?cat=middleeast">Middle East</a></li><li><a href="category.html?cat=asia">Asia</a></li></ul></div><div class="footer-col"><h4>Topics</h4><ul><li><a href="category.html?cat=business">Business</a></li><li><a href="category.html?cat=tech">Technology</a></li><li><a href="category.html?cat=career">Career & AI</a></li><li><a href="category.html?cat=opinion">Opinion</a></li><li><a href="markets.html">📈 Markets</a></li><li><a href="weather.html">🌤 Weather</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="sitemap.xml">Sitemap</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 ClarixNews. All rights reserved.</div><div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></div></div></div></footer>
+
+<button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">↑</button>
+<script src="articles.js"></script>
+<script src="shared.js"></script>
+<script>
+/* ═══ HOME ENGINE: weather + live ticker + labels ═══ */
+(async function(){
+  const $=id=>document.getElementById(id);
+  const cache={get(k){try{const v=JSON.parse(localStorage.getItem('cx_'+k));if(v&&Date.now()-v.t<v.ttl)return v.d}catch(e){}return null},set(k,d,ttl){try{localStorage.setItem('cx_'+k,JSON.stringify({t:Date.now(),ttl:ttl,d:d}))}catch(e){}}};
+  async function getJSON(url,key,ttl){const c=cache.get(key);if(c)return c;try{const r=await fetch(url,{headers:{Accept:'application/json'}});if(!r.ok)throw new Error('HTTP '+r.status);const d=await r.json();cache.set(key,d,ttl);return d}catch(e){return null}}
+  const CITIES=[{n:'Karachi',la:24.86,lo:67.00},{n:'Lahore',la:31.52,lo:74.35},{n:'Islamabad',la:33.68,lo:73.04},{n:'Dubai',la:25.20,lo:55.27},{n:'London',la:51.51,lo:-0.13},{n:'New York',la:40.71,lo:-74.01}];
+  function wIcon(c,day){if(c===0)return day?'☀️':'';if(c<=2)return '🌤️';if(c===3)return '☁️';if(c===45||c===48)return '🌫️';if(c>=51&&c<=67)return '🌦️';if(c>=71&&c<=77)return '🌨️';if(c>=80&&c<=82)return '🌧️';if(c>=95)return '⛈️';return '🌡️';}
+  async function loadWeather(){const el=$('weatherWidget');if(!el)return;const url='https://api.open-meteo.com/v1/forecast?latitude='+CITIES.map(c=>c.la).join(',')+'&longitude='+CITIES.map(c=>c.lo).join(',')+'&current=temperature_2m,weather_code,is_day&timezone=auto';const d=await getJSON(url,'weather',10*60*1000);if(!d)return;const arr=Array.isArray(d)?d:[d];el.innerHTML=arr.map((r,i)=>{const cur=r.current||{};const city=CITIES[i];if(!city)return '';return '<a href="weather.html?lat='+city.la+'&lon='+city.lo+'&name='+encodeURIComponent(city.n)+'" class="weather-item"><span class="weather-city">'+city.n+'</span><span class="weather-icon">'+wIcon(Number(cur.weather_code),cur.is_day===1)+'</span><span class="weather-temp">'+Math.round(Number(cur.temperature_2m)||0)+'°C</span></a>';}).join('');}
+  async function loadTicker(){const el=$('homeTickerInner');if(!el)return;const [crypto,fx,gold]=await Promise.all([getJSON('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,ripple,dogecoin&order=market_cap_desc&sparkline=false','crypto',60*1000),getJSON('https://open.er-api.com/v6/latest/USD','fx',60*60*1000),getJSON('https://api.gold-api.com/price/XAU','gold',5*60*1000)]);let h='';if(gold&&Number.isFinite(Number(gold.price)))h+='<div class="stock-item"><span class="stock-name">GOLD</span><span class="stock-val">$'+Math.round(Number(gold.price)).toLocaleString()+'</span><span class="stock-up">● LIVE</span></div>';if(fx&&fx.rates&&Number.isFinite(Number(fx.rates.PKR))){h+='<div class="stock-item"><span class="stock-name">USD/PKR</span><span class="stock-val">'+Number(fx.rates.PKR).toFixed(2)+'</span><span class="stock-up">● LIVE</span></div>';if(fx.rates.EUR)h+='<div class="stock-item"><span class="stock-name">EUR/USD</span><span class="stock-val">'+(1/Number(fx.rates.EUR)).toFixed(4)+'</span><span class="stock-up">● LIVE</span></div>';}if(crypto&&Array.isArray(crypto)){crypto.forEach(c=>{const pct=Number(c.price_change_percentage_24h)||0,u=pct>=0;const cp=Number(c.current_price)||0;const price=cp>=1000?'$'+Math.round(cp).toLocaleString():'$'+cp.toFixed(3);h+='<div class="stock-item"><span class="stock-name">'+String(c.symbol||'').toUpperCase()+'</span><span class="stock-val">'+price+'</span><span class="'+(u?'stock-up':'stock-down')+'">'+(u?'▲':'▼')+' '+Math.abs(pct).toFixed(2)+'%</span></div>';});}if(!h)h='<div class="stock-item"><span class="stock-name">Market data temporarily unavailable</span></div>';el.innerHTML=h+h;}
+  const stocksBar=$('homeStocksBar');if(stocksBar)stocksBar.addEventListener('click',()=>{window.location.href='markets.html';});
+  document.querySelectorAll('[data-search]').forEach(btn=>btn.addEventListener('click',()=>{const q=btn.getAttribute('data-search')||'';window.location.href='search.html?q='+encodeURIComponent(q);}));
+  if(Array.isArray(window.ARTICLES)){const byId=new Map(window.ARTICLES.map(a=>[String(a.id),a]));document.querySelectorAll('.latest-item').forEach(item=>{const href=item.getAttribute('href')||'';const id=new URL(href,window.location.href).searchParams.get('id');const article=byId.get(String(id));const label=item.querySelector('.latest-time');if(article&&label){const d=new Date(article.date);if(!Number.isNaN(d.getTime()))label.textContent='Published '+d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}});}
+  loadWeather();loadTicker();setInterval(loadTicker,60000);setInterval(loadWeather,600000);
+})();
+</script>
+<script>
+/* ═══ NEWSLETTER → FORMSPREE (single listener — koi duplicate nahi) ═══ */
+(function(){
+  var FORM_ID='xgaaveqw';
+  var form=document.getElementById('newsletterForm'),input=document.getElementById('newsletterEmail'),msg=document.getElementById('newsletterMessage');
+  if(!form||!input||!msg)return;
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var email=(input.value||'').trim();
+    msg.style.color='var(--text-3)';
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.style.color='#ef4444';msg.textContent='Please enter a valid email address.';input.focus();return;}
+    var btn=form.querySelector('button'),old=btn.textContent;
+    btn.textContent='Subscribing…';btn.disabled=true;
+    try{
+      var r=await fetch('https://formspree.io/f/'+FORM_ID,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,source:'clarixnews-homepage',page:location.pathname})});
+      if(r.ok){msg.style.color='#22c55e';msg.textContent="✅ You're in! Your first Morning Brief lands tomorrow at 8 AM.";form.reset();}
+      else throw new Error('fail');
+    }catch(err){msg.style.color='#ef4444';msg.textContent='Something went wrong — please try again.';}
+    btn.textContent=old;btn.disabled=false;
+  });
+})();
+</script>
+<script>
+/* ═══ REVEAL ON SCROLL ═══ */
+(function(){var t=document.querySelectorAll('.reveal');if(window.IntersectionObserver){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.08});t.forEach(function(el){io.observe(el);});}else{t.forEach(function(el){el.classList.add('in');});}})();
+</script>
+<script>
+/* ═══ MOST READ (live from Supabase) ═══ */
+(async function(){
+  var SB_URL='https://lovhjdghpchoikwbumid.supabase.co';
+  var SB_KEY='sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+  var grid=document.getElementById('mostReadGrid');
+  if(!grid)return;
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/rpc/get_most_read',{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({hours:168,lim:6})});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    var rows=await r.json();
+    if(!rows||!rows.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--text-3);font-size:13px;">Jaise hi articles par reads aayengi, yahan aap ke most-read stories dikhein gi.</div>';return;}
+    grid.innerHTML=rows.map(function(row){var a=null;for(var j=0;j<ARTICLES.length;j++){if(ARTICLES[j].id===row.article_id){a=ARTICLES[j];break;}}if(!a)return '';return '<a href="article.html?id='+a.id+'" class="card"><div class="card-img" style="height:150px;"><img src="'+a.image+'" alt="'+a.title+'" loading="lazy" decoding="async" /></div><div class="card-body"><div class="card-cat"><span class="cat-pill '+a.catClass+'">'+a.category+'</span> <span style="font-size:10px;color:var(--text-3);margin-left:6px;">👁 '+row.views.toLocaleString()+' reads</span></div><div class="card-title" style="font-size:16px;">'+a.title+'</div></div></a>';}).join('');
+  }catch(e){console.warn('Most Read load failed:',e);}
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ═══ CMS PLACEMENTS (content-manager se managed articles — optional override) ═══ */
+(async function(){try{
+  const URL='https://lovhjdghpchoikwbumid.supabase.co',KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvdmhqZGdocGNob2lrd2J1bWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4NTgzODAsImV4cCI6MjEwNjQzNDM4MH0.-G4wysxlmlzIdRzo0Pf5ugey_6RJf1p1O5vbeDGdhAU';
+  const sb=window.supabase.createClient(URL,KEY);
+  const [{data:places},{data:managed}]=await Promise.all([sb.from('article_placements').select('*').order('position'),sb.from('managed_articles').select('*').eq('status','published').limit(500)]);
+  if(!places||!places.length)return;
+  const map=new Map((typeof ARTICLES!=='undefined'?ARTICLES:[]).map(a=>[a.id,a]));
+  (managed||[]).forEach(a=>map.set(a.slug,{id:a.slug,title:a.title,subtitle:a.subtitle,category:a.category,catClass:String(a.category||'world').toLowerCase().replace(/[^a-z]+/g,''),author:a.author,date:a.published_at?new Date(a.published_at).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}):'',readTime:'5 min read',image:a.image_url,content:a.content,tags:a.tags||[]}));
+  const by=s=>places.filter(p=>p.section===s).sort((a,b)=>a.position-b.position).map(p=>map.get(p.article_id)).filter(Boolean);
+  const link=a=>'article.html?id='+encodeURIComponent(a.id);
+  const safe=s=>String(s||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const hero=by('hero')[0];
+  if(hero){const el=document.querySelector('.hero-main');if(el){el.href=link(hero);const im=el.querySelector('.hm-img img');if(im&&hero.image){im.src=hero.image;im.alt=hero.title;}const t=el.querySelector('.hero-title');if(t)t.textContent=hero.title;const sub=el.querySelector('.hero-subtitle');if(sub&&hero.subtitle)sub.textContent=hero.subtitle;const meta=el.querySelector('.hero-meta');if(meta)meta.innerHTML='<span>'+safe(hero.author||'ClarixNews')+'</span><span>·</span><span>'+safe(hero.date||'Latest')+'</span><span>·</span><span>'+safe(hero.readTime||'5 min read')+'</span>';const pill=el.querySelector('.cat-pill');if(pill)pill.textContent=hero.category||'FEATURED';}}
+  const trending=by('trending');
+  if(trending.length){const grid=document.querySelector('.trending-grid');if(grid){grid.replaceChildren();trending.forEach((a,i)=>{const el=document.createElement('a');el.href=link(a);el.className='trending-card';el.innerHTML='<div class="trending-num">'+String(i+1).padStart(2,'0')+'</div><div class="trending-title">'+safe(a.title)+'</div><div class="trending-meta">'+safe(a.category)+' · '+safe(a.date)+'</div>';grid.appendChild(el);});}}
+  const latest=by('latest');
+  if(latest.length){const strip=document.querySelector('.latest-inner');if(strip){strip.replaceChildren();latest.forEach(a=>{const el=document.createElement('a');el.className='latest-item';el.href=link(a);el.innerHTML='<div class="latest-time">FEATURED</div><div class="latest-headline">'+safe(a.title)+'</div>';strip.appendChild(el);});}}
+  const top=by('grid1');
+  if(top.length){const grid=document.querySelector('.top-grid');if(grid){grid.replaceChildren();top.forEach(a=>{const el=document.createElement('a');el.className='card';el.href=link(a);el.innerHTML='<div class="card-img" style="height:185px;"><img src="'+safe(a.image||'og-image.png')+'" alt="'+safe(a.title)+'" loading="lazy" decoding="async" /></div><div class="card-body"><div class="cat-pill '+safe(a.catClass||'')+'">'+safe(a.category)+'</div><div class="card-title">'+safe(a.title)+'</div><p class="card-excerpt">'+safe(a.subtitle||'')+'</p></div>';grid.appendChild(el);});}}
+}catch(e){console.warn('Homepage placements skipped:',e);}})();
+</script>
+</body>
+</html>
