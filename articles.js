@@ -1,6 +1,247 @@
 const ARTICLES = [
 
     {
+    id: "k-shaped-economy-explained-2026",
+    title: "K-Shaped Economy Explained: Why GDP Rises While Your Budget Falls",
+    subtitle: "The term is everywhere and rarely defined properly. Here is what a K-shaped recovery actually measures, which indicators reveal it, and why averages hide it.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Economy Desk",
+    authorRole: "Economics & Data Analysis",
+    authorInitials: "CN",
+    date: "November 15, 2026",
+    readTime: "8 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&q=85&fit=crop",
+    tags: ["K-Shaped Economy", "Inequality", "GDP vs Wages", "Inflation", "Economic Explainer"],
+    content: `
+      <p>Two things can be true at once: the economy is growing, and your household is worse off. That is not a contradiction or a conspiracy. It is what a K-shaped economy looks like from the lower branch.</p>
+
+      <h2>The Definition, Precisely</h2>
+      <p>A K-shaped recovery is one in which different groups diverge rather than converge after a shock. The upper branch — asset owners, high-margin sectors, capital-intensive firms — recovers and compounds. The lower branch — wage-dependent households, small service businesses, renters — stagnates or declines. Plot both and the lines form a K.</p>
+
+      <h2>Why Averages Hide It</h2>
+      <p>GDP is a total. GDP per capita is a mean. Neither describes a distribution. If the top decile gains substantially and the bottom half is flat, the average rises while the median does not. This is why economists read <strong>median household income</strong>, <strong>real wages</strong>, and <strong>consumption by quintile</strong> alongside headline growth.</p>
+
+      <h2>The Indicators That Reveal a K</h2>
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Upper branch signal</th><th>Lower branch signal</th></tr></thead><tbody>
+      <tr><td>Asset prices vs real wages</td><td>Equities and property rising</td><td>Wages flat after inflation</td></tr>
+      <tr><td>Discretionary spending</td><td>Luxury and travel strong</td><td>Discount retail outperforming</td></tr>
+      <tr><td>Credit behaviour</td><td>Investment borrowing</td><td>Revolving balances for essentials</td></tr>
+      <tr><td>Housing</td><td>Ownership equity compounding</td><td>Rent share of income rising</td></tr>
+      </tbody></table>
+
+      <h2>The Inflation Hangover</h2>
+      <p>A falling inflation rate does not mean falling prices. It means prices are rising more slowly from an already elevated base. Households experience the level; headlines report the rate. That gap explains much of the disconnect between "the economy is doing well" and "I cannot afford groceries."</p>
+
+      <h2>It Is Not Only an American Story</h2>
+      <p>In import-dependent economies the mechanism differs but the shape repeats: exporters and dollar-earners hedge against currency depreciation, while wage earners paid in local currency absorb the full inflation pass-through. The K appears with a currency axis rather than an asset axis.</p>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>The policy implication is uncomfortable: aggregate stimulus and headline growth are insufficient tools for a distributional problem. Housing supply, wage growth, targeted transfers and skills access do more for the lower branch than another point of GDP does.</p>
+
+      <h2>Related Coverage</h2>
+      <p>See the full data in <a href="article.html?id=usa-economy-2000-2026-gdp-inflation-trade-deficit-analysis">America's Economy 2000–2026</a> and <a href="article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis">Pakistan's Economy 2000–2026</a>.</p>
+    `
+  },
+
+    {
+    id: "skills-stack-2026-employers-ai-hiring",
+    title: "The 2026 Skills Stack: What Employers Screen For When Every Candidate Has AI",
+    subtitle: "When everyone can produce a polished draft in thirty seconds, polish stops being a signal. Here is what hiring managers look for instead — and how to demonstrate it.",
+    category: "Career",
+    catClass: "career",
+    author: "ClarixNews Career Desk",
+    authorRole: "Careers & Skills Analysis",
+    authorInitials: "CN",
+    date: "November 15, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1400&q=85&fit=crop",
+    tags: ["AI Skills 2026", "Career Advice", "Hiring Trends", "AI Literacy", "Job Search"],
+    content: `
+      <p>A quiet shift has happened in hiring. When every applicant can generate a competent cover letter, a clean slide deck and working starter code, those artefacts stop distinguishing anyone. The signal has moved from production to judgment.</p>
+
+      <h2>Four Things Employers Now Screen For</h2>
+      <table class="compare-table"><thead><tr><th>Signal</th><th>How it shows up in an interview</th></tr></thead><tbody>
+      <tr><td>Verification instinct</td><td>"How would you check this output is correct?"</td></tr>
+      <tr><td>Problem framing</td><td>Can you turn a vague request into a scoped task?</td></tr>
+      <tr><td>Taste</td><td>Can you tell good from merely plausible?</td></tr>
+      <tr><td>Ownership</td><td>Do you describe outcomes, or tools you used?</td></tr>
+      </tbody></table>
+
+      <h2>Why Verification Became the Core Skill</h2>
+      <p>AI systems produce confident output regardless of correctness. Someone must own the check. Candidates who describe how they validated a result — a test suite, a source comparison, a sanity calculation — read as senior. Candidates who describe the prompt they used read as junior, no matter how impressive the demo.</p>
+
+      <h2>How to Demonstrate It</h2>
+      <ol>
+        <li><strong>Show the check, not just the work.</strong> In your portfolio, include a short note on how you verified each project.</li>
+        <li><strong>Write decisions down.</strong> A one-page "why I chose X over Y" beats another tutorial clone.</li>
+        <li><strong>Publish something with a failure section.</strong> Naming what did not work is the strongest credibility signal available to a junior candidate.</li>
+        <li><strong>Measure something.</strong> Time saved, errors reduced, conversion improved — any honest number.</li>
+      </ol>
+
+      <h2>The Portfolio That Gets Replies</h2>
+      <p>Three projects, each with: the problem in one sentence, the constraint you worked under, the result, and how you verified it. That is more persuasive than twelve repositories with README files copied from a template.</p>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>AI did not remove the need for skill; it moved the skill upstream. The scarce capability in 2026 is not producing work — it is knowing whether the work is right, and being able to prove it.</p>
+
+      <h2>Related Coverage</h2>
+      <p>Read <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026">AI literacy as a core professional skill</a> and our <a href="article.html?id=ai-career-roadmap-skills-portfolio-2026">90-day AI career roadmap</a>.</p>
+    `
+  },
+
+    {
+    id: "pakistan-freelancing-it-exports-get-paid-dollars-guide-2026",
+    title: "Freelancing in Pakistan 2026: The Skills That Pay, Getting Paid Legally, and Keeping Clients",
+    subtitle: "A practical playbook for earning in dollars — which skills command rates, how payment channels and tax registration work, and why recurring clients beat one-off gigs.",
+    category: "Pakistan",
+    catClass: "pakistan",
+    author: "ClarixNews Economy Desk",
+    authorRole: "Economics & Skills Analysis",
+    authorInitials: "CN",
+    date: "November 15, 2026",
+    readTime: "9 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&q=85&fit=crop",
+    tags: ["Freelancing in Pakistan", "IT Exports Pakistan", "Upwork Fiverr", "Remote Work", "Pakistan Economy"],
+    content: `
+      <p>Pakistan's IT and freelance economy has become one of the country's few reliable sources of foreign exchange. It is also one of the few ladders where a person with a laptop, decent English and a demonstrable skill can change their household's income within a year. This is a practical guide, not a motivational one.</p>
+
+      <h2>Skills That Command Rates in 2026</h2>
+      <table class="compare-table"><thead><tr><th>Skill</th><th>Why buyers pay</th></tr></thead><tbody>
+      <tr><td>Full-stack web development</td><td>Ships a working product, not a mockup</td></tr>
+      <tr><td>Data engineering and automation</td><td>Removes recurring manual cost</td></tr>
+      <tr><td>AI integration (APIs, agents, evaluation)</td><td>Businesses want outcomes, not experiments</td></tr>
+      <tr><td>Technical writing and documentation</td><td>Scarce, and directly reduces support load</td></tr>
+      <tr><td>Design systems and UX for SaaS</td><td>Improves conversion, which is measurable</td></tr>
+      </tbody></table>
+      <p>The pattern: buyers pay for outcomes they can measure. "I know Python" is not an outcome. "I cut your reporting time from six hours to ten minutes" is.</p>
+
+      <h2>Getting Paid: Do It Properly</h2>
+      <p>Use documented channels — bank remittance routes, established payment processors, and the export-friendly accounts Pakistani banks offer for IT earnings. Undocumented channels may look cheaper until a payment is frozen or a tax question arrives.</p>
+      <p>Register with the relevant authorities, keep invoices, and retain contracts. Pakistan has historically offered concessional treatment for IT export receipts, but rates and conditions change — confirm the current position with the State Bank of Pakistan, FBR, or a tax practitioner before relying on any figure you read online, including this article.</p>
+
+      <h2>The Recurring-Client Rule</h2>
+      <p>One-off gigs are a treadmill. Retainers are a business. The transition is usually one conversation: after delivering a project, propose a monthly scope that maintains and improves what you built. Three retainers at a modest monthly rate beat twelve one-off projects at a higher headline price — because your acquisition cost drops to near zero.</p>
+
+      <h2>A 90-Day Starting Sequence</h2>
+      <ol>
+        <li><strong>Days 1–30:</strong> Pick one skill. Build three portfolio pieces that solve a real, describable problem.</li>
+        <li><strong>Days 31–60:</strong> Take small paid jobs to earn reviews. Price for reputation, not for income.</li>
+        <li><strong>Days 61–90:</strong> Raise rates, specialise, and convert your best client to a retainer.</li>
+      </ol>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>The macro story and the personal story point the same way: Pakistan needs export earnings, and individuals need dollar income. The bottleneck is not demand — it is demonstrable skill and professional reliability. Both are buildable.</p>
+
+      <h2>Related Coverage</h2>
+      <p>See <a href="article.html?id=ai-career-roadmap-skills-portfolio-2026">our 90-day AI career roadmap</a> and <a href="article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis">Pakistan's economy in context</a>.</p>
+    `
+  },
+
+    {
+    id: "oil-gold-dollar-bitcoin-market-signals-guide-2026",
+    title: "How to Read a Market Week: Oil, Gold, the Dollar and Bitcoin as One Signal",
+    subtitle: "Most retail investors watch four charts separately. Professionals read them as a single system. Here is the framework — and what each combination usually means.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Markets Desk",
+    authorRole: "Markets & Economy Analysis",
+    authorInitials: "CN",
+    date: "November 15, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=85&fit=crop",
+    tags: ["Oil Prices", "Gold Price", "US Dollar", "Bitcoin", "Market Analysis", "Risk On Risk Off"],
+    content: `
+      <p>Four prices tell you most of what you need to know about a market week: crude oil, gold, the US dollar, and bitcoin. Read alone, each is noise. Read together, they describe what capital is doing — and why.</p>
+
+      <h2>What Each Price Actually Measures</h2>
+      <table class="compare-table"><thead><tr><th>Asset</th><th>What it prices</th></tr></thead><tbody>
+      <tr><td>Crude oil</td><td>Physical supply risk and growth expectations</td></tr>
+      <tr><td>Gold</td><td>Fear, real rates, and confidence in paper claims</td></tr>
+      <tr><td>US dollar (DXY / USD pairs)</td><td>Global liquidity and relative policy credibility</td></tr>
+      <tr><td>Bitcoin</td><td>Risk appetite with a hard-supply narrative attached</td></tr>
+      </tbody></table>
+
+      <h2>The Four Combinations</h2>
+      <p><strong>Oil up, gold up, dollar up:</strong> a supply shock with fear. The worst combination for importers — energy costs rise while financing conditions tighten.</p>
+      <p><strong>Oil down, gold down, dollar down, bitcoin up:</strong> classic risk-on. Liquidity is loose and investors are reaching for growth.</p>
+      <p><strong>Oil flat, gold up, bitcoin down:</strong> quiet fear. Someone is hedging tail risk without a visible headline.</p>
+      <p><strong>Everything up:</strong> usually a currency story, not an asset story. When the dollar's real value is being questioned, hard assets and scarce assets rise together.</p>
+
+      <h2>Why This Matters for Pakistan</h2>
+      <p>For an importing economy, the oil-dollar combination is the household variable. A stronger dollar plus higher crude raises the import bill, pressures the rupee, and eventually shows up in fuel prices and the inflation print. Every sustained $10 move in crude adds roughly $2 billion-plus to Pakistan's annual import bill — an order-of-magnitude figure, not a precise forecast.</p>
+
+      <h2>Three Rules for Reading the Tape</h2>
+      <ol>
+        <li><strong>Watch the week, not the hour.</strong> Intraday moves are positioning; weekly moves are information.</li>
+        <li><strong>Ask what would falsify your read.</strong> If you think it is a supply shock, gold should not be falling.</li>
+        <li><strong>Separate the story from the flow.</strong> Headlines explain moves after the fact; ETF and futures positioning explains them before.</li>
+      </ol>
+
+      <h2>ClarixNews Markets View</h2>
+      <p>No indicator is a crystal ball. The value of this framework is diagnostic: it tells you which question to ask next. Live prices for crude, gold, USD/PKR and major crypto are on our <a href="markets.html">Markets page</a>, refreshing continuously.</p>
+
+      <h2>Related Coverage</h2>
+      <p>For the structural picture, read <a href="article.html?id=usa-economy-2000-2026-gdp-inflation-trade-deficit-analysis">America's Economy 2000–2026</a> and <a href="article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis">Pakistan's Economy 2000–2026</a>.</p>
+    `
+  },
+
+    {
+    id: "ai-agents-capability-reality-check-2026",
+    title: "AI Agents in 2026: What They Reliably Do, Where They Fail, and How to Deploy Them Safely",
+    subtitle: "A practical capability audit — the tasks agents handle end-to-end today, the failure modes that still require humans, and a deployment checklist teams can actually use.",
+    category: "Technology",
+    catClass: "tech",
+    author: "ClarixNews Technology Desk",
+    authorRole: "AI & Infrastructure Analysis",
+    authorInitials: "CN",
+    date: "November 15, 2026",
+    readTime: "8 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=85&fit=crop",
+    tags: ["AI Agents", "AI Agents 2026", "Agentic Workflows", "AI Automation", "AI Oversight"],
+    content: `
+      <p>The pitch for AI agents is simple: stop asking questions, start delegating tasks. The reality in 2026 is more useful than the hype and more limited than the demos. Agents are genuinely good at bounded, verifiable work. They remain unreliable at open-ended judgment. Knowing which is which is the entire skill.</p>
+
+      <h2>What Agents Reliably Handle Today</h2>
+      <table class="compare-table"><thead><tr><th>Task type</th><th>Why it works</th></tr></thead><tbody>
+      <tr><td>Data extraction and reformatting</td><td>Output is checkable against a source</td></tr>
+      <tr><td>Code scaffolding and test generation</td><td>Tests provide an objective pass/fail signal</td></tr>
+      <tr><td>Ticket triage and routing</td><td>Fixed categories, reversible decisions</td></tr>
+      <tr><td>Report drafting from structured data</td><td>Numbers come from a system of record</td></tr>
+      <tr><td>Monitoring and alert summarisation</td><td>Human still owns the response</td></tr>
+      </tbody></table>
+      <p>The common thread: a verification signal exists. When a task can be scored, agents improve fast. When it cannot, they drift.</p>
+
+      <h2>Where They Still Fail</h2>
+      <p>Three failure modes recur. <strong>Goal drift</strong> — the agent optimises the metric you gave it rather than the outcome you wanted. <strong>Compounding error</strong> — a small mistake in step two becomes a confident wrong answer in step nine. <strong>Unbounded scope</strong> — asked to "research this market," an agent produces plausible prose with no defensible sourcing.</p>
+      <p>Published evaluations this year made the point sharply: agents given multi-day compute to replicate open-ended research work failed to produce substantive progress, even while the same systems excelled at fixed benchmarks. Capability on a scoreboard is not capability in the wild.</p>
+
+      <h2>A Deployment Checklist That Works</h2>
+      <ol>
+        <li><strong>Define the verification signal first.</strong> If you cannot say how a human or a test will check the output, do not automate the task.</li>
+        <li><strong>Cap the blast radius.</strong> Read-only access before write access. Drafts before sends. Staging before production.</li>
+        <li><strong>Log every action.</strong> Tool calls, inputs, outputs. You cannot debug what you did not record.</li>
+        <li><strong>Set a step budget.</strong> Long chains compound errors; force a checkpoint every few steps.</li>
+        <li><strong>Keep a human owner.</strong> Accountability does not transfer to software.</li>
+      </ol>
+
+      <h2>The Economics Teams Actually See</h2>
+      <p>The gains are real but narrow. Teams report the largest savings on high-volume, low-judgment work — the tasks nobody wanted anyway. The disappointing deployments are the ones that tried to replace judgment rather than remove drudgery.</p>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>The right mental model is a capable junior colleague with no memory of consequences. Give it checklists, not missions. The organisations winning with agents in 2026 are not the ones with the best models — they are the ones with the best verification.</p>
+
+      <h2>Related Coverage</h2>
+      <p>Read our deep dive: <a href="article.html?id=ai-agents-beyond-chatbots-from-answers-to-actions-2026">AI Agents: From Answers to Actions</a>, and <a href="article.html?id=ai-literacy-new-career-ladder-professional-skills-2026">why AI literacy is now a core professional skill</a>.</p>
+    `
+  },
+
+    {
     id: "usa-economy-2000-2026-gdp-inflation-trade-deficit-analysis",
     title: "The $38 Trillion Question: America's Economy 2000–2026 — GDP Tripled, But Who Got Richer?",
     subtitle: "A 26-year economic autopsy of the United States — GDP, inflation, poverty, trade deficits, the national debt, and why America can run imbalances that would bankrupt any other nation. An economist's verdict on four reference years: 2000, 2010, 2020, and 2026.",
