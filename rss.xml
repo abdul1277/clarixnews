@@ -4,7 +4,15 @@
   <link>https://clarixnews.vercel.app/</link>
   <description>Latest news, explainers and practical guides from ClarixNews.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 15 Nov 2026 06:42:04 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 05:06:32 GMT</lastBuildDate>
+    <item>
+      <title>The $19 Trillion Pivot: China&apos;s Economy 2000–2026 — From World&apos;s Factory to Fortress Economy</title>
+      <link>https://clarixnews.vercel.app/article.html?id=china-economy-2000-2026-gdp-property-trade-surplus-analysis</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=china-economy-2000-2026-gdp-property-trade-surplus-analysis</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>A 26-year economic autopsy of China — WTO accession, the stimulus decade, the COVID exception, and the property hangover. GDP, growth, debt, trade surplus, manufacturing dominance and the demographic cliff, examined through four reference years: 2000, 2010, 2020 and 2026.</description>
+    </item>
     <item>
       <title>K-Shaped Economy Explained: Why GDP Rises While Your Budget Falls</title>
       <link>https://clarixnews.vercel.app/article.html?id=k-shaped-economy-explained-2026</link>
@@ -396,13 +404,5 @@
       <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
       <category>Technology</category>
       <description>Meta says its new AI models are designed for advanced coding, memory and agent tasks. The launch also renews questions about privacy, safety and how independent performance claims are verified.</description>
-    </item>
-    <item>
-      <title>Fusion Energy Breakthrough? What the Latest Research Could Mean for Clean Power</title>
-      <link>https://clarixnews.vercel.app/article.html?id=fusion-energy-breakthrough-2026-what-scientists-found</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=fusion-energy-breakthrough-2026-what-scientists-found</guid>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
-      <category>Science</category>
-      <description>New research is renewing interest in more efficient fusion experiments. But what separates a promising laboratory result from electricity that can power homes?</description>
     </item>
 </channel></rss>
