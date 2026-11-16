@@ -1,6 +1,282 @@
 const ARTICLES = [
 
     {
+    id: "china-economy-2000-2026-gdp-property-trade-surplus-analysis",
+    title: "The $19 Trillion Pivot: China's Economy 2000–2026 — From World's Factory to Fortress Economy",
+    subtitle: "A 26-year economic autopsy of China — WTO accession, the stimulus decade, the COVID exception, and the property hangover. GDP, growth, debt, trade surplus, manufacturing dominance and the demographic cliff, examined through four reference years: 2000, 2010, 2020 and 2026.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Economy Desk",
+    authorRole: "Senior Economic Analyst",
+    authorInitials: "CN",
+    date: "November 15, 2026",
+    readTime: "18 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1400&q=85&fit=crop",
+    tags: ["China Economy", "China GDP 2026", "China Property Crisis", "China Trade Surplus", "China Manufacturing", "China Deflation", "China vs US Economy", "Belt and Road", "China Economic Growth"],
+    content: `
+      <div class="verdict-box">
+        <div class="verdict-title">Executive Summary</div>
+        <div class="verdict-item"><span class="verdict-badge">Scale</span><span>Between 2000 and 2026, China's nominal GDP grew from roughly $1.2 trillion to approximately $19 trillion — a sixteen-fold expansion, the fastest sustained rise of any major economy in recorded history.</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Model</span><span>China is not a market economy with state intervention; it is a state-directed economy with market layers. Land finance, capital controls, state-owned enterprises and industrial policy make standard emerging-market analytics misleading.</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Pivot</span><span>The 2021 property turn ended the old growth model. The 2026 economy is a fortress economy: record trade surpluses, technology self-reliance, and a deliberate tolerance for slower growth in exchange for security and control.</span></div>
+        <div class="verdict-item"><span class="verdict-badge">Warning</span><span>Three drags define the decade: a balance-sheet recession in property and local government, a shrinking and ageing workforce, and an external world that is tariffing the surplus China needs.</span></div>
+      </div>
+
+      <h2 id="framework">1. Analytical Framework: Why China Cannot Be Read Like a Normal Economy</h2>
+      <p>Applied to Pakistan or Argentina, the first questions are reserves and the current account. Applied to the United States, they are fiscal path and the dollar. Applied to China, neither lens works cleanly. Three structural features have to be held in mind first.</p>
+
+      <h3>(a) Land Finance and the Local Government Model</h3>
+      <p>For two decades, local governments funded themselves by selling land-use rights and borrowing through financing vehicles (LGFVs), with property development as the engine. At its peak, property and related chains accounted for roughly a quarter to a third of economic activity. This is why the 2021 property deleveraging was not a sector event — it was a growth-model event.</p>
+
+      <h3>(b) Capital Controls and a Managed Currency</h3>
+      <p>China runs a partially closed capital account and a managed exchange rate. This removes the classic emerging-market crisis channel — sudden stops and currency runs — but replaces it with a slower problem: misallocated capital that cannot exit and therefore accumulates as debt inside the system.</p>
+
+      <h3>(c) State Capacity as Industrial Policy</h3>
+      <p>From WTO accession to "Made in China 2025" to the current semiconductor push, Beijing treats manufacturing depth as national security. The result is visible in 2026: China produces around 30% of global manufacturing value added, dominates solar, batteries and shipbuilding, and leads electric vehicles by volume.</p>
+
+      <p>So the question is not "is China rising or falling?" but: "can a fortress economy rebalance from investment and exports toward household consumption before demographics and external walls close?"</p>
+
+      <h2 id="y2000">2. Year 2000: The Eve of the WTO</h2>
+      <p>Context: two decades of reform had produced a coastal export machine, but China was still outside the World Trade Organization (accession came in December 2001). State-enterprise restructuring had thrown tens of millions off payrolls; the economy was emerging from post-Asian-crisis deflation. What followed accession was not incremental change — it was the largest industrialisation event in history.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2000</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$1.21 trillion</td></tr>
+      <tr><td>GDP Per Capita</td><td>~$950</td></tr>
+      <tr><td>Real GDP Growth</td><td>~8.5%</td></tr>
+      <tr><td>CPI Inflation</td><td>~0.4% (deflation hangover)</td></tr>
+      <tr><td>Urbanisation</td><td>~36%</td></tr>
+      <tr><td>Foreign Exchange Reserves</td><td>~$165 billion</td></tr>
+      <tr><td>Goods Trade Surplus</td><td>~$24 billion</td></tr>
+      <tr><td>Share of Global Manufacturing</td><td>~5–6%</td></tr>
+      <tr><td>FDI Inflows</td><td>~$40–50 billion</td></tr>
+      </tbody></table>
+
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>The year 2000 shows how much of China's rise was unlocked by rules, not resources. WTO membership converted low wages into credible market access, and foreign capital converted access into factories. The state supplied land, credit and infrastructure; the world supplied demand.</p>
+      <p><strong>The lesson:</strong> Institutional access can be worth more than any stimulus. The single largest growth decision of the era was a signature in Doha.</p>
+
+      <h2 id="y2010">3. Year 2010: The World's Factory at Full Throttle</h2>
+      <p>Context: after the 2008 global crisis, China launched a roughly 4 trillion yuan stimulus — credit through state banks, construction through local governments. In 2010 it overtook Japan as the world's second-largest economy, and growth hit double digits again. It also planted the seeds of the debt problem that matured a decade later.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2010</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$6.1 trillion</td></tr>
+      <tr><td>GDP Per Capita</td><td>~$4,550</td></tr>
+      <tr><td>Real GDP Growth</td><td>10.6%</td></tr>
+      <tr><td>CPI Inflation</td><td>~3.3%</td></tr>
+      <tr><td>Urbanisation</td><td>~50%</td></tr>
+      <tr><td>Foreign Exchange Reserves</td><td>~$2.85 trillion</td></tr>
+      <tr><td>Goods Trade Surplus</td><td>~$183 billion</td></tr>
+      <tr><td>Share of Global Manufacturing</td><td>~18–20%</td></tr>
+      <tr><td>M2 / GDP</td><td>~180% (credit boom)</td></tr>
+      </tbody></table>
+
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>The stimulus worked — and it taught the system a dangerous habit: every slowdown could be bought with credit and construction. Local government debt vehicles multiplied, property became the national savings vehicle, and growth became increasingly capital-intensive: each yuan of GDP required more yuan of investment than before.</p>
+      <p><strong>The lesson:</strong> A rescue that becomes a routine stops being a rescue. The 2009 playbook delayed a rebalancing that eventually arrived on worse terms.</p>
+
+      <h2 id="y2020">4. Year 2020: The COVID Exception and Dual Circulation</h2>
+      <p>Context: China controlled the first pandemic year through lockdowns and then supplied the world — PPE, laptops, furniture — while other factories were closed. It was the only major economy with positive growth in 2020. Beijing announced "dual circulation": external demand matters, but internal demand and self-sufficiency matter more.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2020</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$14.7 trillion</td></tr>
+      <tr><td>GDP Per Capita</td><td>~$10,430</td></tr>
+      <tr><td>Real GDP Growth</td><td>2.2%</td></tr>
+      <tr><td>CPI Inflation</td><td>~2.5%</td></tr>
+      <tr><td>Urbanisation</td><td>~64%</td></tr>
+      <tr><td>Foreign Exchange Reserves</td><td>~$3.2 trillion</td></tr>
+      <tr><td>Goods Trade Surplus</td><td>~$535 billion</td></tr>
+      <tr><td>Share of Global Manufacturing</td><td>~28–30%</td></tr>
+      <tr><td>Property Leverage</td><td>Near peak (cracks appear in 2021)</td></tr>
+      </tbody></table>
+
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>Two observations. First, the export windfall of 2020–21 reinforced the export-led instinct precisely when the world was preparing to resist it. Second, the "three red lines" property deleveraging launched in late 2020 — intended to curb developer leverage — triggered the longest property downturn in the country's modern history. Policy succeeded at its narrow goal and failed at its systemic one.</p>
+      <p><strong>The lesson:</strong> In a state-directed system, the risk is not absence of policy but the speed of it. Deleveraging without a demand replacement converts a credit problem into a confidence problem.</p>
+
+      <h2 id="y2026">5. Year 2026: Property Hangover, Deflation Risk, Technology Fortress</h2>
+      <p>Context: the 2026 economy runs on three engines — advanced manufacturing exports (EVs, batteries, solar, ships, mature-node chips), state-directed technology investment, and a services sector recovering unevenly — while dragging two anchors: a property and local-government balance-sheet recession, and a shrinking workforce.</p>
+
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>Year 2026 (provisional)</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$19–19.5 trillion (FX-sensitive)</td></tr>
+      <tr><td>GDP Per Capita</td><td>~$13,300–13,700</td></tr>
+      <tr><td>Real GDP Growth</td><td>~4.5–5.0% (official target band)</td></tr>
+      <tr><td>CPI Inflation</td><td>~0–1% (deflation risk)</td></tr>
+      <tr><td>PPI</td><td>Negative stretches (factory-gate deflation)</td></tr>
+      <tr><td>Youth Unemployment</td><td>Elevated (~17–18%, revised methodology)</td></tr>
+      <tr><td>Population</td><td>Declining since 2022 (~-0.1 to -0.2%/yr)</td></tr>
+      <tr><td>Urbanisation</td><td>~67%</td></tr>
+      <tr><td>Foreign Exchange Reserves</td><td>~$3.2–3.3 trillion</td></tr>
+      <tr><td>Goods Trade Surplus</td><td>Approaching ~$1 trillion (record)</td></tr>
+      <tr><td>Total Debt (all sectors)</td><td>~280–300% of GDP</td></tr>
+      <tr><td>Property Investment</td><td>Down ~30–40% from 2021 peak</td></tr>
+      </tbody></table>
+
+      <p><em>Note: 2026 is an incomplete year at publication. Figures reflect official releases through Q3, customs data, and IMF/World Bank projections. Nominal USD values move with the yuan's managed rate and should be treated as ranges.</em></p>
+
+      <h3>The Economist's Read — "So What?"</h3>
+      <p>The positives are structural, not cyclical: manufacturing depth no competitor can match for a decade, dominance in the green-industrial complex (solar, batteries, EVs), an engineering workforce larger than the G7 combined, and automation capacity that can partly offset demographic decline.</p>
+      <p>The negatives are also structural:</p>
+      <ol>
+        <li><strong>Weak household demand:</strong> the household share of national income remains low; precautionary savings stay high because the social safety net is thin. Hence near-zero CPI and negative PPI — firms cut prices because domestic buyers are scarce.</li>
+        <li><strong>Local government balance sheets:</strong> LGFV debt is the system's stress point; every resolution transfers cost between banks, local states and the centre.</li>
+        <li><strong>External walls:</strong> a surplus approaching $1 trillion is, by arithmetic, everyone else's deficit. Tariffs, anti-dumping cases and "de-risking" are the price of exporting your demand shortage.</li>
+      </ol>
+
+      <h2 id="comparison">6. Four Eras Compared: A Dashboard</h2>
+      <table class="compare-table"><thead><tr><th>Indicator</th><th>2000</th><th>2010</th><th>2020</th><th>2026</th></tr></thead><tbody>
+      <tr><td>GDP (trillion USD)</td><td>1.21</td><td>6.1</td><td>14.7</td><td>~19</td></tr>
+      <tr><td>Per Capita (USD)</td><td>950</td><td>4,550</td><td>10,430</td><td>~13,500</td></tr>
+      <tr><td>Real Growth</td><td>8.5%</td><td>10.6%</td><td>2.2%</td><td>~4.8%</td></tr>
+      <tr><td>CPI Inflation</td><td>0.4%</td><td>3.3%</td><td>2.5%</td><td>~0.5%</td></tr>
+      <tr><td>Urbanisation</td><td>36%</td><td>50%</td><td>64%</td><td>~67%</td></tr>
+      <tr><td>FX Reserves ($T)</td><td>0.17</td><td>2.85</td><td>3.2</td><td>~3.3</td></tr>
+      <tr><td>Goods Surplus ($B)</td><td>24</td><td>183</td><td>535</td><td>~950</td></tr>
+      <tr><td>Global Mfg Share</td><td>~5%</td><td>~19%</td><td>~29%</td><td>~30%</td></tr>
+      <tr><td>Working-age Population</td><td>Rising</td><td>Peaking (~2011)</td><td>Falling</td><td>Falling faster</td></tr>
+      </tbody></table>
+
+      <h3>Three Key Takeaways</h3>
+      <ol>
+        <li>Growth slowed by design and by drag: from double digits to high single, then mid single digits. The transition was never going to be smooth; the property turn made it abrupt.</li>
+        <li>The surplus is a symptom, not a triumph. It records what households did not spend and what the world reluctantly absorbed.</li>
+        <li>Demographics is the only curve in this table with no policy reverse gear. Everything else can be rebalanced; population can only be adapted to.</li>
+      </ol>
+
+      <h2 id="trade">7. Foreign Trade: The Surplus Machine and Its Contradiction</h2>
+      <h3>(a) What China Exports in 2026</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Export Category</th><th>Trend 2000 → 2026</th></tr></thead><tbody>
+      <tr><td>1</td><td>Electronics: phones, computers, components</td><td>From assembly to full supply chains</td></tr>
+      <tr><td>2</td><td>The "new three": EVs, lithium batteries, solar</td><td>From zero to global dominance</td></tr>
+      <tr><td>3</td><td>Machinery and capital equipment</td><td>Steady upgrade up the value chain</td></tr>
+      <tr><td>4</td><td>Ships and marine equipment</td><td>World-leading order books</td></tr>
+      <tr><td>5</td><td>Steel, chemicals, materials</td><td>Overcapacity exported under trade cases</td></tr>
+      <tr><td>6</td><td>Textiles and apparel</td><td>Share migrating to Bangladesh, Vietnam</td></tr>
+      <tr><td>7</td><td>Rare-earth processing and magnets</td><td>Near-monopoly at processing stage</td></tr>
+      </tbody></table>
+
+      <h3>(b) What China Imports</h3>
+      <table class="compare-table"><thead><tr><th>Rank</th><th>Import Category</th><th>Strategic Note</th></tr></thead><tbody>
+      <tr><td>1</td><td>Semiconductors</td><td>Largest single import; the chokepoint driving self-sufficiency policy</td></tr>
+      <tr><td>2</td><td>Crude oil</td><td>~70% import dependence; the maritime-security obsession</td></tr>
+      <tr><td>3</td><td>Iron ore</td><td>Australian/Brazilian dependence; pricing power absent</td></tr>
+      <tr><td>4</td><td>Soybeans and feed grains</td><td>Food-security lever in US relations</td></tr>
+      <tr><td>5</td><td>Natural gas (LNG/pipeline)</td><td>Coal still the backbone; gas the bridge</td></tr>
+      <tr><td>6</td><td>Precision instruments, aircraft</td><td>High-end gaps remain</td></tr>
+      </tbody></table>
+
+      <h3>(c) The Surplus Paradox</h3>
+      <p>China runs a large goods surplus and a services deficit (travel, intellectual property, freight). The net position is a record surplus because domestic absorption is weak. This is the mirror image of the American deficit: the US over-consumes and finances it; China under-consumes and accumulates claims. Both imbalances are the same global accounting identity seen from opposite shores.</p>
+
+      <h2 id="partners">8. Top Trading Partners — The Decade Shift</h2>
+      <p>(Goods trade, exports plus imports, approximate $ billions. Sources: China General Administration of Customs, UN Comtrade.)</p>
+      <table class="compare-table"><thead><tr><th>Partner</th><th>2000</th><th>2010</th><th>2020</th><th>2026 (est.)</th></tr></thead><tbody>
+      <tr><td>🇦🇸 ASEAN</td><td>~40</td><td>~290</td><td>~685</td><td>~950–1,000</td></tr>
+      <tr><td>🇪🇺 European Union</td><td>~65</td><td>~400</td><td>~650</td><td>~800</td></tr>
+      <tr><td>🇺🇸 United States</td><td>~80</td><td>~385</td><td>~587</td><td>~500–600 (tariff-compressed)</td></tr>
+      <tr><td>🇯🇵 Japan</td><td>~85</td><td>~300</td><td>~320</td><td>~330</td></tr>
+      <tr><td>🇰🇷 South Korea</td><td>~30</td><td>~200</td><td>~280</td><td>~340</td></tr>
+      <tr><td>🇷🇺 Russia</td><td>~8</td><td>~55</td><td>~108</td><td>~230 (energy-driven)</td></tr>
+      <tr><td>🇧🇷 Brazil / 🇸🇦 Gulf / Africa bloc</td><td>Small</td><td>Commodity ties</td><td>Growing</td><td>Global South share rising fast</td></tr>
+      </tbody></table>
+      <p><strong>Expert observation:</strong> the headline story is not decoupling but rerouting. Direct US-China trade compressed under tariffs, yet Chinese value-added reaches the US through Vietnam, Mexico and ASEAN assembly. Meanwhile the fastest-growing axis is the Global South — Belt and Road markets absorbing machinery, materials and increasingly cars.</p>
+
+      <h2 id="trends">9. What Grew, What Shrank, What Stayed Unresolved</h2>
+      <h3>📈 What Grew</h3>
+      <table class="compare-table"><thead><tr><th>Domain</th><th>2000</th><th>2026</th><th>Economist's Read</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>$1.2T</td><td>~$19T</td><td>16x — the fastest rise in history</td></tr>
+      <tr><td>Per capita income</td><td>~$950</td><td>~$13,500</td><td>Upper-middle income; middle-income trap is the live question</td></tr>
+      <tr><td>Manufacturing share of world</td><td>~5%</td><td>~30%</td><td>Depth no rival can replicate this decade</td></tr>
+      <tr><td>EV / battery / solar position</td><td>Nonexistent</td><td>Global price-setter</td><td>Industrial policy's clearest win</td></tr>
+      <tr><td>High-speed rail & grid</td><td>Negligible</td><td>World's largest network</td><td>State capacity delivered physical capital</td></tr>
+      <tr><td>R&D intensity</td><td>~1%</td><td>~2.5%+ of GDP</td><td>Patent volume leads; frontier quality still catching up</td></tr>
+      </tbody></table>
+      <h3>📉 What Shrank or Weakened</h3>
+      <table class="compare-table"><thead><tr><th>Domain</th><th>2000</th><th>2026</th><th>Economist's Read</th></tr></thead><tbody>
+      <tr><td>Working-age population</td><td>Rising</td><td>Falling</td><td>The binding long-run constraint</td></tr>
+      <tr><td>Property as growth engine</td><td>Emerging</td><td>Deleveraging</td><td>Balance-sheet recession, Japan-style but state-managed</td></tr>
+      <tr><td>Investment efficiency (ICOR)</td><td>Efficient</td><td>Deteriorated</td><td>More credit per unit of growth</td></tr>
+      <tr><td>Direct US trade share</td><td>Central</td><td>Compressed</td><td>Rerouted, not removed</td></tr>
+      <tr><td>Consumer confidence</td><td>Rising with incomes</td><td>Fragile post-property</td><td>Precautionary savings trap</td></tr>
+      </tbody></table>
+
+      <h2 id="compare3">10. China vs United States vs Pakistan: Three Different Problems</h2>
+      <table class="compare-table"><thead><tr><th>Metric</th><th>🇨🇳 China (2026)</th><th>🇺🇸 USA (2026)</th><th>🇵🇰 Pakistan (2026)</th></tr></thead><tbody>
+      <tr><td>Nominal GDP</td><td>~$19 trillion</td><td>~$32 trillion</td><td>~$390 billion</td></tr>
+      <tr><td>Per Capita</td><td>~$13,500</td><td>~$93,000</td><td>~$1,450</td></tr>
+      <tr><td>Growth rate</td><td>~4.8%</td><td>~2.2%</td><td>~3–4%</td></tr>
+      <tr><td>External position</td><td>Record surplus</td><td>Record deficit</td><td>Chronic deficit, reserve-constrained</td></tr>
+      <tr><td>Currency</td><td>Managed, capital controls</td><td>Reserve currency</td><td>Flexible, crisis-prone</td></tr>
+      <tr><td>Core problem</td><td>Demand rebalancing + demographics</td><td>Fiscal path + inequality</td><td>Exports + energy + fiscal base</td></tr>
+      <tr><td>Debt character</td><td>Mostly internal, CNY</td><td>Internal, USD reserve asset</td><td>Large external share — the real vulnerability</td></tr>
+      </tbody></table>
+      <p><strong>The key point:</strong> China's debt is large but internally held in its own currency behind capital controls — the opposite of Pakistan's vulnerability, and structurally safer than it looks. America's deficit is financeable because the dollar is the world's asset. Each economy's danger lies where its model is thinnest: China in domestic demand, America in fiscal credibility, Pakistan in foreign exchange.</p>
+      <p>→ Companion analyses: <a href="article.html?id=usa-economy-2000-2026-gdp-inflation-trade-deficit-analysis">America's Economy 2000–2026</a> and <a href="article.html?id=pakistan-economy-2000-2026-gdp-inflation-poverty-trade-analysis">Pakistan's Economy 2000–2026</a>.</p>
+
+      <h2 id="myths">11. Three Common Misunderstandings an Economist Clears Up</h2>
+      <p><strong>❌ Myth 1: "China is collapsing."</strong></p>
+      <p><em>Correction:</em> China is not collapsing; it is deleveraging. A balance-sheet recession produces years of slow growth and weak prices — Japan's 1990s, not the USSR's 1980s. The state controls banks, capital flows and land; the crisis channel is time, not explosion.</p>
+      <p><strong>❌ Myth 2: "The trade surplus proves the model is winning."</strong></p>
+      <p><em>Correction:</em> A record surplus alongside weak CPI is a demand failure wearing a victory costume. It also imports retaliation: every surplus of this size manufactures its own tariff coalition abroad.</p>
+      <p><strong>❌ Myth 3: "Decoupling is complete."</strong></p>
+      <p><em>Correction:</em> Direct bilateral trade compressed; value-chain linkage did not. Chinese intermediate goods flow through ASEAN and Mexico into Western markets. What changed is visibility, not dependence — except at the semiconductor frontier, where controls are genuinely biting.</p>
+
+      <h2 id="verdict">12. The Economist's Verdict and Policy Agenda</h2>
+      <p>If five recommendations had to go to Beijing in 2026:</p>
+      <ol>
+        <li><strong>Transfer income to households.</strong> Raise the household share of national income via social insurance, pension portability and hukou reform. Consumption cannot be commanded; it must be funded.</li>
+        <li><strong>Clear the property and LGFV balance sheets decisively.</strong> A one-time recognised loss, centrally backstopped, beats a decade of hidden rollovers that tax confidence annually.</li>
+        <li><strong>Price the exit of zombie capital.</strong> Let weak firms fail where systemic risk is contained; capital that cannot exit cannot be reallocated.</li>
+        <li><strong>Convert demographic drag into automation dividend.</strong> Robotics, elder-care services and human-capital depth are the only honest offsets to a shrinking workforce.</li>
+        <li><strong>Offer the world a demand story, not just a supply story.</strong> Importing more — services, food, premium goods — is the cheapest insurance against the tariff wall the surplus is building.</li>
+      </ol>
+
+      <h3>🔴 Downside Risks, Next 24 Months</h3>
+      <ul>
+        <li>Deflation expectations entrenching into wage and price behaviour</li>
+        <li>A local-government debt event forcing opaque bailouts</li>
+        <li>Tariff escalation on EVs, chips and green tech in multiple markets simultaneously</li>
+        <li>Confidence trap: households saving, firms discounting, state investing — three arrows pointing apart</li>
+      </ul>
+      <h3>✅ Upsides</h3>
+      <ul>
+        <li>Manufacturing depth and green-industrial cost leadership no rival matches before the 2030s</li>
+        <li>Urbanisation headroom (~67% vs ~80% in advanced economies) still holds real demand</li>
+        <li>Global South markets growing faster than the West's walls rise</li>
+        <li>Automation capacity that can turn demographic decline into per-worker gains</li>
+      </ul>
+
+      <blockquote>China's first act was speed: sixteen-fold growth in twenty-six years. The second act must be balance — between state and household, between fortress and market, between the factory of the world and the consumers inside it. A fortress can protect an economy; it cannot feed one. The question of the 2030s is not whether China can produce. It is whether China can spend.</blockquote>
+
+      <h2>FAQ</h2>
+      <h3>What is China's GDP in 2026?</h3>
+      <p>Approximately $19–19.5 trillion in nominal US dollars, second only to the United States. In purchasing-power terms China has been the largest economy since around 2016–17. Nominal USD figures move with the managed exchange rate and should be read as ranges.</p>
+      <h3>What is China's growth rate now?</h3>
+      <p>Roughly 4.5–5.0% in 2026, down from double digits in 2010. At China's size, 5% adds more absolute output than most economies add in total — but it is no longer enough to absorb property deleveraging and youth labour supply painlessly.</p>
+      <h3>Is China in deflation?</h3>
+      <p>It faces deflation risk rather than a deflation spiral: CPI near zero and factory-gate prices negative in stretches, driven by weak household demand and industrial overcapacity. Policy has so far preferred supply-side support over direct household transfers, which prolongs the price pressure.</p>
+      <h3>Who are China's biggest trading partners?</h3>
+      <p>ASEAN is now the largest, followed by the European Union and the United States. The fastest growth is with Russia (energy) and the broader Global South. Direct US trade has compressed under tariffs but survives through third-country rerouting.</p>
+      <h3>Is China's debt dangerous?</h3>
+      <p>Total debt near 280–300% of GDP is high, but it is overwhelmingly domestic-currency and internally held behind capital controls — which removes the classic emerging-market crisis mechanism. The stress point is local-government financing vehicles and their link to bank balance sheets.</p>
+      <h3>Will China overtake the US economy?</h3>
+      <p>In PPP terms it already has. In nominal USD terms the gap widened again after 2021 due to yuan weakness and US inflation. Whether nominal overtaking happens depends less on Chinese growth than on China's rebalancing toward consumption and on exchange-rate path — both uncertain.</p>
+
+      <h2>Sources and Further Reading</h2>
+      <ul>
+        <li><a href="https://www.stats.gov.cn/english/" target="_blank" rel="noopener">National Bureau of Statistics of China</a> — GDP, CPI, population, urbanisation</li>
+        <li><a href="http://english.customs.gov.cn/" target="_blank" rel="noopener">General Administration of Customs, China</a> — trade flows and surplus data</li>
+        <li><a href="http://www.pbc.gov.cn/en/" target="_blank" rel="noopener">People's Bank of China</a> — reserves, credit and monetary aggregates</li>
+        <li><a href="https://www.imf.org/en/Countries/CHN" target="_blank" rel="noopener">IMF World Economic Outlook — China</a> — projections and Article IV assessments</li>
+        <li><a href="https://data.worldbank.org/country/china" target="_blank" rel="noopener">World Bank — China country data</a> — long-run development indicators</li>
+        <li><a href="https://comtradeplus.un.org/" target="_blank" rel="noopener">UN Comtrade</a> — partner-country merchandise flows</li>
+        <li><a href="https://www.wto.org/" target="_blank" rel="noopener">World Trade Organization</a> — accession history and trade statistics</li>
+      </ul>
+      <p><em>Editorial note: 2026 is an incomplete calendar year at publication. All 2026 values are provisional estimates or projections and are labelled as such. Chinese official statistics carry known measurement debates; where series conflict, this article states ranges rather than false precision.</em></p>
+    `
+  },
+
+    {
     id: "k-shaped-economy-explained-2026",
     title: "K-Shaped Economy Explained: Why GDP Rises While Your Budget Falls",
     subtitle: "The term is everywhere and rarely defined properly. Here is what a K-shaped recovery actually measures, which indicators reveal it, and why averages hide it.",
