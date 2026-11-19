@@ -245,94 +245,86 @@ document.addEventListener('DOMContentLoaded', () => {
   initComments();
 });
 
-/* ═══ CLARIXNEWS VISITOR TRACKER v5 (timeout-proof + debug logs) ═══ */
+/* CLARIXNEWS VISITOR TRACKER v6 — Edge Function based */
 (function(){
-  var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
-    var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvdmhqZGdocGNob2lrd2J1bWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4NTgzODAsImV4cCI6MjEwNjQzNDM4MH0.-G4wysxlmlzIdRzo0Pf5ugey_6RJf1p1O5vbeDGdhAU';
+  'use strict';
+  var TRACK_URL = 'https://lovhjdghpchoikwbumid.supabase.co/functions/v1/track-visit';
+  var PUBLIC_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
 
+  function storageGet(key){
+    try { return localStorage.getItem(key); } catch(e) { return null; }
+  }
+  function storageSet(key,value){
+    try { localStorage.setItem(key,value); } catch(e) {}
+  }
+  function makeId(prefix){
+    return prefix + '_' + Math.random().toString(36).slice(2,10) + Date.now().toString(36);
+  }
   function getVisitorId(){
-    var vid = localStorage.getItem('cn_visitor_id');
-    if(!vid){ vid = 'v_' + Math.random().toString(36).slice(2,10) + Date.now().toString(36); localStorage.setItem('cn_visitor_id', vid); }
-    return vid;
+    var id=storageGet('cn_visitor_id');
+    if(!id){ id=makeId('v'); storageSet('cn_visitor_id',id); }
+    return id;
   }
   function getSessionId(){
-    var now = Date.now(); var s = null;
-    try { s = JSON.parse(localStorage.getItem('cn_sess') || 'null'); } catch(e){}
-    if(!s || !s.id || (now - s.t) > 30*60*1000){ s = { id: 's_' + now.toString(36) + Math.random().toString(36).slice(2,8), t: now }; } else { s.t = now; }
-    try { localStorage.setItem('cn_sess', JSON.stringify(s)); } catch(e){}
-    return s.id;
+    var now=Date.now(), session=null;
+    try { session=JSON.parse(storageGet('cn_sess')||'null'); } catch(e){}
+    if(!session||!session.id||(now-session.t)>30*60*1000){
+      session={id:makeId('s'),t:now};
+    } else { session.t=now; }
+    storageSet('cn_sess',JSON.stringify(session));
+    return session.id;
   }
   function isFirstTouch(){
-    if(localStorage.getItem('cn_seen')) return false;
-    localStorage.setItem('cn_seen', String(Date.now()));
+    var seen=storageGet('cn_seen');
+    if(seen) return false;
+    storageSet('cn_seen',String(Date.now()));
     return true;
   }
   function deviceInfo(){
-    var ua = navigator.userAgent;
-    var device = /Mobile|Android|iPhone/i.test(ua) ? 'Mobile' : (/Tablet|iPad/i.test(ua) ? 'Tablet' : 'Desktop');
-    var browser = /Firefox/i.test(ua) ? 'Firefox' : /Edg/i.test(ua) ? 'Edge' : /Chrome/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : 'Unknown';
-    return { device: device, browser: browser };
+    var ua=navigator.userAgent||'';
+    return {
+      device:/iPad|Tablet/i.test(ua)?'Tablet':(/Mobile|Android|iPhone/i.test(ua)?'Mobile':'Desktop'),
+      browser:/Firefox/i.test(ua)?'Firefox':(/Edg/i.test(ua)?'Edge':(/Chrome/i.test(ua)?'Chrome':(/Safari/i.test(ua)?'Safari':'Unknown')))
+    };
   }
-  function getArticleId(){
-    if (location.pathname.indexOf('article') === -1) return null;
-    var m = location.search.match(/[?&]id=([^&]+)/);
-    return m ? decodeURIComponent(m[1]) : null;
+  function articleId(){
+    if(location.pathname.indexOf('article')===-1) return null;
+    try { return new URLSearchParams(location.search).get('id'); } catch(e){ return null; }
   }
-  function withTimeout(p, ms){
-    return Promise.race([p, new Promise(function(res){ setTimeout(function(){ res(null); }, ms); })]);
-  }
-  async function getGeo(){
+  async function postVisit(){
+    if(location.pathname.toLowerCase().indexOf('dashboard')!==-1) return;
+    var info=deviceInfo();
+    var payload={
+      visitor_id:getVisitorId(),
+      session_id:getSessionId(),
+      country:'Unknown',
+      city:'Unknown',
+      page:location.pathname||'/',
+      device:info.device,
+      browser:info.browser,
+      is_returning:!isFirstTouch()
+    };
     try {
-      var cached = JSON.parse(sessionStorage.getItem('cn_geo') || 'null');
-      if (cached && cached.country && cached.country !== 'Unknown') return cached;
-    } catch(e){}
-    var providers = [
-      function(){ return fetch('https://ipapi.co/json/').then(function(r){return r.json();}).then(function(d){ return { country: d.country_name, city: d.city }; }); },
-      function(){ return fetch('https://get.geojs.io/v1/ip/geo.json').then(function(r){return r.json();}).then(function(d){ return { country: d.country, city: d.city }; }); },
-      function(){ return fetch('https://ipwho.is/').then(function(r){return r.json();}).then(function(d){ return { country: d.country, city: d.city }; }); },
-      function(){ return fetch('https://freeipapi.com/api/json/').then(function(r){return r.json();}).then(function(d){ return { country: d.countryName, city: d.cityName }; }); }
-    ];
-    for (var i = 0; i < providers.length; i++){
-      try {
-        var g = await withTimeout(providers[i](), 2500);
-        if (g && g.country && g.country !== 'Unknown' && g.country !== '') {
-          try { sessionStorage.setItem('cn_geo', JSON.stringify(g)); } catch(e){}
-          return g;
-        }
-      } catch(e){}
-    }
-    return { country: 'Unknown', city: 'Unknown' };
-  }
-
-  async function track(){
-    var path = location.pathname;
-    if (path.indexOf('dashboard') > -1) return;
-    try{
-      var first = isFirstTouch();
-      var vid = getVisitorId();
-      var sid = getSessionId();
-      var d = deviceInfo();
-      var geo = await withTimeout(getGeo(), 4000);
-      if (!geo) geo = { country: 'Unknown', city: 'Unknown' };
-
-      var r = await fetch(SB_URL + '/rest/v1/visits', {
-        method: 'POST',
-        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
-        body: JSON.stringify({ visitor_id: vid, session_id: sid, country: geo.country || 'Unknown', city: geo.city || 'Unknown', page: path, device: d.device, browser: d.browser, is_returning: !first })
+      var response=await fetch(TRACK_URL,{
+        method:'POST',
+        headers:{'Content-Type':'application/json','apikey':PUBLIC_KEY},
+        body:JSON.stringify(payload),
+        keepalive:true
       });
-      if (!r.ok) console.warn('[tracker] visits POST failed:', r.status);
-
-      var aid = getArticleId();
-      if (aid) {
-        var r2 = await fetch(SB_URL + '/rest/v1/article_views', {
-          method: 'POST',
-          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
-          body: JSON.stringify({ article_id: aid, visitor_id: vid, country: geo.country || 'Unknown' })
-        });
-        if (!r2.ok) console.warn('[tracker] article_views POST failed:', r2.status);
+      if(!response.ok){
+        var detail='';
+        try { detail=await response.text(); } catch(e){}
+        console.error('[ClarixNews tracker] request failed:',response.status,detail);
+        return;
       }
-    }catch(e){ console.warn('[tracker] error:', e); }
+      console.info('[ClarixNews tracker] visit recorded');
+    } catch(error) {
+      console.error('[ClarixNews tracker] network error:',error);
+    }
   }
-
-  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', track); } else { track(); }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',postVisit,{once:true});
+  } else {
+    postVisit();
+  }
 })();
