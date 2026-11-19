@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ═══ CLARIXNEWS VISITOR TRACKER v5 (timeout-proof + debug logs) ═══ */
 (function(){
   var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
-  var SB_KEY = 'sb_publishable_b5r1AnEn2h_qlOQR0PtXOw_6a3-122C';
+    var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvdmhqZGdocGNob2lrd2J1bWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA4NTgzODAsImV4cCI6MjEwNjQzNDM4MH0.-G4wysxlmlzIdRzo0Pf5ugey_6RJf1p1O5vbeDGdhAU';
 
   function getVisitorId(){
     var vid = localStorage.getItem('cn_visitor_id');
