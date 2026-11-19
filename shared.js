@@ -1,5 +1,5 @@
 /* ============================================================
-   CLARIXNEWS — SHARED JAVASCRIPT (v2.2 — with Visitor Tracker)
+   CLARIXNEWS — SHARED JAVASCRIPT (v3.0 — Tracker v5)
    ============================================================ */
 
 // ── THEME TOGGLE ──
@@ -114,7 +114,7 @@ function initSearch() {
   });
 }
 
-// ── WEATHER WIDGET (sidebar pages ke liye — homepage ka apna engine hai) ──
+// ── WEATHER WIDGET ──
 async function initWeather() {
   const el = document.getElementById('weatherWidget');
   if (!el) return;
@@ -165,11 +165,11 @@ async function initWeather() {
       </a>`;
     }).join('');
   } catch (e) {
-    console.error('Weather widget failed to load:', e);
+    console.error('Weather widget failed:', e);
   }
 }
 
-// ── COMMENTS (clean — koi fake comments nahi) ──
+// ── COMMENTS ──
 function initComments() {
   const form = document.getElementById('commentForm');
   const list = document.getElementById('commentList');
@@ -245,26 +245,20 @@ document.addEventListener('DOMContentLoaded', () => {
   initComments();
 });
 
-/* ═══ CLARIXNEWS VISITOR TRACKER v4 (geo + sessions + article views) ═══ */
+/* ═══ CLARIXNEWS VISITOR TRACKER v5 (timeout-proof + debug logs) ═══ */
 (function(){
   var SB_URL = 'https://lovhjdghpchoikwbumid.supabase.co';
-  var SB_KEY = 'sb_publishable_aHEkPJ2b5AbkN-3DAoj76Q_RA4ZqWcA';
+  var SB_KEY = 'sb_publishable_b5r1AnEn2h_qlOQR0PtXOw_6a3-122C';
 
   function getVisitorId(){
     var vid = localStorage.getItem('cn_visitor_id');
-    if(!vid){
-      vid = 'v_' + Math.random().toString(36).slice(2,10) + Date.now().toString(36);
-      localStorage.setItem('cn_visitor_id', vid);
-    }
+    if(!vid){ vid = 'v_' + Math.random().toString(36).slice(2,10) + Date.now().toString(36); localStorage.setItem('cn_visitor_id', vid); }
     return vid;
   }
   function getSessionId(){
-    var now = Date.now();
-    var s = null;
+    var now = Date.now(); var s = null;
     try { s = JSON.parse(localStorage.getItem('cn_sess') || 'null'); } catch(e){}
-    if(!s || !s.id || (now - s.t) > 30*60*1000){
-      s = { id: 's_' + now.toString(36) + Math.random().toString(36).slice(2,8), t: now };
-    } else { s.t = now; }
+    if(!s || !s.id || (now - s.t) > 30*60*1000){ s = { id: 's_' + now.toString(36) + Math.random().toString(36).slice(2,8), t: now }; } else { s.t = now; }
     try { localStorage.setItem('cn_sess', JSON.stringify(s)); } catch(e){}
     return s.id;
   }
@@ -284,6 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
     var m = location.search.match(/[?&]id=([^&]+)/);
     return m ? decodeURIComponent(m[1]) : null;
   }
+  function withTimeout(p, ms){
+    return Promise.race([p, new Promise(function(res){ setTimeout(function(){ res(null); }, ms); })]);
+  }
   async function getGeo(){
     try {
       var cached = JSON.parse(sessionStorage.getItem('cn_geo') || 'null');
@@ -297,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     for (var i = 0; i < providers.length; i++){
       try {
-        var g = await providers[i]();
+        var g = await withTimeout(providers[i](), 2500);
         if (g && g.country && g.country !== 'Unknown' && g.country !== '') {
           try { sessionStorage.setItem('cn_geo', JSON.stringify(g)); } catch(e){}
           return g;
@@ -308,41 +305,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function track(){
+    var path = location.pathname;
+    if (path.indexOf('dashboard') > -1) return;
     try{
-      var path = location.pathname;
-      if (path.indexOf('dashboard') > -1) return;
       var first = isFirstTouch();
       var vid = getVisitorId();
       var sid = getSessionId();
-      var geo = await getGeo();
       var d = deviceInfo();
+      var geo = await withTimeout(getGeo(), 4000);
+      if (!geo) geo = { country: 'Unknown', city: 'Unknown' };
 
-      /* 1) General visit */
-      await fetch(SB_URL + '/rest/v1/visits', {
+      var r = await fetch(SB_URL + '/rest/v1/visits', {
         method: 'POST',
         headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
-        body: JSON.stringify({
-          visitor_id: vid, session_id: sid,
-          country: geo.country || 'Unknown', city: geo.city || 'Unknown',
-          page: path, device: d.device, browser: d.browser, is_returning: !first
-        })
+        body: JSON.stringify({ visitor_id: vid, session_id: sid, country: geo.country || 'Unknown', city: geo.city || 'Unknown', page: path, device: d.device, browser: d.browser, is_returning: !first })
       });
+      if (!r.ok) console.warn('[tracker] visits POST failed:', r.status);
 
-      /* 2) Article view (sirf article pages par) */
       var aid = getArticleId();
       if (aid) {
-        await fetch(SB_URL + '/rest/v1/article_views', {
+        var r2 = await fetch(SB_URL + '/rest/v1/article_views', {
           method: 'POST',
           headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
           body: JSON.stringify({ article_id: aid, visitor_id: vid, country: geo.country || 'Unknown' })
         });
+        if (!r2.ok) console.warn('[tracker] article_views POST failed:', r2.status);
       }
-    }catch(e){ /* silent */ }
+    }catch(e){ console.warn('[tracker] error:', e); }
   }
 
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', track);
-  }else{
-    track();
-  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', track); } else { track(); }
 })();
