@@ -1,6 +1,254 @@
 const ARTICLES = [
 
     {
+    id: "india-japan-2plus2-live-fire-missile-training-2026",
+    title: "A First in 70 Years: Japan's Forces Will Fire Missiles on Indian Soil",
+    subtitle: "At the November 19 '2+2' talks, India and Japan signed a letter of intent allowing JSDF live-fire missile training at Indian ranges — a quiet document with a loud message about the Indo-Pacific's new geometry.",
+    category: "Asia",
+    catClass: "asia",
+    author: "ClarixNews Asia Desk",
+    authorRole: "Defence & Strategic Analysis",
+    authorInitials: "CN",
+    date: "November 21, 2026",
+    readTime: "6 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&q=85&fit=crop",
+    tags: ["India Japan Defence", "JSDF", "2+2 Talks", "Indo-Pacific", "Type-25 Missile"],
+    content: `
+      <p>Foreign and defence ministers from India and Japan met in a "2+2" format on November 19 and signed an agreement with historic weight: Japan's Self-Defence Forces will conduct live-fire missile training at Indian firing ranges for the first time, beginning next year.</p>
+
+      <h2>What Was Actually Signed</h2>
+      <ul>
+        <li>A letter of intent for JSDF live-fire training at Indian ranges</li>
+        <li>Inclusion of live-fire missile exercises — not just table-top or observer exchanges</li>
+        <li>A timeline starting next year, following 2026's first-ever JASDF fighter deployment to India for joint exercises</li>
+      </ul>
+
+      <h2>Why It Matters Beyond the Ceremony</h2>
+      <p>Three reasons. First, <strong>interoperability</strong>: firing drills create shared procedures that paper agreements never do. Second, <strong>geography</strong>: Indian ranges offer Japan training space and maritime approaches its own islands cannot. Third, <strong>signalling</strong>: the missiles in question — including the Type-25, an upgraded long-range derivative of the Type-12 — were developed explicitly to deter China, and training them on Indian soil makes the deterrence network visible.</p>
+
+      <h2>The Regional Calculus</h2>
+      <p>For New Delhi, the deal deepens a partnership that balances without alliance — India hosts training without treaty obligations. For Tokyo, it normalises overseas operational activity within its constitutional reinterpretations. For Beijing, it confirms a pattern: minilateral defence geometry hardening around the Indian Ocean and Western Pacific.</p>
+
+      <h2>What to Watch</h2>
+      <ul>
+        <li>Which ranges host the first live-fire cycles, and observer access</li>
+        <li>Follow-on logistics pacts (fuel, munitions sharing) that make repetition possible</li>
+        <li>Whether Australia or ASEAN partners join as observers — the minilateral test</li>
+      </ul>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>The document is short; the precedent is long. Once missiles are fired together, retreat becomes politically expensive — which is precisely why both capitals wanted it.</p>
+
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://timesofindia.indiatimes.com/defence/news/japanese-missile-training-in-india-marks-new-phase-in-strategic-partnership/articleshow/136028062.cms" target="_blank" rel="noopener">Times of India — Japanese missile training marks new phase</a></li>
+        <li><a href="https://m.economictimes.com/news/india/india-and-japan-enhance-military-cooperation-with-historic-live-fire-drills-agreement/articleshow/136003359.cms" target="_blank" rel="noopener">Economic Times — Historic live-fire drills agreement</a></li>
+        <li><a href="https://www.deccanherald.com/amp/story/india/japan-to-train-its-troops-in-india-to-fire-missiles-made-to-deter-china-4224676" target="_blank" rel="noopener">Deccan Herald — Missiles made to deter China</a></li>
+      </ul>
+    `
+  },
+
+    {
+    id: "bangladesh-garment-workers-protests-wage-deal-november-2026",
+    title: "The Machines Stopped: What Bangladesh's Garment Uprising Won — and What It Left Unsettled",
+    subtitle: "From August street protests to November's factory shutdowns across Ashulia, Gazipur and Dhaka, workers forced a wage reckoning in the industry that clothes the world. Most are back at work — the arithmetic has not changed.",
+    category: "World",
+    catClass: "world",
+    author: "ClarixNews World Desk",
+    authorRole: "Labour & Supply Chain Reporting",
+    authorInitials: "CN",
+    date: "November 21, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1400&q=85&fit=crop",
+    tags: ["Bangladesh Garment Workers", "RMG Sector", "Wage Protests", "Supply Chains", "Dhaka"],
+    content: `
+      <p>Bangladesh's readymade garment sector — the backbone of the economy and the wardrobe of the world — spent the autumn in confrontation. Protests that began in August escalated through late October and early November across the industrial belts of Ashulia, Gazipur and Dhaka, disrupting hundreds of factories.</p>
+
+      <h2>The Timeline</h2>
+      <table class="compare-table"><thead><tr><th>Phase</th><th>What happened</th></tr></thead><tbody>
+      <tr><td>August 2026</td><td>Protests begin over pay and cost of living</td></tr>
+      <tr><td>Late Oct – early Nov</td><td>Escalation; hundreds of factories disrupted; at least 30 demonstrations recorded</td></tr>
+      <tr><td>Nov 1–5</td><td>Multi-day shutdowns; wage negotiations intensify</td></tr>
+      <tr><td>Nov 5 onward</td><td>Workers largely return after wage protests; some factories remain affected</td></tr>
+      </tbody></table>
+
+      <h2>Why the Anger Is Structural</h2>
+      <p>Garment wages in Bangladesh sit against a cost of living that imports global inflation — food, fuel and rent do not negotiate. When real wages fall for years, the street becomes the only bargaining table with leverage. The tragedy that sharpened this cycle — a young worker's death during the unrest — turned a wage dispute into a moral one.</p>
+
+      <h2>The Buyer's Dilemma</h2>
+      <p>Global brands demand price stability from suppliers while absorbing none of the wage increase themselves. Factories caught between a rising floor at home and a fixed ceiling abroad respond with the only variable left: compliance theatre or order migration. Both hurt workers eventually.</p>
+
+      <h2>What Was Won, What Wasn't</h2>
+      <ul>
+        <li><strong>Won:</strong> immediate wage adjustments and renewed attention to pay scales</li>
+        <li><strong>Unsettled:</strong> indexation of wages to inflation, union safety, and who pays for the increase</li>
+        <li><strong>Watch:</strong> order books for spring — buyers vote with purchase orders, not press releases</li>
+      </ul>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>The factories restarted; the equation did not. Until brand pricing shares the cost of living wages, Bangladesh's garment peace will remain a truce measured in seasons.</p>
+
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/2026_Bangladesh_garment_workers_protests" target="_blank" rel="noopener">Wikipedia — 2026 Bangladesh garment workers protests</a></li>
+        <li><a href="https://www.aljazeera.com/news/2026/11/2/bangladesh-garment-factories-disrupted-as-protests-continue-for-third-day" target="_blank" rel="noopener">Al Jazeera — Factories disrupted as protests continue</a></li>
+        <li><a href="https://www.afp.com/en/bangladesh-garment-workers-largely-return-after-wage-protests" target="_blank" rel="noopener">AFP — Workers largely return after wage protests</a></li>
+        <li><a href="https://acleddata.com/expert-comment/resolution-sight-bangladeshs-garment-worker-unrest" target="_blank" rel="noopener">ACLED — Is a resolution in sight?</a></li>
+      </ul>
+    `
+  },
+
+    {
+    id: "ai-stock-meltdown-nasdaq-correction-november-20-2026",
+    title: "The AI Trade Melts Down: Dow and S&P 500 Enter Correction as Nasdaq Erases 2026 Gains",
+    subtitle: "A ~5.3% Nasdaq slide wiped the index's year-to-date gains and pulled the Dow and S&P 500 into correction territory. This is not a rate story — it is an AI-capex story finally meeting arithmetic.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Markets Desk",
+    authorRole: "Markets & Macro Analysis",
+    authorInitials: "CN",
+    date: "November 21, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=85&fit=crop",
+    tags: ["Nasdaq Correction", "AI Stock Selloff", "Stock Market November 2026", "AI Capex", "S&P 500 Correction"],
+    content: `
+      <p>The week ended with a number nobody wanted to type: the Nasdaq Composite fell nearly 5.3% in a single session, erasing its gains for 2026, while the Dow and S&P 500 crossed into correction territory — a 10% decline from recent peaks.</p>
+
+      <h2>The Sequence</h2>
+      <table class="compare-table"><thead><tr><th>Date</th><th>Event</th></tr></thead><tbody>
+      <tr><td>Nov 5</td><td>Nasdaq tumbles ~5.5% into correction on AI-tech wreck</td></tr>
+      <tr><td>Nov 19</td><td>Record AI IPO debut fails to hold the bid; sentiment cracks</td></tr>
+      <tr><td>Nov 20</td><td>Dow and S&P 500 enter correction; Nasdaq sinks ~5.3%, erasing 2026 gains</td></tr>
+      </tbody></table>
+
+      <h2>Why Now</h2>
+      <p>Three pressures converged. First, capex arithmetic: data-centre build-outs financed with debt need revenue visibility, and several quarters delivered questions instead. Second, concentration: a handful of names carry the indices, so one sector's doubt becomes everyone's drawdown. Third, financing: AI companies seeking billions in debt met a bond market that had stopped paying for promises.</p>
+
+      <h2>Correction, Not Crash — For Now</h2>
+      <p>A 10% decline is a correction by definition, not a verdict on the technology. Earnings of the hyperscalers remain strong; the dispute is about multiples and the marginal return on the next dollar of compute.</p>
+
+      <h2>What to Watch</h2>
+      <ul>
+        <li>Whether index breadth improves or the melt-down stays AI-contained</li>
+        <li>Credit spreads on AI-infrastructure debt — the real stress gauge</li>
+        <li>Capex guidance in the next earnings round: cuts would confirm the cycle turn</li>
+      </ul>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>Markets are not saying AI is fake. They are saying AI was priced as if execution risk did not exist. The correction is that assumption leaving — violently, as assumptions always leave.</p>
+
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-141644188.html" target="_blank" rel="noopener">Yahoo Finance — Dow and S&P 500 enter correction</a></li>
+        <li><a href="https://www.barrons.com/livecoverage/stock-market-news-today-112026" target="_blank" rel="noopener">Barron's — Stock market news, Nov 20, 2026</a></li>
+        <li><a href="https://www.cnbc.com/2026-11-04/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC — Nasdaq tumbles into correction territory</a></li>
+      </ul>
+    `
+  },
+
+    {
+    id: "ai-vulnerability-flood-100000-bugs-2026-cybersecurity",
+    title: "100,000 Bugs and Counting: Inside the AI-Driven Vulnerability Flood Reshaping Cybersecurity",
+    subtitle: "Public vulnerability disclosures passed 100,000 on November 13 — more than double last year's total. AI finds bugs faster than humans can fix them, and the patch queue itself is now causing outages.",
+    category: "Technology",
+    catClass: "tech",
+    author: "ClarixNews Technology Desk",
+    authorRole: "Cybersecurity & AI Analysis",
+    authorInitials: "CN",
+    date: "November 21, 2026",
+    readTime: "7 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=85&fit=crop",
+    tags: ["AI Vulnerabilities", "Zero-Day Flood", "Cybersecurity 2026", "Patch Management", "CVE"],
+    content: `
+      <p>On November 13, publicly disclosed software vulnerabilities crossed 100,000 for the year — more than double the entire 2025 total. The industry has started naming the phenomenon: Bugmageddon, Patchpocalypse, Vulnageddon. The names are jokes; the queue is not.</p>
+
+      <h2>Why the Flood Started</h2>
+      <p>Analysts tie the surge to AI-assisted discovery: frontier models — including new preview systems — can fuzz, diff and reason about code at a scale no human team matches. Discovery got cheap. Verification, triage and remediation did not.</p>
+
+      <h2>The Second-Order Problem: Patches Breaking Things</h2>
+      <p>When every week brings emergency fixes — PHP shipped critical patches in October; a 9.8-severity CVE was exploited within days of disclosure — organisations patch faster than they can test. The result: AI-driven patches are themselves behind production outages, a reversal nobody budgeted for.</p>
+
+      <h2>What This Changes for Defenders</h2>
+      <ul>
+        <li><strong>Triage becomes the scarce skill.</strong> Not every 9.8 is exploitable in your environment; context beats severity scores.</li>
+        <li><strong>Patch cadence becomes risk policy.</strong> Weekly emergency windows replace quarterly maintenance.</li>
+        <li><strong>SBOMs stop being paperwork.</strong> You cannot triage what you cannot enumerate.</li>
+        <li><strong>Attackers get the same AI.</strong> Disclosure-to-exploitation windows keep shrinking.</li>
+      </ul>
+
+      <h2>The Economics</h2>
+      <p>Bug bounties, audit tooling and AI-assisted remediation are becoming line items rather than experiments. The market is pricing a simple fact: the cost of finding a bug has collapsed; the cost of living with software has not.</p>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>2026 will be remembered as the year cybersecurity's bottleneck moved from discovery to digestion. The organisations that survive it are not the ones with the best scanners — they are the ones with the fastest, safest yes.</p>
+
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://www.techpolicy.press/bugmageddon-patchpocalypse-naming-the-ai-vulnerability-flood/" target="_blank" rel="noopener">Tech Policy Press — Naming the AI vulnerability flood</a></li>
+        <li><a href="https://aiweekly.co/alerts/claude-mythos-drives-100000-bug-year-patch-outages-mount" target="_blank" rel="noopener">AI Weekly — 100,000-bug year, patch outages mount</a></li>
+        <li><a href="https://michaelparekh.substack.com/p/ai-vulnageddon-arrives-and-its-here" target="_blank" rel="noopener">Michael Parekh — AI-driven patches behind outages</a></li>
+      </ul>
+    `
+  },
+
+    {
+    id: "strait-of-hormuz-day-266-oil-lng-impact-2026",
+    title: "Day 266: What the Strait of Hormuz Closure Is Doing to the World's Oil and LNG",
+    subtitle: "Two ships transited on November 15 against a normal ~85 a day. Nine months into the closure of the world's most important energy chokepoint, here is what has actually moved — barrels, routes, prices and strategy.",
+    category: "Business",
+    catClass: "business",
+    author: "ClarixNews Markets Desk",
+    authorRole: "Energy & Geoeconomics Analysis",
+    authorInitials: "CN",
+    date: "November 21, 2026",
+    readTime: "8 min read",
+    views: "0",
+    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1400&q=85&fit=crop",
+    tags: ["Strait of Hormuz", "Oil Prices", "LNG Trade", "Energy Security", "Iran", "Shipping Crisis"],
+    content: `
+      <p>Before 2026, roughly a fifth of the world's oil moved through a waterway narrower than many city commutes. Since February 28, that waterway has been largely closed by Iran, and as of this week it remains effectively shut to commercial shipping.</p>
+
+      <h2>The Chokepoint, By the Numbers</h2>
+      <table class="compare-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>
+      <tr><td>Pre-crisis flows (2025)</td><td>~20 million barrels/day of crude and products</td></tr>
+      <tr><td>Share of world oil trade</td><td>~20% before the conflict</td></tr>
+      <tr><td>Normal transits</td><td>~85 vessels/day</td></tr>
+      <tr><td>Transits on Nov 15, 2026</td><td>2 vessels</td></tr>
+      <tr><td>Crisis duration (Nov 20)</td><td>Day 266</td></tr>
+      </tbody></table>
+
+      <h2>Where the Barrels Went</h2>
+      <p>Oil does not disappear when a strait closes — it reroutes, reprices and rationes. Gulf producers with pipeline bypasses (east-west lines to the Red Sea, Fujairah on the Gulf of Oman) moved what they could. Buyers paid for longer voyages around Africa. LNG cargoes, even less substitutable than crude, became the tightest market of the year.</p>
+
+      <h2>The Price Architecture of a Closed Strait</h2>
+      <ul>
+        <li><strong>War-risk insurance</strong> became a line item larger than freight on many voyages.</li>
+        <li><strong>Refining margins</strong> widened where crude grades had to be substituted quickly.</li>
+        <li><strong>Strategic reserves</strong> moved from paper policy to operational tool in several importing states.</li>
+        <li><strong>Demand destruction</strong> did the quiet work no ministry wanted to announce.</li>
+      </ul>
+
+      <h2>The Security Picture</h2>
+      <p>The UN Security Council has described a fragile Gulf calm under test, with attacks on shipping rising even as diplomacy continues. That combination — partial calm, persistent risk — is the worst case for insurers, who price uncertainty rather than danger.</p>
+
+      <h2>ClarixNews Analysis</h2>
+      <p>Nine months in, the Hormuz closure has done what decades of textbooks predicted and no market fully priced: it converted a geographic fact into a permanent risk premium. Even if the strait reopens tomorrow, the premium leaves slowly — because memory in energy markets is longer than news cycles.</p>
+
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia — 2026 Strait of Hormuz crisis</a></li>
+        <li><a href="https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz" target="_blank" rel="noopener">IEA — Strait of Hormuz: oil and LNG trade facts</a></li>
+        <li><a href="https://news.un.org/en/story/2026-11-1168804" target="_blank" rel="noopener">UN News — Security Council: fragile Gulf calm tested</a></li>
+        <li><a href="https://straits.live/" target="_blank" rel="noopener">Straits.live — live transit counts</a></li>
+      </ul>
+    `
+  },
+
+    {
     id: "t20-world-cup-fifa-world-cup-2030-overlap-18-days",
     title: "Two World Cups, One Summer: Cricket and Football Will Collide for 18 Days in 2030",
     subtitle: "The FIFA World Cup (June 8–July 21) and the ICC Men's T20 World Cup (July 4–August 4) will overlap for 18 consecutive days — a first in sporting history, and a scheduling earthquake.",
