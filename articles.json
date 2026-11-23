@@ -1,5 +1,115 @@
 [
   {
+    "id": "patch-triage-playbook-100000-bug-year-2026",
+    "title": "The 100,000-Bug Year: A Practical Patch-Triage Playbook for Teams That Can't Fix Everything",
+    "subtitle": "Disclosures doubled this year and AI-assisted patches now cause outages of their own. The winning response is not faster patching — it is better triage. Here is a working playbook, step by step.",
+    "category": "Technology",
+    "catClass": "tech",
+    "author": "ClarixNews Technology Desk",
+    "authorRole": "Cybersecurity Practice",
+    "authorInitials": "CN",
+    "date": "November 24, 2026",
+    "readTime": "8 min read",
+    "views": "0",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1400&q=85&fit=crop",
+    "tags": [
+      "Patch Management",
+      "Vulnerability Triage",
+      "Cybersecurity Playbook",
+      "SBOM",
+      "AI Security"
+    ],
+    "content": "\n      <p>Public vulnerability disclosures crossed 100,000 on November 13 — more than double last year's total — and emergency patching itself is now a documented cause of production outages. In a flood, the skill is not swimming faster; it is choosing which waves to ride.</p>\n\n      <h2>Step 1: Enumerate Before You Prioritise</h2>\n      <p>You cannot triage what you cannot see. Maintain a living software bill of materials (SBOM): every dependency, version and owner. Teams with accurate SBOMs cut triage time from days to hours because the first question — \"are we even exposed?\" — answers itself.</p>\n\n      <h2>Step 2: Replace Severity With Exploitability</h2>\n      <p>A 9.8 CVE in a component you do not run is noise; a 6.5 in an internet-facing service with known exploit code is fire. Score by three filters: reachability (is it exposed?), exploitability (is there working exploit code?), and impact (what actually breaks?).</p>\n\n      <h2>Step 3: Patch in Rings, Not Batches</h2>\n      <ul>\n        <li><strong>Ring 0:</strong> internet-facing, exploited-in-wild — same-day</li>\n        <li><strong>Ring 1:</strong> internal production — 72 hours with canary deploys</li>\n        <li><strong>Ring 2:</strong> dev/staging and tooling — weekly window</li>\n        <li><strong>Ring 3:</strong> end-user devices — managed rollout</li>\n      </ul>\n      <p>Rings convert panic into schedule. Canaries convert patch outages into non-events.</p>\n\n      <h2>Step 4: Assume the Patch Can Break Things</h2>\n      <p>This year's twist: AI-accelerated patches ship fast and occasionally ship wrong. Keep rollback paths warm, snapshot before emergency windows, and track patch-caused incidents as a first-class metric — you cannot manage what you do not count.</p>\n\n      <h2>Step 5: Practise the Fire Drill</h2>\n      <p>Run a quarterly zero-day simulation: discovery to decision to deploy, timed. The goal is not speed theatre; it is finding the approval bottleneck before a real 9.8 finds it for you.</p>\n\n      <h2>ClarixNews Analysis</h2>\n      <p>The 100,000-bug year did not make security harder — it made undisciplined security impossible. Triage is the new perimeter.</p>\n\n      <h2>Sources</h2>\n      <ul>\n        <li><a href=\"https://www.techpolicy.press/bugmageddon-patchpocalypse-naming-the-ai-vulnerability-flood/\" target=\"_blank\" rel=\"noopener\">Tech Policy Press — Naming the AI vulnerability flood</a></li>\n        <li><a href=\"https://aiweekly.co/alerts/claude-mythos-drives-100000-bug-year-patch-outages-mount\" target=\"_blank\" rel=\"noopener\">AI Weekly — Patch outages mount</a></li>\n        <li><a href=\"https://michaelparekh.substack.com/p/ai-vulnageddon-arrives-and-its-here\" target=\"_blank\" rel=\"noopener\">Michael Parekh — AI-driven patches behind outages</a></li>\n      </ul>\n    "
+  },
+  {
+    "id": "cyclone-akvan-aftermath-recovery-explainer-2026",
+    "title": "After Akvan: What Actually Happens in the 90 Days Following a Cyclone Landfall",
+    "subtitle": "Landfall makes the headlines; recovery writes the balance sheet. From rescue to relief to reconstruction, here is the machinery that follows a storm — and the three gaps where communities get left behind.",
+    "category": "Asia",
+    "catClass": "asia",
+    "author": "ClarixNews Asia Desk",
+    "authorRole": "Disaster Recovery & Policy",
+    "authorInitials": "CN",
+    "date": "November 24, 2026",
+    "readTime": "7 min read",
+    "views": "0",
+    "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1400&q=85&fit=crop",
+    "tags": [
+      "Cyclone Akvan",
+      "Disaster Recovery",
+      "Odisha",
+      "Andhra Pradesh",
+      "Relief Operations"
+    ],
+    "content": "\n      <p>Severe Cyclonic Storm Akvan crossed the Odisha–Andhra Pradesh coast near Gopalpur on November 20, the third cyclone in 24 days. The evacuation — roughly 300,000 people, 423 rescue teams — saved lives in the first 48 hours. The next 90 days decide everything else.</p>\n\n      <h2>Phase 1: Rescue (0–72 Hours)</h2>\n      <p>Search-and-rescue, medical triage, restoring power to hospitals and communications. Success here is measured in lives — and India's cyclone machine, built after the 1999 Odisha super cyclone, is among the world's best at it.</p>\n\n      <h2>Phase 2: Relief (Days 3–30)</h2>\n      <ul>\n        <li>Food, water and shelter for displaced households</li>\n        <li>Epidemic surveillance — standing water is the second disaster</li>\n        <li>Damage surveys that determine compensation tiers</li>\n        <li>Debris clearance that reopens roads, schools and markets</li>\n      </ul>\n\n      <h2>Phase 3: Reconstruction (Months 1–24)</h2>\n      <p>Housing rebuilds, embankment repairs, grid hardening and — most consequentially — the cropping calendar. A November landfall hits rabi-season sowing; miss the window and the income loss lands in March, invisible to headline counts.</p>\n\n      <h2>The Three Gaps Where Communities Fall Behind</h2>\n      <ol>\n        <li><strong>The insurance gap:</strong> most losses are uninsured; compensation covers a fraction of assets.</li>\n        <li><strong>The informal gap:</strong> daily-wage and migrant workers rarely appear in damage registers.</li>\n        <li><strong>The fatigue gap:</strong> three cyclones in 24 days mean households rebuild on top of unfinished repairs — resilience has a savings account, and it can run empty.</li>\n      </ol>\n\n      <h2>ClarixNews Analysis</h2>\n      <p>Evacuation excellence is India's earned reputation. The next frontier is financial resilience: insurance penetration, shock-responsive transfers and faster compensation — because the storm passes in hours, but the balance sheet lasts years.</p>\n\n      <h2>Sources</h2>\n      <ul>\n        <li><a href=\"https://mausam.imd.gov.in/\" target=\"_blank\" rel=\"noopener\">India Meteorological Department — bulletins</a></li>\n        <li><a href=\"https://reliefweb.int/report/india/local-alert-001-cyclone-akva-n-third-cyclone-24-days-pre-landfall-update-18-november-2026-130-pm-ist-andhra-pradesh-yanam-and-south-odisha\" target=\"_blank\" rel=\"noopener\">ReliefWeb — Akvan pre-landfall update</a></li>\n        <li><a href=\"https://www.thehindu.com/news/national/cyclone-akwan-tracker-live-updates-odisha-andhra-pradesh-landfall-imd-map-location-puri-vizag-bay-of-bengal/article71718788.ece\" target=\"_blank\" rel=\"noopener\">The Hindu — Akvan tracker</a></li>\n      </ul>\n    "
+  },
+  {
+    "id": "strait-of-hormuz-winter-lng-heating-season-2026",
+    "title": "Hormuz at Nine Months: Why Winter Makes the World's Most Important Closure Harder",
+    "subtitle": "The strait that carried a fifth of the world's oil has been largely shut since February 28. As northern-hemisphere heating season arrives, the closure stops being an oil story and becomes an LNG story — and LNG has no detour.",
+    "category": "Middle East",
+    "catClass": "middleeast",
+    "author": "ClarixNews Markets Desk",
+    "authorRole": "Energy & Geoeconomics Analysis",
+    "authorInitials": "CN",
+    "date": "November 24, 2026",
+    "readTime": "7 min read",
+    "views": "0",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&q=85&fit=crop",
+    "tags": [
+      "Strait of Hormuz",
+      "LNG Prices",
+      "Winter Energy Crisis",
+      "Qatar LNG",
+      "Energy Security"
+    ],
+    "content": "\n      <p>Nine months into Iran's closure of the Strait of Hormuz, the world has adapted to the oil half of the problem: pipelines bypass, routes lengthen, reserves buffer. Winter tests the other half — liquefied natural gas — where adaptation is far harder.</p>\n\n      <h2>Why LNG Is the Tight Market</h2>\n      <ul>\n        <li><strong>Concentration:</strong> Gulf suppliers, led by Qatar, sit behind the strait; a large share of global LNG capacity transits it.</li>\n        <li><strong>No pipeline substitute:</strong> unlike crude, most stranded LNG volume cannot switch to land routes at scale.</li>\n        <li><strong>Seasonal inelasticity:</strong> heating demand does not defer; buyers pay any price in a cold week.</li>\n        <li><strong>Shipping specificity:</strong> LNG carriers are specialised; rerouting creates vessel scarcity, not just distance.</li>\n      </ul>\n\n      <h2>The Numbers Behind the Chokepoint</h2>\n      <table class=\"compare-table\"><thead><tr><th>Metric</th><th>Pre-crisis</th></tr></thead><tbody>\n      <tr><td>Crude and products via Hormuz (2025)</td><td>~20 million barrels/day</td></tr>\n      <tr><td>Share of world oil trade</td><td>~20%</td></tr>\n      <tr><td>Share of global LNG trade</td><td>Roughly a fifth transits the strait</td></tr>\n      <tr><td>Normal daily transits</td><td>~85 vessels</td></tr>\n      </tbody></table>\n\n      <h2>Who Feels Winter First</h2>\n      <p>Import-dependent Asia bids first and highest; Europe, refilling after a demanding year, bids second. The competition shows up not in headlines but in cargo diversion notices — a ship loaded for one basin turning toward another mid-ocean because someone paid more.</p>\n\n      <h2>The Security Overlay</h2>\n      <p>The UN Security Council describes a fragile Gulf calm under test, with attacks on shipping rising. For insurers, fragile calm prices like risk; for buyers, risk prices like scarcity. The premium is now a structural line item in winter contracts.</p>\n\n      <h2>ClarixNews Analysis</h2>\n      <p>Oil reroutes; gas rationes. If a cold December arrives, the Hormuz closure will stop being a geopolitical story and become a household one — in heating bills from Seoul to Stuttgart.</p>\n\n      <h2>Sources</h2>\n      <ul>\n        <li><a href=\"https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz\" target=\"_blank\" rel=\"noopener\">IEA — Strait of Hormuz oil and LNG facts</a></li>\n        <li><a href=\"https://news.un.org/en/story/2026-11-1168804\" target=\"_blank\" rel=\"noopener\">UN News — Fragile Gulf calm tested</a></li>\n        <li><a href=\"https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis\" target=\"_blank\" rel=\"noopener\">Wikipedia — 2026 Strait of Hormuz crisis</a></li>\n      </ul>\n    "
+  },
+  {
+    "id": "thanksgiving-2026-travel-faa-stress-test-ground-stop",
+    "title": "The First Post-Ground-Stop Thanksgiving: US Aviation Faces Its Biggest Stress Test of 2026",
+    "subtitle": "Ten days after a four-hour nationwide ground stop cancelled nearly 8,000 flights, the system meets the year's heaviest travel window. The question is not whether planes fly — it is whether slack exists when none is scheduled.",
+    "category": "World",
+    "catClass": "world",
+    "author": "ClarixNews World Desk",
+    "authorRole": "Aviation & Systems Reporting",
+    "authorInitials": "CN",
+    "date": "November 24, 2026",
+    "readTime": "6 min read",
+    "views": "0",
+    "image": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1400&q=85&fit=crop",
+    "tags": [
+      "Thanksgiving Travel 2026",
+      "FAA",
+      "US Aviation",
+      "Holiday Travel",
+      "Flight Delays"
+    ],
+    "content": "\n      <p>Americans travel for Thanksgiving the way oceans move for the moon: predictably, massively, and all at once. This year the peak lands on a system still rebuilding from November's four-hour nationwide ground stop — the event that cancelled nearly 8,000 flights and delayed more than 10,000 before lifting on November 14.</p>\n\n      <h2>Why Holiday Peaks Are Different</h2>\n      <ul>\n        <li><strong>Load factors near 100%:</strong> rebooking options vanish precisely when they are needed.</li>\n        <li><strong>Crew buffers thin:</strong> reserve crews are already scheduled into the peak; one disruption borrows from tomorrow.</li>\n        <li><strong>Weather overlay:</strong> late-November systems add convective and winter risk on top of volume.</li>\n        <li><strong>Cargo squeeze:</strong> passenger bellies carry holiday freight; delays ripple into retail.</li>\n      </ul>\n\n      <h2>What Recovery Taught the System</h2>\n      <p>The post-ground-stop week demonstrated both resilience and fragility: more than 8,000 operations resumed in a single night once the stop lifted, yet full normalisation took days as crews and tails repositioned. Airlines enter the holiday with that lesson priced into contingency plans — extra reserves at hubs, pre-authorised rebooking rules, and warmer relationships with rival carriers for interline rescues.</p>\n\n      <h2>What Passengers Should Actually Do</h2>\n      <ol>\n        <li>Fly early; disruption compounds through the day.</li>\n        <li>Know your rebooking rights before you need them.</li>\n        <li>Prefer nonstops; connections multiply failure points.</li>\n        <li>Track your bag's tag number, not just your flight.</li>\n      </ol>\n\n      <h2>ClarixNews Analysis</h2>\n      <p>The ground stop was a four-hour event with a week-long tail. Thanksgiving is a week-long event with no tail allowed. If the system absorbs it quietly, nobody will write the story — which is exactly how resilience announces itself.</p>\n\n      <h2>Sources</h2>\n      <ul>\n        <li><a href=\"https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers\" target=\"_blank\" rel=\"noopener\">FAA — Nationwide ground stop Q&A</a></li>\n        <li><a href=\"https://www.transportation.gov/briefing-room/icymi-us-transportation-secretary-sean-p-duffy-provides-update-restoration-airspace\" target=\"_blank\" rel=\"noopener\">US DOT — Airspace restoration update</a></li>\n        <li><a href=\"https://en.wikipedia.org/wiki/2026_FAA_nationwide_ground_stop\" target=\"_blank\" rel=\"noopener\">Wikipedia — 2026 FAA nationwide ground stop</a></li>\n      </ul>\n    "
+  },
+  {
+    "id": "anthropic-ant-first-week-ipo-watchlist-2026",
+    "title": "ANT After the Debut: Five Things the First Weeks of a $1.27 Trillion Stock Will Reveal",
+    "subtitle": "Priced at $83, opened at $111.50, closed 17% up — day one is marketing. The sessions that follow are information. Here is exactly what to watch in Anthropic's first weeks as a public company, and why each signal matters.",
+    "category": "Business",
+    "catClass": "business",
+    "author": "ClarixNews Markets Desk",
+    "authorRole": "Markets & Corporate Analysis",
+    "authorInitials": "CN",
+    "date": "November 24, 2026",
+    "readTime": "7 min read",
+    "views": "0",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=85&fit=crop",
+    "tags": [
+      "Anthropic Stock",
+      "ANT Shares",
+      "IPO First Week",
+      "AI Stocks",
+      "Index Inclusion"
+    ],
+    "content": "\n      <p>Anthropic's debut was flawless: 980 million Class A shares priced at $83 on November 18, opening at $111.50 on November 19 and closing 17% higher, near a $1.27 trillion valuation in the largest raise in IPO history. Day one tells you about the offering. The weeks that follow tell you about the company.</p>\n\n      <h2>Signal 1: Where the Price Settles</h2>\n      <p>First-day pops decay or solidify. If ANT holds meaningfully above its offer price after the initial flow fades, the market is underwriting fundamentals, not momentum. If it drifts back toward $83, the pop was allocation mechanics — and the real valuation debate begins.</p>\n\n      <h2>Signal 2: Borrow and Short Interest</h2>\n      <p>New mega-caps attract hedging: pairs trades against peers, index-arbitrage shorts, and lockup-mimicking synthetic sales. Elevated borrow costs in week two are normal; persistent elevation signals structural scepticism.</p>\n\n      <h2>Signal 3: The Index Question</h2>\n      <p>Inclusion in major indices forces passive buying regardless of valuation views — and changes the shareholder base from choosers to owners. Watch eligibility timelines and float adjustments; they move more shares than most earnings surprises.</p>\n\n      <h2>Signal 4: The First Public Filings</h2>\n      <p>A public benefit corporation now reports on a quarterly clock. The first 10-Q will be read for three numbers: revenue mix (enterprise vs API), compute commitments, and any disclosure of safety-governance costs — the line item nobody has priced yet.</p>\n\n      <h2>Signal 5: Insider Behaviour Post-Lock-Up</h2>\n      <p>The ~180-day lock-up expiry is the first honest test of internal conviction. Planned selling programmes are routine; unplanned silence or acceleration is information.</p>\n\n      <h2>ClarixNews Analysis</h2>\n      <p>The debut proved demand. The weeks ahead prove durability. In AI's capital cycle, the scarce resource is not money — it is patience, and public markets are about to discover whether they have any.</p>\n\n      <h2>Sources</h2>\n      <ul>\n        <li><a href=\"https://www.anthropic.com/news/anthropic-prices-initial-public-offering\" target=\"_blank\" rel=\"noopener\">Anthropic — IPO pricing announcement</a></li>\n        <li><a href=\"https://finance.yahoo.com/technology/live/anthropic-ipo-live-anthropic-stock-begins-trading-in-record-81b-raise-with-15t-valuation-192410598.html\" target=\"_blank\" rel=\"noopener\">Yahoo Finance — Day-one trading data</a></li>\n        <li><a href=\"https://business.columbia.edu/insights/anthropic-ipo-investors-five-things-to-know\" target=\"_blank\" rel=\"noopener\">Columbia Business School — Five things to know</a></li>\n      </ul>\n    "
+  },
+  {
     "id": "india-japan-2plus2-live-fire-missile-training-2026",
     "title": "A First in 70 Years: Japan's Forces Will Fire Missiles on Indian Soil",
     "subtitle": "At the November 19 '2+2' talks, India and Japan signed a letter of intent allowing JSDF live-fire missile training at Indian ranges — a quiet document with a loud message about the Indo-Pacific's new geometry.",

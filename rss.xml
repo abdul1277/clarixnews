@@ -4,7 +4,47 @@
   <link>https://clarixnews.vercel.app/</link>
   <description>Latest news, explainers and practical guides from ClarixNews.</description>
   <language>en</language>
-  <lastBuildDate>Sat, 21 Nov 2026 07:45:33 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 16:36:14 GMT</lastBuildDate>
+    <item>
+      <title>The 100,000-Bug Year: A Practical Patch-Triage Playbook for Teams That Can&apos;t Fix Everything</title>
+      <link>https://clarixnews.vercel.app/article.html?id=patch-triage-playbook-100000-bug-year-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=patch-triage-playbook-100000-bug-year-2026</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Technology</category>
+      <description>Disclosures doubled this year and AI-assisted patches now cause outages of their own. The winning response is not faster patching — it is better triage. Here is a working playbook, step by step.</description>
+    </item>
+    <item>
+      <title>After Akvan: What Actually Happens in the 90 Days Following a Cyclone Landfall</title>
+      <link>https://clarixnews.vercel.app/article.html?id=cyclone-akvan-aftermath-recovery-explainer-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=cyclone-akvan-aftermath-recovery-explainer-2026</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Asia</category>
+      <description>Landfall makes the headlines; recovery writes the balance sheet. From rescue to relief to reconstruction, here is the machinery that follows a storm — and the three gaps where communities get left behind.</description>
+    </item>
+    <item>
+      <title>Hormuz at Nine Months: Why Winter Makes the World&apos;s Most Important Closure Harder</title>
+      <link>https://clarixnews.vercel.app/article.html?id=strait-of-hormuz-winter-lng-heating-season-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=strait-of-hormuz-winter-lng-heating-season-2026</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Middle East</category>
+      <description>The strait that carried a fifth of the world&apos;s oil has been largely shut since February 28. As northern-hemisphere heating season arrives, the closure stops being an oil story and becomes an LNG story — and LNG has no detour.</description>
+    </item>
+    <item>
+      <title>The First Post-Ground-Stop Thanksgiving: US Aviation Faces Its Biggest Stress Test of 2026</title>
+      <link>https://clarixnews.vercel.app/article.html?id=thanksgiving-2026-travel-faa-stress-test-ground-stop</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=thanksgiving-2026-travel-faa-stress-test-ground-stop</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <category>World</category>
+      <description>Ten days after a four-hour nationwide ground stop cancelled nearly 8,000 flights, the system meets the year&apos;s heaviest travel window. The question is not whether planes fly — it is whether slack exists when none is scheduled.</description>
+    </item>
+    <item>
+      <title>ANT After the Debut: Five Things the First Weeks of a $1.27 Trillion Stock Will Reveal</title>
+      <link>https://clarixnews.vercel.app/article.html?id=anthropic-ant-first-week-ipo-watchlist-2026</link>
+      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=anthropic-ant-first-week-ipo-watchlist-2026</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Business</category>
+      <description>Priced at $83, opened at $111.50, closed 17% up — day one is marketing. The sessions that follow are information. Here is exactly what to watch in Anthropic&apos;s first weeks as a public company, and why each signal matters.</description>
+    </item>
     <item>
       <title>A First in 70 Years: Japan&apos;s Forces Will Fire Missiles on Indian Soil</title>
       <link>https://clarixnews.vercel.app/article.html?id=india-japan-2plus2-live-fire-missile-training-2026</link>
@@ -364,45 +404,5 @@
       <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
       <category>Business</category>
       <description>A Financial Times report says delays, local opposition and financing pressure are challenging the US data-centre build-out powering the AI boom.</description>
-    </item>
-    <item>
-      <title>Ukraine Drone Offensive Hits Russian Oil Sites as War Escalation Raises Energy and Security Concerns</title>
-      <link>https://clarixnews.vercel.app/article.html?id=ukraine-drone-attacks-russian-oil-sites-october-18-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=ukraine-drone-attacks-russian-oil-sites-october-18-2026</guid>
-      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
-      <category>World</category>
-      <description>Associated Press reports fires at oil facilities near St Petersburg after a large Ukrainian drone attack; the wider impact depends on damage, repairs and further strikes.</description>
-    </item>
-    <item>
-      <title>2026 Nobel Peace Prize Awarded to South African Jurist Navi Pillay for Human Rights Leadership</title>
-      <link>https://clarixnews.vercel.app/article.html?id=nobel-peace-prize-2026-navi-pillay</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=nobel-peace-prize-2026-navi-pillay</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-      <category>World</category>
-      <description>Former UN High Commissioner for Human Rights recognized for &apos;tireless advocacy&apos; and &apos;courageous defense&apos; of international justice. First South African woman to receive the prize.</description>
-    </item>
-    <item>
-      <title>Pakistan Declares Emergency Rule in Khyber Pakhtunkhwa — Protests Erupt Over Governor&apos;s Rule</title>
-      <link>https://clarixnews.vercel.app/article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pakistan-emergency-rule-khyber-pakhtunkhwa-october-2026</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-      <category>Pakistan</category>
-      <description>President Zardari invokes Articles 232 and 234, placing northwestern province under federal control. Massive protests clash with police as opposition condemns &apos;undemocratic&apos; move.</description>
-    </item>
-    <item>
-      <title>Yemen Conflict Escalates: Houthis Strike Saudi Aramco Facilities After Coalition Hits Sanaa Oil Site</title>
-      <link>https://clarixnews.vercel.app/article.html?id=yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=yemen-saudi-arabia-conflict-escalation-aramco-strikes-october-2026</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-      <category>Middle East</category>
-      <description>Tensions reach new heights as Houthi rebels warn Aramco sites are &apos;legitimate targets&apos; following Saudi-led airstrikes on Yemeni capital. Regional oil markets react to escalation.</description>
-    </item>
-    <item>
-      <title>Pope Leo XIV Undergoes Lung Cancer Surgery — Currently Recovering at Rome Hospital</title>
-      <link>https://clarixnews.vercel.app/article.html?id=pope-leo-xiv-lung-surgery-cancer-recovery-october-2026</link>
-      <guid isPermaLink="true">https://clarixnews.vercel.app/article.html?id=pope-leo-xiv-lung-surgery-cancer-recovery-october-2026</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-      <category>World</category>
-      <description>Vatican confirms pontiff had lower lobe of right lung removed after early-stage nodule detected. Post-operative recovery described as &apos;progressing well&apos; after peaceful night in hospital.</description>
     </item>
 </channel></rss>
